@@ -1,16 +1,11 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3';
-import { 
-  InstagramIcon, 
-  LinkedinIcon, 
-  TwitterIcon, 
-  FacebookIcon, 
-  Music2Icon as TikTokIcon 
-} from 'lucide-vue-next';
+import { Twitter, Facebook } from 'lucide-vue-next';
 
 const footerSections = [
   {
     title: 'Company',
+    width: '128px',
     links: [
       { name: 'About Acendae', path: '/about' },
       { name: 'Life @ Acendae', path: '/life' },
@@ -20,15 +15,17 @@ const footerSections = [
   },
   {
     title: 'Services',
+    width: '153px',
     links: [
       { name: 'Development Unit', path: '/services/development' },
       { name: 'Engineering Unit', path: '/services/engineering' },
       { name: 'Team Outsourcing', path: '/services/outsourcing' },
-      { name: 'Experience Unit', path: '/services/ux-design' },
+      { name: 'Experience Unit', path: '/services/experience' },
     ],
   },
   {
     title: 'Resources',
+    width: '119px',
     links: [
       { name: 'Our Process', path: '/process' },
       { name: 'Case Studies', path: '/case-studies' },
@@ -38,20 +35,13 @@ const footerSections = [
   },
   {
     title: 'Contact',
+    width: '109px',
     links: [
       { name: 'Get in Touch', path: '/contact' },
       { name: 'Partnerships', path: '/partnerships' },
       { name: 'Support', path: '/support' },
     ],
   },
-];
-
-const socialLinks = [
-  { name: 'Instagram', icon: InstagramIcon, url: 'https://instagram.com/acendae' },
-  { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://linkedin.com/company/acendae' },
-  { name: 'TikTok', icon: TikTokIcon, url: 'https://tiktok.com/@acendae' },
-  { name: 'X', icon: TwitterIcon, url: 'https://x.com/acendae' },
-  { name: 'Facebook', icon: FacebookIcon, url: 'https://facebook.com/acendae' },
 ];
 
 const legalLinks = [
@@ -62,19 +52,25 @@ const legalLinks = [
 </script>
 
 <template>
-  <footer class="section-dark pt-20 pb-10">
-    <div class="acendae-container">
-      <!-- Top Section: 4-Column Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-16 mb-20">
-        <div v-for="section in footerSections" :key="section.title">
-          <h4 class="text-gold uppercase tracking-widest text-xs font-bold mb-8 opacity-90">
+  <footer class="section-dark w-full bg-[#070F1C] font-mona text-white pt-[100px] pb-10 overflow-hidden">
+    <div class="acendae-container-wide flex flex-col items-center">
+      
+      <!-- Section 1: 4-Column Link Grid -->
+      <div class="flex flex-row justify-between w-full max-w-[1103px] gap-[198px] mb-[150px]">
+        <div 
+          v-for="section in footerSections" 
+          :key="section.title"
+          :style="{ width: section.width }"
+          class="flex flex-col flex-shrink-0"
+        >
+          <h4 class="text-[20px] font-medium text-white mb-[24px]">
             {{ section.title }}
           </h4>
-          <ul class="space-y-4">
+          <ul class="flex flex-col gap-2">
             <li v-for="link in section.links" :key="link.path">
               <Link 
                 :href="link.path"
-                class="text-white/70 hover:text-white transition-colors text-sm font-medium"
+                class="text-[16px] font-normal leading-[1.4] text-white/70 hover:text-white transition-colors"
               >
                 {{ link.name }}
               </Link>
@@ -83,37 +79,57 @@ const legalLinks = [
         </div>
       </div>
 
-      <!-- Middle Section: Social Icons Row -->
-      <div class="flex items-center justify-center gap-8 mb-16 py-8 border-y border-white/10">
-        <a 
-          v-for="social in socialLinks" 
-          :key="social.name"
-          :href="social.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-white hover:text-gold transition-colors p-2"
-          :aria-label="social.name"
-        >
-          <component :is="social.icon" class="w-5 h-5" />
-        </a>
+      <!-- Section 2: Social Icons Row -->
+      <div class="flex items-center w-full max-w-[1264px] mb-[64px]">
+        <div class="flex-grow h-[1px] bg-white/30"></div>
+        <div class="flex items-center gap-[28px] mx-[28px]">
+          <!-- Instagram -->
+          <a href="#" class="text-white hover:text-gold transition-all group">
+            <img src="/resources/assets/images/icon-instagram.svg" alt="Instagram" class="w-6 h-6" />
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="text-white hover:text-gold transition-all group">
+            <img src="/resources/assets/images/icon-linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
+          </a>
+          <!-- TikTok -->
+          <a href="#" class="text-white hover:text-gold transition-all group">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.12-1.31a8.6 8.6 0 01-1.87-1.44v6.86a8.4 8.4 0 01-1.12 4.13c-1.11 2-3.13 3.49-5.38 3.73a8.4 8.4 0 01-3.66-.46c-2.43-.88-4.21-3.26-4.21-5.91 0-1.83.75-3.56 2.05-4.7s3.15-1.58 4.96-1.52c.04 0 .04 0 .04.02v4.03c-1.11-.08-2.26.11-3.23.68a4.4 4.4 0 00-1.78 6.13c1.07 1.83 3.65 2.37 5.41 1.15.8-.57 1.34-1.49 1.45-2.48.06-2.24.04-4.48.05-6.72V-.02z"/>
+            </svg>
+          </a>
+          <!-- X/Twitter -->
+          <a href="#" class="text-white hover:text-gold transition-all group">
+            <Twitter class="w-6 h-6" />
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="text-white hover:text-gold transition-all group">
+            <Facebook class="w-6 h-6" />
+          </a>
+        </div>
+        <div class="flex-grow h-[1px] bg-white/30"></div>
       </div>
 
-      <!-- Bottom Section -->
-      <div class="flex flex-col items-center gap-10">
-        <Link href="/" class="flex items-center justify-center mb-2">
-          <span class="acendae-logo text-white font-bold text-2xl tracking-tight">Acendae</span>
-        </Link>
+      <!-- Section 3: Logo -->
+      <Link href="/" class="mb-12">
+        <img 
+          src="/resources/assets/images/logo-light.svg" 
+          alt="Acendae" 
+          class="w-[217px] h-[75px] object-contain"
+        />
+      </Link>
 
-        <p class="text-white/50 text-sm font-medium">
-          Copyright &copy; 2026 Acendae. &nbsp; All rights reserved.
+      <!-- Section 4: Copyright + Legal -->
+      <div class="flex flex-col items-center gap-[64px]">
+        <p class="text-[20px] font-normal text-white">
+          Copyright &copy; 2026 Acendae
         </p>
 
-        <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+        <div class="flex flex-row items-center gap-[64px]">
           <Link 
             v-for="link in legalLinks" 
             :key="link.path"
             :href="link.path"
-            class="text-white/50 hover:text-white transition-colors text-xs font-medium"
+            class="text-[16px] font-normal text-white hover:opacity-70 transition-opacity"
           >
             {{ link.name }}
           </Link>
@@ -124,5 +140,7 @@ const legalLinks = [
 </template>
 
 <style scoped>
-/* No additional CSS needed as per requirements */
+.font-mona {
+  font-family: 'Mona Sans', sans-serif;
+}
 </style>

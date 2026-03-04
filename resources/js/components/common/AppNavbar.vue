@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
-import AppButton from '../ui/AppButton.vue';
-import AppMegaMenu from './AppMegaMenu.vue';
-import AppLanguageSwitcher from './AppLanguageSwitcher.vue';
-import { SunIcon, MoonIcon, MenuIcon, XIcon } from 'lucide-vue-next';
+import { Globe2, Menu, X, Moon } from 'lucide-vue-next';
+import AppButton from '@/components/ui/AppButton.vue';
+import AppMegaMenu from '@/components/common/AppMegaMenu.vue';
+import { usePreferencesStore } from '@/stores/preferences';
 
 const page = usePage();
+const preferences = usePreferencesStore();
+
 const isScrolled = ref(false);
-const scrollDirection = ref<'up' | 'down' | null>(null);
+const isVisible = ref(true);
 const isMobileMenuOpen = ref(false);
 const isMegaMenuOpen = ref(false);
 let lastScrollY = typeof window !== 'undefined' ? window.pageYOffset : 0;
@@ -16,17 +18,16 @@ let lastScrollY = typeof window !== 'undefined' ? window.pageYOffset : 0;
 const updateScroll = () => {
   const scrollY = window.pageYOffset;
   
-  // Scrolled state for background
+  // Background shadow/scrolled state
   isScrolled.value = scrollY > 20;
 
-  // Scroll direction for hide/show navbar
+  // Scroll visibility (hide/show)
   if (scrollY > lastScrollY && scrollY > 80) {
-    scrollDirection.value = 'down';
+    isVisible.value = false;
   } else if (scrollY < lastScrollY) {
-    scrollDirection.value = 'up';
+    isVisible.value = true;
   }
   
-  if (scrollY <= 0) scrollDirection.value = null;
   lastScrollY = scrollY > 0 ? scrollY : 0;
 };
 
@@ -39,100 +40,114 @@ onUnmounted(() => {
 });
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
+  { name: 'About Us', path: '/about' },
   { name: 'Projects', path: '/projects' },
   { name: 'Careers', path: '/careers' },
   { name: 'Life @ Acendae', path: '/life' },
 ];
 
 const isActive = (path: string) => {
-  const currentPath = page.url;
-  if (path === '/' && currentPath === '/') return true;
-  if (path !== '/' && currentPath.startsWith(path)) return true;
-  return false;
+  return page.url === path || page.url.startsWith(path + '/');
 };
 
-// Dark mode logic (placeholder)
-const isDark = ref(false);
+const switchLanguage = (lang: 'en' | 'nl') => {
+  preferences.setLang(lang);
+};
+
 const toggleDarkMode = () => {
-  isDark.value = !isDark.value;
+  preferences.toggleDarkMode();
   document.documentElement.classList.toggle('dark');
 };
 
 const navbarClasses = computed(() => [
-  'fixed top-0 left-0 w-full z-[var(--z-navbar)] transition-all duration-300 bg-white min-h-[64px] lg:min-h-[72px]',
-  {
-    '-translate-y-full': scrollDirection.value === 'down' && !isMobileMenuOpen.value,
-    'shadow-sm': isScrolled.value,
-  }
+  'fixed top-0 left-0 w-full z-[var(--z-navbar)] transition-transform duration-300 bg-white shadow-sm border-b border-navy/5',
+  isVisible.value ? 'translate-y-0' : '-translate-y-full',
+  isScrolled.value ? 'shadow-md' : 'shadow-none',
 ]);
 </script>
 
 <template>
-  <header :class="navbarClasses">
-    <div class="acendae-container h-full flex items-center justify-between">
-      <!-- Left: Logo -->
-      <Link href="/" class="flex items-center">
-        <span class="acendae-logo text-navy font-bold text-xl tracking-tight">Acendae</span>
+  <header :class="navbarClasses" class="h-[64px] lg:h-[74px] flex items-center bg-white font-mona font-medium">
+    <div class="acendae-container-wide w-full flex items-center justify-between px-6 lg:px-[85px]">
+      
+      <!-- Logo -->
+      <Link href="/" class="flex-shrink-0">
+        <img 
+          src="/resources/assets/images/logo-dark.svg" 
+          alt="Acendae" 
+          class="w-[134px] h-[49px] object-contain"
+        />
       </Link>
 
-      <!-- Center: Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-x-8 h-full">
-        <Link 
-          v-for="link in navLinks.slice(0, 1)" 
-          :key="link.path"
-          :href="link.path"
-          class="acendae-nav relative h-full flex items-center font-semibold"
-          :class="{ 'text-gold': isActive(link.path) }"
-        >
-          {{ link.name }}
-          <span v-if="isActive(link.path)" class="absolute bottom-6 left-0 w-full h-0.5 bg-gold"></span>
-        </Link>
-        
-        <!-- Service with MegaMenu -->
+      <!-- Center Links (Desktop) -->
+      <nav class="hidden lg:flex items-center gap-[36px]">
         <div 
-          class="h-full flex items-center relative"
+          class="relative h-full flex items-center"
           @mouseenter="isMegaMenuOpen = true"
           @mouseleave="isMegaMenuOpen = false"
         >
           <button 
-            class="acendae-nav cursor-pointer flex items-center gap-1 font-semibold"
-            :class="{ 'text-gold': isMegaMenuOpen }"
+            class="text-[16px] text-black/85 hover:text-[#0B1F3F] transition-colors cursor-pointer"
+            :class="{ 'text-[#0B1F3F] font-semibold': isMegaMenuOpen }"
           >
             Service
-            <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': isMegaMenuOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
           </button>
           
           <AppMegaMenu v-model="isMegaMenuOpen" @close="isMegaMenuOpen = false" />
         </div>
 
         <Link 
-          v-for="link in navLinks.slice(1)" 
+          v-for="link in navLinks" 
           :key="link.path"
           :href="link.path"
-          class="acendae-nav relative h-full flex items-center font-semibold"
-          :class="{ 'text-gold': isActive(link.path) }"
+          class="text-[16px] transition-colors relative"
+          :class="isActive(link.path) ? 'text-[#0B1F3F] font-semibold' : 'text-black/85 hover:text-[#0B1F3F]'"
         >
           {{ link.name }}
-          <span v-if="isActive(link.path)" class="absolute bottom-6 left-0 w-full h-0.5 bg-gold"></span>
+          <span v-if="isActive(link.path)" class="absolute -bottom-1 left-0 w-full h-[2px] bg-gold"></span>
         </Link>
       </nav>
 
-      <!-- Right: Desktop Actions -->
-      <div class="hidden lg:flex items-center gap-6">
-        <AppLanguageSwitcher />
-        
-        <button @click="toggleDarkMode" class="text-navy hover:text-gold transition-colors">
-          <MoonIcon v-if="!isDark" class="w-5 h-5" />
-          <SunIcon v-else class="w-5 h-5" />
+      <!-- Right Cluster -->
+      <div class="hidden lg:flex items-center gap-[40px]">
+        <!-- Language Switcher -->
+        <div class="flex items-center gap-2">
+          <Globe2 class="w-4 h-4 text-black/40" />
+          <div class="flex items-center w-[109px] h-[36px] bg-white border border-black/10 rounded-full p-1 shadow-sm">
+            <button 
+              @click="switchLanguage('en')"
+              class="flex-1 text-[14px] leading-none transition-all rounded-full h-full"
+              :class="preferences.lang === 'en' ? 'bg-[#D5E2FF4F] text-[#1D4FBC] font-medium' : 'text-black font-medium'"
+            >
+              EN
+            </button>
+            <button 
+              @click="switchLanguage('nl')"
+              class="flex-1 text-[14px] leading-none transition-all rounded-full h-full"
+              :class="preferences.lang === 'nl' ? 'bg-[#D5E2FF4F] text-[#1D4FBC] font-medium' : 'text-black font-medium'"
+            >
+              NL
+            </button>
+          </div>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button @click="toggleDarkMode" class="text-navy transition-transform hover:scale-105">
+          <img src="/resources/assets/images/icon-moon.svg" alt="Dark Mode" class="w-[28px] h-[28px]" />
         </button>
-        
-        <AppButton variant="primary" size="sm" tag="Link" href="/contact" class="group">
-          Get in Touch
-          <span class="pulse-dot ml-2"></span>
+
+        <!-- CTA Button -->
+        <AppButton 
+          variant="primary" 
+          tag="Link" 
+          href="/contact" 
+          class="!bg-[#0B1F3F] !rounded-[6px] !px-[20px] !py-[10px] !gap-[12px] group"
+        >
+          <div class="flex items-center bg-[#00A67E2B] rounded-full p-[6px]">
+            <span class="w-2 h-2 bg-[#0A5E4A] rounded-full"></span>
+            <span class="pulse-dot absolute w-2 h-2 bg-[#0A5E4A] rounded-full"></span>
+          </div>
+          <span class="text-[#9ABAFF] font-semibold text-[16px]">Get Started</span>
         </AppButton>
       </div>
 
@@ -142,60 +157,70 @@ const navbarClasses = computed(() => [
         @click="isMobileMenuOpen = !isMobileMenuOpen"
         aria-label="Toggle menu"
       >
-        <MenuIcon v-if="!isMobileMenuOpen" class="w-6 h-6" />
-        <XIcon v-else class="w-6 h-6" />
+        <Menu v-if="!isMobileMenuOpen" class="w-6 h-6" />
+        <X v-else class="w-6 h-6" />
       </button>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Drawer -->
     <Transition name="slide-down">
       <div 
         v-if="isMobileMenuOpen" 
-        class="lg:hidden absolute top-[64px] left-0 w-full bg-white shadow-lg border-t border-navy/5 px-6 py-8 h-[calc(100vh-64px)] overflow-y-auto"
+        class="lg:hidden absolute top-[64px] left-0 w-full bg-white shadow-lg border-t border-navy/5 h-[calc(100vh-64px)] overflow-y-auto px-6 py-8"
       >
-        <div class="flex flex-col gap-6">
+        <nav class="flex flex-col gap-2">
           <Link 
-            v-for="link in navLinks" 
+            v-for="link in [{ name: 'Service', path: '/services' }, ...navLinks]" 
             :key="link.path"
             :href="link.path"
-            class="text-lg font-semibold text-navy hover:text-gold"
+            class="h-[48px] flex items-center text-[18px] font-semibold text-[#0B1F3F]"
             @click="isMobileMenuOpen = false"
           >
             {{ link.name }}
           </Link>
           
-          <div class="py-4 border-t border-navy/5 flex flex-col gap-6">
+          <div class="mt-8 border-t border-navy/5 pt-8 flex flex-col gap-6">
             <div class="flex items-center justify-between">
-              <span class="text-navy/60 font-medium">Language</span>
-              <AppLanguageSwitcher />
+              <span class="text-black/50 font-medium">Language</span>
+              <div class="flex items-center gap-4">
+                <button @click="switchLanguage('en')" :class="preferences.lang === 'en' ? 'text-[#1D4FBC] font-bold' : 'text-black'">EN</button>
+                <button @click="switchLanguage('nl')" :class="preferences.lang === 'nl' ? 'text-[#1D4FBC] font-bold' : 'text-black'">NL</button>
+              </div>
             </div>
             
-            <div class="flex items-center justify-between">
-              <span class="text-navy/60 font-medium">Appearance</span>
-              <button @click="toggleDarkMode" class="flex items-center gap-2 text-navy">
-                <MoonIcon v-if="!isDark" class="w-5 h-5" />
-                <SunIcon v-else class="w-5 h-5" />
-                {{ isDark ? 'Light Mode' : 'Dark Mode' }}
-              </button>
-            </div>
+            <AppButton 
+              variant="primary" 
+              tag="Link" 
+              href="/contact" 
+              class="w-full !bg-[#0B1F3F] !rounded-[6px] !py-[14px]"
+              @click="isMobileMenuOpen = false"
+            >
+              <span class="text-[#9ABAFF] font-semibold text-[16px]">Get Started</span>
+            </AppButton>
           </div>
-          
-          <AppButton 
-            variant="primary" 
-            tag="Link" 
-            href="/contact" 
-            class="w-full"
-            @click="isMobileMenuOpen = false"
-          >
-            Get in Touch
-            <span class="pulse-dot ml-2"></span>
-          </AppButton>
-        </div>
+        </nav>
       </div>
     </Transition>
   </header>
 </template>
 
 <style scoped>
-/* Scoped styles moved to template classes */
+.font-mona {
+  font-family: 'Mona Sans', sans-serif;
+}
+
+/* Custom shadow/border overrides as per prompt */
+.shadow-navy-lg {
+  box-shadow: 0 10px 30px rgba(11, 31, 63, 0.15);
+}
+
+.pulse-dot {
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
 </style>
