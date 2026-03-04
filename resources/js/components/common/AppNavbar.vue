@@ -61,7 +61,7 @@ const toggleDarkMode = () => {
 };
 
 const navbarClasses = computed(() => [
-  'fixed top-0 left-0 w-full z-[var(--z-navbar)] transition-all duration-300 bg-white h-[72px] lg:h-[72px] h-[64px]',
+  'fixed top-0 left-0 w-full z-[var(--z-navbar)] transition-all duration-300 bg-white min-h-[64px] lg:min-h-[72px]',
   {
     '-translate-y-full': scrollDirection.value === 'down' && !isMobileMenuOpen.value,
     'shadow-sm': isScrolled.value,
@@ -83,7 +83,7 @@ const navbarClasses = computed(() => [
           v-for="link in navLinks.slice(0, 1)" 
           :key="link.path"
           :href="link.path"
-          class="acendae-nav relative h-full flex items-center"
+          class="acendae-nav relative h-full flex items-center font-semibold"
           :class="{ 'text-gold': isActive(link.path) }"
         >
           {{ link.name }}
@@ -97,7 +97,7 @@ const navbarClasses = computed(() => [
           @mouseleave="isMegaMenuOpen = false"
         >
           <button 
-            class="acendae-nav cursor-pointer flex items-center gap-1"
+            class="acendae-nav cursor-pointer flex items-center gap-1 font-semibold"
             :class="{ 'text-gold': isMegaMenuOpen }"
           >
             Service
@@ -113,7 +113,7 @@ const navbarClasses = computed(() => [
           v-for="link in navLinks.slice(1)" 
           :key="link.path"
           :href="link.path"
-          class="acendae-nav relative h-full flex items-center"
+          class="acendae-nav relative h-full flex items-center font-semibold"
           :class="{ 'text-gold': isActive(link.path) }"
         >
           {{ link.name }}
@@ -197,7 +197,5 @@ const navbarClasses = computed(() => [
 </template>
 
 <style scoped>
-.acendae-nav {
-  @apply font-semibold;
-}
+/* Scoped styles moved to template classes */
 </style>
