@@ -1,0 +1,50 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "Over ons",
+        "services": "Diensten",
+        "projects": "Projecten",
+        "careers": "Vacatures",
+        "lifeAtAcendae": "Werken bij Acendae",
+        "getInTouch": "Neem contact op",
+        "outsourceProject": "Project uitbesteden",
+        "buildTeam": "Dedicated team opbouwen",
+        "softwareEng": "Software Engineering",
+        "webDev": "Webontwikkeling",
+        "saasDev": "SaaS Ontwikkeling",
+        "uxUiDesign": "UX/UI Design",
+        "hireWebDevs": "Webdevelopers inhuren",
+        "hireSoftwareEng": "Software Engineers inhuren",
+        "hireUxUi": "UX/UI Designers inhuren",
+        "fullDedicatedTeams": "Volledige dedicated teams"
+    },
+    "hero": {
+        "eyebrow": "Uw groeipartner in tech",
+        "headline": "Elk bedrijf heeft zijn berg. Acendae is de gids.",
+        "subline": "Wij bouwen toonaangevende softwareproducten en dedicated technologieteams die ambitieuze bedrijven helpen groeien — vanuit Nederland naar de wereld.",
+        "ctaOutsource": "Project uitbesteden",
+        "ctaDedicated": "Dedicated team opbouwen"
+    },
+    "footer": {
+        "company": "Bedrijf",
+        "services": "Diensten",
+        "resources": "Bronnen",
+        "contact": "Contact",
+        "copyright": "© {year} Acendae. Alle rechten voorbehouden.",
+        "privacy": "Privacybeleid",
+        "terms": "Algemene voorwaarden",
+        "cookies": "Cookiebeleid"
+    },
+    "common": {
+        "learnMore": "Meer informatie",
+        "viewAll": "Alles bekijken",
+        "letsTalk": "Laten we praten",
+        "discoverJourney": "Ontdek onze reis",
+        "viewCaseStudies": "Bekijk casestudies",
+        "viewOpenPositions": "Bekijk openstaande vacatures"
+    },
+    "flash": {
+        "success": "Actie succesvol uitgevoerd.",
+        "error": "Er is iets misgegaan. Probeer het opnieuw."
+    }
+}

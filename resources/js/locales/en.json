@@ -1,0 +1,50 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "projects": "Projects",
+        "careers": "Careers",
+        "lifeAtAcendae": "Life at Acendae",
+        "getInTouch": "Get in Touch",
+        "outsourceProject": "Outsource a Project",
+        "buildTeam": "Build a Dedicated Team",
+        "softwareEng": "Software Engineering",
+        "webDev": "Web Development",
+        "saasDev": "SaaS Development",
+        "uxUiDesign": "UX/UI Design",
+        "hireWebDevs": "Hire Web Developers",
+        "hireSoftwareEng": "Hire Software Engineers",
+        "hireUxUi": "Hire UX/UI Designers",
+        "fullDedicatedTeams": "Full Dedicated Teams"
+    },
+    "hero": {
+        "eyebrow": "Your growth partner in tech",
+        "headline": "Every business has its mountain. Acendae is the guide.",
+        "subline": "We build world-class software products and dedicated tech teams that help ambitious companies scale — from the Netherlands to the world.",
+        "ctaOutsource": "Outsource a Project",
+        "ctaDedicated": "Build a Dedicated Team"
+    },
+    "footer": {
+        "company": "Company",
+        "services": "Services",
+        "resources": "Resources",
+        "contact": "Contact",
+        "copyright": "© {year} Acendae. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms & Conditions",
+        "cookies": "Cookie Policy"
+    },
+    "common": {
+        "learnMore": "Learn More",
+        "viewAll": "View All",
+        "letsTalk": "Let's Talk",
+        "discoverJourney": "Discover Our Journey",
+        "viewCaseStudies": "View Case Studies",
+        "viewOpenPositions": "View Open Positions"
+    },
+    "flash": {
+        "success": "Action completed successfully.",
+        "error": "Something went wrong. Please try again."
+    }
+}
