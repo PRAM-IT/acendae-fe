@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
-import { Globe2, Menu, X, Moon } from 'lucide-vue-next';
+import { Menu, X } from 'lucide-vue-next';
 import AppButton from '@/components/ui/AppButton.vue';
 import AppMegaMenu from '@/components/common/AppMegaMenu.vue';
 import { usePreferencesStore } from '@/stores/preferences';
@@ -56,22 +56,28 @@ const switchLanguage = (lang: 'en' | 'nl') => {
 
 const toggleDarkMode = () => {
   preferences.toggleDarkMode();
-  document.documentElement.classList.toggle('dark');
 };
 
 const navbarClasses = computed(() => [
-  'fixed top-0 left-0 w-full z-[var(--z-navbar)] transition-transform duration-300 bg-white shadow-sm border-b border-navy/5',
+  'fixed top-0 left-0 w-full z-[var(--z-navbar)] transition-transform duration-300 bg-white border-b border-black/5',
   isVisible.value ? 'translate-y-0' : '-translate-y-full',
   isScrolled.value ? 'shadow-md' : 'shadow-none',
 ]);
+
+// Handle Service click for mobile
+const toggleService = () => {
+  if (window.innerWidth < 1024) {
+    // on mobile it works as a link or simple toggle
+  }
+};
 </script>
 
 <template>
-  <header :class="navbarClasses" class="h-[64px] lg:h-[74px] flex items-center bg-white font-mona font-medium">
-    <div class="acendae-container-wide w-full flex items-center justify-between px-6 lg:px-[85px]">
+  <header :class="navbarClasses" class="h-[64px] lg:h-[74px] flex items-center bg-white font-mona">
+    <div class="relative w-full max-w-[1440px] mx-auto h-full flex items-center">
       
-      <!-- Logo -->
-      <Link href="/" class="flex-shrink-0">
+      <!-- Logo (Left: 85px) -->
+      <Link href="/" class="absolute left-6 lg:left-[85px] top-1/2 -translate-y-[calc(50%+4.49px)]">
         <img 
           src="/resources/assets/images/logo-dark.svg" 
           alt="Acendae" 
@@ -79,52 +85,56 @@ const navbarClasses = computed(() => [
         />
       </Link>
 
-      <!-- Center Links (Desktop) -->
-      <nav class="hidden lg:flex items-center gap-[36px]">
+      <!-- Nav Links (Center/Left-ish Cluster) -->
+      <nav class="hidden lg:flex items-center absolute left-[calc(50%-455px/2-100px)] h-20 gap-[36px]">
+        <!-- Service Mega Menu Toggle -->
         <div 
           class="relative h-full flex items-center"
           @mouseenter="isMegaMenuOpen = true"
           @mouseleave="isMegaMenuOpen = false"
         >
           <button 
-            class="text-[16px] text-black/85 hover:text-[#0B1F3F] transition-colors cursor-pointer"
-            :class="{ 'text-[#0B1F3F] font-semibold': isMegaMenuOpen }"
+            class="text-[16px] font-medium transition-colors cursor-pointer"
+            :class="isMegaMenuOpen ? 'text-[#0B1F3F]' : 'text-black/85 hover:text-[#0B1F3F]'"
           >
             Service
           </button>
           
-          <AppMegaMenu v-model="isMegaMenuOpen" @close="isMegaMenuOpen = false" />
+          <AppMegaMenu :open="isMegaMenuOpen" @close="isMegaMenuOpen = false" />
         </div>
 
+        <!-- Dynamic Links -->
         <Link 
           v-for="link in navLinks" 
           :key="link.path"
           :href="link.path"
-          class="text-[16px] transition-colors relative"
-          :class="isActive(link.path) ? 'text-[#0B1F3F] font-semibold' : 'text-black/85 hover:text-[#0B1F3F]'"
+          class="text-[16px] font-medium transition-colors relative text-center"
+          :class="isActive(link.path) || link.name === 'Life @ Acendae' ? 'text-[#0B1F3F]' : 'text-black/85 hover:text-[#0B1F3F]'"
         >
           {{ link.name }}
           <span v-if="isActive(link.path)" class="absolute -bottom-1 left-0 w-full h-[2px] bg-gold"></span>
         </Link>
       </nav>
 
-      <!-- Right Cluster -->
-      <div class="hidden lg:flex items-center gap-[40px]">
+      <!-- Right Cluster (Left: 996px / Width 356px) -->
+      <div class="hidden lg:flex items-center absolute left-[996px] h-[52px] gap-[40px] w-[356px]">
+        
         <!-- Language Switcher -->
-        <div class="flex items-center gap-2">
-          <Globe2 class="w-4 h-4 text-black/40" />
-          <div class="flex items-center w-[109px] h-[36px] bg-white border border-black/10 rounded-full p-1 shadow-sm">
+        <div class="flex items-center gap-[20px] w-[157px] h-[36px]">
+          <div class="relative w-[109px] h-[36px] bg-white border border-black/10 rounded-full">
+            <img src="/resources/assets/images/globe.svg" class="absolute left-[5px] top-[5px] w-[26px] h-[26px]" alt="Globe" />
+            
             <button 
               @click="switchLanguage('en')"
-              class="flex-1 text-[14px] leading-none transition-all rounded-full h-full"
-              :class="preferences.lang === 'en' ? 'bg-[#D5E2FF4F] text-[#1D4FBC] font-medium' : 'text-black font-medium'"
+              class="absolute left-[37px] top-[5px] w-[32px] h-[26px] flex items-center justify-center text-[14px] font-medium transition-all rounded-full"
+              :class="preferences.lang === 'en' ? 'bg-[#D5E2FF4F] text-[#1D4FBC]' : 'text-black'"
             >
               EN
             </button>
             <button 
               @click="switchLanguage('nl')"
-              class="flex-1 text-[14px] leading-none transition-all rounded-full h-full"
-              :class="preferences.lang === 'nl' ? 'bg-[#D5E2FF4F] text-[#1D4FBC] font-medium' : 'text-black font-medium'"
+              class="absolute left-[73px] top-[5px] w-[32px] h-[26px] flex items-center justify-center text-[14px] font-medium transition-all rounded-full"
+              :class="preferences.lang === 'nl' ? 'bg-[#D5E2FF4F] text-[#1D4FBC]' : 'text-black'"
             >
               NL
             </button>
@@ -132,8 +142,8 @@ const navbarClasses = computed(() => [
         </div>
 
         <!-- Dark Mode Toggle -->
-        <button @click="toggleDarkMode" class="text-navy transition-transform hover:scale-105">
-          <img src="/resources/assets/images/icon-moon.svg" alt="Dark Mode" class="w-[28px] h-[28px]" />
+        <button @click="toggleDarkMode" class="w-7 h-7 flex items-center justify-center transition-transform hover:scale-105">
+          <img src="/resources/assets/images/moon.svg" alt="Dark Mode" class="w-7 h-7" />
         </button>
 
         <!-- CTA Button -->
@@ -141,19 +151,15 @@ const navbarClasses = computed(() => [
           variant="primary" 
           tag="Link" 
           href="/contact" 
-          class="!bg-[#0B1F3F] !rounded-[6px] !px-[20px] !py-[10px] !gap-[12px] group"
+          class="!w-[159px] !h-[48px] !bg-[#0B1F3F] !rounded-[6px] hover:!opacity-90"
         >
-          <div class="flex items-center bg-[#00A67E2B] rounded-full p-[6px]">
-            <span class="w-2 h-2 bg-[#0A5E4A] rounded-full"></span>
-            <span class="pulse-dot absolute w-2 h-2 bg-[#0A5E4A] rounded-full"></span>
-          </div>
           <span class="text-[#9ABAFF] font-semibold text-[16px]">Get Started</span>
         </AppButton>
       </div>
 
       <!-- Mobile Toggle -->
       <button 
-        class="lg:hidden text-navy p-2"
+        class="lg:hidden absolute right-6 text-[#0B1F3F] p-2"
         @click="isMobileMenuOpen = !isMobileMenuOpen"
         aria-label="Toggle menu"
       >
@@ -166,7 +172,7 @@ const navbarClasses = computed(() => [
     <Transition name="slide-down">
       <div 
         v-if="isMobileMenuOpen" 
-        class="lg:hidden absolute top-[64px] left-0 w-full bg-white shadow-lg border-t border-navy/5 h-[calc(100vh-64px)] overflow-y-auto px-6 py-8"
+        class="lg:hidden absolute top-[64px] left-0 w-full bg-white shadow-lg border-t border-black/5 h-[calc(100vh-64px)] overflow-y-auto px-6 py-8"
       >
         <nav class="flex flex-col gap-2">
           <Link 
@@ -179,7 +185,7 @@ const navbarClasses = computed(() => [
             {{ link.name }}
           </Link>
           
-          <div class="mt-8 border-t border-navy/5 pt-8 flex flex-col gap-6">
+          <div class="mt-8 border-t border-black/5 pt-8 flex flex-col gap-6">
             <div class="flex items-center justify-between">
               <span class="text-black/50 font-medium">Language</span>
               <div class="flex items-center gap-4">
@@ -192,7 +198,7 @@ const navbarClasses = computed(() => [
               variant="primary" 
               tag="Link" 
               href="/contact" 
-              class="w-full !bg-[#0B1F3F] !rounded-[6px] !py-[14px]"
+              class="w-full !h-[52px] !bg-[#0B1F3F] !rounded-[6px]"
               @click="isMobileMenuOpen = false"
             >
               <span class="text-[#9ABAFF] font-semibold text-[16px]">Get Started</span>
@@ -209,18 +215,14 @@ const navbarClasses = computed(() => [
   font-family: 'Mona Sans', sans-serif;
 }
 
-/* Custom shadow/border overrides as per prompt */
-.shadow-navy-lg {
-  box-shadow: 0 10px 30px rgba(11, 31, 63, 0.15);
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.3s ease-out;
 }
 
-.pulse-dot {
-  animation: pulse 1.6s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.9); opacity: 0.8; }
-  50% { transform: scale(1.4); opacity: 0; }
-  100% { transform: scale(0.9); opacity: 0.8; }
+.slide-down-enter-from,
+.slide-down-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
 }
 </style>

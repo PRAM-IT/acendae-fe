@@ -2,6 +2,7 @@
 import { Link } from '@inertiajs/vue3';
 import { Twitter, Facebook } from 'lucide-vue-next';
 
+// Re-using footer sections from earlier, but with updated values to match Figma CSS gaps
 const footerSections = [
   {
     title: 'Company',
@@ -52,25 +53,25 @@ const legalLinks = [
 </script>
 
 <template>
-  <footer class="section-dark w-full bg-[#070F1C] font-mona text-white pt-[100px] pb-10 overflow-hidden">
-    <div class="acendae-container-wide flex flex-col items-center">
+  <footer class="relative w-full h-[661px] bg-[#070F1C] font-mona text-white overflow-hidden overflow-y-auto">
+    <div class="acendae-container-wide relative w-[1440px] h-full mx-auto">
       
-      <!-- Section 1: 4-Column Link Grid -->
-      <div class="flex flex-row justify-between w-full max-w-[1103px] gap-[198px] mb-[150px]">
+      <!-- Frame 1000003325: Link Grid -->
+      <div class="absolute top-[100px] left-1/2 -translate-x-1/2 flex flex-row gap-[198px] w-[1103px] h-[164px]">
         <div 
           v-for="section in footerSections" 
           :key="section.title"
           :style="{ width: section.width }"
-          class="flex flex-col flex-shrink-0"
+          class="flex flex-col gap-[24px]"
         >
-          <h4 class="text-[20px] font-medium text-white mb-[24px]">
+          <h4 class="text-[20px] font-medium leading-[24px] text-white">
             {{ section.title }}
           </h4>
-          <ul class="flex flex-col gap-2">
-            <li v-for="link in section.links" :key="link.path">
+          <ul class="flex flex-col gap-[8px]">
+            <li v-for="link in section.links" :key="link.path" class="h-[23px]">
               <Link 
                 :href="link.path"
-                class="text-[16px] font-normal leading-[1.4] text-white/70 hover:text-white transition-colors"
+                class="text-[16px] font-normal leading-[23px] text-white hover:opacity-70 transition-opacity whitespace-nowrap"
               >
                 {{ link.name }}
               </Link>
@@ -79,62 +80,60 @@ const legalLinks = [
         </div>
       </div>
 
-      <!-- Section 2: Social Icons Row -->
-      <div class="flex items-center w-full max-w-[1264px] mb-[64px]">
-        <div class="flex-grow h-[1px] bg-white/30"></div>
-        <div class="flex items-center gap-[28px] mx-[28px]">
-          <!-- Instagram -->
-          <a href="#" class="text-white hover:text-gold transition-all group">
+      <!-- Frame 1000003324: Social row (Top: 350px) -->
+      <div class="absolute top-[350px] left-1/2 -translate-x-1/2 flex items-center w-[1264px] h-[24px] gap-[29px]">
+        <div class="w-[489px] h-[0px] border border-white/30"></div>
+        
+        <div class="flex flex-row items-center gap-[28px] w-[220px] justify-center text-white">
+          <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
             <img src="/resources/assets/images/icon-instagram.svg" alt="Instagram" class="w-6 h-6" />
           </a>
-          <!-- LinkedIn -->
-          <a href="#" class="text-white hover:text-gold transition-all group">
+          <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
             <img src="/resources/assets/images/icon-linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
           </a>
-          <!-- TikTok -->
-          <a href="#" class="text-white hover:text-gold transition-all group">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.12-1.31a8.6 8.6 0 01-1.87-1.44v6.86a8.4 8.4 0 01-1.12 4.13c-1.11 2-3.13 3.49-5.38 3.73a8.4 8.4 0 01-3.66-.46c-2.43-.88-4.21-3.26-4.21-5.91 0-1.83.75-3.56 2.05-4.7s3.15-1.58 4.96-1.52c.04 0 .04 0 .04.02v4.03c-1.11-.08-2.26.11-3.23.68a4.4 4.4 0 00-1.78 6.13c1.07 1.83 3.65 2.37 5.41 1.15.8-.57 1.34-1.49 1.45-2.48.06-2.24.04-4.48.05-6.72V-.02z"/>
-            </svg>
+          <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
+            <img src="/resources/assets/images/icon-tiktok.svg" alt="TikTok" class="w-6 h-6" />
           </a>
-          <!-- X/Twitter -->
-          <a href="#" class="text-white hover:text-gold transition-all group">
-            <Twitter class="w-6 h-6" />
+          <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
+            <img src="/resources/assets/images/icon-twitter.svg" alt="X" class="w-6 h-6" />
           </a>
-          <!-- Facebook -->
-          <a href="#" class="text-white hover:text-gold transition-all group">
-            <Facebook class="w-6 h-6" />
+          <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
+            <img src="/resources/assets/images/icon-facebook.svg" alt="Facebook" class="w-6 h-6" />
           </a>
         </div>
-        <div class="flex-grow h-[1px] bg-white/30"></div>
+
+        <div class="w-[497px] h-[0px] border border-white/30"></div>
       </div>
 
-      <!-- Section 3: Logo -->
-      <Link href="/" class="mb-12">
-        <img 
-          src="/resources/assets/images/logo-light.svg" 
-          alt="Acendae" 
-          class="w-[217px] h-[75px] object-contain"
-        />
-      </Link>
+      <!-- Logo Frame (Top: 414px) -->
+      <div class="absolute top-[414px] left-1/2 -translate-x-1/2 w-[217px] h-[75px]">
+        <Link href="/">
+          <img src="/resources/assets/images/logo-light.svg" alt="Acendae" class="w-full h-full object-contain" />
+        </Link>
+      </div>
 
-      <!-- Section 4: Copyright + Legal -->
-      <div class="flex flex-col items-center gap-[64px]">
-        <p class="text-[20px] font-normal text-white">
-          Copyright &copy; 2026 Acendae
-        </p>
+      <!-- Footer Bottom Frame 1000003383 (Top: 529px) -->
+      <div class="absolute top-[529px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-[32px] w-[507px]">
+        <!-- Copyright -->
+        <div class="w-full text-center h-[28px]">
+           <p class="text-[20px] font-normal leading-[28px] text-white">
+             Copyright &copy; 2026 Acendae
+           </p>
+        </div>
 
-        <div class="flex flex-row items-center gap-[64px]">
+        <!-- Legal links -->
+        <div class="flex flex-row gap-[64px] items-start w-full justify-center h-[23px]">
           <Link 
             v-for="link in legalLinks" 
-            :key="link.path"
+            :key="link.name"
             :href="link.path"
-            class="text-[16px] font-normal text-white hover:opacity-70 transition-opacity"
+            class="text-[16px] font-normal leading-[23px] text-white hover:opacity-70 transition-opacity whitespace-nowrap"
           >
             {{ link.name }}
           </Link>
         </div>
       </div>
+
     </div>
   </footer>
 </template>

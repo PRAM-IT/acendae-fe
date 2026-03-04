@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import { ChevronRight } from 'lucide-vue-next';
+import AppButton from '@/components/ui/AppButton.vue';
 
 interface Props {
   open?: boolean;
@@ -92,13 +93,15 @@ const handleClose = () => {
         <p class="text-[15px] text-white/70 italic">
           Dutch strategy. Sri Lankan execution. <strong class="text-white font-bold ml-1">One</strong> integrated team.
         </p>
-        <Link 
+        <AppButton 
+          variant="outline" 
+          tag="Link" 
           href="/contact" 
-          class="text-[14px] font-medium text-white border border-white/40 rounded-[6px] px-[24px] py-[10px] hover:bg-white/10 transition-colors"
+          class="!text-[14px] !font-medium !text-white !border-white/40 !rounded-[6px] !px-[24px] !py-[10px] hover:!bg-white/10"
           @click="handleClose"
         >
           Let's Talk
-        </Link>
+        </AppButton>
       </div>
     </div>
   </Transition>
