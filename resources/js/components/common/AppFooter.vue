@@ -1,55 +1,57 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { Link } from '@inertiajs/vue3';
-import { Twitter, Facebook } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
 
-// Re-using footer sections from earlier, but with updated values to match Figma CSS gaps
-const footerSections = [
+const { t } = useI18n();
+
+const footerSections = computed(() => [
   {
-    title: 'Company',
+    title: t('footer.columns.company'),
     width: '128px',
     links: [
-      { name: 'About Acendae', path: '/about' },
-      { name: 'Life @ Acendae', path: '/life' },
-      { name: 'Team', path: '/team' },
-      { name: 'Careers', path: '/careers' },
+      { name: t('footer.company.aboutAcendae'), path: '/about' },
+      { name: t('footer.company.lifeAtAcendae'), path: '/life' },
+      { name: t('footer.company.team'), path: '/team' },
+      { name: t('footer.company.careers'), path: '/careers' },
     ],
   },
   {
-    title: 'Services',
+    title: t('footer.columns.services'),
     width: '153px',
     links: [
-      { name: 'Development Unit', path: '/services/development' },
-      { name: 'Engineering Unit', path: '/services/engineering' },
-      { name: 'Team Outsourcing', path: '/services/outsourcing' },
-      { name: 'Experience Unit', path: '/services/experience' },
+      { name: t('footer.services.developmentUnit'), path: '/services/development' },
+      { name: t('footer.services.engineeringUnit'), path: '/services/engineering' },
+      { name: t('footer.services.teamOutsourcing'), path: '/services/outsourcing' },
+      { name: t('footer.services.experienceUnit'), path: '/services/experience' },
     ],
   },
   {
-    title: 'Resources',
+    title: t('footer.columns.resources'),
     width: '119px',
     links: [
-      { name: 'Our Process', path: '/process' },
-      { name: 'Case Studies', path: '/case-studies' },
-      { name: 'Blog', path: '/blog' },
-      { name: 'FAQs', path: '/faqs' },
+      { name: t('footer.resources.ourProcess'), path: '/process' },
+      { name: t('footer.resources.caseStudies'), path: '/case-studies' },
+      { name: t('footer.resources.blog'), path: '/blog' },
+      { name: t('footer.resources.faqs'), path: '/faqs' },
     ],
   },
   {
-    title: 'Contact',
+    title: t('footer.columns.contact'),
     width: '109px',
     links: [
-      { name: 'Get in Touch', path: '/contact' },
-      { name: 'Partnerships', path: '/partnerships' },
-      { name: 'Support', path: '/support' },
+      { name: t('footer.contact.getInTouch'), path: '/contact' },
+      { name: t('footer.contact.partnerships'), path: '/partnerships' },
+      { name: t('footer.contact.support'), path: '/support' },
     ],
   },
-];
+]);
 
-const legalLinks = [
-  { name: 'Privacy Policy', path: '/privacy-policy' },
-  { name: 'Terms & Conditions', path: '/terms-and-conditions' },
-  { name: 'Manage Cookies', path: '/cookies' },
-];
+const legalLinks = computed(() => [
+  { name: t('footer.legal.privacy'), path: '/privacy-policy' },
+  { name: t('footer.legal.terms'), path: '/terms-and-conditions' },
+  { name: t('footer.legal.cookies'), path: '/cookies' },
+]);
 </script>
 
 <template>
@@ -86,19 +88,19 @@ const legalLinks = [
         
         <div class="flex flex-row items-center gap-[28px] w-[220px] justify-center text-white">
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-instagram.svg" alt="Instagram" class="w-6 h-6" />
+            <img src="/resources/assets/images/icon-instagram.svg" :alt="t('common.instagram') || 'Instagram'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
+            <img src="/resources/assets/images/icon-linkedin.svg" :alt="t('common.linkedin') || 'LinkedIn'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-tiktok.svg" alt="TikTok" class="w-6 h-6" />
+            <img src="/resources/assets/images/icon-tiktok.svg" :alt="t('common.tiktok') || 'TikTok'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-twitter.svg" alt="X" class="w-6 h-6" />
+            <img src="/resources/assets/images/icon-twitter.svg" :alt="t('common.twitter') || 'X'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-facebook.svg" alt="Facebook" class="w-6 h-6" />
+            <img src="/resources/assets/images/icon-facebook.svg" :alt="t('common.facebook') || 'Facebook'" class="w-6 h-6" />
           </a>
         </div>
 
@@ -108,7 +110,7 @@ const legalLinks = [
       <!-- Logo Frame (Top: 414px) -->
       <div class="absolute top-[414px] left-1/2 -translate-x-1/2 w-[217px] h-[75px]">
         <Link href="/">
-          <img src="/resources/assets/images/logo-light.svg" alt="Acendae" class="w-full h-full object-contain" />
+          <img src="/resources/assets/images/logo-light.svg" :alt="t('common.logoAlt') || 'Acendae'" class="w-full h-full object-contain" />
         </Link>
       </div>
 
@@ -117,7 +119,7 @@ const legalLinks = [
         <!-- Copyright -->
         <div class="w-full text-center h-[28px]">
            <p class="text-[20px] font-normal leading-[28px] text-white">
-             Copyright &copy; 2026 Acendae
+             {{ t('footer.copyright') }}
            </p>
         </div>
 

@@ -2,7 +2,10 @@
 import { computed } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import { ChevronRight } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
 import AppButton from '@/components/ui/AppButton.vue';
+
+const { t } = useI18n();
 
 interface Props {
   open?: boolean;
@@ -14,19 +17,19 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits(['close']);
 
-const outsourceLinks = [
-  { name: 'Software Engineering', path: '/services/software-engineering' },
-  { name: 'Web Development', path: '/services/web-development' },
-  { name: 'SaaS Development', path: '/services/saas-development' },
-  { name: 'UX/UI Design', path: '/services/ux-ui-design' },
-];
+const outsourceLinks = computed(() => [
+  { name: t('megaMenu.outsource.links.softwareEng'), path: '/services/software-engineering' },
+  { name: t('megaMenu.outsource.links.webDev'), path: '/services/web-development' },
+  { name: t('megaMenu.outsource.links.saasDev'), path: '/services/saas-development' },
+  { name: t('megaMenu.outsource.links.uxui'), path: '/services/ux-ui-design' },
+]);
 
-const teamLinks = [
-  { name: 'Hire Web Developers', path: '/hire/web-developers' },
-  { name: 'Hire Software Engineers', path: '/hire/software-engineers' },
-  { name: 'Hire UX/UI Designers', path: '/hire/ux-ui-designers' },
-  { name: 'Full Dedicated Teams', path: '/hire/dedicated-teams' },
-];
+const teamLinks = computed(() => [
+  { name: t('megaMenu.dedicated.links.hireWebDev'), path: '/hire/web-developers' },
+  { name: t('megaMenu.dedicated.links.hireSoftwareEng'), path: '/hire/software-engineers' },
+  { name: t('megaMenu.dedicated.links.hireUxui'), path: '/hire/ux-ui-designers' },
+  { name: t('megaMenu.dedicated.links.fullTeams'), path: '/hire/dedicated-teams' },
+]);
 
 const handleClose = () => {
   emit('close');
@@ -44,8 +47,8 @@ const handleClose = () => {
         <!-- Left Column -->
         <div class="flex flex-col gap-6 pr-12 pb-12">
           <div class="mb-4">
-            <h3 class="text-[18px] font-bold text-[#0B1F3F] mb-1">Outsource a Project</h3>
-            <p class="text-[14px] text-black/50">Structured delivery from strategy to launch.</p>
+            <h3 class="text-[18px] font-bold text-[#0B1F3F] mb-1">{{ t('megaMenu.outsource.title') }}</h3>
+            <p class="text-[14px] text-black/50">{{ t('megaMenu.outsource.subtitle') }}</p>
           </div>
           
           <div class="flex flex-col gap-1">
@@ -67,8 +70,8 @@ const handleClose = () => {
         <!-- Right Column -->
         <div class="flex flex-col gap-6 bg-[#F0F4F8] p-12 rounded-tl-2xl rounded-tr-2xl">
           <div class="mb-4">
-            <h3 class="text-[18px] font-bold text-[#0B1F3F] mb-1">Build a Dedicated Team</h3>
-            <p class="text-[14px] text-black/50">Long term embedded teams aligned with your company.</p>
+            <h3 class="text-[18px] font-bold text-[#0B1F3F] mb-1">{{ t('megaMenu.dedicated.title') }}</h3>
+            <p class="text-[14px] text-black/50">{{ t('megaMenu.dedicated.subtitle') }}</p>
           </div>
           
           <div class="flex flex-col gap-1">
@@ -90,9 +93,12 @@ const handleClose = () => {
 
       <!-- Bottom Bar -->
       <div class="bg-[#0B1F3F] h-[60px] flex items-center justify-between px-[85px] w-full mt-auto">
-        <p class="text-[15px] text-white/70 italic">
-          Dutch strategy. Sri Lankan execution. <strong class="text-white font-bold ml-1">One</strong> integrated team.
-        </p>
+        <i18n-t keypath="megaMenu.tagline" tag="p" class="text-[15px] text-white/70 italic">
+          <template #highlight>
+            <strong class="text-white font-bold ml-1">{{ t('megaMenu.taglineHighlight') }}</strong>
+          </template>
+        </i18n-t>
+        
         <AppButton 
           variant="outline" 
           tag="Link" 
@@ -100,7 +106,7 @@ const handleClose = () => {
           class="!text-[14px] !font-medium !text-white !border-white/40 !rounded-[6px] !px-[24px] !py-[10px] hover:!bg-white/10"
           @click="handleClose"
         >
-          Let's Talk
+          {{ t('megaMenu.letsTalk') }}
         </AppButton>
       </div>
     </div>

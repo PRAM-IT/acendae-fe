@@ -2,11 +2,13 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
 import { Menu, X } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
 import AppButton from '@/components/ui/AppButton.vue';
 import AppMegaMenu from '@/components/common/AppMegaMenu.vue';
 import { usePreferencesStore } from '@/stores/preferences';
 
 const page = usePage();
+const { t, locale } = useI18n();
 const preferences = usePreferencesStore();
 
 const isScrolled = ref(false);
@@ -39,19 +41,20 @@ onUnmounted(() => {
   window.removeEventListener('scroll', updateScroll);
 });
 
-const navLinks = [
-  { name: 'About Us', path: '/about' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Careers', path: '/careers' },
-  { name: 'Life @ Acendae', path: '/life' },
-];
+const navLinks = computed(() => [
+  { name: t('nav.about'), path: '/about' },
+  { name: t('nav.projects'), path: '/projects' },
+  { name: t('nav.careers'), path: '/careers' },
+  { name: t('nav.lifeAtAcendae'), path: '/life' },
+]);
 
 const isActive = (path: string) => {
   return page.url === path || page.url.startsWith(path + '/');
 };
 
 const switchLanguage = (lang: 'en' | 'nl') => {
-  preferences.setLang(lang);
+  locale.value = lang;
+  preferences.lang = lang;
 };
 
 const toggleDarkMode = () => {
@@ -63,13 +66,6 @@ const navbarClasses = computed(() => [
   isVisible.value ? 'translate-y-0' : '-translate-y-full',
   isScrolled.value ? 'shadow-md' : 'shadow-none',
 ]);
-
-// Handle Service click for mobile
-const toggleService = () => {
-  if (window.innerWidth < 1024) {
-    // on mobile it works as a link or simple toggle
-  }
-};
 </script>
 
 <template>
@@ -80,7 +76,7 @@ const toggleService = () => {
       <Link href="/" class="absolute left-6 lg:left-[85px] top-1/2 -translate-y-[calc(50%+4.49px)]">
         <img 
           src="/resources/assets/images/logo-dark.svg" 
-          alt="Acendae" 
+          :alt="t('common.logoAlt') || 'Acendae'" 
           class="w-[134px] h-[49px] object-contain"
         />
       </Link>
@@ -97,7 +93,7 @@ const toggleService = () => {
             class="text-[16px] font-medium transition-colors cursor-pointer"
             :class="isMegaMenuOpen ? 'text-[#0B1F3F]' : 'text-black/85 hover:text-[#0B1F3F]'"
           >
-            Service
+            {{ t('nav.services') }}
           </button>
           
           <AppMegaMenu :open="isMegaMenuOpen" @close="isMegaMenuOpen = false" />
@@ -109,41 +105,41 @@ const toggleService = () => {
           :key="link.path"
           :href="link.path"
           class="text-[16px] font-medium transition-colors relative text-center"
-          :class="isActive(link.path) || link.name === 'Life @ Acendae' ? 'text-[#0B1F3F]' : 'text-black/85 hover:text-[#0B1F3F]'"
+          :class="isActive(link.path) || link.path === '/life' ? 'text-[#0B1F3F]' : 'text-black/85 hover:text-[#0B1F3F]'"
         >
           {{ link.name }}
           <span v-if="isActive(link.path)" class="absolute -bottom-1 left-0 w-full h-[2px] bg-gold"></span>
         </Link>
       </nav>
 
-      <!-- Right Cluster (Left: 996px / Width 356px) -->
+      <!-- Right Cluster -->
       <div class="hidden lg:flex items-center absolute left-[996px] h-[52px] gap-[40px] w-[356px]">
         
         <!-- Language Switcher -->
         <div class="flex items-center gap-[20px] w-[157px] h-[36px]">
           <div class="relative w-[109px] h-[36px] bg-white border border-black/10 rounded-full">
-            <img src="/resources/assets/images/globe.svg" class="absolute left-[5px] top-[5px] w-[26px] h-[26px]" alt="Globe" />
+            <img src="/resources/assets/images/globe.svg" class="absolute left-[5px] top-[5px] w-[26px] h-[26px]" :alt="t('common.language') || 'Globe'" />
             
             <button 
               @click="switchLanguage('en')"
               class="absolute left-[37px] top-[5px] w-[32px] h-[26px] flex items-center justify-center text-[14px] font-medium transition-all rounded-full"
-              :class="preferences.lang === 'en' ? 'bg-[#D5E2FF4F] text-[#1D4FBC]' : 'text-black'"
+              :class="locale === 'en' ? 'bg-[#D5E2FF4F] text-[#1D4FBC]' : 'text-black'"
             >
-              EN
+              {{ t('common.en') }}
             </button>
             <button 
               @click="switchLanguage('nl')"
               class="absolute left-[73px] top-[5px] w-[32px] h-[26px] flex items-center justify-center text-[14px] font-medium transition-all rounded-full"
-              :class="preferences.lang === 'nl' ? 'bg-[#D5E2FF4F] text-[#1D4FBC]' : 'text-black'"
+              :class="locale === 'nl' ? 'bg-[#D5E2FF4F] text-[#1D4FBC]' : 'text-black'"
             >
-              NL
+              {{ t('common.nl') }}
             </button>
           </div>
         </div>
 
         <!-- Dark Mode Toggle -->
         <button @click="toggleDarkMode" class="w-7 h-7 flex items-center justify-center transition-transform hover:scale-105">
-          <img src="/resources/assets/images/moon.svg" alt="Dark Mode" class="w-7 h-7" />
+          <img src="/resources/assets/images/moon.svg" :alt="t('common.darkMode') || 'Dark Mode'" class="w-7 h-7" />
         </button>
 
         <!-- CTA Button -->
@@ -153,7 +149,7 @@ const toggleService = () => {
           href="/contact" 
           class="!w-[159px] !h-[48px] !bg-[#0B1F3F] !rounded-[6px] hover:!opacity-90"
         >
-          <span class="text-[#9ABAFF] font-semibold text-[16px]">Get Started</span>
+          <span class="text-[#9ABAFF] font-semibold text-[16px]">{{ t('nav.getStarted') }}</span>
         </AppButton>
       </div>
 
@@ -161,7 +157,7 @@ const toggleService = () => {
       <button 
         class="lg:hidden absolute right-6 text-[#0B1F3F] p-2"
         @click="isMobileMenuOpen = !isMobileMenuOpen"
-        aria-label="Toggle menu"
+        :aria-label="isMobileMenuOpen ? t('nav.closeMenu') || 'Close menu' : t('nav.openMenu') || 'Open menu'"
       >
         <Menu v-if="!isMobileMenuOpen" class="w-6 h-6" />
         <X v-else class="w-6 h-6" />
@@ -176,7 +172,14 @@ const toggleService = () => {
       >
         <nav class="flex flex-col gap-2">
           <Link 
-            v-for="link in [{ name: 'Service', path: '/services' }, ...navLinks]" 
+            :href="'/services'"
+            class="h-[48px] flex items-center text-[18px] font-semibold text-[#0B1F3F]"
+            @click="isMobileMenuOpen = false"
+          >
+            {{ t('nav.services') }}
+          </Link>
+          <Link 
+            v-for="link in navLinks" 
             :key="link.path"
             :href="link.path"
             class="h-[48px] flex items-center text-[18px] font-semibold text-[#0B1F3F]"
@@ -187,10 +190,10 @@ const toggleService = () => {
           
           <div class="mt-8 border-t border-black/5 pt-8 flex flex-col gap-6">
             <div class="flex items-center justify-between">
-              <span class="text-black/50 font-medium">Language</span>
+              <span class="text-black/50 font-medium">{{ t('common.language') || 'Language' }}</span>
               <div class="flex items-center gap-4">
-                <button @click="switchLanguage('en')" :class="preferences.lang === 'en' ? 'text-[#1D4FBC] font-bold' : 'text-black'">EN</button>
-                <button @click="switchLanguage('nl')" :class="preferences.lang === 'nl' ? 'text-[#1D4FBC] font-bold' : 'text-black'">NL</button>
+                <button @click="switchLanguage('en')" :class="locale === 'en' ? 'text-[#1D4FBC] font-bold' : 'text-black'">{{ t('common.en') }}</button>
+                <button @click="switchLanguage('nl')" :class="locale === 'nl' ? 'text-[#1D4FBC] font-bold' : 'text-black'">{{ t('common.nl') }}</button>
               </div>
             </div>
             
@@ -201,7 +204,7 @@ const toggleService = () => {
               class="w-full !h-[52px] !bg-[#0B1F3F] !rounded-[6px]"
               @click="isMobileMenuOpen = false"
             >
-              <span class="text-[#9ABAFF] font-semibold text-[16px]">Get Started</span>
+              <span class="text-[#9ABAFF] font-semibold text-[16px]">{{ t('nav.getStarted') }}</span>
             </AppButton>
           </div>
         </nav>

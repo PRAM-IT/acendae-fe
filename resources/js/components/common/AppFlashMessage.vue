@@ -1,54 +1,34 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, onUnmounted } from 'vue';
+import { ref, watch, computed, onUnmounted } from 'vue';
+import { usePage } from '@inertiajs/vue3';
+import { useI18n } from 'vue-i18n';
 import { CheckCircle2Icon, XCircleIcon, XIcon } from 'lucide-vue-next';
 
-interface Props {
-  message?: string;
-  variant?: 'success' | 'error';
-  duration?: number;
-  modelValue?: boolean;
-}
+const page = usePage();
+const { t } = useI18n();
 
-const props = withDefaults(defineProps<Props>(), {
-  message: '',
-  variant: 'success',
-  duration: 4000,
-  modelValue: false,
-});
-
-const emit = defineEmits(['update:modelValue', 'close']);
-
+const message = computed(() => (page.props.flash as any)?.success || (page.props.flash as any)?.error || null);
+const variant = computed(() => (page.props.flash as any)?.success ? 'success' : 'error');
+const visible = ref(false);
+const duration = 4000;
 let timer: ReturnType<typeof setTimeout> | null = null;
-const progressRef = ref<HTMLElement | null>(null);
-
-const startTimer = () => {
-  if (timer) clearTimeout(timer);
-  if (!props.modelValue) return;
-
-  timer = setTimeout(() => {
-    close();
-  }, props.duration);
-};
 
 const close = () => {
-  emit('update:modelValue', false);
-  emit('close');
+    visible.value = false;
 };
 
-watch(() => props.modelValue, (val) => {
-  if (val) startTimer();
-});
-
-watch(() => props.message, () => {
-  if (props.modelValue) startTimer();
-});
-
-onMounted(() => {
-  if (props.modelValue) startTimer();
-});
+watch(message, (newVal) => {
+    if (newVal) {
+        visible.value = true;
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+            close();
+        }, duration);
+    }
+}, { immediate: true });
 
 onUnmounted(() => {
-  if (timer) clearTimeout(timer);
+    if (timer) clearTimeout(timer);
 });
 </script>
 
@@ -56,7 +36,7 @@ onUnmounted(() => {
   <Teleport to="body">
     <Transition name="slide-up">
       <div 
-        v-if="modelValue" 
+        v-if="visible && message" 
         class="fixed bottom-8 right-8 z-[var(--z-toast)] flex items-center min-w-[320px] max-w-md p-4 rounded-xl shadow-[var(--shadow-md)] overflow-hidden"
         :class="variant === 'success' ? 'bg-[#4CAF89] text-white' : 'bg-[#E53E3E] text-white'"
       >
@@ -75,7 +55,7 @@ onUnmounted(() => {
         <button 
           @click="close"
           class="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity p-1"
-          aria-label="Close message"
+          :aria-label="t('common.dismiss') || 'Dismiss'"
         >
           <XIcon class="w-4 h-4" />
         </button>
