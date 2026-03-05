@@ -12,6 +12,9 @@ export const i18n = createI18n<[MessageSchema], 'en' | 'nl'>({
     en,
     nl,
   },
+  // Ensure we can return objects/arrays for lists
+  missingWarn: false,
+  fallbackWarn: false,
 })
 
 // Type augmentation for useI18n and global $t
