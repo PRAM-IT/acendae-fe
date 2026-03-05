@@ -3,6 +3,13 @@ import { computed } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import { useI18n } from 'vue-i18n';
 
+import logoLight from '@assets/images/logo-light.svg';
+import iconInstagram from '@assets/images/icon-instagram.svg';
+import iconLinkedin from '@assets/images/icon-linkedin.svg';
+import iconTiktok from '@assets/images/icon-tiktok.svg';
+import iconTwitter from '@assets/images/icon-twitter.svg';
+import iconFacebook from '@assets/images/icon-facebook.svg';
+
 const { t } = useI18n();
 
 const footerSections = computed(() => [
@@ -88,19 +95,19 @@ const legalLinks = computed(() => [
         
         <div class="flex flex-row items-center gap-[28px] w-[220px] justify-center text-white">
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-instagram.svg" :alt="t('common.instagram') || 'Instagram'" class="w-6 h-6" />
+            <img :src="iconInstagram" :alt="t('common.instagram') || 'Instagram'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-linkedin.svg" :alt="t('common.linkedin') || 'LinkedIn'" class="w-6 h-6" />
+            <img :src="iconLinkedin" :alt="t('common.linkedin') || 'LinkedIn'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-tiktok.svg" :alt="t('common.tiktok') || 'TikTok'" class="w-6 h-6" />
+            <img :src="iconTiktok" :alt="t('common.tiktok') || 'TikTok'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-twitter.svg" :alt="t('common.twitter') || 'X'" class="w-6 h-6" />
+            <img :src="iconTwitter" :alt="t('common.twitter') || 'X'" class="w-6 h-6" />
           </a>
           <a href="#" class="w-6 h-6 hover:text-gold transition-all group">
-            <img src="/resources/assets/images/icon-facebook.svg" :alt="t('common.facebook') || 'Facebook'" class="w-6 h-6" />
+            <img :src="iconFacebook" :alt="t('common.facebook') || 'Facebook'" class="w-6 h-6" />
           </a>
         </div>
 
@@ -110,7 +117,12 @@ const legalLinks = computed(() => [
       <!-- Logo Frame (Top: 414px) -->
       <div class="absolute top-[414px] left-1/2 -translate-x-1/2 w-[217px] h-[75px]">
         <Link href="/">
-          <img src="/resources/assets/images/logo-light.svg" :alt="t('common.logoAlt') || 'Acendae'" class="w-full h-full object-contain" />
+          <img 
+            :src="logoLight" 
+            :alt="t('common.logoAlt') || 'Acendae'" 
+            class="w-full h-full object-contain"
+            onerror="this.src='/images/logo-light.svg'"
+          />
         </Link>
       </div>
 

@@ -6,6 +6,9 @@ import { useI18n } from 'vue-i18n';
 import AppButton from '@/components/ui/AppButton.vue';
 import AppMegaMenu from '@/components/common/AppMegaMenu.vue';
 import { usePreferencesStore } from '@/stores/preferences';
+import logoDark from '@assets/images/logo-dark.svg';
+import globeIcon from '@assets/images/globe.svg';
+import moonIcon from '@assets/images/moon.svg';
 
 const page = usePage();
 const { t, locale } = useI18n();
@@ -75,9 +78,10 @@ const navbarClasses = computed(() => [
       <!-- Logo (Left: 85px) -->
       <Link href="/" class="absolute left-6 lg:left-[85px] top-1/2 -translate-y-[calc(50%+4.49px)]">
         <img 
-          src="/resources/assets/images/logo-dark.svg" 
+          :src="logoDark" 
           :alt="t('common.logoAlt') || 'Acendae'" 
           class="w-[134px] h-[49px] object-contain"
+          onerror="this.src='/images/logo-dark.svg'"
         />
       </Link>
 
@@ -118,7 +122,7 @@ const navbarClasses = computed(() => [
         <!-- Language Switcher -->
         <div class="flex items-center gap-[20px] w-[157px] h-[36px]">
           <div class="relative w-[109px] h-[36px] bg-white border border-black/10 rounded-full">
-            <img src="/resources/assets/images/globe.svg" class="absolute left-[5px] top-[5px] w-[26px] h-[26px]" :alt="t('common.language') || 'Globe'" />
+            <img :src="globeIcon" class="absolute left-[5px] top-[5px] w-[26px] h-[26px]" :alt="t('common.language') || 'Globe'" />
             
             <button 
               @click="switchLanguage('en')"
@@ -139,7 +143,7 @@ const navbarClasses = computed(() => [
 
         <!-- Dark Mode Toggle -->
         <button @click="toggleDarkMode" class="w-7 h-7 flex items-center justify-center transition-transform hover:scale-105">
-          <img src="/resources/assets/images/moon.svg" :alt="t('common.darkMode') || 'Dark Mode'" class="w-7 h-7" />
+          <img :src="moonIcon" :alt="t('common.darkMode') || 'Dark Mode'" class="w-7 h-7" />
         </button>
 
         <!-- CTA Button -->
