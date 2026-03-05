@@ -10,6 +10,10 @@
 /* 2. Tailwind CSS v4 Import */
 @import "tailwindcss";
 
+/* Point Tailwind to the source template files outside the css folder */
+@source "../js";
+@source "../views";
+
 /* 3. CSS Custom Properties (:root) */
 :root {
   /* --- Colors (Brand Palette) --- */
@@ -127,6 +131,7 @@
 }
 
 /* 4. Base Reset */
+@layer base {
 *,
 *::before,
 *::after {
@@ -226,6 +231,7 @@ p {
 ::selection {
   background-color: rgba(201, 168, 76, 0.18);
   color: var(--color-navy);
+}
 }
 
 /* 5. @layer components */
@@ -683,33 +689,7 @@ p {
   opacity: 1;
 }
 
-/* 7. Scroll Reveal Classes (GSAP + ScrollTrigger Compatible) */
-
-[data-reveal] {
-  opacity: 0;
-  will-change: transform, opacity;
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
-}
-
-[data-reveal="up"]    { transform: translateY(40px); }
-[data-reveal="down"]  { transform: translateY(-30px); }
-[data-reveal="left"]  { transform: translateX(-40px); }
-[data-reveal="right"] { transform: translateX(40px); }
-[data-reveal="scale"] { transform: scale(0.94); }
-[data-reveal="fade"]  { transform: none; }
-
-.is-revealed {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-[data-stagger] > * {
-  opacity: 0;
-  transform: translateY(28px);
-  will-change: transform, opacity;
-}
-
-/* 8. Additional Utilities & Animations */
+/* 7. Scroll Reveal Classes disabled globally per request */
 
 /* Screen Reader Only */
 .sr-only {

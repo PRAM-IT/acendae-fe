@@ -1,273 +1,274 @@
 {
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About Us",
-    "projects": "Projects",
-    "careers": "Careers",
-    "lifeAtAcendae": "Life {'@'} Acendae",
-    "getInTouch": "Get in Touch",
-    "discussProject": "Discuss a Project",
-    "getStarted": "Get Started",
-    "openMenu": "Open Menu",
-    "closeMenu": "Close Menu",
-    "dashboard": "Dashboard",
-    "logout": "Log out",
-    "settings": "Settings",
-    "platform": "Platform",
-    "repository": "Repository",
-    "documentation": "Documentation"
-  },
-  "megaMenu": {
-    "outsource": {
-      "title": "Outsource a Project",
-      "subtitle": "Structured delivery from strategy to launch.",
-      "links": {
-        "softwareEng": "Software Engineering",
-        "webDev": "Web Development",
-        "saasDev": "SaaS Development",
-        "uxui": "UX/UI Design"
-      }
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About Us",
+        "projects": "Projects",
+        "careers": "Careers",
+        "lifeAtAcendae": "Life {'@'} Acendae",
+        "getInTouch": "Get in Touch",
+        "discussProject": "Discuss a Project",
+        "getStarted": "Get Started",
+        "openMenu": "Open Menu",
+        "closeMenu": "Close Menu",
+        "dashboard": "Dashboard",
+        "logout": "Log out",
+        "settings": "Settings",
+        "platform": "Platform",
+        "repository": "Repository",
+        "documentation": "Documentation"
     },
-    "dedicated": {
-      "title": "Build a Dedicated Team",
-      "subtitle": "Long-term embedded teams aligned with your company.",
-      "links": {
-        "hireWebDev": "Hire Web Developers",
-        "hireSoftwareEng": "Hire Software Engineers",
-        "hireUxui": "Hire UX/UI Designers",
-        "fullTeams": "Full Dedicated Teams"
-      }
-    },
-    "tagline": "Dutch strategy. Sri Lankan execution. {highlight} integrated team.",
-    "taglineHighlight": "One",
-    "letsTalk": "Let's Talk",
-    "letsStartConversation": "Let's Start the Conversation",
-    "acendaeersReady": "Acendaeers are ready to guide your next move."
-  },
-  "footer": {
-    "columns": {
-      "company": "Company",
-      "services": "Services",
-      "resources": "Resources",
-      "contact": "Contact"
-    },
-    "company": {
-      "aboutAcendae": "About Acendae",
-      "lifeAtAcendae": "Life {'@'} Acendae",
-      "team": "Team",
-      "careers": "Careers"
-    },
-    "services": {
-      "developmentUnit": "Development Unit",
-      "engineeringUnit": "Engineering Unit",
-      "teamOutsourcing": "Team Outsourcing",
-      "experienceUnit": "Experience Unit"
-    },
-    "resources": {
-      "ourProcess": "Our Process",
-      "caseStudies": "Case Studies",
-      "blog": "Blog",
-      "faqs": "FAQs"
-    },
-    "contact": {
-      "getInTouch": "Get in Touch",
-      "partnerships": "Partnerships",
-      "support": "Support"
-    },
-    "copyright": "Copyright © 2026 Acendae",
-    "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms & Conditions",
-      "cookies": "Manage Cookies"
-    }
-  },
-  "home": {
-    "meta": {
-      "title": "Acendae | Strategy & Engineering",
-      "description": "Every business has its mountain. Acendae is the guide."
-    },
-    "hero": {
-      "eyebrow": "Dutch strategy. World-class execution. One integrated team",
-      "title": "Every business has its mountain, Acendae is the guide",
-      "subtitle": "We help businesses ascend through strategy, technology, and people. From first steps to scalable systems — we climb together, step by step.",
-      "cta_outsource": "Outsource a project",
-      "cta_team": "Build a dedicated team",
-      "image_alt": "Acendae Team",
-      "image_caption": "From idea to scale — strategy, design, technology, and teams that grow with you.",
-      "play_aria": "Play video"
-    },
-    "social_proof": {
-      "title": "Progress is not a shortcut. It’s a journey.",
-      "body": "Acendae was born from the idea of ascension rising with intention, structure, and trust. We believe sustainable growth is built step by step, not rushed through quick wins. Many businesses struggle with unclear technical decisions, unreliable delivery, or scaling their teams at the wrong moment. That’s where we come in. We partner with organisations at every stage of their journey — from launching a first website, to building complex software, to scaling through automation or dedicated teams.",
-      "sri_lanka": {
-        "title": "Sri Lanka",
-        "body": "Top-tier technical talent, deep engineering expertise, innovation, and execution power. This is where ideas are built, scaled, and refined.",
-        "body2": "Together, this allows our clients to move faster without losing control — and scale without sacrificing quality. This is not outsourcing. This is one global team, aligned in standards, ownership, and ambition."
-      },
-      "netherlands": {
-        "title": "The Netherlands",
-        "body": "Strategy, structure, clarity, client relationships, and premium quality. This is where vision is shaped and direction is set."
-      },
-      "location_tagline": "Dutch strategy. Sri Lankan execution. One team."
-    },
-    "two_ways": {
-      "title": "Two Ways to Climb With Acendae",
-      "subtitle": "Choose the path that fits your journey.",
-      "outsource": {
-        "title": "Outsource",
-        "subtitle": "A complete project delivery",
-        "body": "You have a project that needs to be built from scratch, or an existing platform that requires a major overhaul. We take full ownership of the process.",
-        "guide_label": "Perfect if you need:",
-        "items": [
-          "Fixed price & deadline",
-          "Acendae product ownership",
-          "Weekly progress demos",
-          "Risk management"
-        ],
-        "footer_note": "We manage the team, the process, and the delivery.",
-        "cta": "Explore Outsourcing"
-      },
-      "team": {
-        "title": "Dedicated Team",
-        "subtitle": "Scale your exact capacity",
-        "body": "You have an ongoing operation but lack the technical capacity. We provide dedicated engineers who integrate directly into your workflows.",
-        "guide_label": "Perfect if you need:",
-        "items": [
-          "Curated engineering talent",
-          "Developer retention & growth",
-          "Full operational support",
-          "Direct integration"
-        ],
-        "footer_note": "You manage the product, we manage the people.",
-        "cta": "Explore Dedicated Teams"
-      }
-    },
-    "units": {
-      "title": "Our Units",
-      "subtitle": "Structured expertise, organised for clarity.",
-      "tabs_aria": "Capability units",
-      "tabs": {
-        "development": "Web & App Development",
-        "engineering": "Platform Engineering",
-        "outsourcing": "Team Outsourcing",
-        "experience": "Digital Experience"
-      },
-      "development": {
-        "name": "Web & App Development",
-        "tagline": "Modern products built for impact",
-        "description": "From MVP to enterprise systems, we build scalable software that fits your business.",
-        "features": [
-          "SaaS & Platform Development",
-          "Mobile App (iOS & Android)",
-          "Legacy Systems Modernization",
-          "E-commerce Scalability"
-        ],
-        "image_alt": "Development",
-        "cta_primary": "Outsource a project",
-        "cta_secondary": "Build a team"
-      },
-      "engineering": {
-        "name": "Platform Engineering",
-        "tagline": "Architecture that scales",
-        "description": "Deep backend expertise and infrastructure design to ensure your system never fails under pressure.",
-        "features": [
-          "Cloud Infrastructure (AWS/Azure)",
-          "Microservices Architecture",
-          "DevOps & Automation",
-          "System Security Audits"
-        ],
-        "image_alt": "Engineering",
-        "cta_primary": "View our capabilities",
-        "cta_secondary": "Speak to an expert"
-      },
-      "outsourcing": {
-        "name": "Team Outsourcing",
-        "tagline": "Embedded engineering power",
-        "description": "Scale your technical bandwidth with long-term, dedicated talent aligned with your standards.",
-        "features": [
-          "Vetted Senior Engineers",
-          "Seamless Workflow Integration",
-          "Full Operational HR Support",
-          "Zero Management Overhead"
-        ],
-        "image_alt": "Outsourcing",
-        "cta_primary": "Find developers",
-        "cta_secondary": "Learn about models"
-      },
-      "experience": {
-        "name": "Digital Experience",
-        "tagline": "User-centric by design",
-        "description": "Balancing business requirements with intuitive user experience to drive conversion and loyalty.",
-        "features": [
-          "UX Audit & Strategy",
-          "High-Fidelity Prototyping",
-          "Visual Brand Languages",
-          "Conversion Optimization"
-        ],
-        "image_alt": "Experience",
-        "cta_primary": "See case studies",
-        "cta_secondary": "Request a review"
-      }
-    },
-    "how_we_work": {
-      "title": "How We Work",
-      "subtitle": "Guided ascent, step by step.",
-      "steps": {
-        "basecamp": {
-          "title": "Discovery & Basecamp",
-          "desc": "We map out your current state, define technical requirements, and build a roadmap for the journey ahead."
+    "megaMenu": {
+        "outsource": {
+            "title": "Outsource a Project",
+            "subtitle": "Structured delivery from strategy to launch.",
+            "links": {
+                "softwareEng": "Software Engineering",
+                "webDev": "Web Development",
+                "saasDev": "SaaS Development",
+                "uxui": "UX/UI Design"
+            }
         },
-        "ascent": {
-          "title": "The Ascent",
-          "desc": "Sprint by sprint, our teams build, test, and release. You remain involved in every critical decision."
+        "dedicated": {
+            "title": "Build a Dedicated Team",
+            "subtitle": "Long-term embedded teams aligned with your company.",
+            "links": {
+                "hireWebDev": "Hire Web Developers",
+                "hireSoftwareEng": "Hire Software Engineers",
+                "hireUxui": "Hire UX/UI Designers",
+                "fullTeams": "Full Dedicated Teams"
+            }
         },
-        "summit": {
-          "title": "Summit & Scale",
-          "desc": "We launch and optimize. Once the foundation holds we shift toward maintenance, iterations, and long-term scaling."
+        "tagline": "Dutch strategy. Sri Lankan execution. {highlight} integrated team.",
+        "taglineHighlight": "One",
+        "letsTalk": "Let's Talk",
+        "letsStartConversation": "Let's Start the Conversation",
+        "acendaeersReady": "Acendaeers are ready to guide your next move."
+    },
+    "footer": {
+        "columns": {
+            "company": "Company",
+            "services": "Services",
+            "resources": "Resources",
+            "contact": "Contact"
+        },
+        "company": {
+            "aboutAcendae": "About Acendae",
+            "lifeAtAcendae": "Life {'@'} Acendae",
+            "team": "Team",
+            "careers": "Careers"
+        },
+        "services": {
+            "developmentUnit": "Development Unit",
+            "engineeringUnit": "Engineering Unit",
+            "teamOutsourcing": "Team Outsourcing",
+            "experienceUnit": "Experience Unit"
+        },
+        "resources": {
+            "ourProcess": "Our Process",
+            "caseStudies": "Case Studies",
+            "blog": "Blog",
+            "faqs": "FAQs"
+        },
+        "contact": {
+            "getInTouch": "Get in Touch",
+            "partnerships": "Partnerships",
+            "support": "Support"
+        },
+        "copyright": "Copyright © 2026 Acendae",
+        "legal": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms & Conditions",
+            "cookies": "Manage Cookies"
         }
-      }
     },
-    "quote": {
-      "text": "By letting Acendae manage our technical load, we could focus entirely on expanding our market presence.",
-      "aria_label": "Customer Quote"
+    "home": {
+        "meta": {
+            "title": "Acendae | Strategy & Engineering",
+            "description": "Every business has its mountain. Acendae is the guide."
+        },
+        "hero": {
+            "eyebrow": "Dutch strategy. World-class execution. One integrated team",
+            "title": "Every business has its mountain, Acendae is the guide",
+            "subtitle": "We help businesses ascend through strategy, technology, and people. From first steps to scalable systems — we climb together, step by step.",
+            "cta_outsource": "Outsource a project",
+            "cta_team": "Build a dedicated team",
+            "image_alt": "Acendae Team",
+            "image_caption": "From idea to scale strategy, design, technology, and teams that grow with you.",
+            "play_aria": "Play video"
+        },
+        "social_proof": {
+            "title": "Progress is not a shortcut. It's a journey.",
+            "body": "Acendae was born from the idea of ascension rising with intention, structure, and trust. We believe sustainable growth is built step by step, not rushed through quick wins. Many businesses struggle with unclear technical decisions, unreliable delivery, or scaling their teams at the wrong moment. That's where we come in. We partner with organisations at every stage of their journey — from launching a first website, to building complex software, to scaling through automation or dedicated teams.",
+            "sri_lanka": {
+                "title": "Sri Lanka",
+                "body1": "Top-tier technical talent, deep engineering expertise, innovation, and execution power. This is where ideas are built, scaled, and refined.",
+                "body2": "Together, this allows our clients to move faster without losing control — and scale without sacrificing quality. This is not outsourcing. This is one global team, aligned in standards, ownership, and ambition."
+            },
+            "netherlands": {
+                "title": "The Netherlands",
+                "body": "Strategy, structure, clarity, client relationships, and premium quality. This is where vision is shaped and direction is set."
+            },
+            "tagline": "Dutch strategy. Sri Lankan execution. One team.",
+            "amsterdam": "Amsterdam, NL",
+            "colombo": "Colombo, LK",
+            "map_alt": ""
+        },
+        "two_ways": {
+            "title": "Two Ways to Climb With Acendae",
+            "subtitle": "Choose the path that fits your journey",
+            "outsource": {
+                "title": "Outsource Your Project",
+                "subtitle": "For clear goals & focused delivery.",
+                "body": "When you outsource a project to Acendae, we take responsibility from start to finish – while keeping you closely involved at every step.",
+                "guide_label": "We guide you through",
+                "items": [
+                    "Scope & strategy",
+                    "Design & development",
+                    "Testing, launch & optimisation"
+                ],
+                "footer_note": "Often chosen by founders and product teams with a clear roadmap who want certainty, structure, and quality delivery.",
+                "cta": "Outsource a project"
+            },
+            "team": {
+                "title": "Build a Dedicated Team",
+                "subtitle": "For sustainable growth & continuous development",
+                "body": "When you build a team with Acendae, you gain dedicated developers or complete teams that work as part of your organisation.",
+                "guide_label": "We provide",
+                "items": [
+                    "Individual specialists or complete teams",
+                    "Long-term, full-time collaboration",
+                    "Teams aligned with your tools, processes, and culture"
+                ],
+                "footer_note": "Often chosen by scale-ups, software companies, and digital agencies expanding delivery capacity.",
+                "cta": "Build a dedicated team"
+            }
+        },
+        "units": {
+            "title": "Our Units",
+            "subtitle": "Structured expertise, organised for clarity.",
+            "tabs_aria": "Capability units",
+            "tabs": {
+                "development": "Web & App Development",
+                "engineering": "Platform Engineering",
+                "outsourcing": "Team Outsourcing",
+                "experience": "Digital Experience"
+            },
+            "development": {
+                "name": "Web & App Development",
+                "tagline": "Modern products built for impact",
+                "description": "From MVP to enterprise systems, we build scalable software that fits your business.",
+                "features": [
+                    "SaaS & Platform Development",
+                    "Mobile App (iOS & Android)",
+                    "Legacy Systems Modernization",
+                    "E-commerce Scalability"
+                ],
+                "image_alt": "Development",
+                "cta_primary": "Outsource a project",
+                "cta_secondary": "Build a team"
+            },
+            "engineering": {
+                "name": "Platform Engineering",
+                "tagline": "Architecture that scales",
+                "description": "Deep backend expertise and infrastructure design to ensure your system never fails under pressure.",
+                "features": [
+                    "Cloud Infrastructure (AWS/Azure)",
+                    "Microservices Architecture",
+                    "DevOps & Automation",
+                    "System Security Audits"
+                ],
+                "image_alt": "Engineering",
+                "cta_primary": "View our capabilities",
+                "cta_secondary": "Speak to an expert"
+            },
+            "outsourcing": {
+                "name": "Team Outsourcing",
+                "tagline": "Embedded engineering power",
+                "description": "Scale your technical bandwidth with long-term, dedicated talent aligned with your standards.",
+                "features": [
+                    "Vetted Senior Engineers",
+                    "Seamless Workflow Integration",
+                    "Full Operational HR Support",
+                    "Zero Management Overhead"
+                ],
+                "image_alt": "Outsourcing",
+                "cta_primary": "Find developers",
+                "cta_secondary": "Learn about models"
+            },
+            "experience": {
+                "name": "Digital Experience",
+                "tagline": "User-centric by design",
+                "description": "Balancing business requirements with intuitive user experience to drive conversion and loyalty.",
+                "features": [
+                    "UX Audit & Strategy",
+                    "High-Fidelity Prototyping",
+                    "Visual Brand Languages",
+                    "Conversion Optimization"
+                ],
+                "image_alt": "Experience",
+                "cta_primary": "See case studies",
+                "cta_secondary": "Request a review"
+            }
+        },
+        "how_we_work": {
+            "title": "How We Work",
+            "subtitle": "Guided ascent, step by step.",
+            "steps": {
+                "basecamp": {
+                    "title": "Discovery & Basecamp",
+                    "desc": "We map out your current state, define technical requirements, and build a roadmap for the journey ahead."
+                },
+                "ascent": {
+                    "title": "The Ascent",
+                    "desc": "Sprint by sprint, our teams build, test, and release. You remain involved in every critical decision."
+                },
+                "summit": {
+                    "title": "Summit & Scale",
+                    "desc": "We launch and optimize. Once the foundation holds we shift toward maintenance, iterations, and long-term scaling."
+                }
+            }
+        },
+        "quote": {
+            "text": "By letting Acendae manage our technical load, we could focus entirely on expanding our market presence.",
+            "aria_label": "Customer Quote"
+        },
+        "join": {
+            "title": "Join the climb",
+            "subtitle": "We are always looking for people who care.",
+            "body1": "At Acendae, we don't just write code or design screens. We solve real problems for real businesses.",
+            "body2": "We are a team that values structure, open communication, and taking ownership.",
+            "who_label": "Who we are looking for:",
+            "values": [
+                "Global projects",
+                "Learning culture",
+                "Ownership",
+                "Sustainable growth"
+            ],
+            "body3": "If you want to work on complex, high-impact projects — you belong here.",
+            "body4": "We work hard, but we also respect boundaries. Because sustainable growth applies to people, too.",
+            "cta": "View open positions",
+            "right_quote": "Empowering global talent to do their best work."
+        }
     },
-    "join": {
-      "title": "Join the climb",
-      "subtitle": "We are always looking for people who care.",
-      "body1": "At Acendae, we don't just write code or design screens. We solve real problems for real businesses.",
-      "body2": "We are a team that values structure, open communication, and taking ownership.",
-      "who_label": "Who we are looking for:",
-      "values": [
-        "Global projects",
-        "Learning culture",
-        "Ownership",
-        "Sustainable growth"
-      ],
-      "body3": "If you want to work on complex, high-impact projects — you belong here.",
-      "body4": "We work hard, but we also respect boundaries. Because sustainable growth applies to people, too.",
-      "cta": "View open positions",
-      "right_quote": "Empowering global talent to do their best work."
+    "cta": {
+        "readyTitle": "Ready to start your ascent?",
+        "readySubtext1": "Let's talk about where you are today — and what the next step should be.",
+        "readySubtext2": "Whether you need a project delivered or a team built around your growth, we'll guide you to the right setup.",
+        "discussProject": "Discuss a project",
+        "discussOutsourcing": "Discuss team outsourcing",
+        "tagline": "We'll find the right next step."
+    },
+    "common": {
+        "logoAlt": "Acendae",
+        "en": "EN",
+        "nl": "NL",
+        "language": "Language",
+        "darkMode": "Dark Mode",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "tiktok": "TikTok",
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook"
     }
-  },
-  "cta": {
-    "readyTitle": "Ready to start your ascent?",
-    "readySubtext1": "Let's talk about where you are today — and what the next step should be.",
-    "readySubtext2": "Whether you need a project delivered or a team built around your growth, we'll guide you to the right setup.",
-    "discussProject": "Discuss a project",
-    "discussOutsourcing": "Discuss team outsourcing",
-    "tagline": "We'll find the right next step."
-  },
-  "common": {
-    "logoAlt": "Acendae",
-    "en": "EN",
-    "nl": "NL",
-    "language": "Language",
-    "darkMode": "Dark Mode",
-    "instagram": "Instagram",
-    "linkedin": "LinkedIn",
-    "tiktok": "TikTok",
-    "twitter": "X (Twitter)",
-    "facebook": "Facebook"
-  }
 }

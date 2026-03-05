@@ -29,5 +29,10 @@ declare module 'vue' {
         $inertia: typeof Router;
         $page: Page;
         $headManager: ReturnType<typeof createHeadManager>;
+        route: typeof import('ziggy-js').route;
     }
+}
+
+declare global {
+    var route: typeof import('ziggy-js').route;
 }

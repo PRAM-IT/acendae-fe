@@ -1,273 +1,274 @@
 {
-  "nav": {
-    "home": "Home",
-    "services": "Diensten",
-    "about": "Over ons",
-    "projects": "Projecten",
-    "careers": "Vacatures",
-    "lifeAtAcendae": "Leven {'@'} Acendae",
-    "getInTouch": "Contact",
-    "discussProject": "Bespreek een project",
-    "getStarted": "Beginnen",
-    "openMenu": "Menu openen",
-    "closeMenu": "Menu sluiten",
-    "dashboard": "Dashboard",
-    "logout": "Uitloggen",
-    "settings": "Instellingen",
-    "platform": "Platform",
-    "repository": "Repository",
-    "documentation": "Documentatie"
-  },
-  "megaMenu": {
-    "outsource": {
-      "title": "Project Uitbesteden",
-      "subtitle": "Gestructureerde levering van strategie tot lancering.",
-      "links": {
-        "softwareEng": "Software Engineering",
-        "webDev": "Webontwikkeling",
-        "saasDev": "SaaS-ontwikkeling",
-        "uxui": "UX/UI Design"
-      }
+    "nav": {
+        "home": "Home",
+        "services": "Diensten",
+        "about": "Over ons",
+        "projects": "Projecten",
+        "careers": "Vacatures",
+        "lifeAtAcendae": "Leven {'@'} Acendae",
+        "getInTouch": "Contact",
+        "discussProject": "Bespreek een project",
+        "getStarted": "Beginnen",
+        "openMenu": "Menu openen",
+        "closeMenu": "Menu sluiten",
+        "dashboard": "Dashboard",
+        "logout": "Uitloggen",
+        "settings": "Instellingen",
+        "platform": "Platform",
+        "repository": "Repository",
+        "documentation": "Documentatie"
     },
-    "dedicated": {
-      "title": "Bouw een Dedicated Team",
-      "subtitle": "Lange-termijn embedded teams die aansluiten bij uw bedrijf.",
-      "links": {
-        "hireWebDev": "Huur Webontwikkelaars",
-        "hireSoftwareEng": "Huur Software Engineers",
-        "hireUxui": "Huur UX/UI Designers",
-        "fullTeams": "Volledige Dedicated Teams"
-      }
-    },
-    "tagline": "Nederlandse strategie. Sri Lankaanse uitvoering. {highlight} geïntegreerd team.",
-    "taglineHighlight": "Eén",
-    "letsTalk": "Laten we praten",
-    "letsStartConversation": "Laten we het gesprek starten",
-    "acendaeersReady": "Acendaeers zijn klaar om uw volgende stap te begeleiden."
-  },
-  "footer": {
-    "columns": {
-      "company": "Bedrijf",
-      "services": "Diensten",
-      "resources": "Resources",
-      "contact": "Contact"
-    },
-    "company": {
-      "aboutAcendae": "Over Acendae",
-      "lifeAtAcendae": "Leven {'@'} Acendae",
-      "team": "Team",
-      "careers": "Vacatures"
-    },
-    "services": {
-      "developmentUnit": "Development Unit",
-      "engineeringUnit": "Engineering Unit",
-      "teamOutsourcing": "Team Outsourcing",
-      "experienceUnit": "Experience Unit"
-    },
-    "resources": {
-      "ourProcess": "Ons Proces",
-      "caseStudies": "Case Studies",
-      "blog": "Blog",
-      "faqs": "FAQs"
-    },
-    "contact": {
-      "getInTouch": "Contact opnemen",
-      "partnerships": "Partnerships",
-      "support": "Support"
-    },
-    "copyright": "Copyright © 2026 Acendae",
-    "legal": {
-      "privacy": "Privacybeleid",
-      "terms": "Algemene Voorwaarden",
-      "cookies": "Cookies Beheren"
-    }
-  },
-  "home": {
-    "meta": {
-      "title": "Acendae | Strategie & Engineering",
-      "description": "Elk bedrijf heeft zijn berg. Acendae is de gids."
-    },
-    "hero": {
-      "eyebrow": "Nederlandse strategie. Wereldklasse uitvoering. Eén geïntegreerd team",
-      "title": "Elk bedrijf heeft zijn berg. Acendae is the gids.",
-      "subtitle": "Wij helpen bedrijven te ascenderen via strategie, technologie en mensen. Van de eerste stappen tot schaalbare systemen — we klimmen samen, stap voor stap.",
-      "cta_outsource": "Project uitbesteden",
-      "cta_team": "Bouw een dedicated team",
-      "image_alt": "Acendae Team",
-      "image_caption": "Acendaeers in Colombo",
-      "play_aria": "Video afspelen"
-    },
-    "social_proof": {
-      "title": "Vooruitgang is geen kortere weg. Het is een reis.",
-      "body": "Acendae is geboren uit het idee van ascensie — stijgen met intentie, structuur en vertrouwen. Wij geloven dat duurzame groei stap voor stap wordt opgebouwd, niet door gehaaste snelle overwinningen.",
-      "sri_lanka": {
-        "title": "Sri Lanka",
-        "body": "Top-tier technisch talent, diepe engineering expertise, innovatie en uitvoeringskracht.",
-        "body2": "Dit is geen outsourcing. Dit is één wereldwijd team, op één lijn wat betreft standaarden, eigenaarschap en ambitie."
-      },
-      "netherlands": {
-        "title": "Nederland",
-        "body": "Strategie, structuur, helderheid, klantrelaties en premium kwaliteit."
-      },
-      "location_tagline": "Nederlandse strategie. Sri Lankaanse uitvoering. Eén team."
-    },
-    "two_ways": {
-      "title": "Twee manieren om met ons te werken",
-      "subtitle": "Afhankelijk van uw behoeften integreren we als een volledig projectteam of schalen we uw bestaande capaciteit op.",
-      "outsource": {
-        "title": "Uitbesteden",
-        "subtitle": "Een complete projectlevering",
-        "body": "U heeft een project dat vanaf nul moet worden opgebouwd, of een bestaand platform dat een grote herziening vereist. Wij nemen de volledige verantwoordelijkheid voor het proces.",
-        "guide_label": "Perfect als u nodig heeft:",
-        "items": [
-          "Vaste prijs & deadline",
-          "Acendae product ownership",
-          "Wekelijkse voortgangsdemo's",
-          "Risicomanagement"
-        ],
-        "footer_note": "Wij beheren het team, het proces en de levering.",
-        "cta": "Ontdek Outsourcing"
-      },
-      "team": {
-        "title": "Dedicated Team",
-        "subtitle": "Schaal uw exacte capaciteit",
-        "body": "U heeft een lopende operatie maar gebrek aan technische capaciteit. Wij bieden dedicated engineers die direct in uw workflows integreren.",
-        "guide_label": "Perfect als u nodig heeft:",
-        "items": [
-          "Geselecteerd engineering talent",
-          "Developer retentie & groei",
-          "Volledige operationele ondersteuning",
-          "Directe integratie"
-        ],
-        "footer_note": "U beheert het product, wij beheren de mensen.",
-        "cta": "Ontdek Dedicated Teams"
-      }
-    },
-    "units": {
-      "title": "Onze capability units",
-      "subtitle": "Gespecialiseerde teams voor specifieke uitdagingen.",
-      "tabs_aria": "Capability units",
-      "tabs": {
-        "development": "Web & App Ontwikkeling",
-        "engineering": "Platform Engineering",
-        "outsourcing": "Team Outsourcing",
-        "experience": "Digital Experience"
-      },
-      "development": {
-        "name": "Web & App Ontwikkeling",
-        "tagline": "Moderne producten gebouwd voor impact",
-        "description": "Van MVP tot enterprise systemen, bouwen wij schaalbare software die bij uw bedrijf past.",
-        "features": [
-          "SaaS & Platform Ontwikkeling",
-          "Mobiele App (iOS & Android)",
-          "Legacy Systemen Modernisering",
-          "E-commerce Schaalbaarheid"
-        ],
-        "image_alt": "Ontwikkeling",
-        "cta_primary": "Project uitbesteden",
-        "cta_secondary": "Bouw een team"
-      },
-      "engineering": {
-        "name": "Platform Engineering",
-        "tagline": "Architectuur die schaalt",
-        "description": "Diepe backend-expertise en infrastructuurontwerp om ervoor te zorgen dat uw systeem nooit faalt onder druk.",
-        "features": [
-          "Cloud Infrastructuur (AWS/Azure)",
-          "Microservices Architectuur",
-          "DevOps & Automatisering",
-          "Systeem Security Audits"
-        ],
-        "image_alt": "Engineering",
-        "cta_primary": "Bekijk mogelijkheden",
-        "cta_secondary": "Spreek een expert"
-      },
-      "outsourcing": {
-        "name": "Team Outsourcing",
-        "tagline": "Embedded engineering kracht",
-        "description": "Schaal uw technische bandbreedte met lange-termijn, dedicated talent dat is afgestemd op uw standaarden.",
-        "features": [
-          "Gevette Senior Engineers",
-          "Naadloze Workflow Integratie",
-          "Volledige Operationele HR Support",
-          "Nul Management Overhead"
-        ],
-        "image_alt": "Outsourcing",
-        "cta_primary": "Vind developers",
-        "cta_secondary": "Leer over modellen"
-      },
-      "experience": {
-        "name": "Digital Experience",
-        "tagline": "Gebruiker-gecentreerd door ontwerp",
-        "description": "Bedrijfsvereisten in evenwicht brengen met intuïtieve gebruikerservaring om conversie en loyaliteit te stimuleren.",
-        "features": [
-          "UX Audit & Strategie",
-          "High-Fidelity Prototyping",
-          "Visuele Merktalen",
-          "Conversie Optimalisatie"
-        ],
-        "image_alt": "Experience",
-        "cta_primary": "Bekijk case studies",
-        "cta_secondary": "Vraag review aan"
-      }
-    },
-    "how_we_work": {
-      "title": "Hoe we samenwerken",
-      "subtitle": "Een transparant proces, van begin tot eind.",
-      "steps": {
-        "basecamp": {
-          "title": "Discovery & Basecamp",
-          "desc": "We brengen uw huidige status in kaart, definiëren technische vereisten en bouwen een roadmap voor de komende reis."
+    "megaMenu": {
+        "outsource": {
+            "title": "Project Uitbesteden",
+            "subtitle": "Gestructureerde levering van strategie tot lancering.",
+            "links": {
+                "softwareEng": "Software Engineering",
+                "webDev": "Webontwikkeling",
+                "saasDev": "SaaS-ontwikkeling",
+                "uxui": "UX/UI Design"
+            }
         },
-        "ascent": {
-          "title": "De Klim",
-          "desc": "Sprint na sprint bouwen, testen en releasen onze teams. U blijft betrokken bij elke kritieke beslissing."
+        "dedicated": {
+            "title": "Bouw een Dedicated Team",
+            "subtitle": "Lange-termijn embedded teams die aansluiten bij uw bedrijf.",
+            "links": {
+                "hireWebDev": "Huur Webontwikkelaars",
+                "hireSoftwareEng": "Huur Software Engineers",
+                "hireUxui": "Huur UX/UI Designers",
+                "fullTeams": "Volledige Dedicated Teams"
+            }
         },
-        "summit": {
-          "title": "Summit & Scale",
-          "desc": "We lanceren en optimaliseren. Zodra de basis staat verschuiven we naar onderhoud, iteraties en lange-termijn schaling."
+        "tagline": "Nederlandse strategie. Sri Lankaanse uitvoering. {highlight} geïntegreerd team.",
+        "taglineHighlight": "Eén",
+        "letsTalk": "Laten we praten",
+        "letsStartConversation": "Laten we het gesprek starten",
+        "acendaeersReady": "Acendaeers zijn klaar om uw volgende stap te begeleiden."
+    },
+    "footer": {
+        "columns": {
+            "company": "Bedrijf",
+            "services": "Diensten",
+            "resources": "Resources",
+            "contact": "Contact"
+        },
+        "company": {
+            "aboutAcendae": "Over Acendae",
+            "lifeAtAcendae": "Leven {'@'} Acendae",
+            "team": "Team",
+            "careers": "Vacatures"
+        },
+        "services": {
+            "developmentUnit": "Development Unit",
+            "engineeringUnit": "Engineering Unit",
+            "teamOutsourcing": "Team Outsourcing",
+            "experienceUnit": "Experience Unit"
+        },
+        "resources": {
+            "ourProcess": "Ons Proces",
+            "caseStudies": "Case Studies",
+            "blog": "Blog",
+            "faqs": "FAQs"
+        },
+        "contact": {
+            "getInTouch": "Contact opnemen",
+            "partnerships": "Partnerships",
+            "support": "Support"
+        },
+        "copyright": "Copyright © 2026 Acendae",
+        "legal": {
+            "privacy": "Privacybeleid",
+            "terms": "Algemene Voorwaarden",
+            "cookies": "Cookies Beheren"
         }
-      }
     },
-    "quote": {
-      "text": "Door Acendae onze technische last te laten beheren, konden we ons volledig concentreren op het uitbreiden van onze marktpositie.",
-      "aria_label": "Klantcitaat"
+    "home": {
+        "meta": {
+            "title": "Acendae | Strategie & Engineering",
+            "description": "Elk bedrijf heeft zijn berg. Acendae is de gids."
+        },
+        "hero": {
+            "eyebrow": "Nederlandse strategie. Wereldklasse uitvoering. Eén geïntegreerd team",
+            "title": "Elk bedrijf heeft zijn berg, Acendae is de gids",
+            "subtitle": "Wij helpen bedrijven te ascenderen via strategie, technologie en mensen. Van de eerste stappen tot schaalbare systemen — we klimmen samen, stap voor stap.",
+            "cta_outsource": "Project uitbesteden",
+            "cta_team": "Bouw een dedicated team",
+            "image_alt": "Acendae Team",
+            "image_caption": "Van idee tot schaal strategie, design, technologie en teams die met u meegroeien.",
+            "play_aria": "Video afspelen"
+        },
+        "social_proof": {
+            "title": "Vooruitgang is geen kortere weg. Het is een reis.",
+            "body": "Acendae was born from the idea of ascension rising with intention, structure, and trust. We believe sustainable growth is built step by step, not rushed through quick wins. Many businesses struggle with unclear technical decisions, unreliable delivery, or scaling their teams at the wrong moment. That's where we come in. We partner with organisations at every stage of their journey — from launching a first website, to building complex software, to scaling through automation or dedicated teams.",
+            "sri_lanka": {
+                "title": "Sri Lanka",
+                "body1": "Technisch toptalent, diepe engineering expertise, innovatie en uitvoeringskracht. Dit is waar ideeën worden gebouwd, geschaald en verfijnd.",
+                "body2": "Samen stelt dit onze klanten in staat om sneller te bewegen zonder de controle te verliezen — en te schalen zonder concessies te doen aan de kwaliteit. Dit is geen outsourcing. Dit is één wereldwijd team, op één lijn wat betreft standaarden, eigenaarschap en ambitie."
+            },
+            "netherlands": {
+                "title": "Nederland",
+                "body": "Strategie, structuur, helderheid, klantrelaties en premium kwaliteit. Dit is waar visie wordt gevormd en richting wordt bepaald."
+            },
+            "tagline": "Nederlandse strategie. Sri Lankaanse uitvoering. Eén team.",
+            "amsterdam": "Amsterdam, NL",
+            "colombo": "Colombo, LK",
+            "map_alt": ""
+        },
+        "two_ways": {
+            "title": "Twee manieren om te groeien met Acendae",
+            "subtitle": "Kies het pad dat past bij uw traject",
+            "outsource": {
+                "title": "Uw Project Uitbesteden",
+                "subtitle": "Voor duidelijke doelen & gerichte levering.",
+                "body": "Wanneer u een project uitbesteedt aan Acendae, nemen wij de verantwoordelijkheid van begin tot einde – terwijl we u nauw betrokken houden bij elke stap.",
+                "guide_label": "Wij begeleiden u door",
+                "items": [
+                    "Scope & strategie",
+                    "Design & development",
+                    "Testen, lanceren & optimaliseren"
+                ],
+                "footer_note": "Vaak gekozen door founders en productteams met een duidelijke roadmap die zekerheid, structuur en kwaliteitslevering willen.",
+                "cta": "Outsource een project"
+            },
+            "team": {
+                "title": "Bouw een Dedicated Team",
+                "subtitle": "Voor duurzame groei & continue ontwikkeling",
+                "body": "Wanneer u een team opbouwt met Acendae, krijgt u dedicated developers of complete teams die werken als onderdeel van uw organisatie.",
+                "guide_label": "Wij bieden",
+                "items": [
+                    "Individuele specialisten of complete teams",
+                    "Langdurige, fulltime samenwerking",
+                    "Teams afgestemd op uw tools, processen en cultuur"
+                ],
+                "footer_note": "Vaak gekozen door scale-ups, softwarebedrijven en digitale bureaus die hun leveringscapaciteit uitbreiden.",
+                "cta": "Bouw een dedicated team"
+            }
+        },
+        "units": {
+            "title": "Onze capability units",
+            "subtitle": "Gespecialiseerde teams voor specifieke uitdagingen.",
+            "tabs_aria": "Capability units",
+            "tabs": {
+                "development": "Web & App Ontwikkeling",
+                "engineering": "Platform Engineering",
+                "outsourcing": "Team Outsourcing",
+                "experience": "Digital Experience"
+            },
+            "development": {
+                "name": "Web & App Ontwikkeling",
+                "tagline": "Moderne producten gebouwd voor impact",
+                "description": "Van MVP tot enterprise systemen, bouwen wij schaalbare software die bij uw bedrijf past.",
+                "features": [
+                    "SaaS & Platform Ontwikkeling",
+                    "Mobiele App (iOS & Android)",
+                    "Legacy Systemen Modernisering",
+                    "E-commerce Schaalbaarheid"
+                ],
+                "image_alt": "Ontwikkeling",
+                "cta_primary": "Project uitbesteden",
+                "cta_secondary": "Bouw een team"
+            },
+            "engineering": {
+                "name": "Platform Engineering",
+                "tagline": "Architectuur die schaalt",
+                "description": "Diepe backend-expertise en infrastructuurontwerp om ervoor te zorgen dat uw systeem nooit faalt onder druk.",
+                "features": [
+                    "Cloud Infrastructuur (AWS/Azure)",
+                    "Microservices Architectuur",
+                    "DevOps & Automatisering",
+                    "Systeem Security Audits"
+                ],
+                "image_alt": "Engineering",
+                "cta_primary": "Bekijk mogelijkheden",
+                "cta_secondary": "Spreek een expert"
+            },
+            "outsourcing": {
+                "name": "Team Outsourcing",
+                "tagline": "Embedded engineering kracht",
+                "description": "Schaal uw technische bandbreedte met lange-termijn, dedicated talent dat is afgestemd op uw standaarden.",
+                "features": [
+                    "Gevette Senior Engineers",
+                    "Naadloze Workflow Integratie",
+                    "Volledige Operationele HR Support",
+                    "Nul Management Overhead"
+                ],
+                "image_alt": "Outsourcing",
+                "cta_primary": "Vind developers",
+                "cta_secondary": "Leer over modellen"
+            },
+            "experience": {
+                "name": "Digital Experience",
+                "tagline": "Gebruiker-gecentreerd door ontwerp",
+                "description": "Bedrijfsvereisten in evenwicht brengen met intuïtieve gebruikerservaring om conversie en loyaliteit te stimuleren.",
+                "features": [
+                    "UX Audit & Strategie",
+                    "High-Fidelity Prototyping",
+                    "Visuele Merktalen",
+                    "Conversie Optimalisatie"
+                ],
+                "image_alt": "Experience",
+                "cta_primary": "Bekijk case studies",
+                "cta_secondary": "Vraag review aan"
+            }
+        },
+        "how_we_work": {
+            "title": "Hoe we samenwerken",
+            "subtitle": "Een transparant proces, van begin tot eind.",
+            "steps": {
+                "basecamp": {
+                    "title": "Discovery & Basecamp",
+                    "desc": "We brengen uw huidige status in kaart, definiëren technische vereisten en bouwen een roadmap voor de komende reis."
+                },
+                "ascent": {
+                    "title": "De Klim",
+                    "desc": "Sprint na sprint bouwen, testen en releasen onze teams. U blijft betrokken bij elke kritieke beslissing."
+                },
+                "summit": {
+                    "title": "Summit & Scale",
+                    "desc": "We lanceren en optimaliseren. Zodra de basis staat verschuiven we naar onderhoud, iteraties en lange-termijn schaling."
+                }
+            }
+        },
+        "quote": {
+            "text": "Door Acendae onze technische last te laten beheren, konden we ons volledig concentreren op het uitbreiden van onze marktpositie.",
+            "aria_label": "Klantcitaat"
+        },
+        "join": {
+            "title": "Sluit je aan bij de klim",
+            "subtitle": "We zijn altijd op zoek naar mensen die ergens om geven.",
+            "body1": "Bij Acendae schrijven we niet alleen code of ontwerpen we schermen. We lossen echte problemen op voor echte bedrijven.",
+            "body2": "Wij zijn een team dat waarde hecht aan structuur, open communicatie en het nemen van eigenaarschap.",
+            "who_label": "Wie we zoeken:",
+            "values": [
+                "Wereldwijde projecten",
+                "Leercultuur",
+                "Eigenaarschap",
+                "Duurzame groei"
+            ],
+            "body3": "Als je wilt werken aan complexe projecten met een hoge impact — dan hoor je hier thuis.",
+            "body4": "We werken hard, maar we respecteren ook grenzen. Omdat duurzame groei ook voor mensen geldt.",
+            "cta": "Bekijk openstaande functies",
+            "right_quote": "Wereldwijd talent in staat stellen om hun beste werk te doen."
+        }
     },
-    "join": {
-      "title": "Sluit je aan bij de klim",
-      "subtitle": "We zijn altijd op zoek naar mensen die ergens om geven.",
-      "body1": "Bij Acendae schrijven we niet alleen code of ontwerpen we schermen. We lossen echte problemen op voor echte bedrijven.",
-      "body2": "Wij zijn een team dat waarde hecht aan structuur, open communicatie en het nemen van eigenaarschap.",
-      "who_label": "Wie we zoeken:",
-      "values": [
-        "Wereldwijde projecten",
-        "Leercultuur",
-        "Eigenaarschap",
-        "Duurzame groei"
-      ],
-      "body3": "Als je wilt werken aan complexe projecten met een hoge impact — dan hoor je hier thuis.",
-      "body4": "We werken hard, maar we respecteren ook grenzen. Omdat duurzame groei ook voor mensen geldt.",
-      "cta": "Bekijk openstaande functies",
-      "right_quote": "Wereldwijd talent in staat stellen om hun beste werk te doen."
+    "cta": {
+        "readyTitle": "Klaar om je klim te beginnen?",
+        "readySubtext1": "Laten we praten over waar je nu staat — en wat de volgende stap zou moeten zijn.",
+        "readySubtext2": "Of je nu een project wilt laten opleveren of een team wilt bouwen rond je groei, wij begeleiden je naar de juiste opzet.",
+        "discussProject": "Bespreek een project",
+        "discussOutsourcing": "Bespreek team outsourcing",
+        "tagline": "We vinden de juiste volgende stap."
+    },
+    "common": {
+        "logoAlt": "Acendae",
+        "en": "EN",
+        "nl": "NL",
+        "language": "Taal",
+        "darkMode": "Donkere Modus",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "tiktok": "TikTok",
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook"
     }
-  },
-  "cta": {
-    "readyTitle": "Klaar om je klim te beginnen?",
-    "readySubtext1": "Laten we praten over waar je nu staat — en wat de volgende stap zou moeten zijn.",
-    "readySubtext2": "Of je nu een project wilt laten opleveren of een team wilt bouwen rond je groei, wij begeleiden je naar de juiste opzet.",
-    "discussProject": "Bespreek een project",
-    "discussOutsourcing": "Bespreek team outsourcing",
-    "tagline": "We vinden de juiste volgende stap."
-  },
-  "common": {
-    "logoAlt": "Acendae",
-    "en": "EN",
-    "nl": "NL",
-    "language": "Taal",
-    "darkMode": "Donkere Modus",
-    "instagram": "Instagram",
-    "linkedin": "LinkedIn",
-    "tiktok": "TikTok",
-    "twitter": "X (Twitter)",
-    "facebook": "Facebook"
-  }
 }

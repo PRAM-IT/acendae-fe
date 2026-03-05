@@ -46,40 +46,7 @@ createInertiaApp({
             .use(head)
             .use(ZiggyVue);
 
-        // Global Reveal Logic
-        const initReveal = () => {
-            const observerOptions = {
-                threshold: 0.15,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-revealed');
-                        // Optional: stop observing once revealed
-                        // observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            // Observe data-reveal elements
-            document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
-
-            // Observe children of data-stagger elements
-            document.querySelectorAll('[data-stagger] > *').forEach((el, index) => {
-                const htmlEl = el as HTMLElement;
-                htmlEl.style.transitionDelay = `${(index % 4) * 0.1}s`;
-                observer.observe(htmlEl);
-            });
-        };
-
-        router.on('finish', () => {
-            setTimeout(initReveal, 100); // Small delay to ensure DOM is ready
-        });
-
         app.mount(el);
-        initReveal();
     },
 
     progress: {
