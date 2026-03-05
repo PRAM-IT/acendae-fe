@@ -1,16 +1,24 @@
-import { createI18n } from 'vue-i18n';
-import en from '@/locales/en.json';
-import nl from '@/locales/nl.json';
+import { createI18n } from 'vue-i18n'
+import en from '@/locales/en.json'
+import nl from '@/locales/nl.json'
 
-const i18n = createI18n({
-    legacy: false,
-    locale: 'en',
-    fallbackLocale: 'en',
-    globalInjection: true,
-    messages: {
-        en,
-        nl,
-    },
-});
+export type MessageSchema = typeof en
 
-export default i18n;
+export const i18n = createI18n<[MessageSchema], 'en' | 'nl'>({
+  legacy: false,
+  locale: 'en',
+  fallbackLocale: 'en',
+  messages: {
+    en,
+    nl,
+  },
+})
+
+// Type augmentation for useI18n and global $t
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $t: (key: string, ...args: any[]) => string
+  }
+}
+
+export default i18n

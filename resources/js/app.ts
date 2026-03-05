@@ -1,6 +1,6 @@
 import '../css/app.css';
 
-import { createInertiaApp } from '@inertiajs/vue3';
+import { createInertiaApp, router } from '@inertiajs/vue3';
 import { createHead } from '@unhead/vue/client';
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
@@ -9,6 +9,7 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from 'ziggy-js';
 import i18n from '@/plugins/i18n';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
+import { usePreferencesStore } from '@/stores/preferences';
 
 createInertiaApp({
     title: (title) => (title ? `${title} | Acendae` : 'Acendae'),
@@ -29,6 +30,11 @@ createInertiaApp({
         pinia.use(piniaPluginPersistedstate);
 
         const head = createHead();
+
+        router.on('before', (event: any) => {
+          const preferences = usePreferencesStore(pinia);
+          event.detail.visit.headers['X-Locale'] = preferences.lang;
+        });
 
         createApp({ render: () => h(App, props) })
             .use(plugin)

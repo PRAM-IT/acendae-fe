@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -37,12 +38,12 @@ class HandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'app' => [
-                'name' => config('app.name'),
-                'url'  => config('app.url'),
+                'name'   => config('app.name'),
+                'locale' => App::getLocale(),
             ],
             'flash' => [
-                'success' => fn () => $request->session()->get('success'),
-                'error'   => fn () => $request->session()->get('error'),
+                'success' => $request->session()->get('success'),
+                'error'   => $request->session()->get('error'),
             ],
             'auth' => [
                 'user' => $request->user(),

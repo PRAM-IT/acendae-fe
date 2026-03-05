@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
 import { usePage } from '@inertiajs/vue3';
-import i18n from '@/plugins/i18n';
+import { useI18n } from 'vue-i18n';
 import { usePreferencesStore } from '@/stores/preferences';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 
 const page = usePage();
-const preferencesStore = usePreferencesStore();
+const { locale } = useI18n();
+const preferences = usePreferencesStore();
 
 /**
  * Restore the user's preferred language on mount.
- * i18n.global.locale is a Ref<string> in Composition API mode (legacy: false).
  */
 onMounted(() => {
-    i18n.global.locale.value = preferencesStore.lang;
+    locale.value = preferences.lang;
 });
 
 /**
