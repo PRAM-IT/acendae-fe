@@ -149,66 +149,62 @@
             "subtitle": "Structured expertise, organised for clarity.",
             "tabs_aria": "Capability units",
             "tabs": {
-                "development": "Web & App Development",
-                "engineering": "Platform Engineering",
-                "outsourcing": "Team Outsourcing",
-                "experience": "Digital Experience"
+                "development": "Development Unit",
+                "engineering": "Engineering Unit",
+                "outsourcing": "Team Outsourcing Unit",
+                "experience": "Experience Unit"
             },
             "development": {
-                "name": "Web & App Development",
-                "tagline": "Modern products built for impact",
-                "description": "From MVP to enterprise systems, we build scalable software that fits your business.",
+                "name": "Development Unit",
+                "tagline": "Websites and platforms that form a strong basecamp.",
+                "description": "We build websites and e-commerce platforms that support growth, performance, and long-term maintainability.",
                 "features": [
-                    "SaaS & Platform Development",
-                    "Mobile App (iOS & Android)",
-                    "Legacy Systems Modernization",
-                    "E-commerce Scalability"
+                    "WordPress, Shopify, Wix, Drupal",
+                    "Conversion-focused & SEO-ready",
+                    "Easy to maintain and extend"
                 ],
                 "image_alt": "Development",
-                "cta_primary": "Outsource a project",
-                "cta_secondary": "Build a team"
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Developers"
             },
             "engineering": {
-                "name": "Platform Engineering",
-                "tagline": "Architecture that scales",
-                "description": "Deep backend expertise and infrastructure design to ensure your system never fails under pressure.",
+                "name": "Engineering Unit",
+                "tagline": "Software systems built for ascent and scale.",
+                "description": "We engineer reliable, future-ready software that supports complex business needs and long-term growth.",
                 "features": [
-                    "Cloud Infrastructure (AWS/Azure)",
-                    "Microservices Architecture",
-                    "DevOps & Automation",
-                    "System Security Audits"
+                    "SaaS platforms & portals",
+                    "API integrations & automation",
+                    "Secure, scalable architectures"
                 ],
                 "image_alt": "Engineering",
-                "cta_primary": "View our capabilities",
-                "cta_secondary": "Speak to an expert"
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Engineers"
             },
             "outsourcing": {
-                "name": "Team Outsourcing",
-                "tagline": "Embedded engineering power",
-                "description": "Scale your technical bandwidth with long-term, dedicated talent aligned with your standards.",
+                "name": "Team Outsourcing Unit",
+                "tagline": "Dedicated teams that extend your delivery power.",
+                "description": "We help companies and digital agencies scale by providing remote developers and teams who work as part of their organisation.",
                 "features": [
-                    "Vetted Senior Engineers",
-                    "Seamless Workflow Integration",
-                    "Full Operational HR Support",
-                    "Zero Management Overhead"
+                    "Developers, engineers, designers & QA",
+                    "Individual specialists or complete teams",
+                    "Long-term, embedded collaboration"
                 ],
                 "image_alt": "Outsourcing",
-                "cta_primary": "Find developers",
-                "cta_secondary": "Learn about models"
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Talents"
             },
             "experience": {
-                "name": "Digital Experience",
-                "tagline": "User-centric by design",
-                "description": "Balancing business requirements with intuitive user experience to drive conversion and loyalty.",
+                "name": "Experience Unit",
+                "tagline": "Designing calm, intuitive experiences along the path.",
+                "description": "We design digital experiences that balance usability, aesthetics, and business goals.",
                 "features": [
-                    "UX Audit & Strategy",
-                    "High-Fidelity Prototyping",
-                    "Visual Brand Languages",
-                    "Conversion Optimization"
+                    "UX & UI design",
+                    "Product & platform design",
+                    "Design systems & experience strategy"
                 ],
                 "image_alt": "Experience",
-                "cta_primary": "See case studies",
-                "cta_secondary": "Request a review"
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Designers"
             }
         },
         "how_we_work": {
@@ -230,25 +226,25 @@
             }
         },
         "quote": {
-            "text": "By letting Acendae manage our technical load, we could focus entirely on expanding our market presence.",
+            "text": "We don’t rush the climb. We protect progress and you’ll always know what the next step is.",
             "aria_label": "Customer Quote"
         },
         "join": {
-            "title": "Join the climb",
-            "subtitle": "We are always looking for people who care.",
-            "body1": "At Acendae, we don't just write code or design screens. We solve real problems for real businesses.",
-            "body2": "We are a team that values structure, open communication, and taking ownership.",
-            "who_label": "Who we are looking for:",
+            "title": "Join Acendae",
+            "subtitle": "Become an Acendor",
+            "body1": "Behind every climb is a team of calm, capable guides. At Acendae, we call them Acendors.",
+            "body2": "An Acendor is not just a developer, designer, or engineer.",
+            "who_label": "An Acendor is someone who",
             "values": [
-                "Global projects",
-                "Learning culture",
-                "Ownership",
-                "Sustainable growth"
+                "Takes ownership",
+                "Values clarity over chaos",
+                "Believes great work is built step by step",
+                "Enjoys growing together with clients and teammates"
             ],
-            "body3": "If you want to work on complex, high-impact projects — you belong here.",
-            "body4": "We work hard, but we also respect boundaries. Because sustainable growth applies to people, too.",
-            "cta": "View open positions",
-            "right_quote": "Empowering global talent to do their best work."
+            "body3": "We work as one integrated team across the Netherlands and Sri Lanka — combining strategy, technology, and execution.",
+            "body4": "If you want to work on meaningful projects, grow continuously, and be part of long-term partnerships instead of short-term gigs, you'll feel at home here.",
+            "cta": "Join Acendae as an Acendor",
+            "right_quote": "We're always looking for people who want to climb together"
         }
     },
     "cta": {

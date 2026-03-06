@@ -149,66 +149,62 @@
             "subtitle": "Gespecialiseerde teams voor specifieke uitdagingen.",
             "tabs_aria": "Capability units",
             "tabs": {
-                "development": "Web & App Ontwikkeling",
-                "engineering": "Platform Engineering",
-                "outsourcing": "Team Outsourcing",
-                "experience": "Digital Experience"
+                "development": "Development Unit",
+                "engineering": "Engineering Unit",
+                "outsourcing": "Team Outsourcing Unit",
+                "experience": "Experience Unit"
             },
             "development": {
-                "name": "Web & App Ontwikkeling",
-                "tagline": "Moderne producten gebouwd voor impact",
-                "description": "Van MVP tot enterprise systemen, bouwen wij schaalbare software die bij uw bedrijf past.",
+                "name": "Development Unit",
+                "tagline": "Websites en platforms die een sterke basis vormen.",
+                "description": "Wij bouwen websites en e-commerce platforms die groei, prestaties en onderhoudbaarheid op lange termijn ondersteunen.",
                 "features": [
-                    "SaaS & Platform Ontwikkeling",
-                    "Mobiele App (iOS & Android)",
-                    "Legacy Systemen Modernisering",
-                    "E-commerce Schaalbaarheid"
+                    "WordPress, Shopify, Wix, Drupal",
+                    "Conversiegericht & SEO-klaar",
+                    "Eenvoudig te onderhouden en uit te breiden"
                 ],
                 "image_alt": "Ontwikkeling",
-                "cta_primary": "Project uitbesteden",
-                "cta_secondary": "Bouw een team"
+                "cta_primary": "Besteed een webproject uit",
+                "cta_secondary": "Huur Developers"
             },
             "engineering": {
-                "name": "Platform Engineering",
-                "tagline": "Architectuur die schaalt",
-                "description": "Diepe backend-expertise en infrastructuurontwerp om ervoor te zorgen dat uw systeem nooit faalt onder druk.",
+                "name": "Engineering Unit",
+                "tagline": "Softwaresystemen gebouwd voor groei en schaal.",
+                "description": "Wij ontwerpen betrouwbare, toekomstbestendige software die complexe bedrijfsbehoeften en langdurige groei ondersteunt.",
                 "features": [
-                    "Cloud Infrastructuur (AWS/Azure)",
-                    "Microservices Architectuur",
-                    "DevOps & Automatisering",
-                    "Systeem Security Audits"
+                    "SaaS-platforms & portals",
+                    "API-integraties & automatisering",
+                    "Veilige, schaalbare architecturen"
                 ],
                 "image_alt": "Engineering",
-                "cta_primary": "Bekijk mogelijkheden",
-                "cta_secondary": "Spreek een expert"
+                "cta_primary": "Besteed een webproject uit",
+                "cta_secondary": "Huur Engineers"
             },
             "outsourcing": {
-                "name": "Team Outsourcing",
-                "tagline": "Embedded engineering kracht",
-                "description": "Schaal uw technische bandbreedte met lange-termijn, dedicated talent dat is afgestemd op uw standaarden.",
+                "name": "Team Outsourcing Unit",
+                "tagline": "Dedicated teams die uw leveringskracht vergroten.",
+                "description": "Wij helpen bedrijven en digitale bureaus schalen door developers en teams op afstand te bieden die werken als onderdeel van hun organisatie.",
                 "features": [
-                    "Gevette Senior Engineers",
-                    "Naadloze Workflow Integratie",
-                    "Volledige Operationele HR Support",
-                    "Nul Management Overhead"
+                    "Developers, engineers, designers & QA",
+                    "Individuele specialisten of volledige teams",
+                    "Langdurige, embedded samenwerking"
                 ],
                 "image_alt": "Outsourcing",
-                "cta_primary": "Vind developers",
-                "cta_secondary": "Leer over modellen"
+                "cta_primary": "Besteed een webproject uit",
+                "cta_secondary": "Huur Talenten"
             },
             "experience": {
-                "name": "Digital Experience",
-                "tagline": "Gebruiker-gecentreerd door ontwerp",
-                "description": "Bedrijfsvereisten in evenwicht brengen met intuïtieve gebruikerservaring om conversie en loyaliteit te stimuleren.",
+                "name": "Experience Unit",
+                "tagline": "Rustige, intuïtieve ervaringen ontwerpen langs het pad.",
+                "description": "Wij ontwerpen digitale ervaringen die een balans vinden tussen bruikbaarheid, esthetiek en zakelijke doelen.",
                 "features": [
-                    "UX Audit & Strategie",
-                    "High-Fidelity Prototyping",
-                    "Visuele Merktalen",
-                    "Conversie Optimalisatie"
+                    "UX & UI design",
+                    "Product & platform ontwerp",
+                    "Design systems & experience strategie"
                 ],
                 "image_alt": "Experience",
-                "cta_primary": "Bekijk case studies",
-                "cta_secondary": "Vraag review aan"
+                "cta_primary": "Besteed een webproject uit",
+                "cta_secondary": "Huur Designers"
             }
         },
         "how_we_work": {
@@ -230,25 +226,25 @@
             }
         },
         "quote": {
-            "text": "Door Acendae onze technische last te laten beheren, konden we ons volledig concentreren op het uitbreiden van onze marktpositie.",
+            "text": "We haasten de klim niet. We beschermen de voortgang en u weet altijd wat de volgende stap is.",
             "aria_label": "Klantcitaat"
         },
         "join": {
-            "title": "Sluit je aan bij de klim",
-            "subtitle": "We zijn altijd op zoek naar mensen die ergens om geven.",
-            "body1": "Bij Acendae schrijven we niet alleen code of ontwerpen we schermen. We lossen echte problemen op voor echte bedrijven.",
-            "body2": "Wij zijn een team dat waarde hecht aan structuur, open communicatie en het nemen van eigenaarschap.",
-            "who_label": "Wie we zoeken:",
+            "title": "Word lid van Acendae",
+            "subtitle": "Word een Acendor",
+            "body1": "Achter elke klim staat een team van rustige, bekwame gidsen. Bij Acendae noemen we hen Acendors.",
+            "body2": "Een Acendor is niet alleen een ontwikkelaar, ontwerper of engineer.",
+            "who_label": "Een Acendor is iemand die",
             "values": [
-                "Wereldwijde projecten",
-                "Leercultuur",
-                "Eigenaarschap",
-                "Duurzame groei"
+                "Eigenaarschap neemt",
+                "Duidelijkheid verkiest boven chaos",
+                "Gelooft dat geweldig werk stap voor stap wordt opgebouwd",
+                "Geniet van het samen groeien met klanten en teamgenoten"
             ],
-            "body3": "Als je wilt werken aan complexe projecten met een hoge impact — dan hoor je hier thuis.",
-            "body4": "We werken hard, maar we respecteren ook grenzen. Omdat duurzame groei ook voor mensen geldt.",
-            "cta": "Bekijk openstaande functies",
-            "right_quote": "Wereldwijd talent in staat stellen om hun beste werk te doen."
+            "body3": "We werken als één geïntegreerd team in Nederland en Sri Lanka — waarbij we strategie, technologie en uitvoering combineren.",
+            "body4": "Als je aan betekenisvolle projecten wilt werken, continu wilt groeien en deel wilt uitmaken van langdurige partnerships in plaats van korte klussen, dan voel je je hier thuis.",
+            "cta": "Word lid van Acendae als Acendor",
+            "right_quote": "We zijn altijd op zoek naar mensen die samen willen klimmen"
         }
     },
     "cta": {
