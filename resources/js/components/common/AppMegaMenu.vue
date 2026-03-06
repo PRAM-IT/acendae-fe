@@ -40,10 +40,10 @@ const handleClose = () => {
   <Transition name="slide-down">
     <div 
       v-if="open" 
-      class="absolute top-[74px] left-0 right-0 w-full bg-white shadow-navy-lg z-[var(--z-dropdown)] overflow-hidden font-mona pt-[40px]"
+      class="absolute left-0 right-0 w-full bg-white shadow-navy-lg z-[90] overflow-hidden font-mona pt-[40px]"
       @mouseleave="handleClose"
     >
-      <div class="acendae-container-wide grid grid-cols-2 gap-0 px-[85px]">
+      <div class="mx-auto flex w-full max-w-[1440px] grid grid-cols-2 gap-0 px-4 sm:px-6 lg:px-[85px]">
         <!-- Left Column -->
         <div class="flex flex-col gap-6 pr-12 pb-12">
           <div class="mb-4">
@@ -56,13 +56,13 @@ const handleClose = () => {
               v-for="link in outsourceLinks" 
               :key="link.path"
               :href="link.path"
-              class="group flex items-center justify-between p-[12px] px-[16px] rounded-lg transition-all border-l-2 border-transparent hover:border-gold hover:bg-[#C9A84C0F]"
+              class="group flex items-center justify-between p-[12px] px-[16px] rounded-lg transition-all border-l-2 border-transparent hover:border-[#C9A84C] hover:bg-[#C9A84C0F]"
               @click="handleClose"
             >
-              <span class="text-[15px] font-medium text-[#0B1F3F] group-hover:text-gold transition-colors">
+              <span class="text-[15px] font-medium text-[#0B1F3F] group-hover:text-[#C9A84C] transition-colors">
                 {{ link.name }}
               </span>
-              <ChevronRight class="w-4 h-4 text-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ChevronRight class="w-4 h-4 text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </div>
         </div>
@@ -92,8 +92,8 @@ const handleClose = () => {
       </div>
 
       <!-- Bottom Bar -->
-      <div class="bg-[#0B1F3F] h-[60px] flex items-center justify-between px-[85px] w-full mt-auto">
-        <i18n-t keypath="megaMenu.tagline" tag="p" class="text-[15px] text-white/70 italic">
+      <div class="bg-[#0B1F3F] h-[60px] flex items-center justify-between px-4 sm:px-6 lg:px-[85px] w-full mt-auto">
+        <i18n-t keypath="megaMenu.tagline" tag="p" class="text-[13px] sm:text-[15px] text-white/70 italic">
           <template #highlight>
             <strong class="text-white font-bold ml-1">{{ t('megaMenu.taglineHighlight') }}</strong>
           </template>
