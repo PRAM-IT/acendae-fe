@@ -130,7 +130,7 @@ const avatarData = [
                 class="pointer-events-none select-none absolute z-0 hidden md:block overflow-visible
                        md:bottom-[-70px] md:right-[-80px] md:w-[450px] md:opacity-80
                        lg:bottom-[-90px] lg:right-[-120px] lg:w-[500px] lg:opacity-100
-                       2xl:bottom-[-130px] 2xl:right-[-240px] 2xl:w-[620px]"
+                       2xl:bottom-[-130px] 2xl:right-[-160px] 2xl:w-[620px]"
             >
                 <img
                     src="/resources/assets/images/logo-n.svg"
