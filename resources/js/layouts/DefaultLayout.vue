@@ -4,9 +4,9 @@ import AppFooter from '@/components/common/AppFooter.vue';
 </script>
 
 <template>
-    <div class="default-layout">
+    <div class="default-layout overflow-x-hidden">
         <AppNavbar />
-        <main>
+        <main class="pt-[64px] lg:pt-[74px]">
             <slot />
         </main>
         <AppFooter />
