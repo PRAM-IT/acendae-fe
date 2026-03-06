@@ -1,88 +1,142 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import AppButton from '@/components/ui/AppButton.vue'
+import { useI18n } from 'vue-i18n';
+import { Link } from '@inertiajs/vue3';
+import { route } from 'ziggy-js';
 
-const { t } = useI18n()
+const { t, tm } = useI18n();
 </script>
 
 <template>
-  <section class="flex flex-col lg:flex-row border-y border-[var(--color-border)] bg-white w-full">
-    <!-- Left: Content -->
-    <div class="lg:w-[720px] shrink-0 p-10 lg:p-[90px] lg:px-[88px]" data-reveal="up">
-      <h2 class="font-bold text-[32px] lg:text-[40px] leading-[1.2] text-[var(--color-navy)] mb-2">
-        {{ t('home.join.title', 'Join the climb') }}
-      </h2>
-      <p class="font-semibold text-[20px] lg:text-[22px] leading-[1.41] text-[#152746] mb-8">
-        {{ t('home.join.subtitle', 'We are always looking for people who care.') }}
-      </p>
-
-      <p class="text-[18px] leading-relaxed text-black/85 mb-4">
-        {{ t('home.join.body1', 'At Acendae, we don\'t just write code or design screens. We solve real problems for real businesses.') }}
-      </p>
-      <p class="text-[18px] leading-relaxed text-black/85 mb-4">
-        {{ t('home.join.body2', 'We are a team that values structure, open communication, and taking ownership.') }}
-      </p>
-
-      <p class="font-semibold text-[18px] text-[var(--color-navy)] mt-6 mb-4">
-        {{ t('home.join.who_label', 'Who we are looking for:') }}
-      </p>
-      <ul class="flex flex-col gap-4 mb-6">
-        <li
-          v-for="value in (t('home.join.values', { returnObjects: true }) as unknown as string[])"
-          :key="value"
-          class="flex items-start gap-2.5 text-[16px] leading-relaxed text-[#081B3A]"
-        >
-          <span class="w-[15px] h-[15px] rounded-full bg-[#D5E2FF] inline-flex items-center justify-center shrink-0 mt-[3px] relative">
-            <span class="absolute w-[11px] h-[11px] bg-[#1D4FBC] rounded-full"></span>
-          </span>
-          {{ value }}
-        </li>
-      </ul>
-
-      <p class="text-[18px] leading-relaxed text-black/85 mb-4">
-        {{ t('home.join.body3', 'If you want to work on complex, high-impact projects — you belong here.') }}
-      </p>
-      <p class="text-[18px] leading-relaxed text-black/85 mb-9">
-        {{ t('home.join.body4', 'We work hard, but we also respect boundaries. Because sustainable growth applies to people, too.') }}
-      </p>
-
-      <AppButton variant="primary" size="lg" tag="a" href="/careers">
-        <template #icon-left>
-          <span class="w-5 h-5 rounded-full inline-flex items-center justify-center shrink-0" style="background:rgba(0,166,126,0.17)">
-            <span class="w-2 h-2 bg-[#0A5E4A] rounded-full"></span>
-          </span>
-        </template>
-        {{ t('home.join.cta', 'View open positions') }}
-      </AppButton>
-    </div>
-
-    <!-- Right: Dark quote panel -->
-    <div
-      class="flex-1 relative overflow-hidden flex flex-col items-center justify-center p-12 lg:p-20 text-center min-h-[380px]"
-      style="background: linear-gradient(180deg, #123C89 0%, #070F1C 100%)"
-      aria-hidden="true"
-      data-reveal="fade"
+    <section
+        class="flex flex-col border-y border-[#D3D8E1] bg-white lg:flex-row"
     >
-      <!-- Decorative logo -->
-      <div class="absolute top-10 left-10 pointer-events-none" style="opacity:0.2">
-        <svg width="120" height="100" viewBox="0 0 560 485" fill="none">
-          <g opacity="0.86">
-            <path d="M495.518 0L348.712 415.875L394.485 414.776L495.518 0Z" fill="#D7A118"/>
-            <path d="M350.64 415.715L285.198 244.809L312.414 192.278L373.088 353.019L350.64 415.715Z" fill="#AB7B29"/>
-            <path d="M269.024 193.339L61.7849 469.98L61.4954 470.273L170.291 467.659L312.399 192.297L269.024 193.339Z" fill="#D7A118"/>
-          </g>
-        </svg>
-      </div>
+        <!-- LEFT COLUMN -->
+        <div
+            class="flex w-full flex-col gap-4 bg-white px-4 py-10 sm:px-5 sm:py-12 md:gap-5 md:px-8 md:py-14 lg:flex-[0_0_55%] lg:gap-5 lg:py-[70px] lg:pr-10 lg:pl-[60px] xl:py-[80px] xl:pr-11 xl:pl-[75px] 2xl:py-[90px] 2xl:pr-12 2xl:pl-[85px]"
+            data-reveal="up"
+        >
+            <h2
+                class="font-instrument text-[24px] leading-[30px] font-semibold text-[#1A2D4B] sm:text-[26px] sm:leading-[32px] md:text-[28px] md:leading-[34px] lg:text-[32px] lg:leading-[40px] xl:text-[36px] xl:leading-[44px] 2xl:text-[40px] 2xl:leading-[48px]"
+            >
+                {{ t('home.join.title') }}
+            </h2>
 
-      <blockquote class="font-bold text-[28px] lg:text-[36px] leading-[1.25] text-white relative z-10 m-0 border-none">
-        "{{ t('home.join.right_quote', 'Empowering global talent to do their best work.') }}"
-      </blockquote>
+            <p
+                class="font-instrument text-[14px] leading-[20px] font-semibold text-[#152746] sm:text-[15px] sm:leading-[21px] md:text-[16px] md:leading-[23px] lg:text-[18px] lg:leading-[25px] xl:text-[20px] xl:leading-[27px] 2xl:text-[22px] 2xl:leading-[28px]"
+            >
+                {{ t('home.join.subtitle') }}
+            </p>
 
-      <!-- Gold dots decoration -->
-      <div class="absolute bottom-10 right-10 flex gap-2.5">
-        <div class="w-4 h-4 rounded-full" style="background:rgba(255,183,0,0.74)"></div>
-        <div class="w-4 h-4 rounded-full" style="background:rgba(255,183,0,0.74);opacity:0.6"></div>
-      </div>
-    </div>
-  </section>
+            <div class="flex flex-col gap-3 sm:gap-4 md:gap-4 lg:gap-5">
+                <p
+                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                >
+                    {{ t('home.join.body1') }}
+                </p>
+                <p
+                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                >
+                    {{ t('home.join.body2') }}
+                </p>
+            </div>
+
+            <p
+                class="font-mona text-[13px] leading-5 font-semibold text-black/85 sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[18px]"
+            >
+                {{ t('home.join.who_label') }}
+            </p>
+
+            <!-- BULLET LIST -->
+            <ul
+                class="flex flex-col gap-3 sm:gap-3.5 md:gap-[14px] lg:gap-[14px]"
+            >
+                <li
+                    v-for="(value, index) in tm('home.join.values') as any"
+                    :key="index"
+                    class="flex flex-row items-center gap-2 lg:gap-[10px]"
+                >
+                    <div
+                        class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-0.5 sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] lg:h-[13px] lg:w-[13px] 2xl:h-[15px] 2xl:w-[15px]"
+                    >
+                        <div
+                            class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] lg:h-[10px] lg:w-[10px] 2xl:h-[11px] 2xl:w-[11px]"
+                        ></div>
+                    </div>
+                    <span
+                        class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                    >
+                        {{ value }}
+                    </span>
+                </li>
+            </ul>
+
+            <div
+                class="mt-2 flex flex-col gap-3 sm:mt-3 sm:gap-4 md:gap-4 lg:mt-4 lg:gap-5"
+            >
+                <p
+                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                >
+                    {{ t('home.join.body3') }}
+                </p>
+                <p
+                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                >
+                    {{ t('home.join.body4') }}
+                </p>
+            </div>
+
+            <!-- PRIMARY CTA BUTTON -->
+            <div class="mt-2 sm:mt-3 lg:mt-4">
+                <Link
+                    :href="route('careers')"
+                    class="inline-flex h-[42px] items-center justify-center self-start rounded-md bg-[#0B1F3F] px-6 py-2 sm:h-[44px] sm:px-7 md:h-[46px] md:px-8 lg:h-[50px] lg:rounded-lg lg:px-8 2xl:h-[55px] 2xl:px-10 2xl:py-2.5"
+                >
+                    <span
+                        class="font-mona text-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
+                    >
+                        {{ t('home.join.cta') }}
+                    </span>
+                </Link>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div
+            class="relative w-full lg:min-h-[500px] lg:flex-1 xl:min-h-[540px] 2xl:min-h-[560px]"
+            data-reveal="fade"
+            data-reveal-delay="100"
+        >
+            <!-- TEAM PHOTO -->
+            <img
+                src="/images/units/team.png"
+                alt=""
+                class="relative z-0 block h-auto w-full object-top lg:absolute lg:inset-0 lg:h-full lg:object-cover"
+            />
+
+            <!-- QUOTE CONTENT -->
+            <div
+                class="absolute inset-0 z-2 flex items-start justify-center px-5 pt-20 pb-8 sm:px-7 sm:pt-24 sm:pb-10 md:px-9 md:pt-28 md:pb-11 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-14 2xl:py-16"
+            >
+                <blockquote
+                    class="font-instrument max-w-[320px] text-center text-[28px] leading-[36px] font-semibold text-white sm:max-w-[380px] sm:text-[32px] sm:leading-[40px] md:max-w-[430px] md:text-[36px] md:leading-[44px] lg:max-w-[360px] lg:text-[26px] lg:leading-[34px] xl:max-w-[390px] xl:text-[30px] xl:leading-[40px] 2xl:max-w-[420px] 2xl:text-[36px] 2xl:leading-[46px]"
+                    data-reveal="up"
+                    data-reveal-delay="200"
+                >
+                    “<span>{{
+                        t('home.join.right_quote').split(' climb together')[0]
+                    }}</span
+                    ><span class="text-[#D7A118]"> climb together</span>”
+                </blockquote>
+            </div>
+        </div>
+    </section>
 </template>
+
+<style scoped>
+.font-instrument {
+    font-family: 'Instrument Sans', sans-serif;
+}
+.font-mona {
+    font-family: 'Mona Sans', sans-serif;
+}
+</style>
