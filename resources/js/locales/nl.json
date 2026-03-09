@@ -1,50 +1,429 @@
 {
-    "nav": {
-        "home": "Home",
-        "about": "Over ons",
-        "services": "Diensten",
-        "projects": "Projecten",
-        "careers": "Vacatures",
-        "lifeAtAcendae": "Werken bij Acendae",
-        "getInTouch": "Neem contact op",
-        "outsourceProject": "Project uitbesteden",
-        "buildTeam": "Dedicated team opbouwen",
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "about": "Over ons",
+    "projects": "Projecten",
+    "careers": "Carrières",
+    "lifeAtAcendae": "Leven bij Acendae",
+    "getInTouch": "Neem contact op",
+    "discussProject": "Project bespreken",
+    "getStarted": "Aan de slag",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "dashboard": "Dashboard",
+    "logout": "Uitloggen",
+    "settings": "Instellingen",
+    "platform": "Platform",
+    "repository": "Repository",
+    "documentation": "Documentatie"
+  },
+  "megaMenu": {
+    "outsource": {
+      "title": "Project uitbesteden",
+      "subtitle": "Gestructureerde levering van strategie tot lancering.",
+      "links": {
         "softwareEng": "Software Engineering",
         "webDev": "Webontwikkeling",
         "saasDev": "SaaS Ontwikkeling",
-        "uxUiDesign": "UX/UI Design",
-        "hireWebDevs": "Webdevelopers inhuren",
+        "uxui": "UX/UI Design"
+      }
+    },
+    "dedicated": {
+      "title": "Een dedicated team opbouwen",
+      "subtitle": "Langdurige embedded teams afgestemd op uw bedrijf.",
+      "links": {
+        "hireWebDev": "Webdevelopers inhuren",
         "hireSoftwareEng": "Software Engineers inhuren",
-        "hireUxUi": "UX/UI Designers inhuren",
-        "fullDedicatedTeams": "Volledige dedicated teams"
+        "hireUxui": "UX/UI Designers inhuren",
+        "fullTeams": "Volledige dedicated teams"
+      }
     },
-    "hero": {
-        "eyebrow": "Uw groeipartner in tech",
-        "headline": "Elk bedrijf heeft zijn berg. Acendae is de gids.",
-        "subline": "Wij bouwen toonaangevende softwareproducten en dedicated technologieteams die ambitieuze bedrijven helpen groeien — vanuit Nederland naar de wereld.",
-        "ctaOutsource": "Project uitbesteden",
-        "ctaDedicated": "Dedicated team opbouwen"
+    "tagline": "Nederlandse strategie. Sri Lankaanse uitvoering. {highlight} geïntegreerd team.",
+    "taglineHighlight": "Eén",
+    "letsTalk": "Laten we praten",
+    "letsStartConversation": "Laten we het gesprek aangaan",
+    "acendaeersReady": "Acendaeerders staan klaar om uw volgende stap te begeleiden."
+  },
+  "footer": {
+    "columns": {
+      "company": "Bedrijf",
+      "services": "Diensten",
+      "resources": "Bronnen",
+      "contact": "Contact"
     },
-    "footer": {
-        "company": "Bedrijf",
-        "services": "Diensten",
-        "resources": "Bronnen",
-        "contact": "Contact",
-        "copyright": "© {year} Acendae. Alle rechten voorbehouden.",
-        "privacy": "Privacybeleid",
-        "terms": "Algemene voorwaarden",
-        "cookies": "Cookiebeleid"
+    "company": {
+      "aboutAcendae": "Over Acendae",
+      "lifeAtAcendae": "Leven bij Acendae",
+      "team": "Team",
+      "careers": "Carrières"
     },
-    "common": {
-        "learnMore": "Meer informatie",
-        "viewAll": "Alles bekijken",
-        "letsTalk": "Laten we praten",
-        "discoverJourney": "Ontdek onze reis",
-        "viewCaseStudies": "Bekijk casestudies",
-        "viewOpenPositions": "Bekijk openstaande vacatures"
+    "services": {
+      "developmentUnit": "Development Unit",
+      "engineeringUnit": "Engineering Unit",
+      "teamOutsourcing": "Team Outsourcing",
+      "experienceUnit": "Experience Unit"
     },
-    "flash": {
-        "success": "Actie succesvol uitgevoerd.",
-        "error": "Er is iets misgegaan. Probeer het opnieuw."
+    "resources": {
+      "ourProcess": "Ons proces",
+      "caseStudies": "Casestudy's",
+      "blog": "Blog",
+      "faqs": "Veelgestelde vragen"
+    },
+    "contact": {
+      "getInTouch": "Neem contact op",
+      "partnerships": "Partnerschappen",
+      "support": "Ondersteuning"
+    },
+    "copyright": "Copyright © 2026 Acendae",
+    "legal": {
+      "privacy": "Privacybeleid",
+      "terms": "Algemene voorwaarden",
+      "cookies": "Cookies beheren"
     }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Uw groeipartner in tech",
+      "headline": "Elk bedrijf heeft zijn berg. Acendae is de gids.",
+      "subline": "Wij bouwen toonaangevende softwareproducten en dedicated technologieteams die ambitieuze bedrijven helpen groeien — van Nederland naar de rest van de wereld.",
+      "ctaOutsource": "Project uitbesteden",
+      "ctaDedicated": "Een dedicated team opbouwen"
+    },
+    "socialProof": {
+      "quote": "Vooruitgang is geen shortcut. Het is een reis.",
+      "sriLankaLabel": "Sri Lanka",
+      "netherlandsLabel": "Nederland"
+    },
+    "twoWays": {
+      "sectionTitle": "Twee manieren om te klimmen met Acendae",
+      "sectionSubtitle": "Of u nu een volledig product wilt laten leveren of een dedicated team in uw workflow wilt integreren, wij bieden de expertise om de top te bereiken.",
+      "outsource": {
+        "title": "Project uitbesteden",
+        "description": "End-to-end levering van uw softwareproduct. Wij nemen eigenaarschap over het gehele proces van ontdekking tot lancering."
+      },
+      "dedicated": {
+        "title": "Een dedicated team opbouwen",
+        "description": "Schaal uw engineeringcapaciteit met langdurig, ingebed talent dat werkt als een naadloze extensie van uw bedrijf."
+      }
+    },
+    "units": {
+      "sectionTitle": "Onze Units",
+      "sectionSubtitle": "Gespecialiseerde teams gericht op verschillende aspecten van de digitale reis.",
+      "tabs": {
+        "development": "Development",
+        "engineering": "Engineering",
+        "outsourcing": "Outsourcing",
+        "experience": "Experience"
+      },
+      "development": {
+        "title": "Development Unit",
+        "description": "Krachtige web- en mobiele applicaties bouwen met moderne tech-stacks."
+      },
+      "engineering": {
+        "title": "Engineering Unit",
+        "description": "Schaalbare software-architectuur en robuuste backend-systemen voor complexe ondernemingen."
+      },
+      "outsourcing": {
+        "title": "Team Outsourcing",
+        "description": "Hoogwaardige engineeringteams afgestemd op uw specifieke technische vereisten."
+      },
+      "experience": {
+        "title": "Experience Unit",
+        "description": "Mensgericht ontwerp dat bedrijfsdoelen in balans brengt met gebruikersbehoeften."
+      }
+    },
+    "howWeWork": {
+      "sectionTitle": "Hoe we werken",
+      "sectionSubtitle": "Onze gestructureerde aanpak zorgt voor transparantie, snelheid en kwaliteit in elke fase van de klim.",
+      "steps": {
+        "step1": "Ontdekking & Strategie",
+        "step2": "Ontwerp & Prototyping",
+        "step3": "Ontwikkeling & QA",
+        "step4": "Lancering & Evolutie"
+      }
+    },
+    "quote": {
+      "text": "Wij haasten de klim niet. Wij beschermen de vooruitgang en u weet altijd wat de volgende stap is."
+    },
+    "join": {
+      "title": "Werken bij Acendae",
+      "subtitle": "Maak deel uit van een samenwerkingscultuur die groei, eigenaarschap en technische uitmuntendheid waardeert.",
+      "bullets": [
+        "Werk aan wereldwijde projecten",
+        "Cultuur van continu leren",
+        "Competitieve arbeidsvoorwaarden",
+        "Flexibele werkomgeving"
+      ],
+      "cta": "Bekijk openstaande rollen",
+      "rightQuote": "We zijn altijd op zoek naar mensen die samen willen klimmen"
+    }
+  },
+  "cta": {
+    "readyTitle": "Klaar om te beginnen aan uw beklimming?",
+    "readySubtext1": "Laten we praten over waar u vandaag staat — en wat de juiste volgende stap zou moeten zijn.",
+    "readySubtext2": "Of u nu een project wilt laten leveren of een team wilt bouwen rond uw groei, wij begeleiden u naar de juiste opzet.",
+    "discussProject": "Project bespreken",
+    "discussOutsourcing": "Team outsourcing bespreken",
+    "tagline": "Wij vinden de juiste volgende stap."
+  },
+  "about": {
+    "hero": {
+      "title": "Over ons",
+      "subtitle": "Wij zijn een team van bouwers, ontwerpers en strategen die zich inzetten om bedrijven te helpen schalen door middel van technologie."
+    },
+    "fromBuilders": {
+      "title": "Van bouwers tot gidsen",
+      "description": "Acendae is ontstaan uit de wens om de kloof tussen strategie op hoog niveau en technische uitvoering te overbruggen."
+    },
+    "theWayWeClimb": {
+      "title": "De manier waarop we klimmen",
+      "description": "Onze kernwaarden bepalen hoe we elke uitdaging en interactie benaderen."
+    }
+  },
+  "services": {
+    "index": {
+      "title": "Onze Diensten",
+      "subtitle": "Uitgebreide technologische oplossingen ontworpen voor schaalbaarheid en prestaties."
+    },
+    "outsource": {
+      "title": "Project Uitbesteding",
+      "description": "Softwareontwikkeling gedurende de volledige cyclus, afgestemd op uw zakelijke behoeften."
+    },
+    "dedicated": {
+      "title": "Dedicated Teams",
+      "description": "Ingebed engineeringtalent dat direct in uw organisatie integreert."
+    }
+  },
+  "caseStudies": {
+    "hero": {
+      "title": "Casestudy's",
+      "subtitle": "Ontdek hoe we ambitieuze bedrijven hebben geholpen bij het oplossen van complexe problemen."
+    },
+    "progressNoise": {
+      "title": "Echte vooruitgang, minder ruis",
+      "description": "Wij richten ons op resultaten die ertoe doen, niet alleen op regels code."
+    },
+    "filters": {
+      "all": "Alle",
+      "saas": "SaaS Producten",
+      "ecommerce": "E-Commerce",
+      "noCode": "No Code",
+      "uxui": "UX/UI Design"
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "Carrières",
+      "subtitle": "Bouw met ons aan de toekomst."
+    },
+    "openRoles": {
+      "title": "Openstaande rollen",
+      "subtitle": "Sluit je aan bij ons groeiende team van experts."
+    },
+    "application": {
+      "title": "Nu solliciteren",
+      "subtitle": "Vertel ons waarom je perfect bij Acendae past."
+    }
+  },
+  "forms": {
+    "contact": {
+      "title": "Neem contact op",
+      "name": "Volledige naam",
+      "email": "E-mailadres",
+      "company": "Bedrijf",
+      "message": "Bericht",
+      "namePlaceholder": "Uw volledige naam",
+      "emailPlaceholder": "u@bedrijf.com",
+      "companyPlaceholder": "Uw bedrijfsnaam",
+      "messagePlaceholder": "Vertel ons over uw project...",
+      "submit": "Bericht verzenden",
+      "submitting": "Verzenden..."
+    },
+    "jobApplication": {
+      "title": "Solliciteer op deze functie",
+      "name": "Volledige naam",
+      "email": "E-mailadres",
+      "cv": "CV uploaden",
+      "cvHint": "PDF of Word, max. 5MB",
+      "submit": "Sollicitatie indienen",
+      "submitting": "Indienen..."
+    },
+    "validation": {
+      "required": "Dit veld is verplicht.",
+      "emailInvalid": "Voer een geldig e-mailadres in.",
+      "fileTooLarge": "Bestand mag niet groter zijn dan 5MB.",
+      "fileType": "Alleen PDF- of Word-documenten worden geaccepteerd."
+    }
+  },
+  "common": {
+    "learnMore": "Meer informatie",
+    "getStarted": "Aan de slag",
+    "viewAll": "Alles bekijken",
+    "backToHome": "Terug naar Home",
+    "loading": "Laden...",
+    "error404Title": "Pagina niet gevonden",
+    "error404Subtitle": "Sorry, de pagina die u zoekt bestaat niet of is verplaatst.",
+    "en": "EN",
+    "nl": "NL",
+    "dismiss": "Sluiten",
+    "logoAlt": "Acendae Logo",
+    "language": "Taal",
+    "darkMode": "Donkere modus",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "tiktok": "TikTok",
+    "twitter": "X (Twitter)",
+    "facebook": "Facebook"
+  },
+  "flash": {
+    "contactSuccess": "Uw bericht is verzonden. We nemen snel contact met u op.",
+    "contactError": "Er is iets misgegaan. Probeer het opnieuw.",
+    "applicationSuccess": "Uw sollicitatie is ingediend. Bedankt!",
+    "applicationError": "Er is iets misgegaan. Probeer het opnieuw."
+  },
+  "auth": {
+    "login": {
+      "title": "Log in op uw account",
+      "description": "Voer uw e-mailadres en wachtwoord hieronder in om in te loggen",
+      "heading": "Inloggen",
+      "email": "E-mailadres",
+      "emailPlaceholder": "email@voorbeeld.nl",
+      "password": "Wachtwoord",
+      "passwordPlaceholder": "Wachtwoord",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "rememberMe": "Onthoud mij",
+      "submit": "Inloggen",
+      "noAccount": "Nog geen account?",
+      "signUp": "Aanmelden"
+    },
+    "register": {
+      "title": "Maak een account aan",
+      "description": "Voer uw gegevens hieronder in om uw account aan te maken",
+      "heading": "Registreren",
+      "name": "Naam",
+      "namePlaceholder": "Volledige naam",
+      "email": "E-mailadres",
+      "emailPlaceholder": "email@voorbeeld.nl",
+      "password": "Wachtwoord",
+      "passwordPlaceholder": "Wachtwoord",
+      "confirmPassword": "Wachtwoord bevestigen",
+      "confirmPasswordPlaceholder": "Wachtwoord bevestigen",
+      "submit": "Account aanmaken",
+      "alreadyHaveAccount": "Heeft u al een account?",
+      "logIn": "Inloggen"
+    },
+    "forgotPassword": {
+      "title": "Wachtwoord vergeten",
+      "description": "Voer uw e-mailadres in om een herstellink te ontvangen",
+      "heading": "Wachtwoord vergeten",
+      "email": "E-mailadres",
+      "emailPlaceholder": "email@voorbeeld.nl",
+      "submit": "E-mail herstellink verzenden",
+      "returnTo": "Of, keer terug naar",
+      "logIn": "inloggen"
+    },
+    "resetPassword": {
+      "title": "Wachtwoord resetten",
+      "description": "Voer uw nieuwe wachtwoord hieronder in",
+      "heading": "Wachtwoord resetten",
+      "email": "E-mailadres",
+      "password": "Wachtwoord",
+      "confirmPassword": "Wachtwoord bevestigen",
+      "submit": "Wachtwoord resetten"
+    },
+    "verifyEmail": {
+      "title": "E-mailadres verifiëren",
+      "description": "Verifieer uw e-mailadres door op de link te klikken die we zojuist naar u hebben gemaild.",
+      "heading": "E-mail verifiëren",
+      "resendSuccess": "Een nieuwe verificatielink is verzonden naar het e-mailadres dat u tijdens de registratie heeft opgegeven.",
+      "submit": "Verificatie-e-mail opnieuw verzenden",
+      "logOut": "Uitloggen"
+    },
+    "confirmPassword": {
+      "title": "Wachtwoord bevestigen",
+      "description": "Dit is een beveiligd gedeelte van de applicatie. Bevestig uw wachtwoord voordat u doorgaat.",
+      "heading": "Wachtwoord bevestigen",
+      "password": "Wachtwoord",
+      "submit": "Bevestigen"
+    },
+    "twoFactor": {
+      "title": "Tweestapsverificatie",
+      "description": "Bevestig de toegang tot uw account door de verificatiecode in te voeren die door uw authenticator-app is verstrekt.",
+      "recoveryDescription": "Bevestig de toegang tot uw account door een van uw noodherstelcodes in te voeren.",
+      "heading": "Tweestapsverificatie",
+      "code": "Code",
+      "recoveryCode": "Herstelcode",
+      "useRecovery": "Gebruik een herstelcode",
+      "useCode": "Gebruik een verificatiecode",
+      "submit": "Inloggen"
+    }
+  },
+  "settings": {
+    "profile": {
+      "title": "Profielinformatie",
+      "description": "Werk de profielinformatie en het e-mailadres van uw account bij.",
+      "name": "Naam",
+      "email": "E-mailadres",
+      "unverified": "Uw e-mailadres is niet geverifieerd.",
+      "resend": "Klik hier om de verificatie-e-mail opnieuw te verzenden.",
+      "resendSuccess": "Er is een nieuwe verificatielink naar uw e-mailadres verzonden.",
+      "save": "Opslaan",
+      "saved": "Opgeslagen."
+    },
+    "password": {
+      "title": "Wachtwoord bijwerken",
+      "description": "Zorg ervoor dat uw account een lang, willekeurig wachtwoord gebruikt om veilig te blijven.",
+      "current": "Huidig wachtwoord",
+      "new": "Nieuw wachtwoord",
+      "confirm": "Wachtwoord bevestigen",
+      "save": "Opslaan",
+      "saved": "Opgeslagen."
+    },
+    "appearance": {
+      "title": "Uiterlijk",
+      "description": "Beheer de uiterlijkinstellingen van uw account.",
+      "theme": "Thema",
+      "light": "Licht",
+      "dark": "Donker",
+      "system": "Systeem"
+    },
+    "twoFactor": {
+      "title": "Tweestapsverificatie",
+      "description": "Voeg extra beveiliging toe aan uw account met behulp van tweestapsverificatie.",
+      "enabled": "U heeft tweestapsverificatie ingeschakeld.",
+      "disabled": "U heeft tweestapsverificatie niet ingeschakeld.",
+      "finish": "Voltooi het inschakelen van tweestapsverificatie.",
+      "setup": "Wanneer tweestapsverificatie is ingeschakeld, wordt u tijdens de authenticatie om een veilig, willekeurig token gevraagd. U kunt dit token ophalen uit de Google Authenticator-app op uw telefoon.",
+      "scan": "Om het inschakelen van tweestapsverificatie te voltooien, scant u de volgende QR-code met uw authenticator-app of voert u de instelsleutel in en voert u de gegenereerde OTP-code in.",
+      "store": "Bewaar deze herstelcodes in een veilige wachtwoordbeheerder. Ze kunnen worden gebruikt om de toegang tot uw account te herstellen als u uw apparaat voor tweestapsverificatie verliest.",
+      "enable": "Inschakelen",
+      "disable": "Uitschakelen",
+      "regenerate": "Herstelcodes opnieuw genereren",
+      "show": "Herstelcodes tonen",
+      "hide": "Herstelcodes verbergen",
+      "confirm": "Bevestigen",
+      "recoveryCodes": "2FA herstelcodes",
+      "recoveryCodesDesc": "Herstelcodes laten u weer inloggen als u uw 2FA-apparaat verliest. Bewaar ze in een veilige wachtwoordbeheerder.",
+      "recoveryCodesStore": "Bewaar deze herstelcodes in een veilige wachtwoordbeheerder. Ze kunnen worden gebruikt om de toegang tot uw account te herstellen als u uw tweestapsverificatie-apparaat verliest.",
+      "recoveryCodesHelp": "Elke herstelcode kan één keer worden gebruikt om toegang te krijgen tot uw account en wordt na gebruik verwijderd. Als u er meer nodig heeft, klik dan hierboven op Herstelcodes opnieuw genereren.",
+      "enabledTitle": "Tweestapsverificatie ingeschakeld",
+      "enabledDesc": "Tweestapsverificatie is nu ingeschakeld. Scan de QR-code of voer de instelsleutel in in uw authenticator-app.",
+      "verifyTitle": "Verificatiecode verifiëren",
+      "verifyDesc": "Voer de 6-cijferige code uit uw authenticator-app in",
+      "continue": "Doorgaan",
+      "close": "Sluiten",
+      "back": "Terug",
+      "orManual": "of voer de code handmatig in"
+    },
+    "deleteUser": {
+      "title": "Account verwijderen",
+      "description": "Zodra uw account is verwijderd, worden alle bijbehorende bronnen en gegevens permanent verwijderd. Download voordat u uw account verwijdert alle gegevens of informatie die u wilt behouden.",
+      "button": "Account verwijderen",
+      "modalTitle": "Weet u zeker dat u uw account wilt verwijderen?",
+      "modalDescription": "Zodra uw account is verwijderd, worden alle bijbehorende bronnen en gegevens permanent verwijderd. Voer uw wachtwoord in om te bevestigen dat u uw account permanent wilt verwijderen.",
+      "password": "Wachtwoord",
+      "cancel": "Annuleren"
+    }
+  }
 }

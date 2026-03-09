@@ -1,50 +1,429 @@
 {
-    "nav": {
-        "home": "Home",
-        "about": "About",
-        "services": "Services",
-        "projects": "Projects",
-        "careers": "Careers",
-        "lifeAtAcendae": "Life at Acendae",
-        "getInTouch": "Get in Touch",
-        "outsourceProject": "Outsource a Project",
-        "buildTeam": "Build a Dedicated Team",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "projects": "Projects",
+    "careers": "Careers",
+    "lifeAtAcendae": "Life @ Acendae",
+    "getInTouch": "Get in Touch",
+    "discussProject": "Discuss a Project",
+    "getStarted": "Get Started",
+    "openMenu": "Open Menu",
+    "closeMenu": "Close Menu",
+    "dashboard": "Dashboard",
+    "logout": "Log out",
+    "settings": "Settings",
+    "platform": "Platform",
+    "repository": "Repository",
+    "documentation": "Documentation"
+  },
+  "megaMenu": {
+    "outsource": {
+      "title": "Outsource a Project",
+      "subtitle": "Structured delivery from strategy to launch.",
+      "links": {
         "softwareEng": "Software Engineering",
         "webDev": "Web Development",
         "saasDev": "SaaS Development",
-        "uxUiDesign": "UX/UI Design",
-        "hireWebDevs": "Hire Web Developers",
+        "uxui": "UX/UI Design"
+      }
+    },
+    "dedicated": {
+      "title": "Build a Dedicated Team",
+      "subtitle": "Long-term embedded teams aligned with your company.",
+      "links": {
+        "hireWebDev": "Hire Web Developers",
         "hireSoftwareEng": "Hire Software Engineers",
-        "hireUxUi": "Hire UX/UI Designers",
-        "fullDedicatedTeams": "Full Dedicated Teams"
+        "hireUxui": "Hire UX/UI Designers",
+        "fullTeams": "Full Dedicated Teams"
+      }
     },
-    "hero": {
-        "eyebrow": "Your growth partner in tech",
-        "headline": "Every business has its mountain. Acendae is the guide.",
-        "subline": "We build world-class software products and dedicated tech teams that help ambitious companies scale — from the Netherlands to the world.",
-        "ctaOutsource": "Outsource a Project",
-        "ctaDedicated": "Build a Dedicated Team"
+    "tagline": "Dutch strategy. Sri Lankan execution. {highlight} integrated team.",
+    "taglineHighlight": "One",
+    "letsTalk": "Let's Talk",
+    "letsStartConversation": "Let's Start the Conversation",
+    "acendaeersReady": "Acendaeers are ready to guide your next move."
+  },
+  "footer": {
+    "columns": {
+      "company": "Company",
+      "services": "Services",
+      "resources": "Resources",
+      "contact": "Contact"
     },
-    "footer": {
-        "company": "Company",
-        "services": "Services",
-        "resources": "Resources",
-        "contact": "Contact",
-        "copyright": "© {year} Acendae. All rights reserved.",
-        "privacy": "Privacy Policy",
-        "terms": "Terms & Conditions",
-        "cookies": "Cookie Policy"
+    "company": {
+      "aboutAcendae": "About Acendae",
+      "lifeAtAcendae": "Life @ Acendae",
+      "team": "Team",
+      "careers": "Careers"
     },
-    "common": {
-        "learnMore": "Learn More",
-        "viewAll": "View All",
-        "letsTalk": "Let's Talk",
-        "discoverJourney": "Discover Our Journey",
-        "viewCaseStudies": "View Case Studies",
-        "viewOpenPositions": "View Open Positions"
+    "services": {
+      "developmentUnit": "Development Unit",
+      "engineeringUnit": "Engineering Unit",
+      "teamOutsourcing": "Team Outsourcing",
+      "experienceUnit": "Experience Unit"
     },
-    "flash": {
-        "success": "Action completed successfully.",
-        "error": "Something went wrong. Please try again."
+    "resources": {
+      "ourProcess": "Our Process",
+      "caseStudies": "Case Studies",
+      "blog": "Blog",
+      "faqs": "FAQs"
+    },
+    "contact": {
+      "getInTouch": "Get in Touch",
+      "partnerships": "Partnerships",
+      "support": "Support"
+    },
+    "copyright": "Copyright © 2026 Acendae",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "cookies": "Manage Cookies"
     }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Your growth partner in tech",
+      "headline": "Every business has its mountain. Acendae is the guide.",
+      "subline": "We build world-class software products and dedicated tech teams that help ambitious companies scale — from the Netherlands to the world.",
+      "ctaOutsource": "Outsource a Project",
+      "ctaDedicated": "Build a Dedicated Team"
+    },
+    "socialProof": {
+      "quote": "Progress is not a shortcut. It's a journey.",
+      "sriLankaLabel": "Sri Lanka",
+      "netherlandsLabel": "The Netherlands"
+    },
+    "twoWays": {
+      "sectionTitle": "Two Ways to Climb With Acendae",
+      "sectionSubtitle": "Whether you need a full product delivered or a dedicated team integrated into your workflow, we provide the expertise to help you reach the summit.",
+      "outsource": {
+        "title": "Outsource a Project",
+        "description": "End-to-end delivery of your software product. We take ownership of the entire process from discovery to launch."
+      },
+      "dedicated": {
+        "title": "Build a Dedicated Team",
+        "description": "Scale your engineering capacity with long-term, embedded talent that works as a seamless extension of your company."
+      }
+    },
+    "units": {
+      "sectionTitle": "Our Units",
+      "sectionSubtitle": "Specialized teams focused on different aspects of the digital journey.",
+      "tabs": {
+        "development": "Development",
+        "engineering": "Engineering",
+        "outsourcing": "Outsourcing",
+        "experience": "Experience"
+      },
+      "development": {
+        "title": "Development Unit",
+        "description": "Building powerful web and mobile applications with modern tech stacks."
+      },
+      "engineering": {
+        "title": "Engineering Unit",
+        "description": "Scalable software architecture and robust backend systems for complex enterprises."
+      },
+      "outsourcing": {
+        "title": "Team Outsourcing",
+        "description": "High-performing engineering teams tailored to your specific technical requirements."
+      },
+      "experience": {
+        "title": "Experience Unit",
+        "description": "Human-centric design that balances business goals with user needs."
+      }
+    },
+    "howWeWork": {
+      "sectionTitle": "How We Work",
+      "sectionSubtitle": "Our structured approach ensures transparency, speed, and quality at every stage of the climb.",
+      "steps": {
+        "step1": "Discovery & Strategy",
+        "step2": "Design & Prototyping",
+        "step3": "Development & QA",
+        "step4": "Launch & Evolution"
+      }
+    },
+    "quote": {
+      "text": "We don't rush the climb. We protect progress and you'll always know what the next step is."
+    },
+    "join": {
+      "title": "Join Acendae",
+      "subtitle": "Be part of a collaborative culture that values growth, ownership, and technical excellence.",
+      "bullets": [
+        "Work on global projects",
+        "Continuous learning culture",
+        "Competitive compensation",
+        "Flexible working environment"
+      ],
+      "cta": "See Open Roles",
+      "rightQuote": "We're always looking for people who want to climb together"
+    }
+  },
+  "cta": {
+    "readyTitle": "Ready to start your ascent?",
+    "readySubtext1": "Let's talk about where you are today — and what the next step should be.",
+    "readySubtext2": "Whether you need a project delivered or a team built around your growth, we'll guide you to the right setup.",
+    "discussProject": "Discuss a project",
+    "discussOutsourcing": "Discuss team outsourcing",
+    "tagline": "We'll find the right next step."
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "We are a team of builders, designers, and strategists committed to helping businesses scale through technology."
+    },
+    "fromBuilders": {
+      "title": "From Builders to Guides",
+      "description": "Acendae was born out of a desire to bridge the gap between high-level strategy and technical execution."
+    },
+    "theWayWeClimb": {
+      "title": "The Way We Climb",
+      "description": "Our core values define how we approach every challenge and interaction."
+    }
+  },
+  "services": {
+    "index": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive technology solutions designed for scale and performance."
+    },
+    "outsource": {
+      "title": "Project Outsourcing",
+      "description": "Full-cycle software development tailored to your business needs."
+    },
+    "dedicated": {
+      "title": "Dedicated Teams",
+      "description": "Embedded engineering talent that integrates directly into your organization."
+    }
+  },
+  "caseStudies": {
+    "hero": {
+      "title": "Case Studies",
+      "subtitle": "Explore how we've helped ambitious companies solve complex problems."
+    },
+    "progressNoise": {
+      "title": "Real Progress, Less Noise",
+      "description": "We focus on outcomes that matter, not just lines of code."
+    },
+    "filters": {
+      "all": "All",
+      "saas": "SaaS Products",
+      "ecommerce": "E-Commerce",
+      "noCode": "No Code",
+      "uxui": "UX/UI Design"
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "Careers",
+      "subtitle": "Build the future with us."
+    },
+    "openRoles": {
+      "title": "Open Roles",
+      "subtitle": "Join our growing team of experts."
+    },
+    "application": {
+      "title": "Apply Now",
+      "subtitle": "Tell us why you'd be a great fit for Acendae."
+    }
+  },
+  "forms": {
+    "contact": {
+      "title": "Get in Touch",
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "message": "Message",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "you@company.com",
+      "companyPlaceholder": "Your company name",
+      "messagePlaceholder": "Tell us about your project...",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "jobApplication": {
+      "title": "Apply for this role",
+      "name": "Full Name",
+      "email": "Email Address",
+      "cv": "Upload CV",
+      "cvHint": "PDF or Word, max 5MB",
+      "submit": "Submit Application",
+      "submitting": "Submitting..."
+    },
+    "validation": {
+      "required": "This field is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "fileTooLarge": "File must be under 5MB.",
+      "fileType": "Only PDF or Word documents are accepted."
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "backToHome": "Back to Home",
+    "loading": "Loading...",
+    "error404Title": "Page Not Found",
+    "error404Subtitle": "Sorry, the page you are looking for doesn't exist or has been moved.",
+    "en": "EN",
+    "nl": "NL",
+    "dismiss": "Dismiss",
+    "logoAlt": "Acendae Logo",
+    "language": "Language",
+    "darkMode": "Dark Mode",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "tiktok": "TikTok",
+    "twitter": "X (Twitter)",
+    "facebook": "Facebook"
+  },
+  "flash": {
+    "contactSuccess": "Your message has been sent. We'll be in touch soon.",
+    "contactError": "Something went wrong. Please try again.",
+    "applicationSuccess": "Your application has been submitted. Thank you!",
+    "applicationError": "Something went wrong. Please try again."
+  },
+  "auth": {
+    "login": {
+      "title": "Log in to your account",
+      "description": "Enter your email and password below to log in",
+      "heading": "Log in",
+      "email": "Email address",
+      "emailPlaceholder": "email@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "Password",
+      "forgotPassword": "Forgot password?",
+      "rememberMe": "Remember me",
+      "submit": "Log in",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create an account",
+      "description": "Enter your details below to create your account",
+      "heading": "Register",
+      "name": "Name",
+      "namePlaceholder": "Full name",
+      "email": "Email address",
+      "emailPlaceholder": "email@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "Password",
+      "confirmPassword": "Confirm password",
+      "confirmPasswordPlaceholder": "Confirm password",
+      "submit": "Create account",
+      "alreadyHaveAccount": "Already have an account?",
+      "logIn": "Log in"
+    },
+    "forgotPassword": {
+      "title": "Forgot password",
+      "description": "Enter your email to receive a password reset link",
+      "heading": "Forgot password",
+      "email": "Email address",
+      "emailPlaceholder": "email@example.com",
+      "submit": "Email password reset link",
+      "returnTo": "Or, return to",
+      "logIn": "log in"
+    },
+    "resetPassword": {
+      "title": "Reset password",
+      "description": "Enter your new password below",
+      "heading": "Reset password",
+      "email": "Email address",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "submit": "Reset password"
+    },
+    "verifyEmail": {
+      "title": "Verify email",
+      "description": "Please verify your email address by clicking on the link we just emailed to you.",
+      "heading": "Verify email",
+      "resendSuccess": "A new verification link has been sent to the email address you provided during registration.",
+      "submit": "Resend verification email",
+      "logOut": "Log out"
+    },
+    "confirmPassword": {
+      "title": "Confirm password",
+      "description": "This is a secure area of the application. Please confirm your password before continuing.",
+      "heading": "Confirm password",
+      "password": "Password",
+      "submit": "Confirm"
+    },
+    "twoFactor": {
+      "title": "Two-factor authentication",
+      "description": "Please confirm access to your account by entering the authentication code provided by your authenticator application.",
+      "recoveryDescription": "Please confirm access to your account by entering one of your emergency recovery codes.",
+      "heading": "Two-factor authentication",
+      "code": "Code",
+      "recoveryCode": "Recovery Code",
+      "useRecovery": "Use a recovery code",
+      "useCode": "Use an authentication code",
+      "submit": "Log in"
+    }
+  },
+  "settings": {
+    "profile": {
+      "title": "Profile Information",
+      "description": "Update your account's profile information and email address.",
+      "name": "Name",
+      "email": "Email address",
+      "unverified": "Your email address is unverified.",
+      "resend": "Click here to re-send the verification email.",
+      "resendSuccess": "A new verification link has been sent to your email address.",
+      "save": "Save",
+      "saved": "Saved."
+    },
+    "password": {
+      "title": "Update Password",
+      "description": "Ensure your account is using a long, random password to stay secure.",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm Password",
+      "save": "Save",
+      "saved": "Saved."
+    },
+    "appearance": {
+      "title": "Appearance",
+      "description": "Manage your account's appearance settings.",
+      "theme": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "twoFactor": {
+      "title": "Two-Factor Authentication",
+      "description": "Add additional security to your account using two-factor authentication.",
+      "enabled": "You have enabled two-factor authentication.",
+      "disabled": "You have not enabled two-factor authentication.",
+      "finish": "Finish enabling two-factor authentication.",
+      "setup": "When two-factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.",
+      "scan": "To finish enabling two-factor authentication, scan the following QR code using your phone's authenticator application or enter the setup key and provide the generated OTP code.",
+      "store": "Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two-factor authentication device is lost.",
+      "enable": "Enable",
+      "disable": "Disable",
+      "regenerate": "Regenerate Recovery Codes",
+      "show": "Show Recovery Codes",
+      "hide": "Hide Recovery Codes",
+      "confirm": "Confirm",
+      "recoveryCodes": "2FA recovery codes",
+      "recoveryCodesDesc": "Recovery codes let you regain access if you lose your 2FA device. Store them in a secure password manager.",
+      "recoveryCodesStore": "Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two-factor authentication device is lost.",
+      "recoveryCodesHelp": "Each recovery code can be used once to access your account and will be removed after use. If you need more, click Regenerate codes above.",
+      "enabledTitle": "Two-factor authentication enabled",
+      "enabledDesc": "Two-factor authentication is now enabled. Scan the QR code or enter the setup key in your authenticator app.",
+      "verifyTitle": "Verify authentication code",
+      "verifyDesc": "Enter the 6-digit code from your authenticator app",
+      "continue": "Continue",
+      "close": "Close",
+      "back": "Back",
+      "orManual": "or, enter the code manually"
+    },
+    "deleteUser": {
+      "title": "Delete Account",
+      "description": "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.",
+      "button": "Delete Account",
+      "modalTitle": "Are you sure you want to delete your account?",
+      "modalDescription": "Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.",
+      "password": "Password",
+      "cancel": "Cancel"
+    }
+  }
 }

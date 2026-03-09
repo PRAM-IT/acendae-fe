@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import AppButton from '@/components/ui/AppButton.vue';
+
+const { t } = useI18n();
 
 // Avatars with background colors and placeholder images as per Figma CSS
 const avatarData = [
@@ -20,7 +23,6 @@ const avatarData = [
           class="absolute left-0 top-2 w-[48px] h-[48px] rounded-full border-[1.5px] border-white shadow-sm z-10 overflow-hidden"
           :style="{ backgroundColor: avatarData[0].color }"
         >
-          <!-- Using a color placeholder as image is not provided -->
           <div class="w-full h-full opacity-0"></div> 
         </div>
 
@@ -44,16 +46,16 @@ const avatarData = [
       <!-- Heading & Supporting Text (Top: 185px, Center) -->
       <div class="absolute top-[185px] left-1/2 -translate-x-1/2 w-[613px] flex flex-col items-center gap-2">
         <h2 class="text-[20px] font-medium leading-[30px] text-[#101828] text-center w-full">
-          Ready to start your ascent?
+          {{ t('cta.readyTitle') }}
         </h2>
         <p class="text-[18px] font-normal leading-[28px] text-[#667085] text-center w-[604px]">
-          Let's talk about where you are today — and what the next step should be.
+          {{ t('cta.readySubtext1') }}
         </p>
       </div>
 
       <!-- Supporting Text 2 (Top: 262px, Center) -->
       <p class="absolute top-[262px] left-1/2 -translate-x-1/2 w-[581px] text-[18px] font-normal leading-[28px] text-[#667085] text-center">
-        Whether you need a project delivered or a team built around your growth, we'll guide you to the right setup.
+        {{ t('cta.readySubtext2') }}
       </p>
 
       <!-- CTA Buttons (Top: 359px, Center) -->
@@ -70,7 +72,7 @@ const avatarData = [
               <img src="/resources/assets/images/green-circle.svg" alt="" class="w-2 h-2" />
               <div class="pulse-dot absolute w-2 h-2 bg-[#0A5E4A] rounded-full"></div>
             </div>
-            <span class="text-[16px] font-semibold text-white whitespace-nowrap">Discuss a project</span>
+            <span class="text-[16px] font-semibold text-white whitespace-nowrap">{{ t('cta.discussProject') }}</span>
           </div>
         </AppButton>
 
@@ -81,13 +83,13 @@ const avatarData = [
           href="/team-outsourcing" 
           class="!w-[266px] !h-[55px] !border-[rgba(11,31,63,0.67)] !border !rounded-[8px] !px-0 !justify-center"
         >
-          <span class="text-[16px] font-medium text-[#0B1F3F]">Discuss team outsourcing</span>
+          <span class="text-[16px] font-medium text-[#0B1F3F]">{{ t('cta.discussOutsourcing') }}</span>
         </AppButton>
       </div>
 
       <!-- Italic Tagline (Top: 446px, Center) -->
       <p class="absolute top-[446px] left-1/2 -translate-x-1/2 w-[238px] text-center text-[18px] font-medium italic text-[#1D4FBC] leading-[28px]">
-        We'll find the right next step.
+        {{ t('cta.tagline') }}
       </p>
 
       <!-- Decorative Gold Shape (Top: 90px, Left: 987px) -->

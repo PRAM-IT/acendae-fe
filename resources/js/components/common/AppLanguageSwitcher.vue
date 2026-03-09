@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { usePreferencesStore } from '@/stores/preferences';
 import { Globe2Icon } from 'lucide-vue-next';
 
-const { locale } = useI18n();
-const store = usePreferencesStore();
+const { locale, t } = useI18n();
+const preferences = usePreferencesStore();
 
-const currentLang = computed(() => store.lang);
-
-const switchLanguage = (newLocale: 'en' | 'nl') => {
-  locale.value = newLocale;
-  store.setLang(newLocale);
-};
+function setLanguage(lang: 'en' | 'nl') {
+  locale.value = lang;
+  preferences.lang = lang;
+}
 </script>
 
 <template>
@@ -21,21 +18,21 @@ const switchLanguage = (newLocale: 'en' | 'nl') => {
     
     <div class="flex items-center gap-2 text-sm">
       <button 
-        @click="switchLanguage('en')"
+        @click="setLanguage('en')"
         class="font-semibold transition-all duration-300"
-        :class="currentLang === 'en' ? 'text-navy scale-105' : 'text-navy/50 hover:text-navy/80'"
+        :class="locale === 'en' ? 'text-navy scale-105' : 'text-navy/50 hover:text-navy/80'"
       >
-        EN
+        {{ t('common.en') }}
       </button>
       
-      <span class="text-navy/20 select-none">&middot;</span>
+      <span class="text-navy/20 select-none" aria-hidden="true">&middot;</span>
       
       <button 
-        @click="switchLanguage('nl')"
+        @click="setLanguage('nl')"
         class="font-semibold transition-all duration-300"
-        :class="currentLang === 'nl' ? 'text-navy scale-105' : 'text-navy/50 hover:text-navy/80'"
+        :class="locale === 'nl' ? 'text-navy scale-105' : 'text-navy/50 hover:text-navy/80'"
       >
-        NL
+        {{ t('common.nl') }}
       </button>
     </div>
   </div>
