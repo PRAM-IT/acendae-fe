@@ -1,0 +1,211 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+import { Link } from '@inertiajs/vue3';
+import { useI18n } from 'vue-i18n';
+
+import logoLight from '@assets/images/logo-light.svg';
+import iconInstagram from '@assets/images/icon-instagram.svg';
+import iconLinkedin from '@assets/images/icon-linkedin.svg';
+import iconTiktok from '@assets/images/icon-tiktok.svg';
+import iconTwitter from '@assets/images/icon-twitter.svg';
+import iconFacebook from '@assets/images/icon-facebook.svg';
+
+const { t } = useI18n();
+
+const footerSections = computed(() => [
+    {
+        title: t('footer.columns.company'),
+        width: '128px',
+        links: [
+            { name: t('footer.company.aboutAcendae'), path: '/about' },
+            { name: t('footer.company.lifeAtAcendae'), path: '/life' },
+            { name: t('footer.company.team'), path: '/team' },
+            { name: t('footer.company.careers'), path: '/careers' },
+        ],
+    },
+    {
+        title: t('footer.columns.services'),
+        width: '153px',
+        links: [
+            {
+                name: t('footer.services.developmentUnit'),
+                path: '/services/development',
+            },
+            {
+                name: t('footer.services.engineeringUnit'),
+                path: '/services/engineering',
+            },
+            {
+                name: t('footer.services.teamOutsourcing'),
+                path: '/services/outsourcing',
+            },
+            {
+                name: t('footer.services.experienceUnit'),
+                path: '/services/experience',
+            },
+        ],
+    },
+    {
+        title: t('footer.columns.resources'),
+        width: '119px',
+        links: [
+            { name: t('footer.resources.ourProcess'), path: '/process' },
+            { name: t('footer.resources.caseStudies'), path: '/case-studies' },
+            { name: t('footer.resources.blog'), path: '/blog' },
+            { name: t('footer.resources.faqs'), path: '/faqs' },
+        ],
+    },
+    {
+        title: t('footer.columns.contact'),
+        width: '109px',
+        links: [
+            { name: t('footer.contact.getInTouch'), path: '/contact' },
+            { name: t('footer.contact.partnerships'), path: '/partnerships' },
+            { name: t('footer.contact.support'), path: '/support' },
+        ],
+    },
+]);
+
+const legalLinks = computed(() => [
+    { name: t('footer.legal.privacy'), path: '/privacy-policy' },
+    { name: t('footer.legal.terms'), path: '/terms-and-conditions' },
+    { name: t('footer.legal.cookies'), path: '/cookies' },
+]);
+</script>
+
+<template>
+    <footer
+        class="w-full bg-[#070F1C] py-[65px] font-['Mona_Sans',sans-serif] text-white lg:py-[100px]"
+    >
+        <div
+            class="mx-auto flex max-w-[1440px] flex-col items-center gap-0 px-[22px] lg:px-[168px]"
+        >
+            <!-- Link Grid -->
+            <!-- Mobile: 2×2 grid | Desktop: single row flex -->
+            <div
+                class="grid w-full grid-cols-2 gap-x-[65px] gap-y-[44px] lg:flex lg:flex-row lg:justify-center lg:gap-[198px]"
+            >
+                <div
+                    v-for="section in footerSections"
+                    :key="section.title"
+                    class="flex flex-col gap-[24px]"
+                >
+                    <h4
+                        class="text-[20px] leading-[24px] font-medium text-white"
+                    >
+                        {{ section.title }}
+                    </h4>
+                    <ul class="flex flex-col gap-[8px]">
+                        <li v-for="link in section.links" :key="link.path">
+                            <Link
+                                :href="link.path"
+                                class="text-sm leading-[20px] font-normal whitespace-nowrap text-white transition-opacity hover:opacity-70 lg:text-base lg:leading-[23px]"
+                            >
+                                {{ link.name }}
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Row -->
+            <div
+                class="mt-[55px] flex w-full items-center justify-center gap-[29px] lg:mt-[186px]"
+            >
+                <div
+                    class="w-[60px] border-t border-white/30 lg:w-[489px]"
+                ></div>
+
+                <div class="flex flex-row items-center gap-[28px]">
+                    <a
+                        href="#"
+                        class="h-6 w-6 transition-opacity hover:opacity-70"
+                    >
+                        <img
+                            :src="iconInstagram"
+                            :alt="t('common.instagram') || 'Instagram'"
+                            class="h-6 w-6 object-contain"
+                        />
+                    </a>
+                    <a
+                        href="#"
+                        class="h-6 w-6 transition-opacity hover:opacity-70"
+                    >
+                        <img
+                            :src="iconLinkedin"
+                            :alt="t('common.linkedin') || 'LinkedIn'"
+                            class="h-6 w-6 object-contain"
+                        />
+                    </a>
+                    <a
+                        href="#"
+                        class="h-6 w-6 transition-opacity hover:opacity-70"
+                    >
+                        <img
+                            :src="iconTiktok"
+                            :alt="t('common.tiktok') || 'TikTok'"
+                            class="h-6 w-6 object-contain"
+                        />
+                    </a>
+                    <a
+                        href="#"
+                        class="h-6 w-6 transition-opacity hover:opacity-70"
+                    >
+                        <img
+                            :src="iconTwitter"
+                            :alt="t('common.twitter') || 'X'"
+                            class="h-6 w-6 object-contain"
+                        />
+                    </a>
+                    <a
+                        href="#"
+                        class="h-6 w-6 transition-opacity hover:opacity-70"
+                    >
+                        <img
+                            :src="iconFacebook"
+                            :alt="t('common.facebook') || 'Facebook'"
+                            class="h-6 w-6 object-contain"
+                        />
+                    </a>
+                </div>
+
+                <div
+                    class="w-[60px] border-t border-white/30 lg:w-[497px]"
+                ></div>
+            </div>
+
+            <!-- Logo -->
+            <div class="mt-[57px] h-[75px] w-[217px]">
+                <Link href="/">
+                    <img
+                        :src="logoLight"
+                        :alt="t('common.logoAlt') || 'Acendae'"
+                        class="h-full w-full object-contain"
+                        onerror="this.src = '/images/logo-light.svg'"
+                    />
+                </Link>
+            </div>
+
+            <!-- Copyright + Legal — desktop only -->
+            <div
+                class="mt-[40px] hidden w-full flex-col items-center gap-[32px] lg:flex"
+            >
+                <p class="text-[20px] leading-[28px] font-normal text-white">
+                    {{ t('footer.copyright') }}
+                </p>
+                <div
+                    class="flex flex-row items-center justify-center gap-[64px]"
+                >
+                    <Link
+                        v-for="link in legalLinks"
+                        :key="link.name"
+                        :href="link.path"
+                        class="text-[16px] leading-[23px] font-normal whitespace-nowrap text-white transition-opacity hover:opacity-70"
+                    >
+                        {{ link.name }}
+                    </Link>
+                </div>
+            </div>
+        </div>
+    </footer>
+</template>

@@ -1,0 +1,341 @@
+<script setup lang="ts">
+import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { Link, usePage } from '@inertiajs/vue3';
+import { Menu, X, ChevronDown } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
+import AppButton from '@/components/ui/AppButton.vue';
+import AppMegaMenu from '@/components/common/AppMegaMenu.vue';
+import { usePreferencesStore } from '@/stores/preferences';
+import logoDark from '@assets/images/logo-dark.svg';
+import globeIcon from '@assets/images/globe.svg';
+import moonIcon from '@assets/images/moon.svg';
+
+const page = usePage();
+const { t, locale } = useI18n();
+const preferences = usePreferencesStore();
+
+const isScrolled = ref(false);
+const isMobileMenuOpen = ref(false);
+const isMegaMenuOpen = ref(false);
+const isMobileServicesOpen = ref(false);
+
+const updateScroll = () => {
+    isScrolled.value = window.pageYOffset > 20;
+};
+
+onMounted(() => {
+    window.addEventListener('scroll', updateScroll, { passive: true });
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', updateScroll);
+});
+
+const navLinks = computed(() => [
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.projects'), path: '/projects' },
+    { name: t('nav.careers'), path: '/careers' },
+    { name: t('nav.lifeAtAcendae'), path: '/life' },
+]);
+
+// Mega menu link groups for mobile accordion
+const outsourceLinks = computed(() => [
+  { name: t('megaMenu.outsource.links.softwareEng'), path: '/services/software-engineering' },
+  { name: t('megaMenu.outsource.links.webDev'), path: '/services/web-development' },
+  { name: t('megaMenu.outsource.links.saasDev'), path: '/services/saas-development' },
+  { name: t('megaMenu.outsource.links.uxui'), path: '/services/ux-ui-design' },
+]);
+
+const teamLinks = computed(() => [
+  { name: t('megaMenu.dedicated.links.hireWebDev'), path: '/hire/web-developers' },
+  { name: t('megaMenu.dedicated.links.hireSoftwareEng'), path: '/hire/software-engineers' },
+  { name: t('megaMenu.dedicated.links.hireUxui'), path: '/hire/ux-ui-designers' },
+  { name: t('megaMenu.dedicated.links.fullTeams'), path: '/hire/dedicated-teams' },
+]);
+
+const isActive = (path: string) => {
+    return page.url === path || page.url.startsWith(path + '/');
+};
+
+const switchLanguage = (lang: 'en' | 'nl') => {
+    locale.value = lang;
+    preferences.lang = lang;
+};
+
+const toggleDarkMode = () => {
+    preferences.toggleDarkMode();
+};
+
+const navbarClasses = computed(() => [
+    'fixed top-0 inset-x-0 z-[100] bg-white transition-all duration-300',
+    isScrolled.value 
+        ? 'h-[64px] lg:h-[74px] border-b border-black/5 shadow-md shadow-black/5' 
+        : 'h-[70px] lg:h-[84px] border-b border-transparent shadow-none',
+]);
+
+const closeAllMobile = () => {
+    isMobileMenuOpen.value = false;
+    isMobileServicesOpen.value = false;
+};
+</script>
+
+<template>
+    <header :class="navbarClasses" class="font-mona flex items-center bg-white">
+        <div class="mx-auto flex h-full w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-[85px]">
+            
+            <!-- LOGO SECTION -->
+            <div class="flex items-center">
+                <Link href="/" class="flex items-center transition-transform hover:scale-[1.02] active:scale-[0.98]">
+                    <img
+                        :src="logoDark"
+                        :alt="t('common.logoAlt') || 'Acendae'"
+                        class="h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px]"
+                        onerror="this.src = '/images/logo-dark.svg'"
+                    />
+                </Link>
+            </div>
+
+            <!-- DESKTOP NAVIGATION -->
+            <nav class="hidden lg:flex items-center gap-x-[24px] xl:gap-x-[36px]">
+                <!-- Services Mega Menu Toggle -->
+                <div 
+                    class="relative py-2"
+                    @mouseenter="isMegaMenuOpen = true"
+                    @mouseleave="isMegaMenuOpen = false"
+                >
+                    <button
+                        class="flex items-center gap-1.5 text-[14px] font-medium transition-all xl:text-[16px]"
+                        :class="isMegaMenuOpen ? 'text-[#0B1F3F]' : 'text-black/70 hover:text-[#0B1F3F]'"
+                    >
+                        {{ t('nav.services') }}
+                        <ChevronDown 
+                            class="h-3.5 w-3.5 transition-transform duration-300 xl:h-4 xl:w-4"
+                            :class="{ 'rotate-180': isMegaMenuOpen }"
+                        />
+                    </button>
+                    <!-- Underline effect for Services (always present when open) -->
+                    <span
+                        class="absolute -bottom-1 left-0 h-[2px] bg-[#C9A84C] transition-all duration-300"
+                        :class="isMegaMenuOpen ? 'w-full opacity-100' : 'w-0 opacity-0'"
+                    ></span>
+                </div>
+
+                <Link
+                    v-for="link in navLinks"
+                    :key="link.path"
+                    :href="link.path"
+                    class="group relative py-2 text-[14px] font-medium transition-all xl:text-[16px]"
+                    :class="isActive(link.path) ? 'text-[#0B1F3F]' : 'text-black/70 hover:text-[#0B1F3F]'"
+                >
+                    {{ link.name }}
+                    <span
+                        class="absolute -bottom-1 left-0 h-[2px] bg-[#C9A84C] transition-all duration-300"
+                        :class="isActive(link.path) ? 'w-full opacity-100' : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-40'"
+                    ></span>
+                </Link>
+            </nav>
+
+            <!-- RIGHT ACTIONS CLUSTER -->
+            <div class="hidden lg:flex items-center gap-x-4 xl:gap-x-8">
+                <!-- Branded Language Switcher Pill -->
+                <div class="relative flex h-[32px] items-center rounded-full border border-black/10 bg-white p-0.5 xl:h-[36px] xl:p-1">
+                    <div class="flex items-center px-1 xl:px-1.5">
+                        <img :src="globeIcon" class="h-4 w-4 xl:h-5 xl:w-5" alt="" />
+                    </div>
+                    <div class="flex gap-x-0.5 xl:gap-x-1">
+                        <button
+                            v-for="lang in (['en', 'nl'] as const)"
+                            :key="lang"
+                            @click="switchLanguage(lang)"
+                            class="flex h-[24px] w-[30px] items-center justify-center rounded-full text-[12px] font-semibold uppercase transition-all xl:h-[26px] xl:w-[34px] xl:text-[13px]"
+                            :class="locale === lang ? 'bg-[#D5E2FF] text-[#1D4FBC]' : 'text-black/60 hover:text-black hover:bg-black/5'"
+                        >
+                            {{ lang }}
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <button
+                    @click="toggleDarkMode"
+                    class="group relative flex h-8 w-8 items-center justify-center rounded-full border border-black/5 bg-gray-50/50 transition-all hover:bg-gray-100 xl:h-9 xl:w-9"
+                    :title="t('common.darkMode')"
+                >
+                    <img :src="moonIcon" class="h-4 w-4 transition-transform group-hover:rotate-12 xl:h-5 xl:w-5" alt="" />
+                </button>
+
+                <!-- Branded Primary CTA -->
+                <AppButton
+                    variant="primary"
+                    tag="Link"
+                    href="/contact"
+                    class="!h-[42px] !min-w-[130px] !rounded-[8px] !bg-[#0B1F3F] !shadow-sm transition-all hover:!bg-[#152a4d] hover:!shadow-md xl:!h-[48px] xl:!min-w-[159px]"
+                >
+                    <span class="text-[13px] font-bold text-[#9ABAFF] xl:text-[15px]">
+                        {{ t('nav.getStarted') }}
+                    </span>
+                </AppButton>
+            </div>
+
+            <!-- MOBILE MENU TRIGGER -->
+            <button
+                class="flex h-10 w-10 items-center justify-center rounded-lg text-[#0B1F3F] transition-colors hover:bg-black/5 lg:hidden"
+                @click="isMobileMenuOpen = !isMobileMenuOpen"
+                :aria-expanded="isMobileMenuOpen"
+            >
+                <div class="relative h-6 w-6">
+                    <Transition name="fade" mode="out-in">
+                        <Menu v-if="!isMobileMenuOpen" key="menu" class="h-6 w-6" />
+                        <X v-else key="close" class="h-6 w-6" />
+                    </Transition>
+                </div>
+            </button>
+        </div>
+
+        <!-- MEGA MENU DESKTOP -->
+        <AppMegaMenu 
+            :open="isMegaMenuOpen" 
+            @close="isMegaMenuOpen = false" 
+            class="top-[70px] lg:top-[84px]"
+            :class="{ '!top-[64px] lg:!top-[74px]': isScrolled }"
+        />
+
+        <!-- MOBILE DRAWER -->
+        <Transition name="slide-down">
+            <div
+                v-if="isMobileMenuOpen"
+                class="fixed inset-x-0 top-[64px] z-[90] h-[calc(100vh-64px)] w-full overflow-y-auto bg-white lg:hidden"
+            >
+                <div class="flex flex-col p-6 pt-8 pb-12">
+                    <!-- Nav Links Stack -->
+                    <nav class="flex flex-col divide-y divide-black/5">
+                        <!-- Services Accordion -->
+                        <div class="flex flex-col">
+                            <button 
+                                class="flex h-[64px] items-center justify-between py-4 text-[18px] font-semibold text-[#0B1F3F]"
+                                @click="isMobileServicesOpen = !isMobileServicesOpen"
+                            >
+                                <span>{{ t('nav.services') }}</span>
+                                <ChevronDown 
+                                    class="h-5 w-5 transition-transform duration-300"
+                                    :class="{ 'rotate-180': isMobileServicesOpen }"
+                                />
+                            </button>
+                            
+                            <Transition name="fade">
+                                <div v-if="isMobileServicesOpen" class="flex flex-col gap-6 pb-6 pl-4">
+                                    <!-- Outsource Links -->
+                                    <div class="flex flex-col gap-3">
+                                        <p class="text-[14px] font-bold uppercase tracking-wider text-[#C9A84C]">{{ t('megaMenu.outsource.title') }}</p>
+                                        <Link 
+                                            v-for="link in outsourceLinks" 
+                                            :key="link.path"
+                                            :href="link.path"
+                                            class="text-[16px] text-black/70 active:text-[#C9A84C]"
+                                            @click="closeAllMobile"
+                                        >
+                                            {{ link.name }}
+                                        </Link>
+                                    </div>
+                                    <!-- Team Links -->
+                                    <div class="flex flex-col gap-3">
+                                        <p class="text-[14px] font-bold uppercase tracking-wider text-[#0B1F3F]">{{ t('megaMenu.dedicated.title') }}</p>
+                                        <Link 
+                                            v-for="link in teamLinks" 
+                                            :key="link.path"
+                                            :href="link.path"
+                                            class="text-[16px] text-black/70 active:text-[#C9A84C]"
+                                            @click="closeAllMobile"
+                                        >
+                                            {{ link.name }}
+                                        </Link>
+                                    </div>
+                                </div>
+                            </Transition>
+                        </div>
+
+                        <Link
+                            v-for="link in navLinks"
+                            :key="link.path"
+                            :href="link.path"
+                            class="group flex h-[64px] items-center justify-between py-4"
+                            @click="closeAllMobile"
+                        >
+                            <span 
+                                class="text-[18px] font-semibold transition-colors"
+                                :class="isActive(link.path) ? 'text-[#C9A84C]' : 'text-[#0B1F3F] group-active:text-[#C9A84C]'"
+                            >
+                                {{ link.name }}
+                            </span>
+                            <ChevronDown class="h-5 w-5 -rotate-90 text-black/20" />
+                        </Link>
+                    </nav>
+
+                    <!-- Bottom Branded Area -->
+                    <div class="mt-10 space-y-8 rounded-2xl bg-gray-50/80 p-6">
+                        <!-- Language Switcher -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img :src="globeIcon" class="h-5 w-5 opacity-60" alt="" />
+                                <span class="text-[15px] font-medium text-black/60">{{ t('common.language') }}</span>
+                            </div>
+                            <div class="flex rounded-full border border-black/10 bg-white p-1">
+                                <button
+                                    v-for="lang in (['en', 'nl'] as const)"
+                                    :key="lang"
+                                    @click="switchLanguage(lang)"
+                                    class="flex h-[28px] w-[40px] items-center justify-center rounded-full text-[13px] font-bold uppercase transition-all"
+                                    :class="locale === lang ? 'bg-[#D5E2FF] text-[#1D4FBC]' : 'text-black/50'"
+                                >
+                                    {{ lang }}
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- CTA Stack -->
+                        <div class="space-y-4">
+                            <AppButton
+                                variant="primary"
+                                tag="Link"
+                                href="/contact"
+                                class="!h-[56px] w-full !rounded-[12px] !bg-[#0B1F3F] !text-[16px] !font-bold"
+                                @click="closeAllMobile"
+                            >
+                                <span class="text-[#9ABAFF]">{{ t('nav.getStarted') }}</span>
+                            </AppButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Transition>
+    </header>
+</template>
+
+<style scoped>
+.font-mona {
+    font-family: 'Mona Sans', sans-serif;
+}
+
+/* Slide Down with scale & fade for modern feel */
+.slide-down-enter-active,
+.slide-down-leave-active {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+    transform: translateY(-20px) scale(0.98);
+    opacity: 0;
+}
+
+/* Generic Fade */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>
