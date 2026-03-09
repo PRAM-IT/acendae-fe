@@ -1,429 +1,270 @@
 {
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About Us",
-    "projects": "Projects",
-    "careers": "Careers",
-    "lifeAtAcendae": "Life @ Acendae",
-    "getInTouch": "Get in Touch",
-    "discussProject": "Discuss a Project",
-    "getStarted": "Get Started",
-    "openMenu": "Open Menu",
-    "closeMenu": "Close Menu",
-    "dashboard": "Dashboard",
-    "logout": "Log out",
-    "settings": "Settings",
-    "platform": "Platform",
-    "repository": "Repository",
-    "documentation": "Documentation"
-  },
-  "megaMenu": {
-    "outsource": {
-      "title": "Outsource a Project",
-      "subtitle": "Structured delivery from strategy to launch.",
-      "links": {
-        "softwareEng": "Software Engineering",
-        "webDev": "Web Development",
-        "saasDev": "SaaS Development",
-        "uxui": "UX/UI Design"
-      }
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About Us",
+        "projects": "Projects",
+        "careers": "Careers",
+        "lifeAtAcendae": "Life {'@'} Acendae",
+        "getInTouch": "Get in Touch",
+        "discussProject": "Discuss a Project",
+        "getStarted": "Get Started",
+        "openMenu": "Open Menu",
+        "closeMenu": "Close Menu",
+        "dashboard": "Dashboard",
+        "logout": "Log out",
+        "settings": "Settings",
+        "platform": "Platform",
+        "repository": "Repository",
+        "documentation": "Documentation"
     },
-    "dedicated": {
-      "title": "Build a Dedicated Team",
-      "subtitle": "Long-term embedded teams aligned with your company.",
-      "links": {
-        "hireWebDev": "Hire Web Developers",
-        "hireSoftwareEng": "Hire Software Engineers",
-        "hireUxui": "Hire UX/UI Designers",
-        "fullTeams": "Full Dedicated Teams"
-      }
+    "megaMenu": {
+        "outsource": {
+            "title": "Outsource a Project",
+            "subtitle": "Structured delivery from strategy to launch.",
+            "links": {
+                "softwareEng": "Software Engineering",
+                "webDev": "Web Development",
+                "saasDev": "SaaS Development",
+                "uxui": "UX/UI Design"
+            }
+        },
+        "dedicated": {
+            "title": "Build a Dedicated Team",
+            "subtitle": "Long-term embedded teams aligned with your company.",
+            "links": {
+                "hireWebDev": "Hire Web Developers",
+                "hireSoftwareEng": "Hire Software Engineers",
+                "hireUxui": "Hire UX/UI Designers",
+                "fullTeams": "Full Dedicated Teams"
+            }
+        },
+        "tagline": "Dutch strategy. Sri Lankan execution. {highlight} integrated team.",
+        "taglineHighlight": "One",
+        "letsTalk": "Let's Talk",
+        "letsStartConversation": "Let's Start the Conversation",
+        "acendaeersReady": "Acendaeers are ready to guide your next move."
     },
-    "tagline": "Dutch strategy. Sri Lankan execution. {highlight} integrated team.",
-    "taglineHighlight": "One",
-    "letsTalk": "Let's Talk",
-    "letsStartConversation": "Let's Start the Conversation",
-    "acendaeersReady": "Acendaeers are ready to guide your next move."
-  },
-  "footer": {
-    "columns": {
-      "company": "Company",
-      "services": "Services",
-      "resources": "Resources",
-      "contact": "Contact"
+    "footer": {
+        "columns": {
+            "company": "Company",
+            "services": "Services",
+            "resources": "Resources",
+            "contact": "Contact"
+        },
+        "company": {
+            "aboutAcendae": "About Acendae",
+            "lifeAtAcendae": "Life {'@'} Acendae",
+            "team": "Team",
+            "careers": "Careers"
+        },
+        "services": {
+            "developmentUnit": "Development Unit",
+            "engineeringUnit": "Engineering Unit",
+            "teamOutsourcing": "Team Outsourcing",
+            "experienceUnit": "Experience Unit"
+        },
+        "resources": {
+            "ourProcess": "Our Process",
+            "caseStudies": "Case Studies",
+            "blog": "Blog",
+            "faqs": "FAQs"
+        },
+        "contact": {
+            "getInTouch": "Get in Touch",
+            "partnerships": "Partnerships",
+            "support": "Support"
+        },
+        "copyright": "Copyright © 2026 Acendae",
+        "legal": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms & Conditions",
+            "cookies": "Manage Cookies"
+        }
     },
-    "company": {
-      "aboutAcendae": "About Acendae",
-      "lifeAtAcendae": "Life @ Acendae",
-      "team": "Team",
-      "careers": "Careers"
+    "home": {
+        "meta": {
+            "title": "Acendae | Strategy & Engineering",
+            "description": "Every business has its mountain. Acendae is the guide."
+        },
+        "hero": {
+            "eyebrow": "Dutch strategy. World-class execution. One integrated team",
+            "title": "Every business has its mountain, Acendae is the guide",
+            "subtitle": "We help businesses ascend through strategy, technology, and people. From first steps to scalable systems — we climb together, step by step.",
+            "cta_outsource": "Outsource a project",
+            "cta_team": "Build a dedicated team",
+            "image_alt": "Acendae Team",
+            "image_caption": "From idea to scale strategy, design, technology, and teams that grow with you.",
+            "play_aria": "Play video"
+        },
+        "social_proof": {
+            "title": "Progress is not a shortcut. It's a journey.",
+            "body": "Acendae was born from the idea of ascension rising with intention, structure, and trust. We believe sustainable growth is built step by step, not rushed through quick wins. Many businesses struggle with unclear technical decisions, unreliable delivery, or scaling their teams at the wrong moment. That's where we come in. We partner with organisations at every stage of their journey — from launching a first website, to building complex software, to scaling through automation or dedicated teams.",
+            "sri_lanka": {
+                "title": "Sri Lanka",
+                "body1": "Top-tier technical talent, deep engineering expertise, innovation, and execution power. This is where ideas are built, scaled, and refined.",
+                "body2": "Together, this allows our clients to move faster without losing control — and scale without sacrificing quality. This is not outsourcing. This is one global team, aligned in standards, ownership, and ambition."
+            },
+            "netherlands": {
+                "title": "The Netherlands",
+                "body": "Strategy, structure, clarity, client relationships, and premium quality. This is where vision is shaped and direction is set."
+            },
+            "tagline": "Dutch strategy. Sri Lankan execution. One team.",
+            "amsterdam": "Amsterdam, NL",
+            "colombo": "Colombo, LK",
+            "map_alt": ""
+        },
+        "two_ways": {
+            "title": "Two Ways to Climb With Acendae",
+            "subtitle": "Choose the path that fits your journey",
+            "outsource": {
+                "title": "Outsource Your Project",
+                "subtitle": "For clear goals & focused delivery.",
+                "body": "When you outsource a project to Acendae, we take responsibility from start to finish – while keeping you closely involved at every step.",
+                "guide_label": "We guide you through",
+                "items": [
+                    "Scope & strategy",
+                    "Design & development",
+                    "Testing, launch & optimisation"
+                ],
+                "footer_note": "Often chosen by founders and product teams with a clear roadmap who want certainty, structure, and quality delivery.",
+                "cta": "Outsource a project"
+            },
+            "team": {
+                "title": "Build a Dedicated Team",
+                "subtitle": "For sustainable growth & continuous development",
+                "body": "When you build a team with Acendae, you gain dedicated developers or complete teams that work as part of your organisation.",
+                "guide_label": "We provide",
+                "items": [
+                    "Individual specialists or complete teams",
+                    "Long-term, full-time collaboration",
+                    "Teams aligned with your tools, processes, and culture"
+                ],
+                "footer_note": "Often chosen by scale-ups, software companies, and digital agencies expanding delivery capacity.",
+                "cta": "Build a dedicated team"
+            }
+        },
+        "units": {
+            "title": "Our Units",
+            "subtitle": "Structured expertise, organised for clarity.",
+            "tabs_aria": "Capability units",
+            "tabs": {
+                "development": "Development Unit",
+                "engineering": "Engineering Unit",
+                "outsourcing": "Team Outsourcing Unit",
+                "experience": "Experience Unit"
+            },
+            "development": {
+                "name": "Development Unit",
+                "tagline": "Websites and platforms that form a strong basecamp.",
+                "description": "We build websites and e-commerce platforms that support growth, performance, and long-term maintainability.",
+                "features": [
+                    "WordPress, Shopify, Wix, Drupal",
+                    "Conversion-focused & SEO-ready",
+                    "Easy to maintain and extend"
+                ],
+                "image_alt": "Development",
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Developers"
+            },
+            "engineering": {
+                "name": "Engineering Unit",
+                "tagline": "Software systems built for ascent and scale.",
+                "description": "We engineer reliable, future-ready software that supports complex business needs and long-term growth.",
+                "features": [
+                    "SaaS platforms & portals",
+                    "API integrations & automation",
+                    "Secure, scalable architectures"
+                ],
+                "image_alt": "Engineering",
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Engineers"
+            },
+            "outsourcing": {
+                "name": "Team Outsourcing Unit",
+                "tagline": "Dedicated teams that extend your delivery power.",
+                "description": "We help companies and digital agencies scale by providing remote developers and teams who work as part of their organisation.",
+                "features": [
+                    "Developers, engineers, designers & QA",
+                    "Individual specialists or complete teams",
+                    "Long-term, embedded collaboration"
+                ],
+                "image_alt": "Outsourcing",
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Talents"
+            },
+            "experience": {
+                "name": "Experience Unit",
+                "tagline": "Designing calm, intuitive experiences along the path.",
+                "description": "We design digital experiences that balance usability, aesthetics, and business goals.",
+                "features": [
+                    "UX & UI design",
+                    "Product & platform design",
+                    "Design systems & experience strategy"
+                ],
+                "image_alt": "Experience",
+                "cta_primary": "Outsource a web project",
+                "cta_secondary": "Hire Designers"
+            }
+        },
+        "how_we_work": {
+            "title": "How We Work",
+            "subtitle": "Guided ascent, step by step.",
+            "steps": {
+                "basecamp": {
+                    "title": "Discovery & Basecamp",
+                    "desc": "We map out your current state, define technical requirements, and build a roadmap for the journey ahead."
+                },
+                "ascent": {
+                    "title": "The Ascent",
+                    "desc": "Sprint by sprint, our teams build, test, and release. You remain involved in every critical decision."
+                },
+                "summit": {
+                    "title": "Summit & Scale",
+                    "desc": "We launch and optimize. Once the foundation holds we shift toward maintenance, iterations, and long-term scaling."
+                }
+            }
+        },
+        "quote": {
+            "text": "We don’t rush the climb. We protect progress and you’ll always know what the next step is.",
+            "aria_label": "Customer Quote"
+        },
+        "join": {
+            "title": "Join Acendae",
+            "subtitle": "Become an Acendor",
+            "body1": "Behind every climb is a team of calm, capable guides. At Acendae, we call them Acendors.",
+            "body2": "An Acendor is not just a developer, designer, or engineer.",
+            "who_label": "An Acendor is someone who",
+            "values": [
+                "Takes ownership",
+                "Values clarity over chaos",
+                "Believes great work is built step by step",
+                "Enjoys growing together with clients and teammates"
+            ],
+            "body3": "We work as one integrated team across the Netherlands and Sri Lanka — combining strategy, technology, and execution.",
+            "body4": "If you want to work on meaningful projects, grow continuously, and be part of long-term partnerships instead of short-term gigs, you'll feel at home here.",
+            "cta": "Join Acendae as an Acendor",
+            "right_quote": "We're always looking for people who want to climb together"
+        }
     },
-    "services": {
-      "developmentUnit": "Development Unit",
-      "engineeringUnit": "Engineering Unit",
-      "teamOutsourcing": "Team Outsourcing",
-      "experienceUnit": "Experience Unit"
+    "cta": {
+        "readyTitle": "Ready to start your ascent?",
+        "readySubtext1": "Let's talk about where you are today — and what the next step should be.",
+        "readySubtext2": "Whether you need a project delivered or a team built around your growth, we'll guide you to the right setup.",
+        "discussProject": "Discuss a project",
+        "discussOutsourcing": "Discuss team outsourcing",
+        "tagline": "We'll find the right next step."
     },
-    "resources": {
-      "ourProcess": "Our Process",
-      "caseStudies": "Case Studies",
-      "blog": "Blog",
-      "faqs": "FAQs"
-    },
-    "contact": {
-      "getInTouch": "Get in Touch",
-      "partnerships": "Partnerships",
-      "support": "Support"
-    },
-    "copyright": "Copyright © 2026 Acendae",
-    "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms & Conditions",
-      "cookies": "Manage Cookies"
+    "common": {
+        "logoAlt": "Acendae",
+        "en": "EN",
+        "nl": "NL",
+        "language": "Language",
+        "darkMode": "Dark Mode",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "tiktok": "TikTok",
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook"
     }
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "Your growth partner in tech",
-      "headline": "Every business has its mountain. Acendae is the guide.",
-      "subline": "We build world-class software products and dedicated tech teams that help ambitious companies scale — from the Netherlands to the world.",
-      "ctaOutsource": "Outsource a Project",
-      "ctaDedicated": "Build a Dedicated Team"
-    },
-    "socialProof": {
-      "quote": "Progress is not a shortcut. It's a journey.",
-      "sriLankaLabel": "Sri Lanka",
-      "netherlandsLabel": "The Netherlands"
-    },
-    "twoWays": {
-      "sectionTitle": "Two Ways to Climb With Acendae",
-      "sectionSubtitle": "Whether you need a full product delivered or a dedicated team integrated into your workflow, we provide the expertise to help you reach the summit.",
-      "outsource": {
-        "title": "Outsource a Project",
-        "description": "End-to-end delivery of your software product. We take ownership of the entire process from discovery to launch."
-      },
-      "dedicated": {
-        "title": "Build a Dedicated Team",
-        "description": "Scale your engineering capacity with long-term, embedded talent that works as a seamless extension of your company."
-      }
-    },
-    "units": {
-      "sectionTitle": "Our Units",
-      "sectionSubtitle": "Specialized teams focused on different aspects of the digital journey.",
-      "tabs": {
-        "development": "Development",
-        "engineering": "Engineering",
-        "outsourcing": "Outsourcing",
-        "experience": "Experience"
-      },
-      "development": {
-        "title": "Development Unit",
-        "description": "Building powerful web and mobile applications with modern tech stacks."
-      },
-      "engineering": {
-        "title": "Engineering Unit",
-        "description": "Scalable software architecture and robust backend systems for complex enterprises."
-      },
-      "outsourcing": {
-        "title": "Team Outsourcing",
-        "description": "High-performing engineering teams tailored to your specific technical requirements."
-      },
-      "experience": {
-        "title": "Experience Unit",
-        "description": "Human-centric design that balances business goals with user needs."
-      }
-    },
-    "howWeWork": {
-      "sectionTitle": "How We Work",
-      "sectionSubtitle": "Our structured approach ensures transparency, speed, and quality at every stage of the climb.",
-      "steps": {
-        "step1": "Discovery & Strategy",
-        "step2": "Design & Prototyping",
-        "step3": "Development & QA",
-        "step4": "Launch & Evolution"
-      }
-    },
-    "quote": {
-      "text": "We don't rush the climb. We protect progress and you'll always know what the next step is."
-    },
-    "join": {
-      "title": "Join Acendae",
-      "subtitle": "Be part of a collaborative culture that values growth, ownership, and technical excellence.",
-      "bullets": [
-        "Work on global projects",
-        "Continuous learning culture",
-        "Competitive compensation",
-        "Flexible working environment"
-      ],
-      "cta": "See Open Roles",
-      "rightQuote": "We're always looking for people who want to climb together"
-    }
-  },
-  "cta": {
-    "readyTitle": "Ready to start your ascent?",
-    "readySubtext1": "Let's talk about where you are today — and what the next step should be.",
-    "readySubtext2": "Whether you need a project delivered or a team built around your growth, we'll guide you to the right setup.",
-    "discussProject": "Discuss a project",
-    "discussOutsourcing": "Discuss team outsourcing",
-    "tagline": "We'll find the right next step."
-  },
-  "about": {
-    "hero": {
-      "title": "About Us",
-      "subtitle": "We are a team of builders, designers, and strategists committed to helping businesses scale through technology."
-    },
-    "fromBuilders": {
-      "title": "From Builders to Guides",
-      "description": "Acendae was born out of a desire to bridge the gap between high-level strategy and technical execution."
-    },
-    "theWayWeClimb": {
-      "title": "The Way We Climb",
-      "description": "Our core values define how we approach every challenge and interaction."
-    }
-  },
-  "services": {
-    "index": {
-      "title": "Our Services",
-      "subtitle": "Comprehensive technology solutions designed for scale and performance."
-    },
-    "outsource": {
-      "title": "Project Outsourcing",
-      "description": "Full-cycle software development tailored to your business needs."
-    },
-    "dedicated": {
-      "title": "Dedicated Teams",
-      "description": "Embedded engineering talent that integrates directly into your organization."
-    }
-  },
-  "caseStudies": {
-    "hero": {
-      "title": "Case Studies",
-      "subtitle": "Explore how we've helped ambitious companies solve complex problems."
-    },
-    "progressNoise": {
-      "title": "Real Progress, Less Noise",
-      "description": "We focus on outcomes that matter, not just lines of code."
-    },
-    "filters": {
-      "all": "All",
-      "saas": "SaaS Products",
-      "ecommerce": "E-Commerce",
-      "noCode": "No Code",
-      "uxui": "UX/UI Design"
-    }
-  },
-  "careers": {
-    "hero": {
-      "title": "Careers",
-      "subtitle": "Build the future with us."
-    },
-    "openRoles": {
-      "title": "Open Roles",
-      "subtitle": "Join our growing team of experts."
-    },
-    "application": {
-      "title": "Apply Now",
-      "subtitle": "Tell us why you'd be a great fit for Acendae."
-    }
-  },
-  "forms": {
-    "contact": {
-      "title": "Get in Touch",
-      "name": "Full Name",
-      "email": "Email Address",
-      "company": "Company",
-      "message": "Message",
-      "namePlaceholder": "Your full name",
-      "emailPlaceholder": "you@company.com",
-      "companyPlaceholder": "Your company name",
-      "messagePlaceholder": "Tell us about your project...",
-      "submit": "Send Message",
-      "submitting": "Sending..."
-    },
-    "jobApplication": {
-      "title": "Apply for this role",
-      "name": "Full Name",
-      "email": "Email Address",
-      "cv": "Upload CV",
-      "cvHint": "PDF or Word, max 5MB",
-      "submit": "Submit Application",
-      "submitting": "Submitting..."
-    },
-    "validation": {
-      "required": "This field is required.",
-      "emailInvalid": "Please enter a valid email address.",
-      "fileTooLarge": "File must be under 5MB.",
-      "fileType": "Only PDF or Word documents are accepted."
-    }
-  },
-  "common": {
-    "learnMore": "Learn More",
-    "getStarted": "Get Started",
-    "viewAll": "View All",
-    "backToHome": "Back to Home",
-    "loading": "Loading...",
-    "error404Title": "Page Not Found",
-    "error404Subtitle": "Sorry, the page you are looking for doesn't exist or has been moved.",
-    "en": "EN",
-    "nl": "NL",
-    "dismiss": "Dismiss",
-    "logoAlt": "Acendae Logo",
-    "language": "Language",
-    "darkMode": "Dark Mode",
-    "instagram": "Instagram",
-    "linkedin": "LinkedIn",
-    "tiktok": "TikTok",
-    "twitter": "X (Twitter)",
-    "facebook": "Facebook"
-  },
-  "flash": {
-    "contactSuccess": "Your message has been sent. We'll be in touch soon.",
-    "contactError": "Something went wrong. Please try again.",
-    "applicationSuccess": "Your application has been submitted. Thank you!",
-    "applicationError": "Something went wrong. Please try again."
-  },
-  "auth": {
-    "login": {
-      "title": "Log in to your account",
-      "description": "Enter your email and password below to log in",
-      "heading": "Log in",
-      "email": "Email address",
-      "emailPlaceholder": "email@example.com",
-      "password": "Password",
-      "passwordPlaceholder": "Password",
-      "forgotPassword": "Forgot password?",
-      "rememberMe": "Remember me",
-      "submit": "Log in",
-      "noAccount": "Don't have an account?",
-      "signUp": "Sign up"
-    },
-    "register": {
-      "title": "Create an account",
-      "description": "Enter your details below to create your account",
-      "heading": "Register",
-      "name": "Name",
-      "namePlaceholder": "Full name",
-      "email": "Email address",
-      "emailPlaceholder": "email@example.com",
-      "password": "Password",
-      "passwordPlaceholder": "Password",
-      "confirmPassword": "Confirm password",
-      "confirmPasswordPlaceholder": "Confirm password",
-      "submit": "Create account",
-      "alreadyHaveAccount": "Already have an account?",
-      "logIn": "Log in"
-    },
-    "forgotPassword": {
-      "title": "Forgot password",
-      "description": "Enter your email to receive a password reset link",
-      "heading": "Forgot password",
-      "email": "Email address",
-      "emailPlaceholder": "email@example.com",
-      "submit": "Email password reset link",
-      "returnTo": "Or, return to",
-      "logIn": "log in"
-    },
-    "resetPassword": {
-      "title": "Reset password",
-      "description": "Enter your new password below",
-      "heading": "Reset password",
-      "email": "Email address",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "submit": "Reset password"
-    },
-    "verifyEmail": {
-      "title": "Verify email",
-      "description": "Please verify your email address by clicking on the link we just emailed to you.",
-      "heading": "Verify email",
-      "resendSuccess": "A new verification link has been sent to the email address you provided during registration.",
-      "submit": "Resend verification email",
-      "logOut": "Log out"
-    },
-    "confirmPassword": {
-      "title": "Confirm password",
-      "description": "This is a secure area of the application. Please confirm your password before continuing.",
-      "heading": "Confirm password",
-      "password": "Password",
-      "submit": "Confirm"
-    },
-    "twoFactor": {
-      "title": "Two-factor authentication",
-      "description": "Please confirm access to your account by entering the authentication code provided by your authenticator application.",
-      "recoveryDescription": "Please confirm access to your account by entering one of your emergency recovery codes.",
-      "heading": "Two-factor authentication",
-      "code": "Code",
-      "recoveryCode": "Recovery Code",
-      "useRecovery": "Use a recovery code",
-      "useCode": "Use an authentication code",
-      "submit": "Log in"
-    }
-  },
-  "settings": {
-    "profile": {
-      "title": "Profile Information",
-      "description": "Update your account's profile information and email address.",
-      "name": "Name",
-      "email": "Email address",
-      "unverified": "Your email address is unverified.",
-      "resend": "Click here to re-send the verification email.",
-      "resendSuccess": "A new verification link has been sent to your email address.",
-      "save": "Save",
-      "saved": "Saved."
-    },
-    "password": {
-      "title": "Update Password",
-      "description": "Ensure your account is using a long, random password to stay secure.",
-      "current": "Current Password",
-      "new": "New Password",
-      "confirm": "Confirm Password",
-      "save": "Save",
-      "saved": "Saved."
-    },
-    "appearance": {
-      "title": "Appearance",
-      "description": "Manage your account's appearance settings.",
-      "theme": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
-    },
-    "twoFactor": {
-      "title": "Two-Factor Authentication",
-      "description": "Add additional security to your account using two-factor authentication.",
-      "enabled": "You have enabled two-factor authentication.",
-      "disabled": "You have not enabled two-factor authentication.",
-      "finish": "Finish enabling two-factor authentication.",
-      "setup": "When two-factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.",
-      "scan": "To finish enabling two-factor authentication, scan the following QR code using your phone's authenticator application or enter the setup key and provide the generated OTP code.",
-      "store": "Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two-factor authentication device is lost.",
-      "enable": "Enable",
-      "disable": "Disable",
-      "regenerate": "Regenerate Recovery Codes",
-      "show": "Show Recovery Codes",
-      "hide": "Hide Recovery Codes",
-      "confirm": "Confirm",
-      "recoveryCodes": "2FA recovery codes",
-      "recoveryCodesDesc": "Recovery codes let you regain access if you lose your 2FA device. Store them in a secure password manager.",
-      "recoveryCodesStore": "Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two-factor authentication device is lost.",
-      "recoveryCodesHelp": "Each recovery code can be used once to access your account and will be removed after use. If you need more, click Regenerate codes above.",
-      "enabledTitle": "Two-factor authentication enabled",
-      "enabledDesc": "Two-factor authentication is now enabled. Scan the QR code or enter the setup key in your authenticator app.",
-      "verifyTitle": "Verify authentication code",
-      "verifyDesc": "Enter the 6-digit code from your authenticator app",
-      "continue": "Continue",
-      "close": "Close",
-      "back": "Back",
-      "orManual": "or, enter the code manually"
-    },
-    "deleteUser": {
-      "title": "Delete Account",
-      "description": "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.",
-      "button": "Delete Account",
-      "modalTitle": "Are you sure you want to delete your account?",
-      "modalDescription": "Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.",
-      "password": "Password",
-      "cancel": "Cancel"
-    }
-  }
 }

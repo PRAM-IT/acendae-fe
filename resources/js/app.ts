@@ -15,14 +15,17 @@ createInertiaApp({
     title: (title) => (title ? `${title} | Acendae` : 'Acendae'),
 
     resolve: (name) => {
-        const pages = import.meta.glob<{ default: DefineComponent }>('../pages/**/*.vue', { eager: true });
-        const page = pages[`../pages/${name}.vue`];
-        
-        if (page?.default) {
-            page.default.layout = page.default.layout ?? DefaultLayout;
+        const pages = import.meta.glob<{ default: DefineComponent }>('./pages/**/*.vue', { eager: true });
+        const page = pages[`./pages/${name}.vue`];
+
+        if (!page) {
+            throw new Error(`Page not found: ${name}`);
         }
-        
-        return page;
+
+        const component = page.default;
+        component.layout = component.layout ?? DefaultLayout;
+
+        return component;
     },
 
     setup({ el, App, props, plugin }) {
@@ -36,13 +39,14 @@ createInertiaApp({
           event.detail.visit.headers['X-Locale'] = preferences.lang;
         });
 
-        createApp({ render: () => h(App, props) })
+        const app = createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(pinia)
             .use(i18n)
             .use(head)
-            .use(ZiggyVue)
-            .mount(el);
+            .use(ZiggyVue);
+
+        app.mount(el);
     },
 
     progress: {
