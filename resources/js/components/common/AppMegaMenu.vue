@@ -1,0 +1,118 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+import { Link } from '@inertiajs/vue3';
+import { ChevronRight } from 'lucide-vue-next';
+import AppButton from '@/components/ui/AppButton.vue';
+
+interface Props {
+  open?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  open: false,
+});
+
+const emit = defineEmits(['close']);
+
+const outsourceLinks = [
+  { name: 'Software Engineering', path: '/services/software-engineering' },
+  { name: 'Web Development', path: '/services/web-development' },
+  { name: 'SaaS Development', path: '/services/saas-development' },
+  { name: 'UX/UI Design', path: '/services/ux-ui-design' },
+];
+
+const teamLinks = [
+  { name: 'Hire Web Developers', path: '/hire/web-developers' },
+  { name: 'Hire Software Engineers', path: '/hire/software-engineers' },
+  { name: 'Hire UX/UI Designers', path: '/hire/ux-ui-designers' },
+  { name: 'Full Dedicated Teams', path: '/hire/dedicated-teams' },
+];
+
+const handleClose = () => {
+  emit('close');
+};
+</script>
+
+<template>
+  <Transition name="slide-down">
+    <div 
+      v-if="open" 
+      class="absolute top-[74px] left-0 right-0 w-full bg-white shadow-navy-lg z-[var(--z-dropdown)] overflow-hidden font-mona pt-[40px]"
+      @mouseleave="handleClose"
+    >
+      <div class="acendae-container-wide grid grid-cols-2 gap-0 px-[85px]">
+        <!-- Left Column -->
+        <div class="flex flex-col gap-6 pr-12 pb-12">
+          <div class="mb-4">
+            <h3 class="text-[18px] font-bold text-[#0B1F3F] mb-1">Outsource a Project</h3>
+            <p class="text-[14px] text-black/50">Structured delivery from strategy to launch.</p>
+          </div>
+          
+          <div class="flex flex-col gap-1">
+            <Link 
+              v-for="link in outsourceLinks" 
+              :key="link.path"
+              :href="link.path"
+              class="group flex items-center justify-between p-[12px] px-[16px] rounded-lg transition-all border-l-2 border-transparent hover:border-gold hover:bg-[#C9A84C0F]"
+              @click="handleClose"
+            >
+              <span class="text-[15px] font-medium text-[#0B1F3F] group-hover:text-gold transition-colors">
+                {{ link.name }}
+              </span>
+              <ChevronRight class="w-4 h-4 text-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+            </Link>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex flex-col gap-6 bg-[#F0F4F8] p-12 rounded-tl-2xl rounded-tr-2xl">
+          <div class="mb-4">
+            <h3 class="text-[18px] font-bold text-[#0B1F3F] mb-1">Build a Dedicated Team</h3>
+            <p class="text-[14px] text-black/50">Long term embedded teams aligned with your company.</p>
+          </div>
+          
+          <div class="flex flex-col gap-1">
+            <Link 
+              v-for="link in teamLinks" 
+              :key="link.path"
+              :href="link.path"
+              class="group flex items-center justify-between p-[12px] px-[16px] rounded-lg transition-all border-l-2 border-transparent hover:border-[#0B1F3F] hover:bg-white/50"
+              @click="handleClose"
+            >
+              <span class="text-[15px] font-medium text-[#0B1F3F] group-hover:text-[#0B1F3F]/80 transition-colors">
+                {{ link.name }}
+              </span>
+              <ChevronRight class="w-4 h-4 text-[#0B1F3F] opacity-0 group-hover:opacity-100 transition-opacity" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="bg-[#0B1F3F] h-[60px] flex items-center justify-between px-[85px] w-full mt-auto">
+        <p class="text-[15px] text-white/70 italic">
+          Dutch strategy. Sri Lankan execution. <strong class="text-white font-bold ml-1">One</strong> integrated team.
+        </p>
+        <AppButton 
+          variant="outline" 
+          tag="Link" 
+          href="/contact" 
+          class="!text-[14px] !font-medium !text-white !border-white/40 !rounded-[6px] !px-[24px] !py-[10px] hover:!bg-white/10"
+          @click="handleClose"
+        >
+          Let's Talk
+        </AppButton>
+      </div>
+    </div>
+  </Transition>
+</template>
+
+<style scoped>
+.font-mona {
+  font-family: 'Mona Sans', sans-serif;
+}
+
+.shadow-navy-lg {
+  box-shadow: 0 10px 30px rgba(11, 31, 63, 0.15);
+}
+</style>
