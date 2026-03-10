@@ -4,7 +4,6 @@ import { Link, usePage } from '@inertiajs/vue3';
 import { Menu, X, ChevronDown } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 import AppButton from '@/components/ui/AppButton.vue';
-import AppMegaMenu from '@/components/common/AppMegaMenu.vue';
 import { usePreferencesStore } from '@/stores/preferences';
 import logoDark from '@assets/images/logo-dark.svg';
 import globeIcon from '@assets/images/globe.svg';
@@ -16,8 +15,6 @@ const preferences = usePreferencesStore();
 
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
-const isMegaMenuOpen = ref(false);
-const isMobileServicesOpen = ref(false);
 
 const updateScroll = () => {
     isScrolled.value = window.pageYOffset > 20;
@@ -36,21 +33,6 @@ const navLinks = computed(() => [
     { name: t('nav.projects'), path: '/projects' },
     { name: t('nav.careers'), path: '/careers' },
     { name: t('nav.lifeAtAcendae'), path: '/life' },
-]);
-
-// Mega menu link groups for mobile accordion
-const outsourceLinks = computed(() => [
-  { name: t('megaMenu.outsource.links.softwareEng'), path: '/services/software-engineering' },
-  { name: t('megaMenu.outsource.links.webDev'), path: '/services/web-development' },
-  { name: t('megaMenu.outsource.links.saasDev'), path: '/services/saas-development' },
-  { name: t('megaMenu.outsource.links.uxui'), path: '/services/ux-ui-design' },
-]);
-
-const teamLinks = computed(() => [
-  { name: t('megaMenu.dedicated.links.hireWebDev'), path: '/hire/web-developers' },
-  { name: t('megaMenu.dedicated.links.hireSoftwareEng'), path: '/hire/software-engineers' },
-  { name: t('megaMenu.dedicated.links.hireUxui'), path: '/hire/ux-ui-designers' },
-  { name: t('megaMenu.dedicated.links.fullTeams'), path: '/hire/dedicated-teams' },
 ]);
 
 const isActive = (path: string) => {
@@ -75,13 +57,12 @@ const navbarClasses = computed(() => [
 
 const closeAllMobile = () => {
     isMobileMenuOpen.value = false;
-    isMobileServicesOpen.value = false;
 };
 </script>
 
 <template>
-    <header :class="navbarClasses" class="font-mona flex items-center bg-white">
-        <div class="mx-auto flex h-full w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-[85px]">
+    <header :class="navbarClasses" class="flex items-center bg-white">
+        <div class="acendae-container mx-auto flex h-full w-full items-center justify-between">
             
             <!-- LOGO SECTION -->
             <div class="flex items-center">
@@ -97,29 +78,6 @@ const closeAllMobile = () => {
 
             <!-- DESKTOP NAVIGATION -->
             <nav class="hidden lg:flex items-center gap-x-[24px] xl:gap-x-[36px]">
-                <!-- Services Mega Menu Toggle -->
-                <div 
-                    class="relative py-2"
-                    @mouseenter="isMegaMenuOpen = true"
-                    @mouseleave="isMegaMenuOpen = false"
-                >
-                    <button
-                        class="flex items-center gap-1.5 text-[14px] font-medium transition-all xl:text-[16px]"
-                        :class="isMegaMenuOpen ? 'text-[#0B1F3F]' : 'text-black/70 hover:text-[#0B1F3F]'"
-                    >
-                        {{ t('nav.services') }}
-                        <ChevronDown 
-                            class="h-3.5 w-3.5 transition-transform duration-300 xl:h-4 xl:w-4"
-                            :class="{ 'rotate-180': isMegaMenuOpen }"
-                        />
-                    </button>
-                    <!-- Underline effect for Services (always present when open) -->
-                    <span
-                        class="absolute -bottom-1 left-0 h-[2px] bg-[#C9A84C] transition-all duration-300"
-                        :class="isMegaMenuOpen ? 'w-full opacity-100' : 'w-0 opacity-0'"
-                    ></span>
-                </div>
-
                 <Link
                     v-for="link in navLinks"
                     :key="link.path"
@@ -192,14 +150,6 @@ const closeAllMobile = () => {
             </button>
         </div>
 
-        <!-- MEGA MENU DESKTOP -->
-        <AppMegaMenu 
-            :open="isMegaMenuOpen" 
-            @close="isMegaMenuOpen = false" 
-            class="top-[70px] lg:top-[84px]"
-            :class="{ '!top-[64px] lg:!top-[74px]': isScrolled }"
-        />
-
         <!-- MOBILE DRAWER -->
         <Transition name="slide-down">
             <div
@@ -209,51 +159,6 @@ const closeAllMobile = () => {
                 <div class="flex flex-col p-6 pt-8 pb-12">
                     <!-- Nav Links Stack -->
                     <nav class="flex flex-col divide-y divide-black/5">
-                        <!-- Services Accordion -->
-                        <div class="flex flex-col">
-                            <button 
-                                class="flex h-[64px] items-center justify-between py-4 text-[18px] font-semibold text-[#0B1F3F]"
-                                @click="isMobileServicesOpen = !isMobileServicesOpen"
-                            >
-                                <span>{{ t('nav.services') }}</span>
-                                <ChevronDown 
-                                    class="h-5 w-5 transition-transform duration-300"
-                                    :class="{ 'rotate-180': isMobileServicesOpen }"
-                                />
-                            </button>
-                            
-                            <Transition name="fade">
-                                <div v-if="isMobileServicesOpen" class="flex flex-col gap-6 pb-6 pl-4">
-                                    <!-- Outsource Links -->
-                                    <div class="flex flex-col gap-3">
-                                        <p class="text-[14px] font-bold uppercase tracking-wider text-[#C9A84C]">{{ t('megaMenu.outsource.title') }}</p>
-                                        <Link 
-                                            v-for="link in outsourceLinks" 
-                                            :key="link.path"
-                                            :href="link.path"
-                                            class="text-[16px] text-black/70 active:text-[#C9A84C]"
-                                            @click="closeAllMobile"
-                                        >
-                                            {{ link.name }}
-                                        </Link>
-                                    </div>
-                                    <!-- Team Links -->
-                                    <div class="flex flex-col gap-3">
-                                        <p class="text-[14px] font-bold uppercase tracking-wider text-[#0B1F3F]">{{ t('megaMenu.dedicated.title') }}</p>
-                                        <Link 
-                                            v-for="link in teamLinks" 
-                                            :key="link.path"
-                                            :href="link.path"
-                                            class="text-[16px] text-black/70 active:text-[#C9A84C]"
-                                            @click="closeAllMobile"
-                                        >
-                                            {{ link.name }}
-                                        </Link>
-                                    </div>
-                                </div>
-                            </Transition>
-                        </div>
-
                         <Link
                             v-for="link in navLinks"
                             :key="link.path"
@@ -312,10 +217,6 @@ const closeAllMobile = () => {
 </template>
 
 <style scoped>
-.font-mona {
-    font-family: 'Mona Sans', sans-serif;
-}
-
 /* Slide Down with scale & fade for modern feel */
 .slide-down-enter-active,
 .slide-down-leave-active {
