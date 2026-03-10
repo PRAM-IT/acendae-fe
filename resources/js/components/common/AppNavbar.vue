@@ -50,9 +50,9 @@ const toggleDarkMode = () => {
 
 const navbarClasses = computed(() => [
     'fixed top-0 inset-x-0 z-[100] bg-white transition-all duration-300',
-    isScrolled.value 
-        ? 'h-[64px] lg:h-[74px] border-b border-black/5 shadow-md shadow-black/5' 
-        : 'h-[70px] lg:h-[84px] border-b border-transparent shadow-none',
+    isScrolled.value
+        ? 'h-[60px] lg:h-[74px] border-b border-black/5 shadow-sm shadow-black/5'
+        : 'h-[64px] lg:h-[74px] border-b border-transparent shadow-none',
 ]);
 
 const closeAllMobile = () => {
@@ -62,11 +62,15 @@ const closeAllMobile = () => {
 
 <template>
     <header :class="navbarClasses" class="flex items-center bg-white">
-        <div class="acendae-container mx-auto flex h-full w-full items-center justify-between">
-            
+        <div
+            class="acendae-container mx-auto flex h-full w-full items-center justify-between"
+        >
             <!-- LOGO SECTION -->
             <div class="flex items-center">
-                <Link href="/" class="flex items-center transition-transform hover:scale-[1.02] active:scale-[0.98]">
+                <Link
+                    href="/"
+                    class="flex items-center transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                >
                     <img
                         :src="logoDark"
                         :alt="t('common.logoAlt') || 'Acendae'"
@@ -77,36 +81,54 @@ const closeAllMobile = () => {
             </div>
 
             <!-- DESKTOP NAVIGATION -->
-            <nav class="hidden lg:flex items-center gap-x-[24px] xl:gap-x-[36px]">
+            <nav class="hidden items-center gap-x-[36px] lg:flex">
                 <Link
                     v-for="link in navLinks"
                     :key="link.path"
                     :href="link.path"
-                    class="group relative py-2 text-[14px] font-medium transition-all xl:text-[16px]"
-                    :class="isActive(link.path) ? 'text-[#0B1F3F]' : 'text-black/70 hover:text-[#0B1F3F]'"
+                    class="group relative py-2 text-[16px] leading-[18px] font-medium transition-colors duration-200"
+                    :class="
+                        isActive(link.path)
+                            ? 'text-[#0B1F3F]'
+                            : 'text-black/85 hover:text-[#0B1F3F]'
+                    "
                 >
                     {{ link.name }}
                     <span
                         class="absolute -bottom-1 left-0 h-[2px] bg-[#C9A84C] transition-all duration-300"
-                        :class="isActive(link.path) ? 'w-full opacity-100' : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-40'"
+                        :class="
+                            isActive(link.path)
+                                ? 'w-full opacity-100'
+                                : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-40'
+                        "
                     ></span>
                 </Link>
             </nav>
 
             <!-- RIGHT ACTIONS CLUSTER -->
-            <div class="hidden lg:flex items-center gap-x-4 xl:gap-x-8">
+            <div class="hidden items-center gap-x-[40px] lg:flex">
                 <!-- Branded Language Switcher Pill -->
-                <div class="relative flex h-[32px] items-center rounded-full border border-black/10 bg-white p-0.5 xl:h-[36px] xl:p-1">
-                    <div class="flex items-center px-1 xl:px-1.5">
-                        <img :src="globeIcon" class="h-4 w-4 xl:h-5 xl:w-5" alt="" />
+                <div
+                    class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white pr-1 pl-1.5"
+                >
+                    <div class="flex items-center pr-1">
+                        <img
+                            :src="globeIcon"
+                            class="h-[26px] w-[26px]"
+                            alt=""
+                        />
                     </div>
-                    <div class="flex gap-x-0.5 xl:gap-x-1">
+                    <div class="flex">
                         <button
-                            v-for="lang in (['en', 'nl'] as const)"
+                            v-for="lang in ['en', 'nl'] as const"
                             :key="lang"
                             @click="switchLanguage(lang)"
-                            class="flex h-[24px] w-[30px] items-center justify-center rounded-full text-[12px] font-semibold uppercase transition-all xl:h-[26px] xl:w-[34px] xl:text-[13px]"
-                            :class="locale === lang ? 'bg-[#D5E2FF] text-[#1D4FBC]' : 'text-black/60 hover:text-black hover:bg-black/5'"
+                            class="flex h-[26px] w-[32px] items-center justify-center text-[14px] font-medium uppercase transition-all duration-150"
+                            :class="
+                                locale === lang
+                                    ? 'rounded-full bg-[rgba(213,226,255,0.31)] text-[#1D4FBC]'
+                                    : 'rounded text-black hover:bg-black/5'
+                            "
                         >
                             {{ lang }}
                         </button>
@@ -116,10 +138,14 @@ const closeAllMobile = () => {
                 <!-- Dark Mode Toggle -->
                 <button
                     @click="toggleDarkMode"
-                    class="group relative flex h-8 w-8 items-center justify-center rounded-full border border-black/5 bg-gray-50/50 transition-all hover:bg-gray-100 xl:h-9 xl:w-9"
+                    class="group relative flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-gray-100 xl:h-9 xl:w-9"
                     :title="t('common.darkMode')"
                 >
-                    <img :src="moonIcon" class="h-4 w-4 transition-transform group-hover:rotate-12 xl:h-5 xl:w-5" alt="" />
+                    <img
+                        :src="moonIcon"
+                        class="h-5 w-5 transition-transform group-hover:rotate-12 xl:h-6 xl:w-6"
+                        alt=""
+                    />
                 </button>
 
                 <!-- Branded Primary CTA -->
@@ -127,9 +153,11 @@ const closeAllMobile = () => {
                     variant="primary"
                     tag="Link"
                     href="/contact"
-                    class="!h-[42px] !min-w-[130px] !rounded-[8px] !bg-[#0B1F3F] !shadow-sm transition-all hover:!bg-[#152a4d] hover:!shadow-md xl:!h-[48px] xl:!min-w-[159px]"
+                    class="!h-[48px] !w-[159px] !rounded-[6px] !bg-[#0B1F3F] !px-5 transition-all duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629]"
                 >
-                    <span class="text-[13px] font-bold text-[#9ABAFF] xl:text-[15px]">
+                    <span
+                        class="text-[16px] leading-[16px] font-semibold text-[#9ABAFF]"
+                    >
                         {{ t('nav.getStarted') }}
                     </span>
                 </AppButton>
@@ -143,7 +171,11 @@ const closeAllMobile = () => {
             >
                 <div class="relative h-6 w-6">
                     <Transition name="fade" mode="out-in">
-                        <Menu v-if="!isMobileMenuOpen" key="menu" class="h-6 w-6" />
+                        <Menu
+                            v-if="!isMobileMenuOpen"
+                            key="menu"
+                            class="h-6 w-6"
+                        />
                         <X v-else key="close" class="h-6 w-6" />
                     </Transition>
                 </div>
@@ -166,13 +198,19 @@ const closeAllMobile = () => {
                             class="group flex h-[64px] items-center justify-between py-4"
                             @click="closeAllMobile"
                         >
-                            <span 
+                            <span
                                 class="text-[18px] font-semibold transition-colors"
-                                :class="isActive(link.path) ? 'text-[#C9A84C]' : 'text-[#0B1F3F] group-active:text-[#C9A84C]'"
+                                :class="
+                                    isActive(link.path)
+                                        ? 'text-[#C9A84C]'
+                                        : 'text-[#0B1F3F] group-active:text-[#C9A84C]'
+                                "
                             >
                                 {{ link.name }}
                             </span>
-                            <ChevronDown class="h-5 w-5 -rotate-90 text-black/20" />
+                            <ChevronDown
+                                class="h-5 w-5 -rotate-90 text-black/20"
+                            />
                         </Link>
                     </nav>
 
@@ -181,16 +219,29 @@ const closeAllMobile = () => {
                         <!-- Language Switcher -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-3">
-                                <img :src="globeIcon" class="h-5 w-5 opacity-60" alt="" />
-                                <span class="text-[15px] font-medium text-black/60">{{ t('common.language') }}</span>
+                                <img
+                                    :src="globeIcon"
+                                    class="h-5 w-5 opacity-60"
+                                    alt=""
+                                />
+                                <span
+                                    class="text-[15px] font-medium text-black/60"
+                                    >{{ t('common.language') }}</span
+                                >
                             </div>
-                            <div class="flex rounded-full border border-black/10 bg-white p-1">
+                            <div
+                                class="flex rounded-full border border-black/10 bg-white p-1"
+                            >
                                 <button
-                                    v-for="lang in (['en', 'nl'] as const)"
+                                    v-for="lang in ['en', 'nl'] as const"
                                     :key="lang"
                                     @click="switchLanguage(lang)"
                                     class="flex h-[28px] w-[40px] items-center justify-center rounded-full text-[13px] font-bold uppercase transition-all"
-                                    :class="locale === lang ? 'bg-[#D5E2FF] text-[#1D4FBC]' : 'text-black/50'"
+                                    :class="
+                                        locale === lang
+                                            ? 'bg-[#D5E2FF] text-[#1D4FBC]'
+                                            : 'text-black/50'
+                                    "
                                 >
                                     {{ lang }}
                                 </button>
@@ -206,7 +257,9 @@ const closeAllMobile = () => {
                                 class="!h-[56px] w-full !rounded-[12px] !bg-[#0B1F3F] !text-[16px] !font-bold"
                                 @click="closeAllMobile"
                             >
-                                <span class="text-[#9ABAFF]">{{ t('nav.getStarted') }}</span>
+                                <span class="text-[#9ABAFF]">{{
+                                    t('nav.getStarted')
+                                }}</span>
                             </AppButton>
                         </div>
                     </div>

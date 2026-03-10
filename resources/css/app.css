@@ -42,7 +42,7 @@
     /* --- Layout Tokens --- */
     --max-width: 1920px;
     --content-width: 1280px;
-    --container-padding: clamp(1.5rem, 3.5vw, 3.5rem);
+    --container-padding: clamp(3rem, 5.9028vw, 5.3125rem);
     --navbar-height: 4.5rem;
 
     /* --- Spacing Scale (4px base unit) --- */
@@ -250,7 +250,7 @@
     /* --- Containers --- */
     .acendae-container {
         width: 100%;
-        max-width: calc(var(--content-width) + 2 * var(--container-padding));
+        max-width: 1450px;
         margin-inline: auto;
         padding-inline: var(--container-padding);
     }
@@ -326,8 +326,10 @@
 
     .acendae-nav {
         font-family: 'DM Sans', sans-serif;
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-weight: 500;
+        line-height: 1.125rem;
+        color: rgba(0, 0, 0, 0.85);
         transition: color var(--transition-fast);
     }
 
@@ -407,6 +409,15 @@
     .btn-primary:hover {
         background-color: var(--color-navy-light);
         border-color: var(--color-navy-light);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(11, 31, 58, 0.28);
+    }
+
+    .btn-primary:active {
+        background-color: var(--color-navy-dark);
+        border-color: var(--color-navy-dark);
+        transform: translateY(0);
+        box-shadow: none;
     }
 
     .btn-outline {

@@ -31,7 +31,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
     >
         <!-- SECTION HEADER (centered) -->
         <div
-            class="acendae-container mx-auto mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12"
+            class="acendae-container mx-auto mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12 lg:px-[var(--container-padding)]"
             data-reveal="up"
         >
             <h2
@@ -40,7 +40,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                 {{ t('home.units.title') }}
             </h2>
             <p
-                class="text-center text-[14px] leading-5 font-normal text-black/85 sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
+                class="text-center text-[14px] leading-5 font-normal text-[#6b7280] sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
             >
                 {{ t('home.units.subtitle') }}
             </p>
@@ -48,7 +48,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
         <!-- TAB NAVIGATION -->
         <div
-            class="acendae-container mx-auto grid h-auto grid-cols-2 border border-[#D3D8E1] lg:flex lg:h-[65px] lg:flex-row xl:h-[70px] 2xl:h-[77px]"
+            class="acendae-container-fluid mx-auto grid h-auto grid-cols-2 border border-[#D3D8E1] lg:flex lg:h-[65px] lg:max-w-[1271px] lg:flex-row xl:h-[70px] 2xl:h-[77px]"
             data-reveal="up"
             data-reveal-delay="50"
         >
@@ -58,8 +58,8 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                 class="flex h-[52px] cursor-pointer items-center justify-center transition-colors duration-200 sm:h-[56px] md:h-[60px] lg:h-full lg:flex-1"
                 :class="[
                     activeTab === index
-                        ? 'bg-[#F3F5FB] font-medium text-black/85'
-                        : 'bg-white font-normal text-black/36',
+                        ? 'bg-[#F3F5FB] font-medium text-[#0b1f3a]'
+                        : 'bg-white font-normal text-[#0b1f3a]/40',
                     // Mobile 2×2 grid borders
                     index === 0
                         ? 'border-r border-b border-[#D3D8E1] lg:border-b-0'
@@ -82,7 +82,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
         <!-- UNIT CARD PANEL WRAPPER -->
         <div
-            class="acendae-container mx-auto overflow-hidden border border-t-0 border-[#D3D8E1] lg:flex lg:min-h-[460px] xl:min-h-[490px] 2xl:min-h-[520px]"
+            class="acendae-container-fluid mx-auto mt-10 overflow-hidden border border-[#D3D8E1] lg:flex lg:min-h-[460px] lg:max-w-[1271px] xl:min-h-[490px] 2xl:min-h-[520px]"
         >
             <Transition name="unit-fade" mode="out-in">
                 <div :key="activeTab" class="flex w-full flex-col lg:flex-row">
@@ -104,7 +104,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 {{ t(`home.units.${activeUnit}.tagline`) }}
                             </p>
                             <p
-                                class="text-[13px] leading-[19px] font-normal text-black/85 sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                class="text-[13px] leading-[19px] font-normal text-[#6b7280] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
                             >
                                 {{ t(`home.units.${activeUnit}.description`) }}
                             </p>
@@ -129,7 +129,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                     ></div>
                                 </div>
                                 <span
-                                    class="text-[13px] leading-[19px] text-black/85 sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                    class="text-[13px] leading-[19px] text-[#6b7280] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
                                 >
                                     {{ feature }}
                                 </span>
@@ -143,7 +143,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                             <!-- PRIMARY button -->
                             <Link
                                 :href="route('services.outsource')"
-                                class="flex h-[42px] w-full items-center justify-center gap-2 rounded-md bg-[#0B1F3F] px-4 sm:h-[44px] md:h-[46px] lg:h-[50px] lg:w-auto lg:gap-2.5 lg:rounded-lg lg:px-5 2xl:h-[55px]"
+                                class="flex h-[42px] w-full items-center justify-center gap-2 rounded-md bg-[#0B1F3F] px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 active:bg-[#081629] sm:h-[44px] md:h-[46px] lg:h-[50px] lg:w-auto lg:gap-2.5 lg:rounded-lg lg:px-5 2xl:h-[55px]"
                             >
                                 <span
                                     class="text-[13px] font-semibold whitespace-nowrap text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
@@ -172,7 +172,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                             <!-- SECONDARY button -->
                             <Link
                                 :href="route('services.dedicated-team')"
-                                class="flex h-[42px] w-full items-center justify-center gap-2 rounded-md bg-[rgba(77,161,240,0.11)] px-4 sm:h-[44px] md:h-[46px] lg:h-[50px] lg:w-auto lg:rounded-lg lg:px-5 2xl:h-[55px]"
+                                class="flex h-[42px] w-full items-center justify-center gap-2 rounded-md bg-[rgba(77,161,240,0.11)] px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[rgba(77,161,240,0.2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 sm:h-[44px] md:h-[46px] lg:h-[50px] lg:w-auto lg:rounded-lg lg:px-5 2xl:h-[55px]"
                             >
                                 <span
                                     class="text-[13px] font-semibold whitespace-nowrap text-[#1D4FBC] sm:text-[14px] md:text-[15px] lg:text-[16px]"

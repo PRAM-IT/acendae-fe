@@ -66,12 +66,12 @@ const { t } = useI18n();
                         class="mt-2.5 flex flex-col gap-3 sm:mt-3 sm:gap-4 md:gap-4 lg:mt-4 lg:gap-5 2xl:gap-6"
                     >
                         <p
-                            class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-[#6b7280] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body1') }}
                         </p>
                         <p
-                            class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-[#6b7280] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body2') }}
                         </p>
@@ -94,7 +94,7 @@ const { t } = useI18n();
                         </h3>
                         <div class="mt-2.5 sm:mt-3 lg:mt-4">
                             <p
-                                class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                class="text-[13px] leading-5 font-normal text-[#6b7280] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                             >
                                 {{ t('home.social_proof.netherlands.body') }}
                             </p>
@@ -164,8 +164,5 @@ const { t } = useI18n();
 <style scoped>
 .font-instrument {
     font-family: 'Instrument Sans', sans-serif;
-}
-.font-work {
-    font-family: 'Work Sans', sans-serif;
 }
 </style>

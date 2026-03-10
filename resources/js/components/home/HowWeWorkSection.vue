@@ -37,7 +37,7 @@ const steps = computed(() => [
 
 <template>
     <section
-        class="border-b border-[var(--color-border)] bg-white py-10 sm:py-12 md:py-14 lg:py-16 xl:py-[70px] 2xl:py-[80px]"
+        class="bg-white pt-10 pb-0 sm:pt-12 sm:pb-0 md:pt-14 md:pb-0 lg:pt-16 lg:pb-0 xl:pt-[70px] xl:pb-0 2xl:pt-[80px] 2xl:pb-0"
     >
         <div class="acendae-container mx-auto">
             <div

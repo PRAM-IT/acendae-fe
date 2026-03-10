@@ -12,7 +12,7 @@ const { t, tm } = useI18n();
     >
         <!-- LEFT COLUMN -->
         <div
-            class="flex w-full flex-col gap-4 bg-white px-4 py-10 sm:px-5 sm:py-12 md:gap-5 md:px-8 md:py-14 lg:flex-[0_0_55%] lg:gap-5 lg:py-[70px] lg:pr-10 lg:pl-[var(--container-padding)] xl:py-[80px] xl:pr-11 2xl:py-[90px] 2xl:pr-12"
+            class="flex w-full flex-col gap-4 bg-white py-10 pr-0 pl-[max(var(--container-padding),calc((100vw-var(--content-width))/2))] sm:py-12 md:gap-5 md:py-14 lg:flex-[0_0_55%] lg:gap-5 lg:py-[70px] xl:py-[80px] 2xl:py-[90px]"
             data-reveal="up"
         >
             <h2
@@ -89,7 +89,7 @@ const { t, tm } = useI18n();
             <div class="mt-2 sm:mt-3 lg:mt-4">
                 <Link
                     :href="route('careers')"
-                    class="inline-flex h-[42px] items-center justify-center self-start rounded-md bg-[#0B1F3F] px-6 py-2 sm:h-[44px] sm:px-7 md:h-[46px] md:px-8 lg:h-[50px] lg:rounded-lg lg:px-8 2xl:h-[55px] 2xl:px-10 2xl:py-2.5"
+                    class="inline-flex h-[42px] items-center justify-center self-start rounded-md bg-[#0B1F3F] px-6 py-2 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] active:translate-y-0 active:bg-[#081629] sm:h-[44px] sm:px-7 md:h-[46px] md:px-8 lg:h-[50px] lg:rounded-lg lg:px-8 2xl:h-[55px] 2xl:px-10 2xl:py-2.5"
                 >
                     <span
                         class="text-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"

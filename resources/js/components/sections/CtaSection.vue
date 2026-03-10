@@ -110,7 +110,7 @@ const avatarData = [
                     variant="outline"
                     tag="Link"
                     href="/team-outsourcing"
-                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] !border !border-[rgba(11,31,63,0.67)] !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
+                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] !border !border-[rgba(11,31,63,0.67)] !bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
                 >
                     <span
                         class="text-[13px] font-medium text-[#0B1F3F] md:text-[14px] lg:text-[15px] 2xl:text-[16px]"
