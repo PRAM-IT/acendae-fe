@@ -31,7 +31,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
     >
         <!-- SECTION HEADER (centered) -->
         <div
-            class="mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12"
+            class="acendae-container mx-auto mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12"
             data-reveal="up"
         >
             <h2
@@ -40,7 +40,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                 {{ t('home.units.title') }}
             </h2>
             <p
-                class="font-mona text-center text-[14px] leading-5 font-normal text-black/85 sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
+                class="text-center text-[14px] leading-5 font-normal text-black/85 sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
             >
                 {{ t('home.units.subtitle') }}
             </p>
@@ -48,7 +48,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
         <!-- TAB NAVIGATION -->
         <div
-            class="mx-4 grid h-auto grid-cols-2 border border-[#D3D8E1] sm:mx-5 md:mx-6 lg:mx-auto lg:flex lg:h-[65px] lg:max-w-[1271px] lg:flex-row xl:h-[70px] 2xl:h-[77px]"
+            class="acendae-container mx-auto grid h-auto grid-cols-2 border border-[#D3D8E1] lg:flex lg:h-[65px] lg:flex-row xl:h-[70px] 2xl:h-[77px]"
             data-reveal="up"
             data-reveal-delay="50"
         >
@@ -73,7 +73,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                 @click="activeTab = index"
             >
                 <span
-                    class="font-mona text-[14px] leading-[20px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] 2xl:leading-[27px]"
+                    class="text-[14px] leading-[20px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] 2xl:leading-[27px]"
                 >
                     {{ tab }}
                 </span>
@@ -82,7 +82,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
         <!-- UNIT CARD PANEL WRAPPER -->
         <div
-            class="mx-4 overflow-hidden border border-t-0 border-[#D3D8E1] sm:mx-5 md:mx-6 lg:mx-auto lg:flex lg:min-h-[460px] lg:max-w-[1271px] xl:min-h-[490px] 2xl:min-h-[520px]"
+            class="acendae-container mx-auto overflow-hidden border border-t-0 border-[#D3D8E1] lg:flex lg:min-h-[460px] xl:min-h-[490px] 2xl:min-h-[520px]"
         >
             <Transition name="unit-fade" mode="out-in">
                 <div :key="activeTab" class="flex w-full flex-col lg:flex-row">
@@ -99,12 +99,12 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 {{ t(`home.units.${activeUnit}.name`) }}
                             </h3>
                             <p
-                                class="font-mona text-[13px] leading-[19px] font-semibold text-[#1A2D4B] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                class="text-[13px] leading-[19px] font-semibold text-[#1A2D4B] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
                             >
                                 {{ t(`home.units.${activeUnit}.tagline`) }}
                             </p>
                             <p
-                                class="font-mona text-[13px] leading-[19px] font-normal text-black/85 sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                class="text-[13px] leading-[19px] font-normal text-black/85 sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
                             >
                                 {{ t(`home.units.${activeUnit}.description`) }}
                             </p>
@@ -129,7 +129,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                     ></div>
                                 </div>
                                 <span
-                                    class="font-mona text-[13px] leading-[19px] text-black/85 sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                    class="text-[13px] leading-[19px] text-black/85 sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
                                 >
                                     {{ feature }}
                                 </span>
@@ -146,7 +146,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 class="flex h-[42px] w-full items-center justify-center gap-2 rounded-md bg-[#0B1F3F] px-4 sm:h-[44px] md:h-[46px] lg:h-[50px] lg:w-auto lg:gap-2.5 lg:rounded-lg lg:px-5 2xl:h-[55px]"
                             >
                                 <span
-                                    class="font-mona text-[13px] font-semibold whitespace-nowrap text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
+                                    class="text-[13px] font-semibold whitespace-nowrap text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
                                 >
                                     {{
                                         t(
@@ -175,7 +175,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 class="flex h-[42px] w-full items-center justify-center gap-2 rounded-md bg-[rgba(77,161,240,0.11)] px-4 sm:h-[44px] md:h-[46px] lg:h-[50px] lg:w-auto lg:rounded-lg lg:px-5 2xl:h-[55px]"
                             >
                                 <span
-                                    class="font-mona text-[13px] font-semibold whitespace-nowrap text-[#1D4FBC] sm:text-[14px] md:text-[15px] lg:text-[16px]"
+                                    class="text-[13px] font-semibold whitespace-nowrap text-[#1D4FBC] sm:text-[14px] md:text-[15px] lg:text-[16px]"
                                 >
                                     {{
                                         t(
@@ -276,8 +276,5 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
 .font-instrument {
     font-family: 'Instrument Sans', sans-serif;
-}
-.font-mona {
-    font-family: 'Mona Sans', sans-serif;
 }
 </style>

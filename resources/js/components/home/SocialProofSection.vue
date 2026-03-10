@@ -6,7 +6,7 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="font-mona flex w-full flex-col overflow-hidden border-t border-b border-[#D3D8E1] bg-white lg:flex-row"
+        class="flex w-full flex-col overflow-hidden border-t border-b border-[#D3D8E1] bg-white lg:flex-row"
     >
         <!-- LEFT PANEL: Dark Hero -->
         <div
@@ -58,7 +58,7 @@ const { t } = useI18n();
                     data-reveal="up"
                 >
                     <h3
-                        class="font-mona text-[18px] leading-[25px] font-semibold text-[#1A2D4B] sm:text-[19px] sm:leading-[26px] md:text-[20px] md:leading-[28px] lg:text-[21px] lg:leading-[30px] xl:text-[22px] xl:leading-[32px] 2xl:leading-[48px]"
+                        class="text-[18px] leading-[25px] font-semibold text-[#1A2D4B] sm:text-[19px] sm:leading-[26px] md:text-[20px] md:leading-[28px] lg:text-[21px] lg:leading-[30px] xl:text-[22px] xl:leading-[32px] 2xl:leading-[48px]"
                     >
                         {{ t('home.social_proof.sri_lanka.title') }}
                     </h3>
@@ -66,12 +66,12 @@ const { t } = useI18n();
                         class="mt-2.5 flex flex-col gap-3 sm:mt-3 sm:gap-4 md:gap-4 lg:mt-4 lg:gap-5 2xl:gap-6"
                     >
                         <p
-                            class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body1') }}
                         </p>
                         <p
-                            class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body2') }}
                         </p>
@@ -88,13 +88,13 @@ const { t } = useI18n();
                         class="px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-5 md:px-7 md:pt-7 lg:px-8 lg:pt-[26px] lg:pb-7 xl:px-10 2xl:px-11 2xl:pt-[35px]"
                     >
                         <h3
-                            class="font-mona text-[15px] leading-[22px] font-semibold text-[#1A2D4B] sm:text-[16px] sm:leading-[24px] md:text-[17px] md:leading-[26px] lg:text-[18px] lg:leading-[28px] xl:text-[20px] xl:leading-[30px] 2xl:text-[22px] 2xl:leading-[48px]"
+                            class="text-[15px] leading-[22px] font-semibold text-[#1A2D4B] sm:text-[16px] sm:leading-[24px] md:text-[17px] md:leading-[26px] lg:text-[18px] lg:leading-[28px] xl:text-[20px] xl:leading-[30px] 2xl:text-[22px] 2xl:leading-[48px]"
                         >
                             {{ t('home.social_proof.netherlands.title') }}
                         </h3>
                         <div class="mt-2.5 sm:mt-3 lg:mt-4">
                             <p
-                                class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                             >
                                 {{ t('home.social_proof.netherlands.body') }}
                             </p>
@@ -162,9 +162,6 @@ const { t } = useI18n();
 </template>
 
 <style scoped>
-.font-mona {
-    font-family: 'Mona Sans', sans-serif;
-}
 .font-instrument {
     font-family: 'Instrument Sans', sans-serif;
 }

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { Link } from '@inertiajs/vue3'
 import { route } from 'ziggy-js'
 import AppButton from '@/components/ui/AppButton.vue'
 
@@ -8,8 +7,8 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="relative w-full overflow-hidden bg-white font-mona pt-[74px] flex items-center min-h-[700px] sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px]">
-    <div class="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center justify-center gap-8 px-4 pt-0 pb-10 sm:gap-10 sm:px-5 sm:pt-2 sm:pb-12 md:gap-12 md:px-10 md:pt-12 md:pb-16 lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-x-[40px] lg:gap-y-0 lg:px-[60px] lg:py-0 xl:gap-x-[50px] xl:px-[75px] 2xl:gap-x-[60px] 2xl:px-[85px]">
+  <section class="relative w-full overflow-hidden bg-white pt-[74px] flex items-center min-h-[700px] sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px]">
+    <div class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-8 pt-0 pb-10 sm:gap-10 sm:pt-2 sm:pb-12 md:gap-12 md:pt-12 md:pb-16 lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-x-[40px] lg:gap-y-0 lg:py-0 xl:gap-x-[50px] 2xl:gap-x-[60px]">
 
       <!-- Left Column - Text Area -->
       <div 
@@ -44,7 +43,7 @@ const { t } = useI18n()
 
       <!-- Right Column - Image Stack -->
       <div 
-        class="group relative w-full overflow-hidden rounded-[6px] shadow-lg h-[320px] sm:h-[420px] md:h-[520px] lg:h-[440px] lg:w-[420px] xl:h-[500px] xl:w-[480px] 2xl:h-[563px] 2xl:w-[546px] lg:col-start-2 lg:row-span-2" 
+        class="group relative w-full overflow-hidden rounded-[6px] shadow-lg h-[320px] sm:h-[420px] md:h-[520px] lg:h-[440px] lg:w-[420px] xl:h-[500px] xl:w-[480px] 2xl:h-[563px] 2xl:w-[546px] lg:col-start-2 lg:row-span-2 lg:justify-self-end" 
         data-reveal="fade"
       >
         <!-- Photo -->
@@ -126,8 +125,4 @@ const { t } = useI18n()
   </section>
 </template>
 
-<style scoped>
-.font-mona {
-  font-family: 'Mona Sans', sans-serif;
-}
-</style>
+

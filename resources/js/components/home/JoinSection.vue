@@ -12,7 +12,7 @@ const { t, tm } = useI18n();
     >
         <!-- LEFT COLUMN -->
         <div
-            class="flex w-full flex-col gap-4 bg-white px-4 py-10 sm:px-5 sm:py-12 md:gap-5 md:px-8 md:py-14 lg:flex-[0_0_55%] lg:gap-5 lg:py-[70px] lg:pr-10 lg:pl-[60px] xl:py-[80px] xl:pr-11 xl:pl-[75px] 2xl:py-[90px] 2xl:pr-12 2xl:pl-[85px]"
+            class="flex w-full flex-col gap-4 bg-white px-4 py-10 sm:px-5 sm:py-12 md:gap-5 md:px-8 md:py-14 lg:flex-[0_0_55%] lg:gap-5 lg:py-[70px] lg:pr-10 lg:pl-[var(--container-padding)] xl:py-[80px] xl:pr-11 2xl:py-[90px] 2xl:pr-12"
             data-reveal="up"
         >
             <h2
@@ -29,19 +29,19 @@ const { t, tm } = useI18n();
 
             <div class="flex flex-col gap-3 sm:gap-4 md:gap-4 lg:gap-5">
                 <p
-                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
                 >
                     {{ t('home.join.body1') }}
                 </p>
                 <p
-                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
                 >
                     {{ t('home.join.body2') }}
                 </p>
             </div>
 
             <p
-                class="font-mona text-[13px] leading-5 font-semibold text-black/85 sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[18px]"
+                class="text-[13px] leading-5 font-semibold text-black/85 sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[18px]"
             >
                 {{ t('home.join.who_label') }}
             </p>
@@ -63,7 +63,7 @@ const { t, tm } = useI18n();
                         ></div>
                     </div>
                     <span
-                        class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                        class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                     >
                         {{ value }}
                     </span>
@@ -74,12 +74,12 @@ const { t, tm } = useI18n();
                 class="mt-2 flex flex-col gap-3 sm:mt-3 sm:gap-4 md:gap-4 lg:mt-4 lg:gap-5"
             >
                 <p
-                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
                 >
                     {{ t('home.join.body3') }}
                 </p>
                 <p
-                    class="font-mona max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
+                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
                 >
                     {{ t('home.join.body4') }}
                 </p>
@@ -92,7 +92,7 @@ const { t, tm } = useI18n();
                     class="inline-flex h-[42px] items-center justify-center self-start rounded-md bg-[#0B1F3F] px-6 py-2 sm:h-[44px] sm:px-7 md:h-[46px] md:px-8 lg:h-[50px] lg:rounded-lg lg:px-8 2xl:h-[55px] 2xl:px-10 2xl:py-2.5"
                 >
                     <span
-                        class="font-mona text-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
+                        class="text-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
                     >
                         {{ t('home.join.cta') }}
                     </span>
@@ -135,8 +135,5 @@ const { t, tm } = useI18n();
 <style scoped>
 .font-instrument {
     font-family: 'Instrument Sans', sans-serif;
-}
-.font-mona {
-    font-family: 'Mona Sans', sans-serif;
 }
 </style>
