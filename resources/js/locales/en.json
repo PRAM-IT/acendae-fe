@@ -212,16 +212,16 @@
             "subtitle": "Guided ascent, step by step.",
             "steps": {
                 "basecamp": {
-                    "title": "Discovery & Basecamp",
-                    "desc": "We map out your current state, define technical requirements, and build a roadmap for the journey ahead."
+                    "title": "Basecamp – Understand",
+                    "desc": "We learn your business, goals, and constraints."
                 },
                 "ascent": {
-                    "title": "The Ascent",
-                    "desc": "Sprint by sprint, our teams build, test, and release. You remain involved in every critical decision."
+                    "title": "Ascent – Build",
+                    "desc": "Design and development progress in structured phases, with clear communication and ownership."
                 },
                 "summit": {
-                    "title": "Summit & Scale",
-                    "desc": "We launch and optimize. Once the foundation holds we shift toward maintenance, iterations, and long-term scaling."
+                    "title": "Summit – Scale",
+                    "desc": "After launch, we optimise, expand, and support continued growth."
                 }
             }
         },

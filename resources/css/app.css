@@ -854,7 +854,7 @@
 
 @media (max-width: 480px) {
     :root {
-        --container-padding: 1rem;
+        --container-padding: 1.25rem;
     }
 }
 

@@ -39,15 +39,18 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
         <!-- 2. The Connected Grid Area -->
         <div class="relative border-t border-b border-[#d3d8e1]">
-            <!-- Grid Cell Backgrounds (Desktop only) -->
-            <div class="pointer-events-none absolute inset-0 hidden lg:flex">
-                <div class="acendae-container mx-auto flex h-full px-0">
-                    <!-- Left Blue Cell Tint - with Figma Gradient -->
+            <!-- Grid Content -->
+            <div class="acendae-container relative z-10 mx-auto px-0">
+                <div
+                    class="flex flex-col border-x border-[#d3d8e1] divide-y divide-[#d3d8e1] lg:flex-row lg:divide-x lg:divide-y-0"
+                >
+                    <!-- LEFT COLUMN -->
                     <div
-                        class="relative ml-[var(--container-padding)] h-full flex-1 overflow-hidden border-l border-[#d3d8e1]"
+                        class="relative flex flex-1 justify-center px-[var(--container-padding)] py-4 sm:py-6 lg:py-8 lg:pr-0 lg:pl-[var(--container-padding)] 2xl:py-10"
                     >
+                        <!-- Gradient Background (Mobile & Desktop) -->
                         <div
-                            class="absolute inset-0"
+                            class="absolute inset-0 z-0"
                             style="
                                 background: linear-gradient(
                                     180deg,
@@ -57,37 +60,6 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 opacity: 0.53;
                             "
                         ></div>
-                    </div>
-                    <!-- Right White Cell -->
-                    <div
-                        class="mr-[var(--container-padding)] h-full flex-1 border-r border-[#d3d8e1] bg-white"
-                    ></div>
-                </div>
-            </div>
-
-            <!-- Vertical Divider (Center line) -->
-            <div
-                class="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-[#d3d8e1] lg:block"
-            ></div>
-
-            <!-- Mobile borders replacement -->
-            <div
-                class="pointer-events-none absolute inset-y-0 left-0 w-full lg:hidden"
-            >
-                <div
-                    class="h-full w-full border-r border-l border-[#d3d8e1]/30"
-                ></div>
-            </div>
-
-            <!-- Grid Content -->
-            <div class="acendae-container relative z-10 mx-auto px-0">
-                <div
-                    class="flex flex-col divide-y divide-[#d3d8e1] lg:flex-row lg:divide-x lg:divide-y-0"
-                >
-                    <!-- LEFT COLUMN -->
-                    <div
-                        class="flex flex-1 justify-center px-[var(--container-padding)] py-4 sm:py-6 lg:py-8 lg:pr-0 lg:pl-[var(--container-padding)] 2xl:py-10"
-                    >
                         <div
                             data-reveal="up"
                             class="relative w-full max-w-[580px] rounded-[14px] border border-[rgba(195,204,222,0.32)] bg-transparent sm:rounded-[16px] lg:rounded-[20px]"
@@ -200,7 +172,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
                     <!-- RIGHT COLUMN -->
                     <div
-                        class="flex flex-1 justify-center px-[var(--container-padding)] py-4 sm:py-6 lg:py-8 lg:pr-[var(--container-padding)] lg:pl-0 2xl:py-10"
+                        class="flex flex-1 justify-center bg-white px-[var(--container-padding)] py-4 sm:py-6 lg:py-8 lg:pr-[var(--container-padding)] lg:pl-0 2xl:py-10"
                     >
                         <div
                             data-reveal="up"

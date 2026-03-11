@@ -8,10 +8,10 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-4 sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px]"
+        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-4 sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px] lg:mb-8"
     >
         <div
-            class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-6 pt-0 pb-10 sm:gap-8 sm:pt-0 sm:pb-12 md:gap-10 md:pt-4 md:pb-10 lg:grid-cols-2 lg:gap-x-12 lg:py-0 xl:gap-x-20 2xl:gap-x-28"
+            class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-10 pt-0 pb-10 sm:gap-12 sm:pt-0 sm:pb-12 md:gap-14 md:pt-4 md:pb-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-10 lg:py-0 xl:grid-cols-[1.1fr_0.9fr] xl:gap-x-16 2xl:grid-cols-[1.15fr_0.85fr] 2xl:gap-x-20"
         >
             <!-- Left Column - Text Area -->
             <div
@@ -47,7 +47,7 @@ const { t } = useI18n();
                 </div>
                 <!-- Bottom Column - CTA Buttons (Desktop only) -->
                 <div
-                    class="mt-6 hidden w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row lg:mt-10 lg:flex lg:gap-[12px]"
+                    class="mt-6 hidden w-full flex-col items-center gap-3 md:mt-6 md:w-auto md:flex-row lg:mt-6 lg:flex lg:gap-[12px] xl:mt-8"
                     data-reveal="up"
                     data-reveal-delay="100"
                 >
@@ -56,7 +56,7 @@ const { t } = useI18n();
                         variant="primary"
                         tag="Link"
                         :href="route('services.outsource')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-4 2xl:!h-[55px] 2xl:!px-6"
                     >
                         <div class="flex items-center gap-[10px]">
                             <div
@@ -79,7 +79,7 @@ const { t } = useI18n();
                         variant="outline"
                         tag="Link"
                         :href="route('services.dedicated-team')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!px-5 lg:!h-[48px] lg:!h-[50px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-6"
                     >
                         <span
                             class="text-[13px] leading-[13px] font-medium text-[#0B1F3F] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
@@ -157,7 +157,7 @@ const { t } = useI18n();
 
             <!-- CTA Buttons - Mobile/Tablet (below image) -->
             <div
-                class="flex w-full flex-col items-center gap-3 md:flex-row md:justify-center lg:hidden"
+                class="flex w-full flex-col items-center gap-3 lg:hidden"
                 data-reveal="up"
                 data-reveal-delay="100"
             >
@@ -166,7 +166,7 @@ const { t } = useI18n();
                     variant="primary"
                     tag="Link"
                     :href="route('services.outsource')"
-                    class="!flex !h-[52px] !w-full !max-w-[500px] !items-center !justify-center !gap-[10px] !rounded-[10px] !border-0 !bg-[#001D3D] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#002855] hover:!shadow-[0_6px_20px_rgba(0,29,61,0.2)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 sm:!h-[55px] md:!w-[280px]"
+                    class="!flex !h-[52px] !w-full !max-w-none !items-center !justify-center !gap-[10px] !rounded-[10px] !border-0 !bg-[#001D3D] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#002855] hover:!shadow-[0_6px_20px_rgba(0,29,61,0.2)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 sm:!h-[55px]"
                 >
                     <div class="flex items-center gap-[10px]">
                         <div
@@ -189,7 +189,7 @@ const { t } = useI18n();
                     variant="outline"
                     tag="Link"
                     :href="route('services.dedicated-team')"
-                    class="!flex !h-[52px] !w-full !max-w-[500px] !items-center !justify-center !rounded-[10px] !border !border-[#BCC5D3] !bg-white !px-4 sm:!h-[55px] md:!w-[280px]"
+                    class="!flex !h-[52px] !w-full !max-w-none !items-center !justify-center !rounded-[10px] !border !border-[#BCC5D3] !bg-white !px-4 sm:!h-[55px]"
                 >
                     <span
                         class="text-[15px] leading-[15px] font-medium tracking-[-0.02em] text-[#001D3D]"

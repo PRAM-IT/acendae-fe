@@ -8,12 +8,11 @@ const { t, tm } = useI18n();
 
 <template>
     <section
-        class="flex flex-col border-y border-[#D3D8E1] bg-white lg:flex-row"
+        class="flex flex-col border-b border-[#D3D8E1] bg-white lg:flex-row lg:border-y"
     >
         <!-- LEFT COLUMN -->
         <div
-            class="flex w-full flex-col gap-4 bg-white py-10 pr-[var(--container-padding)] sm:py-12 md:gap-5 md:py-14 lg:flex-[0_0_44%] lg:gap-5 lg:py-[70px] xl:py-[80px] 2xl:py-[90px]"
-            style="margin-left: var(--container-offset)"
+            class="acendae-container join-content-left flex w-full flex-col gap-4 bg-white py-10 sm:py-12 md:gap-5 md:py-14 lg:mx-0 lg:max-w-none lg:flex-[0_0_44%] lg:gap-5 lg:px-0 lg:py-[70px] lg:pr-[var(--container-padding)] xl:py-[80px] 2xl:py-[90px]"
             data-reveal="up"
         >
             <h2
@@ -90,7 +89,7 @@ const { t, tm } = useI18n();
             <div class="mt-2 sm:mt-3 lg:mt-4">
                 <Link
                     :href="route('careers')"
-                    class="inline-flex h-[42px] items-center justify-center self-start rounded-md bg-[#0B1F3F] px-6 py-2 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] active:translate-y-0 active:bg-[#081629] sm:h-[44px] sm:px-7 md:h-[46px] md:px-8 lg:h-[50px] lg:rounded-lg lg:px-8 2xl:h-[55px] 2xl:px-10 2xl:py-2.5"
+                    class="flex w-full items-center justify-center rounded-md bg-[#0B1F3F] px-6 py-2 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] active:translate-y-0 active:bg-[#081629] sm:h-[44px] sm:px-7 md:h-[46px] md:px-8 lg:h-[50px] lg:w-fit lg:rounded-lg lg:px-8 2xl:h-[55px] 2xl:px-10 2xl:py-2.5"
                 >
                     <span
                         class="text-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
@@ -103,7 +102,7 @@ const { t, tm } = useI18n();
 
         <!-- RIGHT COLUMN -->
         <div
-            class="relative w-full lg:min-h-[500px] lg:flex-1 xl:min-h-[540px] 2xl:min-h-[560px]"
+            class="relative min-h-[500px] w-full sm:min-h-[540px] md:min-h-[580px] lg:min-h-[500px] lg:flex-1 xl:min-h-[540px] 2xl:min-h-[560px]"
             data-reveal="fade"
             data-reveal-delay="100"
         >
@@ -111,15 +110,15 @@ const { t, tm } = useI18n();
             <img
                 src="/images/units/team.png"
                 alt=""
-                class="relative z-0 block h-auto w-full object-top lg:absolute lg:inset-0 lg:h-full lg:object-cover"
+                class="absolute inset-0 z-0 block h-full w-full object-cover object-center"
             />
 
             <!-- QUOTE CONTENT -->
             <div
-                class="absolute inset-0 z-2 flex items-start justify-center px-5 pt-20 pb-8 sm:px-7 sm:pt-24 sm:pb-10 md:px-9 md:pt-28 md:pb-11 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-14 2xl:py-16"
+                class="absolute inset-0 z-2 flex items-start justify-center px-6 pt-16 pb-8 sm:px-8 sm:pt-20 sm:pb-10 md:px-10 md:pt-24 md:pb-11 lg:mt-0 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-14 2xl:py-16"
             >
                 <blockquote
-                    class="font-instrument max-w-[320px] text-center text-[28px] leading-[36px] font-semibold text-white sm:max-w-[380px] sm:text-[32px] sm:leading-[40px] md:max-w-[430px] md:text-[36px] md:leading-[44px] lg:max-w-[360px] lg:text-[26px] lg:leading-[34px] xl:max-w-[390px] xl:text-[30px] xl:leading-[40px] 2xl:max-w-[420px] 2xl:text-[36px] 2xl:leading-[46px]"
+                    class="font-instrument w-full max-w-[280px] text-center text-[24px] leading-[32px] font-semibold text-white sm:max-w-[340px] sm:text-[28px] sm:leading-[36px] md:max-w-[420px] md:text-[34px] md:leading-[42px] lg:max-w-[360px] lg:text-[26px] lg:leading-[34px] xl:max-w-[390px] xl:text-[30px] xl:leading-[40px] 2xl:max-w-[420px] 2xl:text-[36px] 2xl:leading-[46px]"
                     data-reveal="up"
                     data-reveal-delay="200"
                 >
@@ -136,5 +135,11 @@ const { t, tm } = useI18n();
 <style scoped>
 .font-instrument {
     font-family: 'Instrument Sans Variable', sans-serif;
+}
+
+@media (min-width: 1024px) {
+    .join-content-left {
+        margin-left: var(--container-offset);
+    }
 }
 </style>
