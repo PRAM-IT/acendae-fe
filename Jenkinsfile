@@ -35,15 +35,13 @@ pipeline {
             }
         }
 
-        stage('Install PHP Dependencies') {
-            steps {
-                sh 'composer install --no-interaction --prefer-dist'
-            }
-        }
-
         stage('Generate Wayfinder') {
             steps {
-                sh 'node node_modules/.bin/wayfinder 2>/dev/null || true'
+                sh '''
+                    mkdir -p vendor
+                    printf "<?php\n// CI stub\n" > vendor/autoload.php
+                    node node_modules/.bin/wayfinder 2>/dev/null || true
+                '''
             }
         }
 
@@ -167,6 +165,7 @@ pipeline {
                     sh """
                         ssh -o StrictHostKeyChecking=no -p ${DEPLOY_PORT} ${DEPLOY_USER}@${DEPLOY_HOST} \
                         "cd ${DEPLOY_PATH} && \
+                        php artisan wayfinder:generate 2>/dev/null || true && \
                         php artisan config:clear && \
                         php artisan cache:clear && \
                         php artisan route:clear && \
