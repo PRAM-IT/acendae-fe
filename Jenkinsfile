@@ -35,6 +35,12 @@ pipeline {
             }
         }
 
+        stage('Install PHP Dependencies') {
+            steps {
+                sh 'composer install --no-interaction --prefer-dist'
+            }
+        }
+
         stage('Generate Wayfinder') {
             steps {
                 sh 'node node_modules/.bin/wayfinder 2>/dev/null || true'
@@ -43,7 +49,10 @@ pipeline {
 
         stage('Build Vue Assets') {
             steps {
-                sh 'npm run build'
+                sh '''
+                    npm install vite@^6.3.5 @vitejs/plugin-vue@^5.2.1 laravel-vite-plugin@^1.2.0 --save-dev --no-save
+                    npm run build
+                '''
             }
         }
 
