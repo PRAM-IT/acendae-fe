@@ -12,7 +12,7 @@ const { t, tm } = useI18n();
     >
         <!-- LEFT COLUMN -->
         <div
-            class="acendae-container join-content-left flex w-full flex-col gap-4 bg-white py-10 sm:py-12 md:mx-0 md:max-w-none md:flex-[0_0_44%] md:gap-5 md:px-0 md:py-14 md:pr-[var(--container-padding)] lg:py-[70px] xl:py-[80px] 2xl:py-[90px]"
+            class="acendae-container join-content-left flex w-full flex-col gap-4 bg-white pt-4 pb-10 sm:pt-6 sm:pb-12 md:mx-0 md:max-w-none md:flex-[0_0_44%] md:gap-5 md:px-0 md:pt-8 md:pb-14 md:pr-[var(--container-padding)] lg:pt-[40px] lg:pb-[70px] xl:pt-[45px] xl:pb-[80px] 2xl:pt-[50px] 2xl:pb-[90px]"
             data-reveal="up"
         >
             <h2
