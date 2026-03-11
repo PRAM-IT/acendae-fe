@@ -35,20 +35,19 @@ pipeline {
             }
         }
 
-        stage('Generate Wayfinder') {
+       stage('Generate Wayfinder') {
             steps {
-                sh '''
-                    mkdir -p vendor
-                    printf "<?php\n// CI stub\n" > vendor/autoload.php
-                    node node_modules/.bin/wayfinder 2>/dev/null || true
-                '''
+                sh 'node node_modules/.bin/wayfinder 2>/dev/null || true'
             }
         }
-
+        
         stage('Build Vue Assets') {
             steps {
                 sh '''
                     npm install vite@^6.3.5 @vitejs/plugin-vue@^5.2.1 laravel-vite-plugin@^1.2.0 --save-dev --no-save
+                    # Remove wayfinder plugin from vite config so it doesn't call php artisan
+                    sed -i "/wayfinder/d" vite.config.js 2>/dev/null || true
+                    sed -i "/wayfinder/d" vite.config.ts 2>/dev/null || true
                     npm run build
                 '''
             }
