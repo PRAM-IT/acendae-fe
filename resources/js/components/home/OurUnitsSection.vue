@@ -27,7 +27,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
 <template>
     <section
-        class="acendae-container border-b border-[#D3D8E1] bg-white pt-10 pb-0 sm:pt-12 md:pt-14 lg:pt-16 2xl:pt-20"
+        class="acendae-container bg-white pt-10 pb-0 sm:pt-12 md:pt-14 lg:pt-16 2xl:pt-20"
     >
         <!-- SECTION HEADER (centered) -->
         <div
@@ -72,7 +72,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                 @click="activeTab = index"
             >
                 <span
-                    class="text-[14px] leading-[20px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] 2xl:leading-[27px]"
+                    class="px-1 text-[13px] leading-[18px] sm:text-[14px] sm:leading-[20px] md:text-[15px] lg:px-0 lg:text-[15px] xl:text-[17px] 2xl:text-[19px] 2xl:leading-[27px]"
                 >
                     {{ tab }}
                 </span>
@@ -84,16 +84,16 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
              Mobile: auto height (image 340px top + content below).
         -->
         <div
-            class="mx-auto mt-10 w-full overflow-hidden border border-[#D3D8E1] lg:h-[560px] lg:max-w-[var(--content-width)] xl:h-[510px] 2xl:h-[565px]"
+            class="mx-auto mt-10 flex w-full flex-col overflow-hidden border border-[#D3D8E1] lg:min-h-[620px] lg:max-w-[var(--content-width)] xl:min-h-[580px] 2xl:min-h-[640px]"
         >
-            <Transition name="unit-fade" mode="out-in">
+            <Transition name="unit-fade" mode="out-in" class="flex flex-1">
                 <div
                     :key="activeTab"
-                    class="flex w-full flex-col lg:h-full lg:flex-row"
+                    class="flex w-full flex-1 flex-col lg:flex-row lg:items-stretch"
                 >
                     <!-- LEFT COLUMN (content) — order-last on mobile, order-first at lg -->
                     <div
-                        class="order-last flex w-full flex-col bg-[rgba(249,251,255,0.71)] p-5 sm:p-6 md:p-8 lg:order-first lg:h-full lg:w-[430px] lg:shrink-0 lg:p-[50px_44px] xl:w-[480px] xl:p-[55px_50px] 2xl:w-[535px] 2xl:p-[60px_58px]"
+                        class="order-last flex w-full flex-col bg-[rgba(249,251,255,0.71)] p-5 sm:p-6 md:p-8 lg:order-first lg:w-[460px] lg:shrink-0 lg:p-[50px_44px] xl:w-[510px] xl:p-[55px_50px] 2xl:w-[560px] 2xl:p-[60px_58px]"
                         data-reveal="up"
                         data-reveal-delay="100"
                     >
@@ -113,7 +113,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
                         <!-- BODY + BULLETS GROUP -->
                         <div
-                            class="mt-4 flex flex-col gap-3 sm:mt-5 lg:mt-0 lg:gap-[32px] lg:pt-[32px]"
+                            class="mt-4 flex flex-col gap-3 sm:mt-5 lg:mt-0 lg:flex-1 lg:gap-[32px] lg:pt-[32px]"
                         >
                             <p
                                 class="text-[13px] leading-[20px] font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
@@ -155,7 +155,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                              xl inner width = 380px — fits comfortably
                         -->
                         <div
-                            class="mt-5 flex flex-col gap-[10px] sm:mt-6 lg:mt-auto lg:gap-[10px] xl:flex-row xl:gap-[14px]"
+                            class="mt-8 flex flex-col gap-[10px] sm:mt-8 lg:mt-auto lg:pt-[32px] lg:gap-[10px] xl:flex-row xl:gap-[14px]"
                         >
                             <!-- PRIMARY button -->
                             <Link
@@ -222,7 +222,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                          Desktop: lg:h-full — fills the parent fixed card height exactly.
                     -->
                     <div
-                        class="relative order-first h-[340px] w-full overflow-hidden sm:h-[400px] md:h-[460px] lg:order-last lg:flex lg:h-full lg:flex-1 lg:items-center lg:justify-center"
+                        class="relative order-first h-[340px] w-full overflow-hidden sm:h-[400px] md:h-[460px] lg:order-last lg:h-auto lg:flex-1 lg:self-stretch"
                         style="
                             background: linear-gradient(
                                 180deg,
@@ -259,7 +259,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
                         <!-- UNIT IMAGE -->
                         <div
-                            class="relative z-10 flex h-full w-full justify-center"
+                            class="relative z-10 flex h-full w-full justify-center lg:absolute lg:inset-0"
                             :class="
                                 activeUnit === 'outsourcing'
                                     ? 'items-end'
