@@ -4,8 +4,9 @@
  * CSS engine: Tailwind CSS v4
  */
 
-/* 1. Google Fonts Import — must precede @import tailwindcss to satisfy PostCSS ordering */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400;1,9..40,500&display=swap');
+/* 1. Mona Sans & Instrument Sans Variable Font Imports (Fontsource) */
+@import '@fontsource-variable/mona-sans';
+@import '@fontsource-variable/instrument-sans';
 
 /* 2. Tailwind CSS v4 Import */
 @import 'tailwindcss';
@@ -41,8 +42,11 @@
 
     /* --- Layout Tokens --- */
     --max-width: 1920px;
-    --content-width: 1280px;
-    --container-padding: clamp(3rem, 5.9028vw, 5.3125rem);
+    --content-width: 1440px;
+    --container-padding: clamp(1rem, 4vw, 3.5rem);
+    --container-offset: calc(
+        max(0px, (100vw - var(--content-width)) / 2) + var(--container-padding)
+    );
     --navbar-height: 4.5rem;
 
     /* --- Spacing Scale (4px base unit) --- */
@@ -153,7 +157,7 @@
     }
 
     body {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: var(--text-base);
         color: var(--color-text);
         background-color: var(--color-bg);
@@ -217,7 +221,7 @@
     h4,
     h5,
     h6 {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-weight: 700;
         line-height: var(--leading-tight);
         letter-spacing: var(--tracking-snug);
@@ -250,9 +254,14 @@
     /* --- Containers --- */
     .acendae-container {
         width: 100%;
-        max-width: 1450px;
+        max-width: var(--content-width);
         margin-inline: auto;
         padding-inline: var(--container-padding);
+    }
+
+    .acendae-nav {
+        font-family: 'Instrument Sans Variable', sans-serif;
+        font-weight: 500;
     }
 
     .acendae-container-wide {
@@ -276,8 +285,12 @@
     }
 
     /* --- Typography Classes --- */
+    .font-instrument {
+        font-family: 'Instrument Sans Variable', sans-serif !important;
+    }
+
     .acendae-title {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Instrument Sans Variable', sans-serif;
         color: var(--color-navy);
         font-size: clamp(2.5rem, 4.5vw, 3.5rem);
         font-weight: 700;
@@ -286,7 +299,7 @@
     }
 
     .acendae-title-section {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Instrument Sans Variable', sans-serif;
         color: var(--color-navy);
         font-size: clamp(1.75rem, 3vw, 2.5rem);
         font-weight: 700;
@@ -295,7 +308,7 @@
     }
 
     .acendae-title-card {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Instrument Sans Variable', sans-serif;
         color: var(--color-navy);
         font-size: clamp(1.125rem, 1.8vw, 1.5rem);
         font-weight: 700;
@@ -304,28 +317,28 @@
     }
 
     .acendae-subtitle {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
         font-weight: 400;
         color: var(--color-text-muted);
     }
 
     .acendae-body {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: 1rem;
         font-weight: 400;
         color: var(--color-text);
     }
 
     .acendae-body-sm {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: 0.875rem;
         font-weight: 400;
         color: var(--color-text-muted);
     }
 
     .acendae-nav {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: 1rem;
         font-weight: 500;
         line-height: 1.125rem;
@@ -338,7 +351,7 @@
     }
 
     .acendae-cta {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -347,10 +360,18 @@
     }
 
     .acendae-menu-category {
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: 0.8125rem;
         font-weight: 600;
         color: var(--color-gold);
+    }
+
+    /* --- Quote Section --- */
+    .quote-heading {
+        font-family: 'Instrument Sans Variable', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        color: #ffffff;
     }
 
     /* --- Card Shadow --- */
@@ -374,7 +395,7 @@
         gap: 0.5rem;
         padding: 0.6875rem 1.375rem;
         border-radius: var(--radius-full);
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Mona Sans Variable', sans-serif;
         font-size: var(--text-sm);
         font-weight: 600;
         line-height: 1;

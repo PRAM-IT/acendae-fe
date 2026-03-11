@@ -34,6 +34,8 @@
         "vue-tsc": "^2.2.4"
     },
     "dependencies": {
+        "@fontsource-variable/instrument-sans": "^5.2.8",
+        "@fontsource-variable/mona-sans": "^5.2.8",
         "@inertiajs/vue3": "^2.3.7",
         "@unhead/vue": "^2.1.10",
         "@vueuse/core": "^12.8.2",
