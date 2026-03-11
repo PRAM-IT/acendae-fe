@@ -7,7 +7,10 @@ const { t } = useI18n();
 const steps = computed(() => [
     {
         num: '01',
-        title: t('home.how_we_work.steps.basecamp.title', 'Basecamp – Understand'),
+        title: t(
+            'home.how_we_work.steps.basecamp.title',
+            'Basecamp – Understand',
+        ),
         desc: t(
             'home.how_we_work.steps.basecamp.desc',
             'We learn your business, goals, and constraints.',
@@ -65,32 +68,16 @@ const steps = computed(() => [
                 <article
                     v-for="step in steps"
                     :key="step.num"
-                    class="flex w-full flex-col rounded-[12px] border border-[#1D4FBC]/[.17] bg-[#F5F8FF] bg-gradient-to-b from-transparent to-[#4DA1F0]/[0.03]
-                           px-5 pt-5 pb-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(29,79,188,0.1)]
-                           sm:px-6 sm:pt-6 sm:pb-7
-                           md:min-h-[300px] md:px-7 md:pt-6 md:pb-7
-                           lg:min-h-[360px] lg:px-9 lg:pt-8 lg:pb-10
-                           xl:min-h-[320px] xl:px-11 xl:pt-9 xl:pb-11
-                           2xl:min-h-[350px] 2xl:px-12 2xl:pt-10 2xl:pb-12"
+                    class="flex w-full flex-col rounded-[12px] border border-[#1D4FBC]/[.17] bg-[#F5F8FF] bg-gradient-to-b from-transparent to-[#4DA1F0]/[0.03] px-5 pt-5 pb-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(29,79,188,0.1)] sm:px-6 sm:pt-6 sm:pb-7 md:min-h-[300px] md:px-7 md:pt-6 md:pb-7 lg:min-h-[360px] lg:px-9 lg:pt-8 lg:pb-10 xl:min-h-[320px] xl:px-11 xl:pt-9 xl:pb-11 2xl:min-h-[350px] 2xl:px-12 2xl:pt-10 2xl:pb-12"
                 >
                     <div
-                        class="mb-2 text-[20px] leading-[26px] font-bold text-[#0C2143]/28
-                               sm:mb-3 sm:text-[22px] sm:leading-[28px]
-                               md:mb-4 md:text-[28px] md:leading-[38px]
-                               lg:mb-6 lg:text-[32px] lg:leading-[42px]
-                               xl:text-[34px]
-                               2xl:mb-7 2xl:text-[36px] 2xl:leading-[51px]"
+                        class="mb-2 text-[20px] leading-[26px] font-bold text-[#0C2143]/28 sm:mb-3 sm:text-[22px] sm:leading-[28px] md:mb-4 md:text-[28px] md:leading-[38px] lg:mb-6 lg:text-[32px] lg:leading-[42px] xl:text-[34px] 2xl:mb-7 2xl:text-[36px] 2xl:leading-[51px]"
                         aria-hidden="true"
                     >
                         {{ step.num }}
                     </div>
                     <h3
-                        class="mb-2 text-[14px] leading-[20px] font-semibold text-[#152746]
-                               sm:text-[15px] sm:leading-[21px]
-                               md:text-[17px] md:leading-[24px]
-                               lg:text-[19px] lg:leading-[27px]
-                               xl:text-[20px]
-                               2xl:mb-3.5 2xl:text-[22px] 2xl:leading-[31px]"
+                        class="mb-2 text-[14px] leading-[20px] font-semibold text-[#152746] sm:text-[15px] sm:leading-[21px] md:text-[17px] md:leading-[24px] lg:text-[19px] lg:leading-[27px] xl:text-[20px] 2xl:mb-3.5 2xl:text-[22px] 2xl:leading-[31px]"
                     >
                         {{ step.title }}
                     </h3>
