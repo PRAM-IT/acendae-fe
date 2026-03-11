@@ -8,11 +8,11 @@ const { t, tm } = useI18n();
 
 <template>
     <section
-        class="flex flex-col border-b border-[#D3D8E1] bg-white lg:flex-row lg:border-y"
+        class="flex flex-col border-b border-[#D3D8E1] bg-white md:flex-row md:border-y"
     >
         <!-- LEFT COLUMN -->
         <div
-            class="acendae-container join-content-left flex w-full flex-col gap-4 bg-white py-10 sm:py-12 md:gap-5 md:py-14 lg:mx-0 lg:max-w-none lg:flex-[0_0_44%] lg:gap-5 lg:px-0 lg:py-[70px] lg:pr-[var(--container-padding)] xl:py-[80px] 2xl:py-[90px]"
+            class="acendae-container join-content-left flex w-full flex-col gap-4 bg-white py-10 sm:py-12 md:mx-0 md:max-w-none md:flex-[0_0_44%] md:gap-5 md:px-0 md:py-14 md:pr-[var(--container-padding)] lg:py-[70px] xl:py-[80px] 2xl:py-[90px]"
             data-reveal="up"
         >
             <h2
@@ -102,7 +102,7 @@ const { t, tm } = useI18n();
 
         <!-- RIGHT COLUMN -->
         <div
-            class="relative min-h-[500px] w-full sm:min-h-[540px] md:min-h-[580px] lg:min-h-[500px] lg:flex-1 xl:min-h-[540px] 2xl:min-h-[560px]"
+            class="relative min-h-[500px] w-full sm:min-h-[540px] md:min-h-0 md:flex-1 xl:min-h-[540px] 2xl:min-h-[560px]"
             data-reveal="fade"
             data-reveal-delay="100"
         >
@@ -137,7 +137,7 @@ const { t, tm } = useI18n();
     font-family: 'Instrument Sans Variable', sans-serif;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .join-content-left {
         margin-left: var(--container-offset);
     }

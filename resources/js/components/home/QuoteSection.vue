@@ -6,7 +6,7 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="bg-white pt-2 pb-8 sm:pt-3 sm:pb-10 md:pt-4 md:pb-12 lg:pt-5 lg:pb-14 2xl:pt-6 2xl:pb-16"
+        class="bg-white pt-2 pb-2 sm:pt-3 sm:pb-3 md:pt-4 md:pb-4 lg:pt-5 lg:pb-5 2xl:pt-6 2xl:pb-6"
     >
         <div class="acendae-container mx-auto">
             <div

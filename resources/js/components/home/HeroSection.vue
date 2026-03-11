@@ -8,7 +8,7 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-4 sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px] lg:mb-8"
+        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-4 sm:min-h-[750px] md:min-h-[850px] lg:mb-8 lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px]"
     >
         <div
             class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-10 pt-0 pb-10 sm:gap-12 sm:pt-0 sm:pb-12 md:gap-14 md:pt-4 md:pb-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-10 lg:py-0 xl:grid-cols-[1.1fr_0.9fr] xl:gap-x-16 2xl:grid-cols-[1.15fr_0.85fr] 2xl:gap-x-20"
@@ -20,10 +20,10 @@ const { t } = useI18n();
             >
                 <!-- Eyebrow Badge -->
                 <div
-                    class="mb-4 flex w-fit flex-row items-center rounded-2xl bg-[rgba(77,161,240,0.11)] px-3 py-1.5 sm:mb-5 sm:px-4 sm:py-2 md:mb-6 md:px-5 lg:mb-6 lg:py-[10px] lg:pr-[22px] lg:pl-[18px] 2xl:mb-[24px] 2xl:py-[10px] 2xl:pr-[24px] 2xl:pl-[18px]"
+                    class="mb-4 flex w-fit flex-row items-center rounded-2xl bg-[rgba(77,161,240,0.11)] px-2.5 py-1 sm:mb-5 sm:px-4 sm:py-2 md:mb-6 md:px-5 lg:mb-6 lg:py-[10px] lg:pr-[22px] lg:pl-[18px] 2xl:mb-[24px] 2xl:py-[10px] 2xl:pr-[24px] 2xl:pl-[18px]"
                 >
                     <span
-                        class="text-[12px] leading-[18px] font-medium text-[#1D4FBC] sm:text-[12px] sm:leading-[20px] md:text-[13px] md:leading-[22px] lg:text-[14px] lg:leading-[27px]"
+                        class="text-[11px] leading-[16px] font-medium whitespace-nowrap text-[#1D4FBC] sm:text-[12px] sm:leading-[20px] sm:whitespace-normal md:text-[15px] md:leading-[24px] lg:text-[16px] lg:leading-[28px]"
                     >
                         {{ t('home.hero.eyebrow') }}
                     </span>
@@ -34,7 +34,7 @@ const { t } = useI18n();
                     class="mb-6 flex w-full flex-col gap-2 sm:mb-7 sm:gap-2.5 md:mb-8 md:gap-3 lg:mb-[28px] lg:gap-[10px] 2xl:mb-[28px] 2xl:gap-[10px]"
                 >
                     <h1
-                        class="w-full text-[26px] leading-[34px] font-semibold text-[#0B1F3F] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[48px] lg:text-[32px] lg:leading-[42px] xl:text-[38px] xl:leading-[52px] 2xl:text-[44px] 2xl:leading-[62px]"
+                        class="w-full text-[22px] leading-[30px] font-semibold text-[#0B1F3F] sm:text-[28px] sm:leading-[38px] md:text-[36px] md:leading-[48px] lg:text-[32px] lg:leading-[42px] xl:text-[38px] xl:leading-[52px] 2xl:text-[44px] 2xl:leading-[62px]"
                     >
                         {{ t('home.hero.title') }}
                     </h1>

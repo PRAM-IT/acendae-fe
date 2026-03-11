@@ -10,7 +10,7 @@ const { t } = useI18n();
     >
         <!-- LEFT PANEL: Dark Hero -->
         <div
-            class="relative flex min-h-[440px] w-full shrink-0 flex-col justify-start overflow-hidden px-5 py-8 sm:min-h-[480px] sm:px-6 sm:py-9 md:min-h-[400px] md:px-8 md:py-10 lg:min-h-[640px] lg:w-[500px] lg:p-0 xl:min-h-[660px] xl:w-[570px] 2xl:min-h-[766px] 2xl:w-[640px]"
+            class="relative flex min-h-[440px] w-full shrink-0 flex-col justify-start overflow-hidden px-5 py-8 sm:min-h-[480px] sm:px-6 sm:py-9 md:min-h-[400px] md:px-8 md:py-10 lg:min-h-[640px] lg:w-[460px] lg:p-0 xl:min-h-[660px] xl:w-[570px] 2xl:min-h-[766px] 2xl:w-[640px]"
             style="
                 background: linear-gradient(180deg, #0e2a66 0%, #0b244e 100%);
             "
@@ -135,9 +135,18 @@ const { t } = useI18n();
                                 </div>
                             </div>
                             <h4
-                                class="font-instrument text-[14px] leading-[20px] font-semibold text-[#1A2D4B] sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[22px] lg:max-w-[190px] lg:text-[18px] lg:leading-[25px] xl:max-w-[220px] xl:text-[20px] xl:leading-[28px] 2xl:max-w-[280px] 2xl:text-[24px] 2xl:leading-[32px]"
+                                class="font-instrument text-[14px] leading-[20px] font-semibold text-[#1A2D4B] sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[22px] lg:text-[18px] lg:leading-[25px] xl:text-[20px] xl:leading-[28px] 2xl:text-[24px] 2xl:leading-[32px]"
                             >
-                                {{ t('home.social_proof.tagline') }}
+                                <span
+                                    v-for="(part, index) in t(
+                                        'home.social_proof.tagline',
+                                    )
+                                        .split('.')
+                                        .filter((p) => p.trim())"
+                                    :key="index"
+                                    class="after:content-['._'] lg:block lg:after:content-['.']"
+                                    >{{ part.trim() }}</span
+                                >
                             </h4>
                         </div>
                     </div>
