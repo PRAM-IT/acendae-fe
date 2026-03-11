@@ -84,22 +84,18 @@ const avatarData = [
                     variant="primary"
                     tag="Link"
                     href="/contact"
-                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[210px] 2xl:!h-[55px] 2xl:!w-[228px]"
+                    class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
                 >
-                    <div class="flex items-center justify-center gap-[10px]">
+                    <div class="flex items-center gap-[10px]">
                         <div
-                            class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#00A67E]/20"
+                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5"
                         >
                             <div
-                                class="relative h-2 w-2 rounded-full bg-[#00A67E]"
-                            >
-                                <div
-                                    class="absolute inset-0 rounded-full bg-[#00A67E]"
-                                ></div>
-                            </div>
+                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
+                            ></div>
                         </div>
                         <span
-                            class="text-[13px] font-semibold whitespace-nowrap text-white md:text-[14px] lg:text-[15px] 2xl:text-[16px]"
+                            class="text-[13px] leading-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
                         >
                             {{ t('cta.discussProject') }}
                         </span>
@@ -132,7 +128,7 @@ const avatarData = [
                 class="pointer-events-none absolute z-0 hidden overflow-visible select-none md:right-[-80px] md:bottom-[-70px] md:block md:w-[450px] md:opacity-80 lg:right-[-120px] lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
             >
                 <img
-                    src="/resources/assets/images/logo-n.svg"
+                    src="/images/logo-n.svg"
                     alt=""
                     class="h-auto w-full"
                 />

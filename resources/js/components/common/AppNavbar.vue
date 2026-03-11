@@ -86,7 +86,7 @@ const closeAllMobile = () => {
                     v-for="link in navLinks"
                     :key="link.path"
                     :href="link.path"
-                    class="group relative py-2 text-[16px] leading-[18px] font-medium transition-colors duration-200"
+                    class="acendae-nav group relative py-2 text-[16px] leading-[18px] font-medium transition-colors duration-200"
                     :class="
                         isActive(link.path)
                             ? 'text-[#0B1F3F]'

@@ -45,7 +45,7 @@ const steps = computed(() => [
                 data-reveal="up"
             >
                 <h2
-                    class="mb-2 text-[22px] leading-[28px] font-bold text-[var(--color-navy)] sm:text-[24px] sm:leading-[30px] md:text-[28px] md:leading-[34px] lg:text-[32px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[40px] 2xl:leading-[48px]"
+                    class="font-instrument mb-2 text-[22px] leading-[28px] font-bold text-[var(--color-navy)] sm:text-[24px] sm:leading-[30px] md:text-[28px] md:leading-[34px] lg:text-[32px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[40px] 2xl:leading-[48px]"
                 >
                     {{ t('home.how_we_work.title', 'How we work together') }}
                 </h2>
@@ -91,3 +91,9 @@ const steps = computed(() => [
         </div>
     </section>
 </template>
+
+<style scoped>
+.font-instrument {
+    font-family: 'Instrument Sans Variable', sans-serif;
+}
+</style>

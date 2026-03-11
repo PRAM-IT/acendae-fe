@@ -25,12 +25,12 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                 class="relative z-10 flex flex-col items-center gap-[17px]"
             >
                 <h2
-                    class="font-instrument m-0 max-w-[300px] text-center text-[24px] leading-[30px] font-semibold text-black sm:max-w-[360px] sm:text-[28px] sm:leading-[34px] md:max-w-[420px] md:text-[32px] md:leading-[38px] lg:text-[36px] lg:leading-[42px] xl:text-[38px] 2xl:max-w-[462px] 2xl:text-[40px] 2xl:leading-[48px]"
+                    class="font-instrument m-0 max-w-[300px] text-center text-[24px] leading-[30px] font-semibold text-[#0B1F3F] sm:max-w-[360px] sm:text-[28px] sm:leading-[34px] md:max-w-[420px] md:text-[32px] md:leading-[38px] lg:text-[36px] lg:leading-[42px] xl:text-[38px] 2xl:max-w-[462px] 2xl:text-[40px] 2xl:leading-[48px]"
                 >
                     {{ t('home.two_ways.title') }}
                 </h2>
                 <p
-                    class="m-0 text-center text-[14px] leading-5 font-normal text-[#6b7280] sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
+                    class="m-0 text-center text-[14px] leading-5 font-normal text-[#000000D9] sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
                 >
                     {{ t('home.two_ways.subtitle') }}
                 </p>
@@ -114,14 +114,14 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 </div>
 
                                 <p
-                                    class="m-0 text-[14px] leading-relaxed font-normal text-[#6b7280] lg:text-[16px]"
+                                    class="m-0 text-[14px] leading-relaxed font-normal text-[#000000D9] lg:text-[16px]"
                                 >
                                     {{ t('home.two_ways.outsource.body') }}
                                 </p>
 
                                 <div class="flex flex-col gap-4">
                                     <p
-                                        class="m-0 text-[14px] font-medium text-[#6b7280] lg:text-[16px]"
+                                        class="m-0 text-[14px] font-medium text-[#000000D9] lg:text-[16px]"
                                     >
                                         {{
                                             t(
@@ -138,12 +138,12 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                             class="flex items-center gap-3"
                                         >
                                             <img
-                                                src="/resources/assets/images/blue-circle.svg"
+                                                src="/images/blue-circle.svg"
                                                 alt=""
                                                 class="h-3 w-3 shrink-0"
                                             />
                                             <span
-                                                class="text-[14px] text-[#6b7280] lg:text-[16px]"
+                                                class="text-[14px] text-[#000000D9] lg:text-[16px]"
                                                 >{{ item }}</span
                                             >
                                         </li>
@@ -151,7 +151,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 </div>
 
                                 <p
-                                    class="m-0 text-[14px] text-[#6b7280] italic lg:text-[16px]"
+                                    class="m-0 text-[14px] text-[#000000D9] italic lg:text-[16px]"
                                 >
                                     {{
                                         t('home.two_ways.outsource.footer_note')
@@ -162,7 +162,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                     variant="primary"
                                     tag="Link"
                                     :href="route('services.outsource')"
-                                    class="!flex !h-12 w-full !items-center !justify-center !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-10 sm:w-fit"
+                                    class="!flex !h-12 w-full !items-center !justify-center !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-10 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:w-fit"
                                 >
                                     <div class="flex items-center gap-3">
                                         <div
@@ -225,14 +225,14 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 </div>
 
                                 <p
-                                    class="m-0 text-[14px] leading-relaxed font-normal text-[#6b7280] lg:text-[16px]"
+                                    class="m-0 text-[14px] leading-relaxed font-normal text-[#000000D9] lg:text-[16px]"
                                 >
                                     {{ t('home.two_ways.team.body') }}
                                 </p>
 
                                 <div class="flex flex-col gap-4">
                                     <p
-                                        class="m-0 text-[14px] font-medium text-[#6b7280] lg:text-[16px]"
+                                        class="m-0 text-[14px] font-medium text-[#000000D9] lg:text-[16px]"
                                     >
                                         {{
                                             t('home.two_ways.team.guide_label')
@@ -247,12 +247,12 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                             class="flex items-center gap-3"
                                         >
                                             <img
-                                                src="/resources/assets/images/blue-circle.svg"
+                                                src="/images/blue-circle.svg"
                                                 alt=""
                                                 class="h-3 w-3 shrink-0"
                                             />
                                             <span
-                                                class="text-[14px] text-[#6b7280] lg:text-[16px]"
+                                                class="text-[14px] text-[#000000D9] lg:text-[16px]"
                                                 >{{ item }}</span
                                             >
                                         </li>
@@ -260,7 +260,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 </div>
 
                                 <p
-                                    class="m-0 text-[14px] text-[#6b7280] italic lg:text-[16px]"
+                                    class="m-0 text-[14px] text-[#000000D9] italic lg:text-[16px]"
                                 >
                                     {{ t('home.two_ways.team.footer_note') }}
                                 </p>
@@ -303,6 +303,6 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
 <style scoped>
 .font-instrument {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Instrument Sans Variable', sans-serif;
 }
 </style>

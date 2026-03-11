@@ -8,14 +8,14 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-[74px] sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px]"
+        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-4 sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px]"
     >
         <div
-            class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-6 pt-0 pb-10 sm:gap-8 sm:pt-2 sm:pb-12 md:gap-10 md:pt-12 md:pb-16 lg:grid-cols-2 lg:gap-x-[32px] lg:py-0 xl:gap-x-[40px] 2xl:gap-x-[48px]"
+            class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-6 pt-0 pb-10 sm:gap-8 sm:pt-0 sm:pb-12 md:gap-10 md:pt-4 md:pb-10 lg:grid-cols-2 lg:gap-x-12 lg:py-0 xl:gap-x-20 2xl:gap-x-28"
         >
             <!-- Left Column - Text Area -->
             <div
-                class="flex w-full flex-col items-start lg:col-start-1 lg:w-[420px] lg:justify-center lg:justify-self-end xl:w-[520px] 2xl:w-[600px]"
+                class="flex w-full flex-col items-start lg:col-start-1 lg:justify-start"
                 data-reveal="up"
             >
                 <!-- Eyebrow Badge -->
@@ -31,7 +31,7 @@ const { t } = useI18n();
 
                 <!-- Content Block -->
                 <div
-                    class="mb-6 flex flex-col gap-2 sm:mb-7 sm:gap-2.5 md:mb-8 md:gap-3 lg:mb-[28px] lg:gap-[10px] 2xl:mb-[28px] 2xl:gap-[10px]"
+                    class="mb-6 flex w-full flex-col gap-2 sm:mb-7 sm:gap-2.5 md:mb-8 md:gap-3 lg:mb-[28px] lg:gap-[10px] 2xl:mb-[28px] 2xl:gap-[10px]"
                 >
                     <h1
                         class="w-full text-[26px] leading-[34px] font-semibold text-[#0B1F3F] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[48px] lg:text-[32px] lg:leading-[42px] xl:text-[38px] xl:leading-[52px] 2xl:text-[44px] 2xl:leading-[62px]"
@@ -45,9 +45,9 @@ const { t } = useI18n();
                         {{ t('home.hero.subtitle') }}
                     </p>
                 </div>
-                <!-- Bottom Column - CTA Buttons (Moves below image on small screens) -->
+                <!-- Bottom Column - CTA Buttons (Desktop only) -->
                 <div
-                    class="flex w-full flex-col items-center gap-3 md:w-auto md:flex-row lg:gap-[12px]"
+                    class="mt-6 hidden w-full flex-col items-center gap-3 md:mt-8 md:w-auto md:flex-row lg:mt-10 lg:flex lg:gap-[12px]"
                     data-reveal="up"
                     data-reveal-delay="100"
                 >
@@ -56,7 +56,7 @@ const { t } = useI18n();
                         variant="primary"
                         tag="Link"
                         :href="route('services.outsource')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-[185px] xl:!h-[52px] xl:!w-[210px] 2xl:!h-[55px] 2xl:!w-[228px] 2xl:!px-[15px] 2xl:!pr-[20px]"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
                     >
                         <div class="flex items-center gap-[10px]">
                             <div
@@ -79,7 +79,7 @@ const { t } = useI18n();
                         variant="outline"
                         tag="Link"
                         :href="route('services.dedicated-team')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-[185px] xl:!h-[52px] xl:!w-[205px] 2xl:!h-[55px] 2xl:!w-[221px] 2xl:!px-[20px]"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
                     >
                         <span
                             class="text-[13px] leading-[13px] font-medium text-[#0B1F3F] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
@@ -92,7 +92,7 @@ const { t } = useI18n();
 
             <!-- Right Column - Image Stack -->
             <div
-                class="group relative h-[320px] w-full overflow-hidden rounded-[6px] shadow-lg sm:h-[420px] md:h-[520px] lg:col-start-2 lg:h-[440px] lg:w-[420px] lg:justify-self-end xl:h-[500px] xl:w-[480px] 2xl:h-[563px] 2xl:w-[546px]"
+                class="group relative h-[320px] w-full overflow-hidden rounded-[6px] shadow-lg sm:h-[420px] md:h-[520px] lg:col-start-2 lg:h-[440px] lg:justify-self-end xl:h-[500px] 2xl:h-[563px]"
                 data-reveal="fade"
             >
                 <!-- Photo -->
@@ -153,6 +153,50 @@ const { t } = useI18n();
                         </button>
                     </div>
                 </div>
+            </div>
+
+            <!-- CTA Buttons - Mobile/Tablet (below image) -->
+            <div
+                class="flex w-full flex-col items-center gap-3 md:flex-row md:justify-center lg:hidden"
+                data-reveal="up"
+                data-reveal-delay="100"
+            >
+                <!-- Primary CTA -->
+                <AppButton
+                    variant="primary"
+                    tag="Link"
+                    :href="route('services.outsource')"
+                    class="!flex !h-[52px] !w-full !max-w-[500px] !items-center !justify-center !gap-[10px] !rounded-[10px] !border-0 !bg-[#001D3D] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#002855] hover:!shadow-[0_6px_20px_rgba(0,29,61,0.2)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 sm:!h-[55px] md:!w-[280px]"
+                >
+                    <div class="flex items-center gap-[10px]">
+                        <div
+                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px]"
+                        >
+                            <div
+                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px]"
+                            ></div>
+                        </div>
+                        <span
+                            class="text-[15px] leading-[15px] font-semibold tracking-[-0.01em] text-white"
+                        >
+                            {{ t('home.hero.cta_outsource') }}
+                        </span>
+                    </div>
+                </AppButton>
+
+                <!-- Outline CTA -->
+                <AppButton
+                    variant="outline"
+                    tag="Link"
+                    :href="route('services.dedicated-team')"
+                    class="!flex !h-[52px] !w-full !max-w-[500px] !items-center !justify-center !rounded-[10px] !border !border-[#BCC5D3] !bg-white !px-4 sm:!h-[55px] md:!w-[280px]"
+                >
+                    <span
+                        class="text-[15px] leading-[15px] font-medium tracking-[-0.02em] text-[#001D3D]"
+                    >
+                        {{ t('home.hero.cta_team') }}
+                    </span>
+                </AppButton>
             </div>
         </div>
     </section>

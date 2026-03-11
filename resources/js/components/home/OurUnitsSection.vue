@@ -27,11 +27,11 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
 <template>
     <section
-        class="border-b border-[#D3D8E1] bg-white pt-10 pb-0 sm:pt-12 md:pt-14 lg:pt-16 2xl:pt-20"
+        class="acendae-container border-b border-[#D3D8E1] bg-white pt-10 pb-0 sm:pt-12 md:pt-14 lg:pt-16 2xl:pt-20"
     >
         <!-- SECTION HEADER (centered) -->
         <div
-            class="acendae-container mx-auto mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12 lg:px-[var(--container-padding)]"
+            class="acendae-container mx-auto mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12"
             data-reveal="up"
         >
             <h2
@@ -48,7 +48,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
         <!-- TAB NAVIGATION -->
         <div
-            class="acendae-container-fluid mx-auto grid h-auto grid-cols-2 border border-[#D3D8E1] lg:flex lg:h-[65px] lg:max-w-[1271px] lg:flex-row xl:h-[70px] 2xl:h-[77px]"
+            class="mx-auto grid h-auto w-full grid-cols-2 border border-[#D3D8E1] lg:flex lg:h-[65px] lg:max-w-[var(--content-width)] lg:flex-row xl:h-[70px] 2xl:h-[77px]"
             data-reveal="up"
             data-reveal-delay="50"
         >
@@ -82,7 +82,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
         <!-- UNIT CARD PANEL WRAPPER -->
         <div
-            class="acendae-container-fluid mx-auto mt-10 overflow-hidden border border-[#D3D8E1] lg:flex lg:min-h-[460px] lg:max-w-[1271px] xl:min-h-[490px] 2xl:min-h-[520px]"
+            class="mx-auto mt-10 w-full overflow-hidden border border-[#D3D8E1] lg:flex lg:min-h-[460px] lg:max-w-[var(--content-width)] xl:min-h-[490px] 2xl:min-h-[520px]"
         >
             <Transition name="unit-fade" mode="out-in">
                 <div :key="activeTab" class="flex w-full flex-col lg:flex-row">
@@ -275,6 +275,6 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 }
 
 .font-instrument {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Instrument Sans Variable', sans-serif;
 }
 </style>

@@ -10,7 +10,7 @@ const { t } = useI18n();
     >
         <!-- LEFT PANEL: Dark Hero -->
         <div
-            class="relative flex min-h-[440px] w-full shrink-0 flex-col justify-start overflow-hidden px-5 py-8 sm:min-h-[480px] sm:px-6 sm:py-9 md:min-h-[400px] md:px-8 md:py-10 lg:min-h-[640px] lg:w-[440px] lg:p-0 xl:min-h-[660px] xl:w-[510px] 2xl:min-h-[680px] 2xl:w-[576px]"
+            class="relative flex min-h-[440px] w-full shrink-0 flex-col justify-start overflow-hidden px-5 py-8 sm:min-h-[480px] sm:px-6 sm:py-9 md:min-h-[400px] md:px-8 md:py-10 lg:min-h-[640px] lg:w-[440px] lg:p-0 xl:min-h-[660px] xl:w-[510px] 2xl:min-h-[766px] 2xl:w-[576px]"
             style="
                 background: linear-gradient(180deg, #0e2a66 0%, #0b244e 100%);
             "
@@ -18,10 +18,10 @@ const { t } = useI18n();
         >
             <!-- Decorative Logo Watermark (Desktop) -->
             <div
-                class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px] overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px] md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] lg:opacity-50 2xl:right-[-100px] 2xl:bottom-[-60px] 2xl:w-[480px] 2xl:opacity-100"
+                class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px] overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px] md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] 2xl:right-[-100px] 2xl:bottom-[-60px] 2xl:w-[480px]"
             >
                 <img
-                    src="/resources/assets/images/logo-n.svg"
+                    src="/images/logo-n.svg"
                     alt=""
                     class="h-auto w-full"
                 />
@@ -66,12 +66,12 @@ const { t } = useI18n();
                         class="mt-2.5 flex flex-col gap-3 sm:mt-3 sm:gap-4 md:gap-4 lg:mt-4 lg:gap-5 2xl:gap-6"
                     >
                         <p
-                            class="text-[13px] leading-5 font-normal text-[#6b7280] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-[##000000D9] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body1') }}
                         </p>
                         <p
-                            class="text-[13px] leading-5 font-normal text-[#6b7280] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-[##000000D9] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body2') }}
                         </p>
@@ -94,7 +94,7 @@ const { t } = useI18n();
                         </h3>
                         <div class="mt-2.5 sm:mt-3 lg:mt-4">
                             <p
-                                class="text-[13px] leading-5 font-normal text-[#6b7280] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                             >
                                 {{ t('home.social_proof.netherlands.body') }}
                             </p>
@@ -110,10 +110,12 @@ const { t } = useI18n();
                     <div
                         class="px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-6 md:px-7 md:pt-6 lg:px-8 lg:pt-[38px] lg:pb-9 xl:px-10 2xl:px-11 2xl:pt-[43px] 2xl:pb-10"
                     >
-                        <div class="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+                        <div
+                            class="flex flex-col gap-3 sm:gap-4 lg:gap-5 2xl:gap-[25px]"
+                        >
                             <!-- Flag Pair -->
                             <div
-                                class="flex items-center -space-x-2.5 sm:-space-x-3 md:-space-x-3 lg:-space-x-3.5 2xl:-space-x-4"
+                                class="flex items-center -space-x-2.5 sm:-space-x-3 md:-space-x-3 lg:-space-x-3 2xl:-space-x-3"
                             >
                                 <div
                                     class="z-20 h-9 w-9 overflow-hidden rounded-full border border-white shadow-sm ring-2 ring-white sm:h-10 sm:w-10 md:h-10 md:w-10 lg:h-11 lg:w-11 2xl:h-12 2xl:w-12"
@@ -163,6 +165,6 @@ const { t } = useI18n();
 
 <style scoped>
 .font-instrument {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Instrument Sans Variable', sans-serif;
 }
 </style>

@@ -12,7 +12,8 @@ const { t, tm } = useI18n();
     >
         <!-- LEFT COLUMN -->
         <div
-            class="flex w-full flex-col gap-4 bg-white py-10 pr-0 pl-[max(var(--container-padding),calc((100vw-var(--content-width))/2))] sm:py-12 md:gap-5 md:py-14 lg:flex-[0_0_55%] lg:gap-5 lg:py-[70px] xl:py-[80px] 2xl:py-[90px]"
+            class="flex w-full flex-col gap-4 bg-white py-10 pr-[var(--container-padding)] sm:py-12 md:gap-5 md:py-14 lg:flex-[0_0_44%] lg:gap-5 lg:py-[70px] xl:py-[80px] 2xl:py-[90px]"
+            style="margin-left: var(--container-offset)"
             data-reveal="up"
         >
             <h2
@@ -134,6 +135,6 @@ const { t, tm } = useI18n();
 
 <style scoped>
 .font-instrument {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Instrument Sans Variable', sans-serif;
 }
 </style>

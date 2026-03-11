@@ -30,7 +30,7 @@ const { t } = useI18n();
                     class="relative z-2 flex h-full flex-col items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 xl:px-9 2xl:px-10"
                 >
                     <blockquote
-                        class="w-full max-w-[280px] text-center text-[16px] leading-[24px] font-medium text-white sm:max-w-[360px] sm:text-[18px] sm:leading-[26px] md:max-w-[500px] md:text-[22px] md:leading-[30px] lg:max-w-[640px] lg:text-[28px] lg:leading-[36px] lg:font-semibold xl:max-w-[780px] xl:text-[34px] xl:leading-[42px] 2xl:max-w-[887px] 2xl:text-[40px] 2xl:leading-[48px]"
+                        class="quote-heading w-full max-w-[280px] text-[16px] leading-[24px] sm:max-w-[360px] sm:text-[18px] sm:leading-[26px] md:max-w-[500px] md:text-[22px] md:leading-[30px] lg:max-w-[640px] lg:text-[28px] lg:leading-[36px] xl:max-w-[780px] xl:text-[34px] xl:leading-[42px] 2xl:max-w-[887px] 2xl:text-[40px] 2xl:leading-[48px]"
                         data-reveal="up"
                         data-reveal-delay="100"
                     >
