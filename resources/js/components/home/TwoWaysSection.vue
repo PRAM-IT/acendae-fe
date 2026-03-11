@@ -123,7 +123,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 </div>
 
                                 <p
-                                    class="m-0 text-[14px] text-[#000000D9] italic lg:text-[16px]"
+                                    class="m-0 text-[14px] text-[#000000D9] lg:text-[16px]"
                                 >
                                     {{
                                         t('home.two_ways.outsource.footer_note')
@@ -232,7 +232,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 </div>
 
                                 <p
-                                    class="m-0 text-[14px] text-[#000000D9] italic lg:text-[16px]"
+                                    class="m-0 text-[14px] text-[#000000D9] lg:text-[16px]"
                                 >
                                     {{ t('home.two_ways.team.footer_note') }}
                                 </p>
