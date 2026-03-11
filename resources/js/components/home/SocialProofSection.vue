@@ -6,11 +6,11 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="font-mona flex w-full flex-col overflow-hidden border-t border-b border-[#D3D8E1] bg-white lg:flex-row"
+        class="flex w-full flex-col overflow-hidden border-t border-b border-[#D3D8E1] bg-white lg:flex-row"
     >
         <!-- LEFT PANEL: Dark Hero -->
         <div
-            class="relative flex min-h-[440px] w-full shrink-0 flex-col justify-start overflow-hidden px-5 py-8 sm:min-h-[480px] sm:px-6 sm:py-9 md:min-h-[400px] md:px-8 md:py-10 lg:min-h-[640px] lg:w-[440px] lg:p-0 xl:min-h-[660px] xl:w-[510px] 2xl:min-h-[680px] 2xl:w-[576px]"
+            class="relative flex min-h-[440px] w-full shrink-0 flex-col justify-start overflow-hidden px-5 py-8 sm:min-h-[480px] sm:px-6 sm:py-9 md:min-h-[400px] md:px-8 md:py-10 lg:min-h-[640px] lg:w-[460px] lg:p-0 xl:min-h-[660px] xl:w-[570px] 2xl:min-h-[766px] 2xl:w-[640px]"
             style="
                 background: linear-gradient(180deg, #0e2a66 0%, #0b244e 100%);
             "
@@ -18,13 +18,9 @@ const { t } = useI18n();
         >
             <!-- Decorative Logo Watermark (Desktop) -->
             <div
-                class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px] overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px] md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] lg:opacity-50 2xl:right-[-100px] 2xl:bottom-[-60px] 2xl:w-[480px] 2xl:opacity-100"
+                class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px] overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px] md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] 2xl:right-[-100px] 2xl:bottom-[-60px] 2xl:w-[480px]"
             >
-                <img
-                    src="/resources/assets/images/logo-n.svg"
-                    alt=""
-                    class="h-auto w-full"
-                />
+                <img src="/images/logo-n.svg" alt="" class="h-auto w-full" />
             </div>
 
             <!-- Content -->
@@ -51,14 +47,16 @@ const { t } = useI18n();
         <!-- RIGHT PANEL: Grid + Map -->
         <div class="relative flex flex-1 flex-col bg-white lg:min-h-[680px]">
             <!-- Content Grid Area -->
-            <div class="flex flex-col md:flex-row md:items-stretch">
+            <div
+                class="flex flex-col md:flex-row md:items-stretch lg:flex-col xl:flex-row xl:items-stretch"
+            >
                 <!-- Sri Lanka Column -->
                 <div
-                    class="w-full px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-6 md:flex-[0_0_290px] md:[background-image:repeating-linear-gradient(to_bottom,#D3D8E1_0,#D3D8E1_14px,transparent_14px,transparent_24px)] md:[background-size:1px_100%] md:[background-position:right_center] md:[background-repeat:no-repeat] md:px-7 md:pt-7 lg:flex-[0_0_350px] lg:px-8 lg:pt-8 xl:flex-[0_0_400px] xl:px-10 2xl:flex-[0_0_463px] 2xl:px-11 2xl:pt-[35px] 2xl:pb-10"
+                    class="w-full px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-6 md:flex-[0_0_310px] md:[background-image:repeating-linear-gradient(to_bottom,#B2B8C2_0,#B2B8C2_5px,transparent_5px,transparent_8px)] md:[background-size:1px_100%] md:[background-position:right_center] md:[background-repeat:no-repeat] md:px-7 md:pt-7 lg:w-full lg:flex-none lg:[background-image:repeating-linear-gradient(to_right,#B2B8C2_0,#B2B8C2_5px,transparent_5px,transparent_8px)] lg:[background-size:100%_1px] lg:[background-position:center_bottom] lg:[background-repeat:no-repeat] lg:px-8 lg:pt-8 lg:pb-6 xl:w-auto xl:flex-[0_0_350px] xl:[background-image:repeating-linear-gradient(to_bottom,#B2B8C2_0,#B2B8C2_5px,transparent_5px,transparent_8px)] xl:[background-size:1px_100%] xl:[background-position:right_center] xl:[background-repeat:no-repeat] xl:px-10 xl:pt-7 xl:pb-7 2xl:flex-[0_0_400px] 2xl:px-11 2xl:pt-[35px] 2xl:pb-10"
                     data-reveal="up"
                 >
                     <h3
-                        class="font-mona text-[18px] leading-[25px] font-semibold text-[#1A2D4B] sm:text-[19px] sm:leading-[26px] md:text-[20px] md:leading-[28px] lg:text-[21px] lg:leading-[30px] xl:text-[22px] xl:leading-[32px] 2xl:leading-[48px]"
+                        class="text-[18px] leading-[25px] font-semibold text-[#1A2D4B] sm:text-[19px] sm:leading-[26px] md:text-[20px] md:leading-[28px] lg:text-[21px] lg:leading-[30px] xl:text-[22px] xl:leading-[32px] 2xl:leading-[48px]"
                     >
                         {{ t('home.social_proof.sri_lanka.title') }}
                     </h3>
@@ -66,12 +64,12 @@ const { t } = useI18n();
                         class="mt-2.5 flex flex-col gap-3 sm:mt-3 sm:gap-4 md:gap-4 lg:mt-4 lg:gap-5 2xl:gap-6"
                     >
                         <p
-                            class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-[##000000D9] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body1') }}
                         </p>
                         <p
-                            class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                            class="text-[13px] leading-5 font-normal text-[##000000D9] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                         >
                             {{ t('home.social_proof.sri_lanka.body2') }}
                         </p>
@@ -80,21 +78,21 @@ const { t } = useI18n();
 
                 <!-- Netherlands Column Container (Vertical Split) -->
                 <div
-                    class="flex flex-1 flex-col [background-image:repeating-linear-gradient(to_right,#D3D8E1_0,#D3D8E1_14px,transparent_14px,transparent_24px)] [background-size:100%_1px] [background-position:top_left] [background-repeat:no-repeat] md:[background-image:none]"
+                    class="flex flex-1 flex-col [background-image:repeating-linear-gradient(to_right,#B2B8C2_0,#B2B8C2_5px,transparent_5px,transparent_8px)] [background-size:100%_1px] [background-position:top_left] [background-repeat:no-repeat] md:[background-image:none]"
                     data-reveal="up"
                 >
                     <!-- Top Part: Netherlands Text -->
                     <div
-                        class="px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-5 md:px-7 md:pt-7 lg:px-8 lg:pt-[26px] lg:pb-7 xl:px-10 2xl:px-11 2xl:pt-[35px]"
+                        class="px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-5 md:px-7 md:pt-7 lg:pt-[26px] lg:pr-16 lg:pb-7 lg:pl-8 xl:pr-24 xl:pl-10 2xl:pt-[35px] 2xl:pr-32 2xl:pl-11"
                     >
                         <h3
-                            class="font-mona text-[15px] leading-[22px] font-semibold text-[#1A2D4B] sm:text-[16px] sm:leading-[24px] md:text-[17px] md:leading-[26px] lg:text-[18px] lg:leading-[28px] xl:text-[20px] xl:leading-[30px] 2xl:text-[22px] 2xl:leading-[48px]"
+                            class="text-[15px] leading-[22px] font-semibold text-[#1A2D4B] sm:text-[16px] sm:leading-[24px] md:text-[17px] md:leading-[26px] lg:text-[18px] lg:leading-[28px] xl:text-[20px] xl:leading-[30px] 2xl:text-[22px] 2xl:leading-[48px]"
                         >
                             {{ t('home.social_proof.netherlands.title') }}
                         </h3>
                         <div class="mt-2.5 sm:mt-3 lg:mt-4">
                             <p
-                                class="font-mona text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                                class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
                             >
                                 {{ t('home.social_proof.netherlands.body') }}
                             </p>
@@ -103,17 +101,19 @@ const { t } = useI18n();
 
                     <!-- Separator Line -->
                     <div
-                        class="h-px w-full [background-image:repeating-linear-gradient(to_right,#D3D8E1_0,#D3D8E1_14px,transparent_14px,transparent_24px)]"
+                        class="h-px w-full [background-image:repeating-linear-gradient(to_right,#B2B8C2_0,#B2B8C2_5px,transparent_5px,transparent_8px)]"
                     ></div>
 
                     <!-- Bottom Part: Tagline + Flags -->
                     <div
-                        class="px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-6 md:px-7 md:pt-6 lg:px-8 lg:pt-[38px] lg:pb-9 xl:px-10 2xl:px-11 2xl:pt-[43px] 2xl:pb-10"
+                        class="px-4 pt-5 pb-5 sm:px-5 sm:pt-6 sm:pb-6 md:px-7 md:pt-6 lg:pt-[38px] lg:pr-16 lg:pb-9 lg:pl-8 xl:pr-24 xl:pl-10 2xl:pt-[43px] 2xl:pr-32 2xl:pb-10 2xl:pl-11"
                     >
-                        <div class="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+                        <div
+                            class="flex flex-row items-center gap-4 sm:gap-5 lg:flex-col lg:items-start lg:gap-5 2xl:gap-[25px]"
+                        >
                             <!-- Flag Pair -->
                             <div
-                                class="flex items-center -space-x-2.5 sm:-space-x-3 md:-space-x-3 lg:-space-x-3.5 2xl:-space-x-4"
+                                class="flex items-center -space-x-2.5 sm:-space-x-3 md:-space-x-3 lg:-space-x-3 2xl:-space-x-3"
                             >
                                 <div
                                     class="z-20 h-9 w-9 overflow-hidden rounded-full border border-white shadow-sm ring-2 ring-white sm:h-10 sm:w-10 md:h-10 md:w-10 lg:h-11 lg:w-11 2xl:h-12 2xl:w-12"
@@ -135,9 +135,18 @@ const { t } = useI18n();
                                 </div>
                             </div>
                             <h4
-                                class="font-instrument text-[14px] leading-[20px] font-semibold text-[#1A2D4B] sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[22px] lg:text-[18px] lg:leading-[25px] xl:text-[20px] xl:leading-[28px] 2xl:max-w-[313px] 2xl:text-[24px] 2xl:leading-[32px]"
+                                class="font-instrument text-[14px] leading-[20px] font-semibold text-[#1A2D4B] sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[22px] lg:text-[18px] lg:leading-[25px] xl:text-[20px] xl:leading-[28px] 2xl:text-[24px] 2xl:leading-[32px]"
                             >
-                                {{ t('home.social_proof.tagline') }}
+                                <span
+                                    v-for="(part, index) in t(
+                                        'home.social_proof.tagline',
+                                    )
+                                        .split('.')
+                                        .filter((p) => p.trim())"
+                                    :key="index"
+                                    class="after:content-['._'] lg:block lg:after:content-['.']"
+                                    >{{ part.trim() }}</span
+                                >
                             </h4>
                         </div>
                     </div>
@@ -162,13 +171,7 @@ const { t } = useI18n();
 </template>
 
 <style scoped>
-.font-mona {
-    font-family: 'Mona Sans', sans-serif;
-}
 .font-instrument {
-    font-family: 'Instrument Sans', sans-serif;
-}
-.font-work {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Instrument Sans Variable', sans-serif;
 }
 </style>

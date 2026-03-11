@@ -78,12 +78,12 @@ const legalLinks = computed(() => [
         class="w-full bg-[#070F1C] py-[65px] font-['Mona_Sans',sans-serif] text-white lg:py-[100px]"
     >
         <div
-            class="mx-auto flex max-w-[1440px] flex-col items-center gap-0 px-[22px] lg:px-[168px]"
+            class="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-0 px-5 sm:px-8 md:px-[55px] lg:px-[85px]"
         >
             <!-- Link Grid -->
             <!-- Mobile: 2×2 grid | Desktop: single row flex -->
             <div
-                class="grid w-full grid-cols-2 gap-x-[65px] gap-y-[44px] lg:flex lg:flex-row lg:justify-center lg:gap-[198px]"
+                class="grid w-full grid-cols-2 gap-x-[40px] gap-y-[44px] sm:gap-x-[55px] lg:flex lg:flex-row lg:justify-between lg:gap-0"
             >
                 <div
                     v-for="section in footerSections"
@@ -113,7 +113,7 @@ const legalLinks = computed(() => [
                 class="mt-[55px] flex w-full items-center justify-center gap-[29px] lg:mt-[186px]"
             >
                 <div
-                    class="w-[60px] border-t border-white/30 lg:w-[489px]"
+                    class="flex-1 border-t border-white/30"
                 ></div>
 
                 <div class="flex flex-row items-center gap-[28px]">
@@ -170,7 +170,7 @@ const legalLinks = computed(() => [
                 </div>
 
                 <div
-                    class="w-[60px] border-t border-white/30 lg:w-[497px]"
+                    class="flex-1 border-t border-white/30"
                 ></div>
             </div>
 
