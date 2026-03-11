@@ -121,7 +121,7 @@ pipeline {
                         "cd ${DEPLOY_PATH} && \
                         tar -xzf deploy.tar.gz && \
                         rm -f deploy.tar.gz && \
-                        /usr/local/bin/composer install --no-dev --optimize-autoloader --no-interaction && \
+                        /usr/local/bin/composer install --no-dev --optimize-autoloader --no-interaction --no-scripts && \
                         echo 'Extracted and composer done'"
                     """
                 }
@@ -164,6 +164,7 @@ pipeline {
                     sh """
                         ssh -o StrictHostKeyChecking=no -p ${DEPLOY_PORT} ${DEPLOY_USER}@${DEPLOY_HOST} \
                         "cd ${DEPLOY_PATH} && \
+                        php artisan package:discover --ansi 2>/dev/null || true && \
                         php artisan wayfinder:generate 2>/dev/null || true && \
                         php artisan config:clear && \
                         php artisan cache:clear && \
