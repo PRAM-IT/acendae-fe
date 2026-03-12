@@ -81,12 +81,12 @@ const closeAllMobile = () => {
             </div>
 
             <!-- DESKTOP NAVIGATION -->
-            <nav class="hidden items-center gap-x-[36px] lg:flex">
+            <nav class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[28px] 2xl:gap-x-[36px]">
                 <Link
                     v-for="link in navLinks"
                     :key="link.path"
                     :href="link.path"
-                    class="acendae-nav group relative py-2 text-[16px] leading-[18px] font-medium transition-colors duration-200"
+                    class="acendae-nav group relative whitespace-nowrap py-2 text-[14px] leading-[18px] font-medium transition-colors duration-200 xl:text-[15px] 2xl:text-[16px]"
                     :class="
                         isActive(link.path)
                             ? 'text-[#0B1F3F]'
@@ -106,7 +106,7 @@ const closeAllMobile = () => {
             </nav>
 
             <!-- RIGHT ACTIONS CLUSTER -->
-            <div class="hidden items-center gap-x-[40px] lg:flex">
+            <div class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[32px] 2xl:gap-x-[40px]">
                 <!-- Branded Language Switcher Pill -->
                 <div
                     class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white pr-1 pl-1.5"
@@ -153,10 +153,10 @@ const closeAllMobile = () => {
                     variant="primary"
                     tag="Link"
                     href="/contact"
-                    class="!h-[48px] !w-[159px] !rounded-[6px] !bg-[#0B1F3F] !px-5 transition-all duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629]"
+                    class="!h-[44px] !w-auto !rounded-[6px] !bg-[#0B1F3F] !px-4 transition-all duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] xl:!h-[48px] xl:!w-[159px] xl:!px-5"
                 >
                     <span
-                        class="text-[16px] leading-[16px] font-semibold text-[#9ABAFF]"
+                        class="text-[14px] leading-[16px] font-semibold whitespace-nowrap text-[#9ABAFF] xl:text-[16px]"
                     >
                         {{ t('nav.getStarted') }}
                     </span>
