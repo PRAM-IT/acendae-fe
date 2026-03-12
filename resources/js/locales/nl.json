@@ -109,7 +109,7 @@
                 "title": "Nederland",
                 "body": "Strategie, structuur, helderheid, klantrelaties en premium kwaliteit. Dit is waar visie wordt gevormd en richting wordt bepaald."
             },
-            "tagline": "Nederlandse strategie. Sri Lankaanse uitvoering. Eén team.",
+            "tagline": "Nederlandse Strategie. Sri Lankaanse uitvoering. Eén team.",
             "amsterdam": "Amsterdam, NL",
             "colombo": "Colombo, LK",
             "map_alt": ""
@@ -208,20 +208,20 @@
             }
         },
         "how_we_work": {
-            "title": "Hoe we samenwerken",
-            "subtitle": "Een transparant proces, van begin tot eind.",
+            "title": "Hoe we werken",
+            "subtitle": "Begeleide klim, stap voor stap.",
             "steps": {
                 "basecamp": {
-                    "title": "Discovery & Basecamp",
-                    "desc": "We brengen uw huidige status in kaart, definiëren technische vereisten en bouwen een roadmap voor de komende reis."
+                    "title": "Basecamp – Begrijpen",
+                    "desc": "We leren uw bedrijf, doelen en beperkingen kennen."
                 },
                 "ascent": {
-                    "title": "De Klim",
-                    "desc": "Sprint na sprint bouwen, testen en releasen onze teams. U blijft betrokken bij elke kritieke beslissing."
+                    "title": "Ascent – Bouwen",
+                    "desc": "Ontwerp en ontwikkeling vorderen in gestructureerde fasen, met duidelijke communicatie en eigenaarschap."
                 },
                 "summit": {
-                    "title": "Summit & Scale",
-                    "desc": "We lanceren en optimaliseren. Zodra de basis staat verschuiven we naar onderhoud, iteraties en lange-termijn schaling."
+                    "title": "Summit – Schalen",
+                    "desc": "Na de lancering optimaliseren, breiden we uit en ondersteunen we verdere groei."
                 }
             }
         },

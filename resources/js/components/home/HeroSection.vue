@@ -1,133 +1,199 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { Link } from '@inertiajs/vue3'
-import { route } from 'ziggy-js'
-import AppButton from '@/components/ui/AppButton.vue'
+import { useI18n } from 'vue-i18n';
+import { route } from 'ziggy-js';
+import AppButton from '@/components/ui/AppButton.vue';
 
-const { t } = useI18n()
+const { t } = useI18n();
 </script>
 
 <template>
-  <section class="relative w-full overflow-hidden bg-white font-mona pt-[74px] flex items-center min-h-[700px] sm:min-h-[750px] md:min-h-[850px] lg:min-h-[660px] xl:min-h-[690px] 2xl:min-h-[707px]">
-    <div class="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center justify-center gap-8 px-4 pt-0 pb-10 sm:gap-10 sm:px-5 sm:pt-2 sm:pb-12 md:gap-12 md:px-10 md:pt-12 md:pb-16 lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-x-[40px] lg:gap-y-0 lg:px-[60px] lg:py-0 xl:gap-x-[50px] xl:px-[75px] 2xl:gap-x-[60px] 2xl:px-[85px]">
-
-      <!-- Left Column - Text Area -->
-      <div 
-        class="flex w-full flex-col items-start lg:w-[460px] xl:w-[580px] 2xl:w-[676px] lg:col-start-1 lg:row-start-1" 
-        data-reveal="up"
-      >
-        
-        <!-- Eyebrow Badge -->
-        <div 
-          class="mb-4 flex w-fit flex-row items-center rounded-full bg-[rgba(77,161,240,0.11)] px-3 py-1.5 sm:mb-5 sm:px-4 sm:py-2 md:mb-6 md:px-5 lg:mb-8 lg:px-[22px] lg:py-2.5 2xl:mb-[47px] 2xl:px-[24px] 2xl:py-3"
+    <section
+        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-[20px] sm:min-h-[750px] sm:pt-[24px] md:min-h-[850px] md:pt-[28px] lg:mb-8 lg:min-h-[660px] lg:pt-0 xl:min-h-[690px] 2xl:min-h-[707px]"
+    >
+        <div
+            class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-[28px] pb-10 sm:gap-[30px] sm:pb-12 md:gap-[32px] md:pt-4 md:pb-10 lg:grid-cols-[1fr_420px] lg:gap-x-10 lg:py-0 xl:grid-cols-[1fr_480px] xl:gap-x-16 2xl:grid-cols-[1fr_546px] 2xl:gap-x-20"
         >
-          <span class="text-[12px] font-medium leading-tight text-[#1D4FBC] sm:text-[12px] md:text-[13px] lg:text-[14px]">
-            {{ t('home.hero.eyebrow') }}
-          </span>
-        </div>
-
-        <!-- Content Block -->
-        <div class="mb-6 flex flex-col gap-4 sm:mb-7 sm:gap-5 md:mb-8 md:gap-6 lg:mb-8 lg:gap-[20px] xl:mb-10 xl:gap-[24px] 2xl:mb-[47px]">
-          <h1 
-            class="w-full text-[26px] font-semibold leading-[34px] text-[#0B1F3F] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[48px] lg:text-[32px] lg:leading-[42px] xl:text-[38px] xl:leading-[52px] 2xl:text-[44px] 2xl:leading-[62px]"
-          >
-            {{ t('home.hero.title') }}
-          </h1>
-
-          <p 
-            class="w-full text-[14px] font-normal leading-5 text-black/85 sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[24px] lg:text-[15px] lg:leading-[22px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
-          >
-            {{ t('home.hero.subtitle') }}
-          </p>
-        </div>
-      </div>
-
-      <!-- Right Column - Image Stack -->
-      <div 
-        class="group relative w-full overflow-hidden rounded-[6px] shadow-lg h-[320px] sm:h-[420px] md:h-[520px] lg:h-[440px] lg:w-[420px] xl:h-[500px] xl:w-[480px] 2xl:h-[563px] 2xl:w-[546px] lg:col-start-2 lg:row-span-2" 
-        data-reveal="fade"
-      >
-        <!-- Photo -->
-        <img
-          src="/images/hero-team.png"
-          :alt="t('home.hero.image_alt')"
-          class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          loading="eager"
-        />
-
-        <!-- Overlay Layer -->
-        <div 
-          class="absolute inset-0 z-10"
-          style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(11, 31, 63, 0.6) 100%)"
-        ></div>
-
-        <!-- Caption & Play Button Group -->
-        <div 
-          class="absolute inset-x-0 bottom-4 z-20 flex px-4 sm:bottom-5 sm:px-5 md:bottom-6 md:px-6 lg:bottom-[30px] lg:px-6 xl:bottom-[45px] xl:px-10 2xl:bottom-[55px] 2xl:px-12"
-        >
-          <div class="ml-auto flex items-end gap-2 sm:gap-3 md:gap-4 lg:items-center lg:gap-5 xl:gap-8">
-            <!-- Text Part -->
-            <div class="max-w-[250px] text-right sm:max-w-[350px] md:max-w-[450px] lg:max-w-[280px] xl:max-w-[380px] 2xl:max-w-[420px]">
-              <p class="text-[12px] font-medium leading-[16px] text-white sm:text-[13px] sm:leading-[18px] md:text-[14px] lg:text-[13px] lg:leading-[18px] xl:text-[16px] xl:leading-[22px]">
-                {{ t('home.hero.image_caption') }}
-              </p>
-            </div>
-
-            <!-- Play Button -->
-            <button
-              class="flex shrink-0 cursor-pointer items-center justify-center rounded-full border-0 bg-[#FCF2F2] shadow-md transition-transform hover:scale-110 w-[44px] h-[44px] sm:w-[48px] sm:h-[48px] md:w-[52px] md:h-[52px] lg:w-[48px] lg:h-[48px] xl:w-[58px] xl:h-[58px]"
-              :aria-label="t('home.hero.play_aria')"
+            <!-- Left Column - Text Area -->
+            <div
+                class="flex min-w-0 w-full flex-col items-start lg:col-start-1 lg:justify-start"
+                data-reveal="up"
             >
-              <svg viewBox="0 0 19 25" fill="none" class="ml-1 w-[14px] h-[18px] sm:w-[15px] sm:h-[20px] md:w-[16px] md:h-[21px] lg:w-[15px] lg:h-[20px] xl:w-[19px] xl:h-[25px]">
-                <path d="M2 2L17 12.5L2 23V2" fill="#1D1D1D" stroke="#1D1D1D" stroke-width="1.5"/>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
+                <!-- Eyebrow Badge -->
+                <div
+                    class="mb-[12px] flex max-w-full w-fit flex-row items-center rounded-2xl bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:mb-5 sm:px-4 sm:py-2 md:mb-6 md:px-5 lg:mb-6 lg:max-w-[420px] lg:py-[10px] lg:pr-[22px] lg:pl-[18px] 2xl:mb-[24px] 2xl:max-w-none 2xl:py-[10px] 2xl:pr-[24px] 2xl:pl-[18px]"
+                >
+                    <span
+                        class="text-[12px] leading-[20px] font-medium text-[#1D4FBC] sm:text-[12px] sm:leading-[20px] md:text-[13px] md:leading-[20px] lg:text-[16px] lg:leading-[24px]"
+                    >
+                        {{ t('home.hero.eyebrow') }}
+                    </span>
+                </div>
 
-      <!-- Bottom Column - CTA Buttons (Moves below image on small screens) -->
-      <div 
-        class="flex w-full flex-col items-center gap-3 md:w-auto md:flex-row lg:gap-[12px] lg:col-start-1 lg:row-start-2 lg:w-[460px] xl:w-[580px] 2xl:w-[676px]" 
-        data-reveal="up"
-        data-reveal-delay="100"
-      >
-        <!-- Primary CTA -->
-        <AppButton
-          variant="primary"
-          tag="Link"
-          :href="route('services.outsource')"
-          class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !border-0 !bg-[#0B1F3F] !px-4 sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-[185px] xl:!h-[52px] xl:!w-[210px] 2xl:!h-[55px] 2xl:!w-[228px] !rounded-[8px] 2xl:!px-[15px] 2xl:!pr-[20px]"
-        >
-          <div class="flex items-center gap-[10px]">
-            <div class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5">
-              <div class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"></div>
+                <!-- Content Block -->
+                <div
+                    class="mb-6 flex w-full flex-col gap-2 sm:mb-7 sm:gap-2.5 md:mb-8 md:gap-3 lg:mb-[28px] lg:gap-[10px] 2xl:mb-[28px] 2xl:gap-[10px]"
+                >
+                    <h1
+                        class="w-full break-words text-[24px] leading-[34px] font-semibold text-[#0B1F3F] sm:text-[28px] sm:leading-[38px] md:text-[36px] md:leading-[48px] lg:text-[32px] lg:leading-[42px] xl:text-[38px] xl:leading-[52px] 2xl:text-[44px] 2xl:leading-[62px]"
+                    >
+                        {{ t('home.hero.title') }}
+                    </h1>
+
+                    <p
+                        class="w-full text-[14px] leading-5 font-normal text-black/85 sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[24px] lg:text-[15px] lg:leading-[22px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
+                    >
+                        {{ t('home.hero.subtitle') }}
+                    </p>
+                </div>
+                <!-- Bottom Column - CTA Buttons (Desktop only) -->
+                <div
+                    class="mt-6 hidden w-full flex-col items-center gap-3 md:mt-6 md:w-auto md:flex-row lg:mt-6 lg:flex lg:gap-[12px] xl:mt-8"
+                    data-reveal="up"
+                    data-reveal-delay="100"
+                >
+                    <!-- Primary CTA -->
+                    <AppButton
+                        variant="primary"
+                        tag="Link"
+                        :href="route('services.outsource')"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-4 2xl:!h-[55px] 2xl:!px-6"
+                    >
+                        <div class="flex items-center gap-[10px]">
+                            <div
+                                class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5"
+                            >
+                                <div
+                                    class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
+                                ></div>
+                            </div>
+                            <span
+                                class="text-[13px] leading-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
+                            >
+                                {{ t('home.hero.cta_outsource') }}
+                            </span>
+                        </div>
+                    </AppButton>
+
+                    <!-- Outline CTA -->
+                    <AppButton
+                        variant="outline"
+                        tag="Link"
+                        :href="route('services.dedicated-team')"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!px-5 lg:!h-[48px] lg:!h-[50px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-6"
+                    >
+                        <span
+                            class="text-[13px] leading-[13px] font-medium text-[#0B1F3F] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
+                        >
+                            {{ t('home.hero.cta_team') }}
+                        </span>
+                    </AppButton>
+                </div>
             </div>
-            <span class="text-[13px] font-semibold leading-[13px] text-white sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]">
-              {{ t('home.hero.cta_outsource') }}
-            </span>
-          </div>
-        </AppButton>
 
-        <!-- Outline CTA -->
-        <AppButton
-          variant="outline"
-          tag="Link"
-          :href="route('services.dedicated-team')"
-          class="!flex !h-[48px] !w-full !items-center !justify-center !bg-transparent !px-4 sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-[185px] xl:!h-[52px] xl:!w-[205px] 2xl:!h-[55px] 2xl:!w-[221px] !rounded-[8px] 2xl:!px-[20px] !border-[rgba(11,31,63,0.67)]"
-        >
-          <span class="text-[13px] font-medium leading-[13px] text-[#0B1F3F] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]">
-            {{ t('home.hero.cta_team') }}
-          </span>
-        </AppButton>
-      </div>
+            <!-- Right Column - Image Stack -->
+            <div
+                class="group relative h-[402px] w-full overflow-hidden rounded-[6px] shadow-lg sm:h-[440px] md:h-[520px] lg:col-start-2 lg:h-[440px] xl:h-[500px] 2xl:h-[563px]"
+                data-reveal="fade"
+            >
+                <!-- Photo -->
+                <img
+                    src="/images/hero-team.png"
+                    :alt="t('home.hero.image_alt')"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="eager"
+                />
 
-    </div>
-  </section>
+                <!-- Overlay Layer -->
+                <div
+                    class="absolute inset-0 z-10"
+                    style="
+                        background: linear-gradient(
+                            180deg,
+                            rgba(0, 0, 0, 0) 0%,
+                            rgba(11, 31, 63, 0.6) 100%
+                        );
+                    "
+                ></div>
+
+                <!-- Caption & Play Button Group -->
+                <div
+                    class="absolute inset-x-0 bottom-4 z-20 flex px-4 sm:bottom-5 sm:px-5 md:bottom-6 md:px-6 lg:bottom-[30px] lg:px-6 xl:bottom-[45px] xl:px-10 2xl:bottom-[55px] 2xl:px-12"
+                >
+                    <div
+                        class="ml-auto flex items-end gap-2 sm:gap-3 md:gap-4 lg:items-center lg:gap-5 xl:gap-8"
+                    >
+                        <!-- Text Part -->
+                        <div
+                            class="max-w-[250px] text-right sm:max-w-[350px] md:max-w-[450px] lg:max-w-[280px] xl:max-w-[380px] 2xl:max-w-[420px]"
+                        >
+                            <p
+                                class="text-[12px] leading-[16px] font-medium text-white sm:text-[13px] sm:leading-[18px] md:text-[14px] lg:text-[13px] lg:leading-[18px] xl:text-[16px] xl:leading-[20px] 2xl:leading-[20px]"
+                            >
+                                {{ t('home.hero.image_caption') }}
+                            </p>
+                        </div>
+
+                        <!-- Play Button -->
+                        <button
+                            class="flex h-[44px] w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-full border-0 bg-[#FCF2F2] shadow-md transition-transform hover:scale-110 sm:h-[48px] sm:w-[48px] md:h-[52px] md:w-[52px] lg:h-[48px] lg:w-[48px] xl:h-[58px] xl:w-[58px]"
+                            :aria-label="t('home.hero.play_aria')"
+                        >
+                            <svg
+                                viewBox="0 0 19 25"
+                                fill="none"
+                                class="ml-1 h-[18px] w-[14px] sm:h-[20px] sm:w-[15px] md:h-[21px] md:w-[16px] lg:h-[20px] lg:w-[15px] xl:h-[25px] xl:w-[19px]"
+                            >
+                                <path
+                                    d="M2 2L17 12.5L2 23V2"
+                                    fill="#1D1D1D"
+                                    stroke="#1D1D1D"
+                                    stroke-width="1.5"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons - Mobile/Tablet (below image) -->
+            <div
+                class="flex w-full flex-col items-center gap-[10px] lg:hidden"
+                data-reveal="up"
+                data-reveal-delay="100"
+            >
+                <!-- Primary CTA — Figma: bg #0B1F3F, h=47px, border-radius 6.77px -->
+                <AppButton
+                    variant="primary"
+                    tag="Link"
+                    :href="route('services.outsource')"
+                    class="!flex !h-[47px] !w-full !max-w-none !items-center !justify-center !gap-[8px] !rounded-[7px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
+                >
+                    <div class="flex items-center gap-[8px]">
+                        <div
+                            class="flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]"
+                        >
+                            <div class="h-[6px] w-[6px] rounded-full bg-[#0A5E4A]"></div>
+                        </div>
+                        <span class="text-[14px] leading-[14px] font-semibold text-white">
+                            {{ t('home.hero.cta_outsource') }}
+                        </span>
+                    </div>
+                </AppButton>
+
+                <!-- Outline CTA — Figma: border rgba(11,31,63,0.67), h=47px, border-radius 6.77px -->
+                <AppButton
+                    variant="outline"
+                    tag="Link"
+                    :href="route('services.dedicated-team')"
+                    class="group !flex !h-[47px] !w-full !max-w-none !items-center !justify-center !rounded-[7px] !border !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!border-[#0b1f3a] hover:!bg-[#0b1f3a] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.2)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
+                >
+                    <span
+                        class="text-[14px] leading-[14px] font-medium text-[#0B1F3F] transition-colors group-hover:text-white"
+                    >
+                        {{ t('home.hero.cta_team') }}
+                    </span>
+                </AppButton>
+            </div>
+        </div>
+    </section>
 </template>
-
-<style scoped>
-.font-mona {
-  font-family: 'Mona Sans', sans-serif;
-}
-</style>

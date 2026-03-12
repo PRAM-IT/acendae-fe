@@ -24,7 +24,9 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits(['click']);
 
 const classes = computed(() => [
-  'btn',
+  'btn transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]',
+  props.variant === 'primary' ? 'bg-[#0B1F3F] hover:bg-[#1a3358] hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] active:bg-[#081629] active:translate-y-0 text-white' : '',
+  props.variant === 'outline' ? 'group border border-[#0B1F3F] bg-transparent hover:bg-[#0b1f3a] hover:border-[#0b1f3a] hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(11,31,58,0.2)] active:bg-[#081629] active:translate-y-0' : '',
   `btn-${props.variant}`,
   props.size !== 'md' ? `btn-${props.size}` : '',
   {
@@ -57,7 +59,9 @@ const handleClick = (event: MouseEvent) => {
       <slot name="icon-left" />
     </span>
     
-    <slot />
+    <span :class="{ 'group-hover:text-white': variant === 'outline' }">
+        <slot />
+    </span>
     
     <span v-if="$slots['icon-right']" class="btn-icon-right ml-2">
       <slot name="icon-right" />

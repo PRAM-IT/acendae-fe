@@ -40,10 +40,10 @@ const handleClose = () => {
   <Transition name="slide-down">
     <div 
       v-if="open" 
-      class="absolute left-0 right-0 w-full bg-white shadow-navy-lg z-[90] overflow-hidden font-mona pt-[40px]"
+      class="absolute left-0 right-0 w-full bg-white shadow-navy-lg z-[90] overflow-hidden pt-[40px]"
       @mouseleave="handleClose"
     >
-      <div class="mx-auto flex w-full max-w-[1440px] grid grid-cols-2 gap-0 px-4 sm:px-6 lg:px-[85px]">
+      <div class="acendae-container mx-auto grid grid-cols-2 gap-0">
         <!-- Left Column -->
         <div class="flex flex-col gap-6 pr-12 pb-12">
           <div class="mb-4">
@@ -92,7 +92,7 @@ const handleClose = () => {
       </div>
 
       <!-- Bottom Bar -->
-      <div class="bg-[#0B1F3F] h-[60px] flex items-center justify-between px-4 sm:px-6 lg:px-[85px] w-full mt-auto">
+      <div class="bg-[#0B1F3F] h-[60px] flex items-center justify-between px-4 sm:px-6 lg:px-[var(--container-padding)] w-full mt-auto">
         <i18n-t keypath="megaMenu.tagline" tag="p" class="text-[13px] sm:text-[15px] text-white/70 italic">
           <template #highlight>
             <strong class="text-white font-bold ml-1">{{ t('megaMenu.taglineHighlight') }}</strong>
@@ -114,10 +114,6 @@ const handleClose = () => {
 </template>
 
 <style scoped>
-.font-mona {
-  font-family: 'Mona Sans', sans-serif;
-}
-
 .shadow-navy-lg {
   box-shadow: 0 10px 30px rgba(11, 31, 63, 0.15);
 }
