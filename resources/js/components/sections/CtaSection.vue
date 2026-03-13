@@ -14,10 +14,10 @@ const avatarData = [
 
 <template>
     <section
-        class="relative w-full overflow-hidden bg-[#F4F9FF] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-18 2xl:py-20"
+        class="landing-section relative w-full overflow-hidden bg-[#F4F9FF] text-navy dark:bg-[#070F1C] dark:text-white"
     >
         <div
-            class="acendae-container relative mx-auto flex flex-col items-center gap-5 sm:gap-6 md:gap-7 lg:gap-8"
+            class="wrap relative mx-auto flex flex-col items-center gap-5 sm:gap-6 md:gap-7 lg:gap-8"
         >
             <!-- Avatar group -->
             <div
@@ -59,19 +59,13 @@ const avatarData = [
 
             <!-- Heading & Supporting Text -->
             <div class="flex w-full flex-col items-center gap-2">
-                <h2
-                    class="w-full max-w-[613px] text-center text-[15px] leading-[22px] font-medium text-[#101828] sm:text-[16px] sm:leading-[24px] md:text-[17px] md:leading-[26px] lg:text-[18px] lg:leading-[28px] xl:text-[19px] xl:leading-[29px] 2xl:text-[20px] 2xl:leading-[30px]"
-                >
+                <h2 class="title-section text-center dark:text-white">
                     {{ t('cta.readyTitle') }}
                 </h2>
-                <p
-                    class="w-full max-w-[604px] text-center text-[13px] leading-5 font-normal text-[#667085] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[27px] 2xl:text-[18px] 2xl:leading-[28px]"
-                >
+                <p class="body w-full max-w-2xl text-center text-muted dark:text-white/80">
                     {{ t('cta.readySubtext1') }}
                 </p>
-                <p
-                    class="w-full max-w-[581px] text-center text-[13px] leading-5 font-normal text-[#667085] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[27px] 2xl:text-[18px] 2xl:leading-[28px]"
-                >
+                <p class="body w-full max-w-2xl text-center text-muted dark:text-white/80">
                     {{ t('cta.readySubtext2') }}
                 </p>
             </div>
@@ -88,15 +82,14 @@ const avatarData = [
                 >
                     <div class="flex items-center gap-[10px]">
                         <div
-                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5"
+                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]
+                            md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5 dark:bg-[#FFB200]/80"
                         >
                             <div
-                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
+                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A]  md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
                             ></div>
                         </div>
-                        <span
-                            class="text-[13px] leading-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
-                        >
+                        <span class="btn-text">
                             {{ t('cta.discussProject') }}
                         </span>
                     </div>
@@ -106,11 +99,10 @@ const avatarData = [
                     variant="outline"
                     tag="Link"
                     href="/team-outsourcing"
-                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] !border !border-[rgba(11,31,63,0.67)] !bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
+                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] border border-[rgba(11,31,63,0.67)] dark:!border-[#FFB200]/80
+                    bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
                 >
-                    <span
-                        class="text-[13px] font-medium text-[#0B1F3F] md:text-[14px] lg:text-[15px] 2xl:text-[16px]"
-                    >
+                    <span class="btn-text-outline dark:!text-[#ffffff]">
                         {{ t('cta.discussOutsourcing') }}
                     </span>
                 </AppButton>
@@ -118,20 +110,16 @@ const avatarData = [
 
             <!-- Italic Tagline -->
             <p
-                class="w-full max-w-[238px] text-center text-[12px] leading-5 font-medium text-[#1D4FBC] italic sm:max-w-[260px] sm:text-[13px] md:text-[14px] md:leading-[22px] lg:max-w-[300px] lg:text-[16px] lg:leading-[26px] 2xl:text-[18px] 2xl:leading-[28px]"
+                class="eyebrow-accent w-full max-w-xs text-center sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg"
             >
                 {{ t('cta.tagline') }}
             </p>
 
             <!-- Decorative Gold Shape -->
             <div
-                class="pointer-events-none absolute z-0 hidden overflow-visible select-none md:right-[-80px] md:bottom-[-70px] md:block md:w-[450px] md:opacity-80 lg:right-[-120px] lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
+                class="pointer-events-none absolute z-0 hidden overflow-visible select-none lg:right-[-120px] lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
             >
-                <img
-                    src="/images/logo-n.svg"
-                    alt=""
-                    class="h-auto w-full"
-                />
+                <img src="/images/logo-n.svg" alt="" class="h-auto w-full" />
             </div>
         </div>
     </section>

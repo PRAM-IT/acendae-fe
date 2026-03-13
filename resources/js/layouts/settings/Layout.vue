@@ -34,7 +34,7 @@ const { isCurrentOrParentUrl } = useCurrentUrl();
 </script>
 
 <template>
-    <div class="px-4 py-6">
+    <div class="px-4 py-6 bg-white text-navy dark:bg-[#070F1C] dark:text-white">
         <Heading
             title="Settings"
             description="Manage your profile and account settings"

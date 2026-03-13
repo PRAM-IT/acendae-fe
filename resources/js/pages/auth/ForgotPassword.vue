@@ -35,7 +35,9 @@ const { t } = useI18n();
         <div class="space-y-6">
             <Form v-bind="email.form()" v-slot="{ errors, processing }">
                 <div class="grid gap-2">
-                    <Label for="email">{{ t('auth.forgotPassword.email') }}</Label>
+                    <Label for="email">{{
+                        t('auth.forgotPassword.email')
+                    }}</Label>
                     <Input
                         id="email"
                         type="email"
@@ -59,9 +61,11 @@ const { t } = useI18n();
                 </div>
             </Form>
 
-            <div class="space-x-1 text-center text-sm text-muted-foreground">
+            <div class="text-muted-foreground space-x-1 text-center text-sm">
                 <span>{{ t('auth.forgotPassword.returnTo') }}</span>
-                <TextLink :href="login()">{{ t('auth.forgotPassword.logIn') }}</TextLink>
+                <TextLink :href="login()">{{
+                    t('auth.forgotPassword.logIn')
+                }}</TextLink>
             </div>
         </div>
     </AuthLayout>

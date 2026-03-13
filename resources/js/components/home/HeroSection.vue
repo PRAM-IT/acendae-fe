@@ -8,40 +8,42 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="relative flex min-h-[700px] w-full items-center overflow-hidden bg-white pt-[20px] sm:min-h-[750px] sm:pt-[24px] md:min-h-[850px] md:pt-[28px] lg:mb-8 lg:min-h-[660px] lg:pt-0 xl:min-h-[690px] 2xl:min-h-[707px]"
+        class="container-px relative flex w-full items-center overflow-hidden
+        bg-white text-navy min-h-[850px]
+        lg:min-h-[690px] 2xl:min-h-[750px] 4xl:min-h-[800px]
+        dark:bg-[#070F1C] dark:text-white"
     >
         <div
-            class="acendae-container mx-auto grid w-full grid-cols-1 items-center justify-center gap-[28px] pb-10 sm:gap-[30px] sm:pb-12 md:gap-[32px] md:pt-4 md:pb-10 lg:grid-cols-[1fr_420px] lg:gap-x-10 lg:py-0 xl:grid-cols-[1fr_480px] xl:gap-x-16 2xl:grid-cols-[1fr_546px] 2xl:gap-x-20"
+            class="grid w-full grid-cols-1 items-center justify-center gap-7 pb-10 sm:gap-8
+            sm:pb-12 md:gap-8 md:pt-4 md:pb-10 lg:grid-cols-[1fr_420px] lg:gap-x-10 lg:py-0
+            xl:grid-cols-[1fr_480px] xl:gap-x-16 2xl:grid-cols-[1fr_546px] 2xl:gap-x-20"
         >
             <!-- Left Column - Text Area -->
             <div
-                class="flex min-w-0 w-full flex-col items-start lg:col-start-1 lg:justify-start"
+                class="flex w-full min-w-0 flex-col items-start lg:col-start-1 lg:justify-start"
                 data-reveal="up"
             >
                 <!-- Eyebrow Badge -->
                 <div
-                    class="mb-[12px] flex max-w-full w-fit flex-row items-center rounded-2xl bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:mb-5 sm:px-4 sm:py-2 md:mb-6 md:px-5 lg:mb-6 lg:max-w-[420px] lg:py-[10px] lg:pr-[22px] lg:pl-[18px] 2xl:mb-[24px] 2xl:max-w-none 2xl:py-[10px] 2xl:pr-[24px] 2xl:pl-[18px]"
+                    class="flex w-fit max-w-full flex-row items-center rounded-2xl
+                    bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:px-4 sm:py-2 md:mb-6 md:px-5 mb-5
+                    lg:max-w-md lg:py-2.5 lg:pr-6 lg:pl-4 md:mb-6 2xl:max-w-none 2xl:py-2.5
+                     2xl:pr-6 2xl:pl-4"
                 >
-                    <span
-                        class="text-[12px] leading-[20px] font-medium text-[#1D4FBC] sm:text-[12px] sm:leading-[20px] md:text-[13px] md:leading-[20px] lg:text-[16px] lg:leading-[24px]"
-                    >
+                    <span class="eyebrow-accent dark:!text-white">
                         {{ t('home.hero.eyebrow') }}
                     </span>
                 </div>
 
                 <!-- Content Block -->
                 <div
-                    class="mb-6 flex w-full flex-col gap-2 sm:mb-7 sm:gap-2.5 md:mb-8 md:gap-3 lg:mb-[28px] lg:gap-[10px] 2xl:mb-[28px] 2xl:gap-[10px]"
+                    class="mb-6 flex w-full flex-col sm:mb-7 md:mb-8 gap-5 md:gap-6 lg:mb-7 lg:gap-2.5 2xl:mb-7 2xl:gap-2.5"
                 >
-                    <h1
-                        class="w-full break-words text-[24px] leading-[34px] font-semibold text-[#0B1F3F] sm:text-[28px] sm:leading-[38px] md:text-[36px] md:leading-[48px] lg:text-[32px] lg:leading-[42px] xl:text-[38px] xl:leading-[52px] 2xl:text-[44px] 2xl:leading-[62px]"
-                    >
+                    <h1 class="title w-full break-words dark:text-white">
                         {{ t('home.hero.title') }}
                     </h1>
 
-                    <p
-                        class="w-full text-[14px] leading-5 font-normal text-black/85 sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[24px] lg:text-[15px] lg:leading-[22px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
-                    >
+                    <p class="body w-full dark:text-white/80">
                         {{ t('home.hero.subtitle') }}
                     </p>
                 </div>
@@ -56,7 +58,13 @@ const { t } = useI18n();
                         variant="primary"
                         tag="Link"
                         :href="route('services.outsource')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-4 2xl:!h-[55px] 2xl:!px-6"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0
+                        !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px
+                        hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2
+                        focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0
+                        active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto
+                        lg:!px-8 xl:!h-[52px] xl:!px-4 2xl:!h-[55px] 2xl:!px-6 dark:!bg-[#FFB200]/80 dark:hover:!bg-[#E3C45F]
+                        dark:active:!bg-[#B8933D]"
                     >
                         <div class="flex items-center gap-[10px]">
                             <div
@@ -66,9 +74,7 @@ const { t } = useI18n();
                                     class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
                                 ></div>
                             </div>
-                            <span
-                                class="text-[13px] leading-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
-                            >
+                            <span class="btn-text dark:text-[#070F1C]">
                                 {{ t('home.hero.cta_outsource') }}
                             </span>
                         </div>
@@ -79,11 +85,9 @@ const { t } = useI18n();
                         variant="outline"
                         tag="Link"
                         :href="route('services.dedicated-team')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!px-5 lg:!h-[48px] lg:!h-[50px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-6"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!px-5 lg:!h-[48px] lg:!h-[50px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-6 dark:!border-[#C9A84C] dark:hover:!bg-[#C9A84C]/10"
                     >
-                        <span
-                            class="text-[13px] leading-[13px] font-medium text-[#0B1F3F] sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
-                        >
+                        <span class="btn-text-outline dark:!text-white">
                             {{ t('home.hero.cta_team') }}
                         </span>
                     </AppButton>
@@ -117,7 +121,7 @@ const { t } = useI18n();
 
                 <!-- Caption & Play Button Group -->
                 <div
-                    class="absolute inset-x-0 bottom-4 z-20 flex px-4 sm:bottom-5 sm:px-5 md:bottom-6 md:px-6 lg:bottom-[30px] lg:px-6 xl:bottom-[45px] xl:px-10 2xl:bottom-[55px] 2xl:px-12"
+                    class="absolute inset-x-0 bottom-4 z-20 flex px-4 sm:bottom-5 sm:px-5 md:bottom-6 md:px-6 lg:bottom-8 lg:px-6 xl:bottom-11 xl:px-10 2xl:bottom-14 2xl:px-12"
                 >
                     <div
                         class="ml-auto flex items-end gap-2 sm:gap-3 md:gap-4 lg:items-center lg:gap-5 xl:gap-8"
@@ -127,7 +131,7 @@ const { t } = useI18n();
                             class="max-w-[250px] text-right sm:max-w-[350px] md:max-w-[450px] lg:max-w-[280px] xl:max-w-[380px] 2xl:max-w-[420px]"
                         >
                             <p
-                                class="text-[12px] leading-[16px] font-medium text-white sm:text-[13px] sm:leading-[18px] md:text-[14px] lg:text-[13px] lg:leading-[18px] xl:text-[16px] xl:leading-[20px] 2xl:leading-[20px]"
+                                class="text-right text-xs font-medium text-white sm:text-sm md:text-sm xl:text-base"
                             >
                                 {{ t('home.hero.image_caption') }}
                             </p>
@@ -166,15 +170,18 @@ const { t } = useI18n();
                     variant="primary"
                     tag="Link"
                     :href="route('services.outsource')"
-                    class="!flex !h-[47px] !w-full !max-w-none !items-center !justify-center !gap-[8px] !rounded-[7px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
+                    class="!flex !h-[47px] !w-full !max-w-none !items-center !justify-center !gap-[8px] !rounded-[7px] !border-0
+                    !bg-[#0B1F3F] dark:!bg-[#FFB200]/80 !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
                 >
                     <div class="flex items-center gap-[8px]">
                         <div
                             class="flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]"
                         >
-                            <div class="h-[6px] w-[6px] rounded-full bg-[#0A5E4A]"></div>
+                            <div
+                                class="h-[6px] w-[6px] rounded-full bg-[#0A5E4A]"
+                            ></div>
                         </div>
-                        <span class="text-[14px] leading-[14px] font-semibold text-white">
+                        <span class="btn-text">
                             {{ t('home.hero.cta_outsource') }}
                         </span>
                     </div>
@@ -185,11 +192,14 @@ const { t } = useI18n();
                     variant="outline"
                     tag="Link"
                     :href="route('services.dedicated-team')"
-                    class="group !flex !h-[47px] !w-full !max-w-none !items-center !justify-center !rounded-[7px] !border !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!border-[#0b1f3a] hover:!bg-[#0b1f3a] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.2)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
+                    class="group !flex !h-[47px] !w-full !max-w-none !items-center !justify-center !rounded-[7px] !border
+                    !border-[rgba(11,31,63,0.67)]
+                    dark:!border-[#FFB200]/80 !bg-transparent !px-4 !transition-all !duration-200 hover:!-translate-y-px
+                    hover:!border-[#0b1f3a] hover:!bg-[#0b1f3a] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.2)]
+                    focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C]
+                    active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
                 >
-                    <span
-                        class="text-[14px] leading-[14px] font-medium text-[#0B1F3F] transition-colors group-hover:text-white"
-                    >
+                    <span class="btn-text-outline dark:!text-white">
                         {{ t('home.hero.cta_team') }}
                     </span>
                 </AppButton>

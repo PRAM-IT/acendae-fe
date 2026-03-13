@@ -113,7 +113,7 @@ watch(
         <DialogContent class="sm:max-w-md">
             <DialogHeader class="flex items-center justify-center">
                 <div
-                    class="mb-3 w-auto rounded-full border border-border bg-card p-0.5 shadow-sm"
+                    class="bg-card mb-3 w-auto rounded-full border border-border p-0.5 shadow-sm"
                 >
                     <div
                         class="relative overflow-hidden rounded-full border border-border bg-muted p-2.5"
@@ -137,7 +137,7 @@ watch(
                             />
                         </div>
                         <ScanLine
-                            class="relative z-20 size-6 text-foreground"
+                            class="text-foreground relative z-20 size-6"
                         />
                     </div>
                 </div>
@@ -161,7 +161,7 @@ watch(
                             >
                                 <div
                                     v-if="!qrCodeSvg"
-                                    class="absolute inset-0 z-10 flex aspect-square h-auto w-full animate-pulse items-center justify-center bg-background"
+                                    class="bg-background absolute inset-0 z-10 flex aspect-square h-auto w-full animate-pulse items-center justify-center"
                                 >
                                     <Spinner class="size-6" />
                                 </div>
@@ -195,9 +195,9 @@ watch(
                             <div
                                 class="absolute inset-0 top-1/2 h-px w-full bg-border"
                             />
-                            <span class="relative bg-card px-2 py-1"
-                                >{{ t('settings.twoFactor.orManual') }}</span
-                            >
+                            <span class="bg-card relative px-2 py-1">{{
+                                t('settings.twoFactor.orManual')
+                            }}</span>
                         </div>
 
                         <div
@@ -217,7 +217,7 @@ watch(
                                         type="text"
                                         readonly
                                         :value="manualSetupKey"
-                                        class="h-full w-full bg-background p-3 text-foreground"
+                                        class="bg-background text-foreground h-full w-full p-3"
                                     />
                                     <button
                                         @click="copy(manualSetupKey || '')"

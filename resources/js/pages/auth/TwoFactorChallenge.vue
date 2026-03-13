@@ -85,7 +85,7 @@ const code = ref<string>('');
                     <Button type="submit" class="w-full" :disabled="processing">
                         {{ t('auth.twoFactor.submit') }}
                     </Button>
-                    <div class="text-center text-sm text-muted-foreground">
+                    <div class="text-muted-foreground text-center text-sm">
                         <button
                             type="button"
                             class="text-foreground underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out hover:decoration-current! dark:decoration-neutral-500"
@@ -116,7 +116,7 @@ const code = ref<string>('');
                         {{ t('auth.twoFactor.submit') }}
                     </Button>
 
-                    <div class="text-center text-sm text-muted-foreground">
+                    <div class="text-muted-foreground text-center text-sm">
                         <button
                             type="button"
                             class="text-foreground underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out hover:decoration-current! dark:decoration-neutral-500"

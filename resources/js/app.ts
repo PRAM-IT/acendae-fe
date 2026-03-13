@@ -10,12 +10,16 @@ import { ZiggyVue } from 'ziggy-js';
 import i18n from '@/plugins/i18n';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import { usePreferencesStore } from '@/stores/preferences';
+import { initializeTheme } from '@/composables/useAppearance';
 
 createInertiaApp({
     title: (title) => (title ? `${title} | Acendae` : 'Acendae'),
 
     resolve: (name) => {
-        const pages = import.meta.glob<{ default: DefineComponent }>('./pages/**/*.vue', { eager: true });
+        const pages = import.meta.glob<{ default: DefineComponent }>(
+            './pages/**/*.vue',
+            { eager: true },
+        );
         const page = pages[`./pages/${name}.vue`];
 
         if (!page) {
@@ -35,9 +39,11 @@ createInertiaApp({
         const head = createHead();
 
         router.on('before', (event: any) => {
-          const preferences = usePreferencesStore(pinia);
-          event.detail.visit.headers['X-Locale'] = preferences.lang;
+            const preferences = usePreferencesStore(pinia);
+            event.detail.visit.headers['X-Locale'] = preferences.lang;
         });
+
+        initializeTheme();
 
         const app = createApp({ render: () => h(App, props) })
             .use(plugin)

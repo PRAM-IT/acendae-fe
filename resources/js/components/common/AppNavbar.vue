@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
-import { Menu, X, ChevronDown } from 'lucide-vue-next';
+import { Menu, X, ChevronDown, Moon, Sun } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 import AppButton from '@/components/ui/AppButton.vue';
 import { usePreferencesStore } from '@/stores/preferences';
+import { useAppearance } from '@/composables/useAppearance';
 import logoDark from '@assets/images/logo-dark.svg';
 import globeIcon from '@assets/images/globe.svg';
-import moonIcon from '@assets/images/moon.svg';
 
 const page = usePage();
 const { t, locale } = useI18n();
 const preferences = usePreferencesStore();
+const { resolvedAppearance, updateAppearance } = useAppearance();
 
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
@@ -45,11 +46,16 @@ const switchLanguage = (lang: 'en' | 'nl') => {
 };
 
 const toggleDarkMode = () => {
-    preferences.toggleDarkMode();
+    const next =
+        resolvedAppearance.value === 'dark' || resolvedAppearance.value === 'system'
+            ? 'light'
+            : 'dark';
+
+    updateAppearance(next);
 };
 
 const navbarClasses = computed(() => [
-    'fixed top-0 inset-x-0 z-[100] bg-white transition-all duration-300',
+    'fixed top-0 inset-x-0 z-[100] bg-white transition-all duration-300 dark:bg-[#070F1C]',
     isScrolled.value
         ? 'h-[60px] lg:h-[74px] border-b border-black/5 shadow-sm shadow-black/5'
         : 'h-[64px] lg:h-[74px] border-b border-transparent shadow-none',
@@ -61,9 +67,9 @@ const closeAllMobile = () => {
 </script>
 
 <template>
-    <header :class="navbarClasses" class="flex items-center bg-white">
+    <header :class="navbarClasses" class="flex items-center">
         <div
-            class="acendae-container mx-auto flex h-full w-full items-center justify-between"
+            class="wrap mx-auto flex h-full w-full items-center justify-between"
         >
             <!-- LOGO SECTION -->
             <div class="flex items-center">
@@ -71,26 +77,35 @@ const closeAllMobile = () => {
                     href="/"
                     class="flex items-center transition-transform hover:scale-[1.02] active:scale-[0.98]"
                 >
+                    <!-- Light theme logo -->
                     <img
                         :src="logoDark"
                         :alt="t('common.logoAlt') || 'Acendae'"
-                        class="h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px]"
+                        class="h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:hidden"
                         onerror="this.src = '/images/logo-dark.svg'"
+                    />
+                    <!-- Dark theme logo -->
+                    <img
+                        src="/assets/images/logo-light.svg"
+                        :alt="t('common.logoAlt') || 'Acendae'"
+                        class="hidden h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:block"
                     />
                 </Link>
             </div>
 
             <!-- DESKTOP NAVIGATION -->
-            <nav class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[28px] 2xl:gap-x-[36px]">
+            <nav
+                class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[28px] 2xl:gap-x-[36px]"
+            >
                 <Link
                     v-for="link in navLinks"
                     :key="link.path"
                     :href="link.path"
-                    class="acendae-nav group relative whitespace-nowrap py-2 text-[14px] leading-[18px] font-medium transition-colors duration-200 xl:text-[15px] 2xl:text-[16px]"
+                    class="nav-link group relative py-2 text-[14px] leading-[18px] font-medium whitespace-nowrap transition-colors duration-200 xl:text-[15px] 2xl:text-[16px]"
                     :class="
                         isActive(link.path)
-                            ? 'text-[#0B1F3F]'
-                            : 'text-black/85 hover:text-[#0B1F3F]'
+                            ? 'text-[#0B1F3F] dark:text-white'
+                            : 'text-black/85 hover:text-[#0B1F3F] dark:text-white/80 dark:hover:text-white'
                     "
                 >
                     {{ link.name }}
@@ -106,15 +121,17 @@ const closeAllMobile = () => {
             </nav>
 
             <!-- RIGHT ACTIONS CLUSTER -->
-            <div class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[32px] 2xl:gap-x-[40px]">
+            <div
+                class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[32px] 2xl:gap-x-[40px]"
+            >
                 <!-- Branded Language Switcher Pill -->
                 <div
-                    class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white pr-1 pl-1.5"
+                    class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white pr-1 pl-1.5 dark:border-white/15 dark:bg-[#0B1F3F]"
                 >
                     <div class="flex items-center pr-1">
                         <img
                             :src="globeIcon"
-                            class="h-[26px] w-[26px]"
+                            class="h-[26px] w-[26px] dark:invert dark:brightness-110"
                             alt=""
                         />
                     </div>
@@ -126,8 +143,8 @@ const closeAllMobile = () => {
                             class="flex h-[26px] w-[32px] items-center justify-center text-[14px] font-medium uppercase transition-all duration-150"
                             :class="
                                 locale === lang
-                                    ? 'rounded-full bg-[rgba(213,226,255,0.31)] text-[#1D4FBC]'
-                                    : 'rounded text-black hover:bg-black/5'
+                                    ? 'rounded-full bg-[rgba(213,226,255,0.31)] text-[#1D4FBC] dark:bg-[#C9A84C] dark:text-[#070F1C]'
+                                    : 'rounded text-black hover:bg-black/5 dark:text-white dark:hover:bg-white/10'
                             "
                         >
                             {{ lang }}
@@ -138,13 +155,16 @@ const closeAllMobile = () => {
                 <!-- Dark Mode Toggle -->
                 <button
                     @click="toggleDarkMode"
-                    class="group relative flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-gray-100 xl:h-9 xl:w-9"
+                    class="group relative flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-gray-100 xl:h-9 xl:w-9 dark:hover:bg-white/10"
                     :title="t('common.darkMode')"
                 >
-                    <img
-                        :src="moonIcon"
-                        class="h-5 w-5 transition-transform group-hover:rotate-12 xl:h-6 xl:w-6"
-                        alt=""
+                    <Sun
+                        v-if="resolvedAppearance === 'dark'"
+                        class="h-5 w-5 text-[#C9A84C] transition-transform group-hover:rotate-12 xl:h-6 xl:w-6"
+                    />
+                    <Moon
+                        v-else
+                        class="h-5 w-5 text-[#0B1F3F] transition-transform group-hover:rotate-12 xl:h-6 xl:w-6 dark:text-white"
                     />
                 </button>
 
@@ -165,7 +185,7 @@ const closeAllMobile = () => {
 
             <!-- MOBILE MENU TRIGGER -->
             <button
-                class="flex h-10 w-10 items-center justify-center rounded-lg text-[#0B1F3F] transition-colors hover:bg-black/5 lg:hidden"
+                class="flex h-10 w-10 items-center justify-center rounded-lg text-[#0B1F3F] transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/10 lg:hidden"
                 @click="isMobileMenuOpen = !isMobileMenuOpen"
                 :aria-expanded="isMobileMenuOpen"
             >
@@ -186,11 +206,11 @@ const closeAllMobile = () => {
         <Transition name="slide-down">
             <div
                 v-if="isMobileMenuOpen"
-                class="fixed inset-x-0 top-[64px] z-[90] h-[calc(100vh-64px)] w-full overflow-y-auto bg-white lg:hidden"
+                class="fixed inset-x-0 top-[64px] z-[90] h-[calc(100vh-64px)] w-full overflow-y-auto bg-white dark:bg-[#070F1C] lg:hidden"
             >
                 <div class="flex flex-col p-6 pt-8 pb-12">
                     <!-- Nav Links Stack -->
-                    <nav class="flex flex-col divide-y divide-black/5">
+                    <nav class="flex flex-col divide-y divide-black/5 dark:divide-white/10">
                         <Link
                             v-for="link in navLinks"
                             :key="link.path"
@@ -203,29 +223,29 @@ const closeAllMobile = () => {
                                 :class="
                                     isActive(link.path)
                                         ? 'text-[#C9A84C]'
-                                        : 'text-[#0B1F3F] group-active:text-[#C9A84C]'
+                                        : 'text-[#0B1F3F] group-active:text-[#C9A84C] dark:text-white dark:group-active:text-[#C9A84C]'
                                 "
                             >
                                 {{ link.name }}
                             </span>
                             <ChevronDown
-                                class="h-5 w-5 -rotate-90 text-black/20"
+                                class="h-5 w-5 -rotate-90 text-black/20 dark:text-white/30"
                             />
                         </Link>
                     </nav>
 
                     <!-- Bottom Branded Area -->
-                    <div class="mt-10 space-y-8 rounded-2xl bg-gray-50/80 p-6">
+                    <div class="mt-10 space-y-8 rounded-2xl bg-gray-50/80 p-6 dark:bg-white/5">
                         <!-- Language Switcher -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-3">
                                 <img
                                     :src="globeIcon"
-                                    class="h-5 w-5 opacity-60"
+                                class="h-5 w-5 opacity-60 dark:invert dark:brightness-110"
                                     alt=""
                                 />
                                 <span
-                                    class="text-[15px] font-medium text-black/60"
+                                class="text-[15px] font-medium text-black/60 dark:text-white/80"
                                     >{{ t('common.language') }}</span
                                 >
                             </div>
@@ -239,8 +259,8 @@ const closeAllMobile = () => {
                                     class="flex h-[28px] w-[40px] items-center justify-center rounded-full text-[13px] font-bold uppercase transition-all"
                                     :class="
                                         locale === lang
-                                            ? 'bg-[#D5E2FF] text-[#1D4FBC]'
-                                            : 'text-black/50'
+                                            ? 'bg-[#D5E2FF] text-[#1D4FBC] dark:bg-[#C9A84C] dark:text-[#070F1C]'
+                                            : 'text-black/50 dark:text-white/60'
                                     "
                                 >
                                     {{ lang }}

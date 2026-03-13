@@ -244,7 +244,10 @@
             "body3": "We work as one integrated team across the Netherlands and Sri Lanka — combining strategy, technology, and execution.",
             "body4": "If you want to work on meaningful projects, grow continuously, and be part of long-term partnerships instead of short-term gigs, you'll feel at home here.",
             "cta": "Join Acendae as an Acendor",
-            "right_quote": "We're always looking for people who want to climb together"
+            "right_quote": "We're always looking for people who want to climb together",
+            "right_quote_prefix": "We're always looking for people who want to",
+            "right_quote_highlight": "climb together",
+            "team_image_alt": "Acendae team"
         }
     },
     "cta": {
