@@ -27,28 +27,25 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
 
 <template>
     <section
-        class="acendae-container bg-white pt-10 pb-0 sm:pt-12 md:pt-14 lg:pt-16 2xl:pt-20"
+        class="landing-section bg-white"
     >
+        <div class="wrap mx-auto">
         <!-- SECTION HEADER (centered) -->
         <div
-            class="acendae-container mx-auto mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12"
+            class="mx-auto mb-6 flex flex-col items-center gap-4 sm:mb-8 md:mb-10 lg:mb-12"
             data-reveal="up"
         >
-            <h2
-                class="font-instrument text-center text-[24px] leading-[30px] font-semibold text-[#1A2D4B] sm:text-[28px] sm:leading-[34px] md:text-[32px] md:leading-[38px] lg:text-[36px] lg:leading-[42px] xl:text-[38px] 2xl:text-[40px] 2xl:leading-[48px]"
-            >
+            <h2 class="title-section text-navy-light text-center">
                 {{ t('home.units.title') }}
             </h2>
-            <p
-                class="text-center text-[14px] leading-5 font-normal text-[#6b7280] sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
-            >
+            <p class="subtitle text-center">
                 {{ t('home.units.subtitle') }}
             </p>
         </div>
 
         <!-- TAB NAVIGATION -->
         <div
-            class="mx-auto grid h-auto w-full grid-cols-2 border border-[#D3D8E1] lg:flex lg:h-[65px] lg:max-w-[var(--content-width)] lg:flex-row xl:h-[70px] 2xl:h-[77px]"
+            class="mx-auto grid h-auto w-full grid-cols-2 border border-[#D3D8E1] lg:flex lg:h-[65px] lg:max-w-inner lg:flex-row xl:h-[70px] 2xl:h-[77px]"
             data-reveal="up"
             data-reveal-delay="50"
         >
@@ -61,19 +58,17 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                         ? 'bg-[#F3F5FB] font-medium text-[#0b1f3a]'
                         : 'bg-white font-normal text-[#0b1f3a]/40',
                     index === 0
-                        ? 'border-r border-b border-[#D3D8E1] lg:border-b-0'
+                        ? 'border-b border-r border-[#D3D8E1] lg:border-b-0'
                         : '',
                     index === 1
-                        ? 'border-b border-[#D3D8E1] lg:border-r lg:border-b-0 lg:border-[#D3D8E1]'
+                        ? 'border-b border-[#D3D8E1] lg:border-b-0 lg:border-r lg:border-[#D3D8E1]'
                         : '',
                     index === 2 ? 'border-r border-[#D3D8E1] lg:border-r' : '',
                     index === 3 ? 'lg:border-r-0' : '',
                 ]"
                 @click="activeTab = index"
             >
-                <span
-                    class="px-1 text-[13px] leading-[18px] sm:text-[14px] sm:leading-[20px] md:text-[15px] lg:px-0 lg:text-[15px] xl:text-[17px] 2xl:text-[19px] 2xl:leading-[27px]"
-                >
+                <span class="body-sm px-1 lg:px-0">
                     {{ tab }}
                 </span>
             </button>
@@ -84,7 +79,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
              Mobile: auto height (image 340px top + content below).
         -->
         <div
-            class="mx-auto mt-10 flex w-full flex-col overflow-hidden border border-[#D3D8E1] lg:min-h-[620px] lg:max-w-[var(--content-width)] xl:min-h-[580px] 2xl:min-h-[640px]"
+            class="mx-auto mt-10 flex w-full flex-col overflow-hidden border border-[#D3D8E1] lg:min-h-[620px] lg:max-w-inner xl:min-h-[580px] 2xl:min-h-[640px]"
         >
             <Transition name="unit-fade" mode="out-in" class="flex flex-1">
                 <div
@@ -99,14 +94,10 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                     >
                         <!-- HEADING GROUP: title + tagline -->
                         <div class="flex flex-col gap-2 lg:gap-[16px]">
-                            <h3
-                                class="font-instrument text-[22px] leading-[30px] font-semibold text-[#0C2143] sm:text-[24px] sm:leading-[32px] md:text-[26px] md:leading-[34px] lg:text-[28px] lg:leading-[38px] xl:text-[32px] xl:leading-[44px] 2xl:text-[36px] 2xl:leading-[51px]"
-                            >
+                            <h3 class="title-card text-[#0C2143]">
                                 {{ t(`home.units.${activeUnit}.name`) }}
                             </h3>
-                            <p
-                                class="text-[13px] leading-[20px] font-semibold text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
-                            >
+                            <p class="label text-navy/85">
                                 {{ t(`home.units.${activeUnit}.tagline`) }}
                             </p>
                         </div>
@@ -115,9 +106,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                         <div
                             class="mt-4 flex flex-col gap-3 sm:mt-5 lg:mt-0 lg:flex-1 lg:gap-[32px] lg:pt-[32px]"
                         >
-                            <p
-                                class="text-[13px] leading-[20px] font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
-                            >
+                            <p class="body">
                                 {{ t(`home.units.${activeUnit}.description`) }}
                             </p>
 
@@ -139,9 +128,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                             class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] lg:h-[10px] lg:w-[10px] 2xl:h-[11px] 2xl:w-[11px]"
                                         ></div>
                                     </div>
-                                    <span
-                                        class="text-[13px] leading-[20px] text-[#081B3A] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24px] 2xl:text-[18px] 2xl:leading-[27px]"
-                                    >
+                                    <span class="body text-[#081B3A]">
                                         {{ feature }}
                                     </span>
                                 </div>
@@ -155,7 +142,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                              xl inner width = 380px — fits comfortably
                         -->
                         <div
-                            class="mt-8 flex flex-col gap-[10px] sm:mt-8 lg:mt-auto lg:pt-[32px] lg:gap-[10px] xl:flex-row xl:gap-[14px]"
+                            class="mt-8 flex flex-col gap-[10px] sm:mt-8 lg:mt-auto lg:gap-[10px] lg:pt-[32px] xl:flex-row xl:gap-[14px]"
                         >
                             <!-- PRIMARY button -->
                             <Link
@@ -163,7 +150,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[#0B1F3F] px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 active:bg-[#081629] sm:h-[46px] lg:h-[48px] lg:rounded-[8px] lg:px-5 xl:w-auto 2xl:h-[55px]"
                             >
                                 <span
-                                    class="text-[13px] font-semibold whitespace-nowrap text-white sm:text-[14px] lg:text-[16px]"
+                                    class="btn-text whitespace-nowrap"
                                 >
                                     {{
                                         t(
@@ -192,7 +179,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[rgba(77,161,240,0.11)] px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[rgba(77,161,240,0.2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 sm:h-[46px] lg:h-[48px] lg:rounded-[8px] lg:px-5 xl:w-auto 2xl:h-[55px]"
                             >
                                 <span
-                                    class="text-[13px] font-semibold whitespace-nowrap text-[#1D4FBC] sm:text-[14px] lg:text-[16px]"
+                                    class="body-sm whitespace-nowrap font-semibold text-[#1D4FBC]"
                                 >
                                     {{
                                         t(
@@ -240,7 +227,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                             <div
                                 v-for="i in 14"
                                 :key="'sm-' + i"
-                                class="absolute top-0 bottom-0 w-[60px] bg-white/4"
+                                class="bg-white/4 absolute bottom-0 top-0 w-[60px]"
                                 :style="{ left: 10 + (i - 1) * 80 + 'px' }"
                             ></div>
                         </div>
@@ -252,7 +239,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                             <div
                                 v-for="i in 8"
                                 :key="'lg-' + i"
-                                class="absolute top-0 bottom-0 w-[110px] bg-white/4"
+                                class="bg-white/4 absolute bottom-0 top-0 w-[110px]"
                                 :style="{ left: 40 + (i - 1) * 145 + 'px' }"
                             ></div>
                         </div>
@@ -281,6 +268,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                     </div>
                 </div>
             </Transition>
+        </div>
         </div>
     </section>
 </template>

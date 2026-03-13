@@ -15,7 +15,10 @@ createInertiaApp({
     title: (title) => (title ? `${title} | Acendae` : 'Acendae'),
 
     resolve: (name) => {
-        const pages = import.meta.glob<{ default: DefineComponent }>('./pages/**/*.vue', { eager: true });
+        const pages = import.meta.glob<{ default: DefineComponent }>(
+            './pages/**/*.vue',
+            { eager: true },
+        );
         const page = pages[`./pages/${name}.vue`];
 
         if (!page) {
@@ -35,8 +38,8 @@ createInertiaApp({
         const head = createHead();
 
         router.on('before', (event: any) => {
-          const preferences = usePreferencesStore(pinia);
-          event.detail.visit.headers['X-Locale'] = preferences.lang;
+            const preferences = usePreferencesStore(pinia);
+            event.detail.visit.headers['X-Locale'] = preferences.lang;
         });
 
         const app = createApp({ render: () => h(App, props) })

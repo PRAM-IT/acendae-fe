@@ -44,7 +44,9 @@ onMounted(async () => {
     <Card class="w-full">
         <CardHeader>
             <CardTitle class="flex gap-3">
-                <LockKeyhole class="size-4" />{{ t('settings.twoFactor.recoveryCodes') }}
+                <LockKeyhole class="size-4" />{{
+                    t('settings.twoFactor.recoveryCodes')
+                }}
             </CardTitle>
             <CardDescription>
                 {{ t('settings.twoFactor.recoveryCodesDesc') }}
@@ -52,14 +54,18 @@ onMounted(async () => {
         </CardHeader>
         <CardContent>
             <div
-                class="flex flex-col gap-3 select-none sm:flex-row sm:items-center sm:justify-between"
+                class="flex select-none flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
             >
                 <Button @click="toggleRecoveryCodesVisibility" class="w-fit">
                     <component
                         :is="isRecoveryCodesVisible ? EyeOff : Eye"
                         class="size-4"
                     />
-                    {{ isRecoveryCodesVisible ? t('settings.twoFactor.hide') : t('settings.twoFactor.show') }}
+                    {{
+                        isRecoveryCodesVisible
+                            ? t('settings.twoFactor.hide')
+                            : t('settings.twoFactor.show')
+                    }}
                 </Button>
 
                 <Form
@@ -93,13 +99,13 @@ onMounted(async () => {
                 <div v-else class="mt-3 space-y-3">
                     <div
                         ref="recoveryCodeSectionRef"
-                        class="grid gap-1 rounded-lg bg-muted p-4 font-mono text-sm"
+                        class="bg-muted grid gap-1 rounded-lg p-4 font-mono text-sm"
                     >
                         <div v-if="!recoveryCodesList.length" class="space-y-2">
                             <div
                                 v-for="n in 8"
                                 :key="n"
-                                class="h-4 animate-pulse rounded bg-muted-foreground/20"
+                                class="bg-muted-foreground/20 h-4 animate-pulse rounded"
                             ></div>
                         </div>
                         <div
@@ -110,7 +116,7 @@ onMounted(async () => {
                             {{ code }}
                         </div>
                     </div>
-                    <p class="text-xs text-muted-foreground select-none">
+                    <p class="text-muted-foreground select-none text-xs">
                         {{ t('settings.twoFactor.recoveryCodesHelp') }}
                     </p>
                 </div>

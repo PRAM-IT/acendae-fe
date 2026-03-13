@@ -12,8 +12,8 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const classes = computed(() => [
-  'acendae-badge',
-  props.variant !== 'default' ? `acendae-badge-${props.variant}` : '',
+  'badge',
+  props.variant !== 'default' ? `badge-${props.variant}` : '',
   {
     'text-xs px-2 py-0.5': props.size === 'sm',
     'text-sm px-2.5 py-1': props.size === 'md',

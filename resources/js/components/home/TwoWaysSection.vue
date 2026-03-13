@@ -14,39 +14,37 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
 <template>
     <section
-        class="relative overflow-hidden border-t border-[#b0c8f3] bg-white"
+        class="landing-section relative overflow-hidden border-t border-[#b0c8f3] bg-white"
     >
         <!-- 1. Header Area (Above the grid) -->
         <div
-            class="acendae-container mx-auto pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-24 lg:pb-16"
+            class="wrap mx-auto"
         >
             <div
                 data-reveal="up"
                 class="relative z-10 flex flex-col items-center gap-[17px]"
             >
                 <h2
-                    class="font-instrument m-0 max-w-[300px] text-center text-[24px] leading-[30px] font-semibold text-[#0B1F3F] sm:max-w-[360px] sm:text-[28px] sm:leading-[34px] md:max-w-[420px] md:text-[32px] md:leading-[38px] lg:text-[36px] lg:leading-[42px] xl:text-[38px] 2xl:max-w-[462px] 2xl:text-[40px] 2xl:leading-[48px]"
+                    class="title-section ssm:max-w-sm m-0 max-w-xs text-center md:max-w-md 2xl:max-w-lg"
                 >
                     {{ t('home.two_ways.title') }}
                 </h2>
-                <p
-                    class="m-0 text-center text-[14px] leading-5 font-normal text-[#000000D9] sm:text-[15px] md:text-[16px] lg:text-[18px] lg:leading-[27px]"
-                >
+                <p class="subtitle m-0 text-center">
                     {{ t('home.two_ways.subtitle') }}
                 </p>
             </div>
         </div>
 
         <!-- 2. The Connected Grid Area -->
-        <div class="relative border-t border-b border-[#d3d8e1]">
+        <div class="relative border-b border-t border-[#d3d8e1]">
             <!-- Grid Content -->
-            <div class="acendae-container relative z-10 mx-auto px-0">
+            <div class="wrap relative z-10 mx-auto px-0">
                 <div
-                    class="flex flex-col border-x border-[#d3d8e1] divide-y divide-[#d3d8e1] lg:flex-row lg:divide-x lg:divide-y-0"
+                    class="flex flex-col divide-y divide-[#d3d8e1] border-x border-[#d3d8e1] lg:flex-row lg:divide-x lg:divide-y-0"
                 >
                     <!-- LEFT COLUMN -->
                     <div
-                        class="relative flex flex-1 justify-center px-[var(--container-padding)] py-4 sm:py-6 lg:py-8 lg:pr-0 lg:pl-[var(--container-padding)] 2xl:py-10"
+                        class="relative flex flex-1 justify-center container-px py-4 sm:py-6 lg:py-8 lg:pr-0 2xl:py-10"
                     >
                         <!-- Gradient Background (Mobile & Desktop) -->
                         <div
@@ -66,17 +64,13 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                         >
                             <!-- Card Content (Transparent) -->
                             <div
-                                class="relative z-1 flex flex-col gap-6 bg-transparent p-6 sm:p-8 md:p-10 lg:gap-8 lg:p-12 2xl:gap-9 2xl:p-14"
+                                class="z-1 relative flex flex-col gap-6 bg-transparent p-6 sm:p-8 md:p-10 lg:gap-8 lg:p-12 2xl:gap-9 2xl:p-14"
                             >
                                 <div class="flex flex-col gap-2">
-                                    <h3
-                                        class="m-0 text-[22px] font-semibold text-[#1a2d4b] sm:text-[24px] lg:text-[28px] 2xl:text-[34px]"
-                                    >
+                                    <h3 class="title-card text-navy-light m-0">
                                         {{ t('home.two_ways.outsource.title') }}
                                     </h3>
-                                    <p
-                                        class="m-0 text-[14px] font-semibold text-[#1a2d4b] sm:text-[15px] lg:text-[18px]"
-                                    >
+                                    <p class="label text-navy-light m-0">
                                         {{
                                             t(
                                                 'home.two_ways.outsource.subtitle',
@@ -85,16 +79,12 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                     </p>
                                 </div>
 
-                                <p
-                                    class="m-0 text-[14px] leading-relaxed font-normal text-[#000000D9] lg:text-[16px]"
-                                >
+                                <p class="body m-0">
                                     {{ t('home.two_ways.outsource.body') }}
                                 </p>
 
                                 <div class="flex flex-col gap-4">
-                                    <p
-                                        class="m-0 text-[14px] font-medium text-[#000000D9] lg:text-[16px]"
-                                    >
+                                    <p class="label text-navy/85 m-0">
                                         {{
                                             t(
                                                 'home.two_ways.outsource.guide_label',
@@ -114,17 +104,12 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                                 alt=""
                                                 class="h-3 w-3 shrink-0"
                                             />
-                                            <span
-                                                class="text-[14px] text-[#000000D9] lg:text-[16px]"
-                                                >{{ item }}</span
-                                            >
+                                            <span class="body">{{ item }}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p
-                                    class="m-0 text-[14px] text-[#000000D9] lg:text-[16px]"
-                                >
+                                <p class="body m-0">
                                     {{
                                         t('home.two_ways.outsource.footer_note')
                                     }}
@@ -145,7 +130,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                             ></div>
                                         </div>
                                         <span
-                                            class="text-[15px] font-semibold text-white"
+                                            class="btn-text"
                                         >
                                             {{
                                                 t('home.two_ways.outsource.cta')
@@ -172,7 +157,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
                     <!-- RIGHT COLUMN -->
                     <div
-                        class="flex flex-1 justify-center bg-white px-[var(--container-padding)] py-4 sm:py-6 lg:py-8 lg:pr-[var(--container-padding)] lg:pl-0 2xl:py-10"
+                        class="flex flex-1 justify-center bg-white container-px py-4 sm:py-6 lg:py-8 lg:pl-0 2xl:py-10"
                     >
                         <div
                             data-reveal="up"
@@ -181,31 +166,23 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                         >
                             <!-- Card Content (Transparent) -->
                             <div
-                                class="relative z-1 flex flex-col gap-6 bg-transparent p-6 sm:p-8 md:p-10 lg:gap-8 lg:p-12 2xl:gap-9 2xl:p-14"
+                                class="z-1 relative flex flex-col gap-6 bg-transparent p-6 sm:p-8 md:p-10 lg:gap-8 lg:p-12 2xl:gap-9 2xl:p-14"
                             >
                                 <div class="flex flex-col gap-2">
-                                    <h3
-                                        class="m-0 text-[22px] font-semibold text-[#1a2d4b] sm:text-[24px] lg:text-[28px] 2xl:text-[34px]"
-                                    >
+                                    <h3 class="title-card text-navy-light m-0">
                                         {{ t('home.two_ways.team.title') }}
                                     </h3>
-                                    <p
-                                        class="m-0 text-[14px] font-semibold text-[#1a2d4b] sm:text-[15px] lg:text-[18px]"
-                                    >
+                                    <p class="label text-navy-light m-0">
                                         {{ t('home.two_ways.team.subtitle') }}
                                     </p>
                                 </div>
 
-                                <p
-                                    class="m-0 text-[14px] leading-relaxed font-normal text-[#000000D9] lg:text-[16px]"
-                                >
+                                <p class="body m-0">
                                     {{ t('home.two_ways.team.body') }}
                                 </p>
 
                                 <div class="flex flex-col gap-4">
-                                    <p
-                                        class="m-0 text-[14px] font-medium text-[#000000D9] lg:text-[16px]"
-                                    >
+                                    <p class="label text-navy/85 m-0">
                                         {{
                                             t('home.two_ways.team.guide_label')
                                         }}
@@ -223,17 +200,12 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                                 alt=""
                                                 class="h-3 w-3 shrink-0"
                                             />
-                                            <span
-                                                class="text-[14px] text-[#000000D9] lg:text-[16px]"
-                                                >{{ item }}</span
-                                            >
+                                            <span class="body">{{ item }}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p
-                                    class="m-0 text-[14px] text-[#000000D9] lg:text-[16px]"
-                                >
+                                <p class="body m-0">
                                     {{ t('home.two_ways.team.footer_note') }}
                                 </p>
 
@@ -245,7 +217,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 >
                                     <div class="flex items-center gap-3">
                                         <span
-                                            class="text-[15px] font-semibold text-[#0b1f3f] transition-colors duration-200"
+                                            class="btn-text-outline"
                                         >
                                             {{ t('home.two_ways.team.cta') }}
                                         </span>

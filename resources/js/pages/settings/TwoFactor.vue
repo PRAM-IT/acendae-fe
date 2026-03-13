@@ -59,7 +59,9 @@ onUnmounted(() => {
                     v-if="!twoFactorEnabled"
                     class="flex flex-col items-start justify-start space-y-4"
                 >
-                    <Badge variant="destructive">{{ t('settings.twoFactor.disabled') }}</Badge>
+                    <Badge variant="destructive">{{
+                        t('settings.twoFactor.disabled')
+                    }}</Badge>
 
                     <p class="text-muted-foreground">
                         {{ t('settings.twoFactor.setup') }}
@@ -79,7 +81,9 @@ onUnmounted(() => {
                             #default="{ processing }"
                         >
                             <Button type="submit" :disabled="processing">
-                                <ShieldCheck />{{ t('settings.twoFactor.enable') }}</Button
+                                <ShieldCheck />{{
+                                    t('settings.twoFactor.enable')
+                                }}</Button
                             ></Form
                         >
                     </div>
@@ -89,7 +93,9 @@ onUnmounted(() => {
                     v-else
                     class="flex flex-col items-start justify-start space-y-4"
                 >
-                    <Badge variant="default">{{ t('settings.twoFactor.enabled') }}</Badge>
+                    <Badge variant="default">{{
+                        t('settings.twoFactor.enabled')
+                    }}</Badge>
 
                     <p class="text-muted-foreground">
                         {{ t('settings.twoFactor.setup') }}

@@ -18,10 +18,10 @@ const paddingClasses = {
 };
 
 const classes = computed(() => [
-  'acendae-surface overflow-hidden',
+  'surface overflow-hidden',
   paddingClasses[props.padding],
   {
-    'acendae-card-shadow': props.hover,
+    'card-shadow': props.hover,
   },
 ]);
 </script>

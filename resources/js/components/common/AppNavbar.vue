@@ -63,7 +63,7 @@ const closeAllMobile = () => {
 <template>
     <header :class="navbarClasses" class="flex items-center bg-white">
         <div
-            class="acendae-container mx-auto flex h-full w-full items-center justify-between"
+            class="wrap mx-auto flex h-full w-full items-center justify-between"
         >
             <!-- LOGO SECTION -->
             <div class="flex items-center">
@@ -81,12 +81,14 @@ const closeAllMobile = () => {
             </div>
 
             <!-- DESKTOP NAVIGATION -->
-            <nav class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[28px] 2xl:gap-x-[36px]">
+            <nav
+                class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[28px] 2xl:gap-x-[36px]"
+            >
                 <Link
                     v-for="link in navLinks"
                     :key="link.path"
                     :href="link.path"
-                    class="acendae-nav group relative whitespace-nowrap py-2 text-[14px] leading-[18px] font-medium transition-colors duration-200 xl:text-[15px] 2xl:text-[16px]"
+                    class="nav-link group relative whitespace-nowrap py-2 text-[14px] font-medium leading-[18px] transition-colors duration-200 xl:text-[15px] 2xl:text-[16px]"
                     :class="
                         isActive(link.path)
                             ? 'text-[#0B1F3F]'
@@ -106,10 +108,12 @@ const closeAllMobile = () => {
             </nav>
 
             <!-- RIGHT ACTIONS CLUSTER -->
-            <div class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[32px] 2xl:gap-x-[40px]">
+            <div
+                class="hidden items-center gap-x-[20px] lg:flex xl:gap-x-[32px] 2xl:gap-x-[40px]"
+            >
                 <!-- Branded Language Switcher Pill -->
                 <div
-                    class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white pr-1 pl-1.5"
+                    class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white pl-1.5 pr-1"
                 >
                     <div class="flex items-center pr-1">
                         <img
@@ -156,7 +160,7 @@ const closeAllMobile = () => {
                     class="!h-[44px] !w-auto !rounded-[6px] !bg-[#0B1F3F] !px-4 transition-all duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] xl:!h-[48px] xl:!w-[159px] xl:!px-5"
                 >
                     <span
-                        class="text-[14px] leading-[16px] font-semibold whitespace-nowrap text-[#9ABAFF] xl:text-[16px]"
+                        class="whitespace-nowrap text-[14px] font-semibold leading-[16px] text-[#9ABAFF] xl:text-[16px]"
                     >
                         {{ t('nav.getStarted') }}
                     </span>
@@ -188,7 +192,7 @@ const closeAllMobile = () => {
                 v-if="isMobileMenuOpen"
                 class="fixed inset-x-0 top-[64px] z-[90] h-[calc(100vh-64px)] w-full overflow-y-auto bg-white lg:hidden"
             >
-                <div class="flex flex-col p-6 pt-8 pb-12">
+                <div class="flex flex-col p-6 pb-12 pt-8">
                     <!-- Nav Links Stack -->
                     <nav class="flex flex-col divide-y divide-black/5">
                         <Link

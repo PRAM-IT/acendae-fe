@@ -13,11 +13,9 @@ const avatarData = [
 </script>
 
 <template>
-    <section
-        class="relative w-full overflow-hidden bg-[#F4F9FF] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-18 2xl:py-20"
-    >
+    <section class="landing-section relative w-full overflow-hidden bg-[#F4F9FF]">
         <div
-            class="acendae-container relative mx-auto flex flex-col items-center gap-5 sm:gap-6 md:gap-7 lg:gap-8"
+            class="wrap relative mx-auto flex flex-col items-center gap-5 sm:gap-6 md:gap-7 lg:gap-8"
         >
             <!-- Avatar group -->
             <div
@@ -25,7 +23,7 @@ const avatarData = [
             >
                 <!-- Left Avatar -->
                 <div
-                    class="absolute top-2 left-0 z-10 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#ABB677] shadow-sm"
+                    class="absolute left-0 top-2 z-10 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#ABB677] shadow-sm"
                 >
                     <img
                         src="/images/avatars/avatar1.png"
@@ -36,7 +34,7 @@ const avatarData = [
 
                 <!-- Right Avatar -->
                 <div
-                    class="absolute top-2 left-[72px] z-20 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#D9B9BB] shadow-sm"
+                    class="absolute left-[72px] top-2 z-20 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#D9B9BB] shadow-sm"
                 >
                     <img
                         src="/images/avatars/avatar2.png"
@@ -47,7 +45,7 @@ const avatarData = [
 
                 <!-- Center Avatar -->
                 <div
-                    class="absolute top-0 left-8 z-30 h-[56px] w-[56px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#C7B9DA] shadow-sm"
+                    class="absolute left-8 top-0 z-30 h-[56px] w-[56px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#C7B9DA] shadow-sm"
                 >
                     <img
                         src="/images/avatars/avatar3.png"
@@ -59,19 +57,13 @@ const avatarData = [
 
             <!-- Heading & Supporting Text -->
             <div class="flex w-full flex-col items-center gap-2">
-                <h2
-                    class="w-full max-w-[613px] text-center text-[15px] leading-[22px] font-medium text-[#101828] sm:text-[16px] sm:leading-[24px] md:text-[17px] md:leading-[26px] lg:text-[18px] lg:leading-[28px] xl:text-[19px] xl:leading-[29px] 2xl:text-[20px] 2xl:leading-[30px]"
-                >
+                <h2 class="title-section text-center">
                     {{ t('cta.readyTitle') }}
                 </h2>
-                <p
-                    class="w-full max-w-[604px] text-center text-[13px] leading-5 font-normal text-[#667085] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[27px] 2xl:text-[18px] 2xl:leading-[28px]"
-                >
+                <p class="body w-full max-w-2xl text-center text-muted">
                     {{ t('cta.readySubtext1') }}
                 </p>
-                <p
-                    class="w-full max-w-[581px] text-center text-[13px] leading-5 font-normal text-[#667085] sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[27px] 2xl:text-[18px] 2xl:leading-[28px]"
-                >
+                <p class="body w-full max-w-2xl text-center text-muted">
                     {{ t('cta.readySubtext2') }}
                 </p>
             </div>
@@ -95,7 +87,7 @@ const avatarData = [
                             ></div>
                         </div>
                         <span
-                            class="text-[13px] leading-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px]"
+                            class="btn-text"
                         >
                             {{ t('cta.discussProject') }}
                         </span>
@@ -108,9 +100,7 @@ const avatarData = [
                     href="/team-outsourcing"
                     class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] !border !border-[rgba(11,31,63,0.67)] !bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
                 >
-                    <span
-                        class="text-[13px] font-medium text-[#0B1F3F] md:text-[14px] lg:text-[15px] 2xl:text-[16px]"
-                    >
+                    <span class="btn-text-outline">
                         {{ t('cta.discussOutsourcing') }}
                     </span>
                 </AppButton>
@@ -118,20 +108,16 @@ const avatarData = [
 
             <!-- Italic Tagline -->
             <p
-                class="w-full max-w-[238px] text-center text-[12px] leading-5 font-medium text-[#1D4FBC] italic sm:max-w-[260px] sm:text-[13px] md:text-[14px] md:leading-[22px] lg:max-w-[300px] lg:text-[16px] lg:leading-[26px] 2xl:text-[18px] 2xl:leading-[28px]"
+                class="eyebrow-accent w-full max-w-xs text-center sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg"
             >
                 {{ t('cta.tagline') }}
             </p>
 
             <!-- Decorative Gold Shape -->
             <div
-                class="pointer-events-none absolute z-0 hidden overflow-visible select-none md:right-[-80px] md:bottom-[-70px] md:block md:w-[450px] md:opacity-80 lg:right-[-120px] lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
+                class="pointer-events-none absolute z-0 hidden select-none overflow-visible md:bottom-[-70px] md:right-[-80px] md:block md:w-[450px] md:opacity-80 lg:bottom-[-90px] lg:right-[-120px] lg:w-[500px] lg:opacity-100 2xl:bottom-[-130px] 2xl:right-[-160px] 2xl:w-[620px]"
             >
-                <img
-                    src="/images/logo-n.svg"
-                    alt=""
-                    class="h-auto w-full"
-                />
+                <img src="/images/logo-n.svg" alt="" class="h-auto w-full" />
             </div>
         </div>
     </section>

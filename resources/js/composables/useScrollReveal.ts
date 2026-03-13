@@ -20,12 +20,7 @@ export function useScrollReveal(
     target: Ref<HTMLElement | null>,
     options: ScrollRevealOptions = {},
 ): void {
-    const {
-        delay = 0,
-        duration = 0.8,
-        y = 40,
-        once = true,
-    } = options;
+    const { delay = 0, duration = 0.8, y = 40, once = true } = options;
 
     let scrollTriggerInstance: ScrollTrigger | undefined;
 
