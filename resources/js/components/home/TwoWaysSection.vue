@@ -35,7 +35,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
         <!-- 2. The Connected Grid Area -->
         <div class="wrap relative w-full border-t border-b border-[#d3d8e1] dark:border-[#30456B]">
-            <div class="md:wrap relative z-10 mx-auto w-full px-0">
+            <div class="relative z-10 mx-auto w-full px-0">
                 <div
                     class="flex w-full flex-col divide-y divide-[#d3d8e1] border-x border-[#d3d8e1]/20 lg:flex-row lg:divide-x lg:divide-y-0 dark:divide-[#30456B] dark:border-[#30456B]"
                 >
@@ -84,7 +84,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                             class="flex items-center gap-3"
                                         >
                                             <div
-                                                class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-0.5 sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] dark:bg-[rgba(201,168,76,0.15)]"
+                                                class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] lg:h-[13px] lg:w-[13px] 2xl:h-[15px] 2xl:w-[15px] dark:bg-[rgba(201,168,76,0.15)]"
                                             >
                                                 <div
                                                     class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] dark:bg-[#C9A84C]"
@@ -171,7 +171,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                             class="flex items-center gap-3"
                                         >
                                             <div
-                                                class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-0.5 sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] dark:bg-[rgba(201,168,76,0.15)]"
+                                                class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] lg:h-[13px] lg:w-[13px] 2xl:h-[15px] 2xl:w-[15px] dark:bg-[rgba(201,168,76,0.15)]"
                                             >
                                                 <div
                                                     class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] dark:bg-[#C9A84C]"

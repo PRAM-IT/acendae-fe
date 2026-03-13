@@ -53,7 +53,7 @@ const { t, tm } = useI18n();
                         class="flex flex-row items-center gap-2 lg:gap-[10px]"
                     >
                         <div
-                            class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-0.5 sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] lg:h-[13px] lg:w-[13px] 2xl:h-[15px] 2xl:w-[15px] dark:bg-[rgba(201,168,76,0.15)]"
+                            class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] lg:h-[13px] lg:w-[13px] 2xl:h-[15px] 2xl:w-[15px] dark:bg-[rgba(201,168,76,0.15)]"
                         >
                             <div
                                 class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] lg:h-[10px] lg:w-[10px] 2xl:h-[11px] 2xl:w-[11px] dark:bg-[#C9A84C]"
