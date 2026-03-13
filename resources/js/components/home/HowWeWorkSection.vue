@@ -24,7 +24,9 @@ const steps = computed(() => [
 </script>
 
 <template>
-    <section class="section-pt bg-white text-navy dark:bg-[#070F1C] dark:text-white">
+    <section
+        class="section-pt bg-white text-navy dark:bg-[#070F1C] dark:text-white"
+    >
         <div class="wrap mx-auto">
             <div class="mb-5 text-center md:mb-10 4xl:mb-14" data-reveal="up">
                 <h2 class="title-section">
@@ -42,14 +44,7 @@ const steps = computed(() => [
                 <article
                     v-for="step in steps"
                     :key="step.num"
-                    class="flex w-full flex-col items-start justify-start gap-3 md:gap-5
-                           rounded-[12px] border border-[#1D4FBC]/[.17]
-                           bg-[#F5F8FF] bg-gradient-to-b from-transparent to-[#4DA1F0]/[0.03]
-                           p-8 sm:p-10 lg:p-12 xl:p-14 4xl:p-16
-                           transition-all duration-200
-                           hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(29,79,188,0.1)]
-                           md:min-h-[300px] lg:min-h-[360px] xl:min-h-[250px] 4xl:min-h-[300px]
-                           dark:border-[#30456B] dark:bg-[#0B1F3F] dark:bg-none dark:hover:shadow-[0_8px_32px_rgba(0,0,0,0.45)]"
+                    class="flex w-full flex-col items-start justify-start gap-3 rounded-[12px] border border-[#1D4FBC]/[.17] bg-[#F5F8FF] bg-gradient-to-b from-transparent to-[#4DA1F0]/[0.03] p-8 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(29,79,188,0.1)] sm:p-10 md:min-h-[300px] md:gap-5 lg:min-h-[360px] lg:p-12 xl:min-h-[250px] xl:p-14 4xl:min-h-[300px] 4xl:p-16 dark:border-[#30456B] dark:bg-[#0B1F3F] dark:bg-none dark:hover:shadow-[0_8px_32px_rgba(0,0,0,0.45)]"
                 >
                     <div class="step-num" aria-hidden="true">
                         {{ step.num }}

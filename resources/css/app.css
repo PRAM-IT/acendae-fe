@@ -322,6 +322,13 @@
         @apply mx-auto w-full max-w-[1920px] px-4 md:px-10 xl:px-14 2xl:px-16 4xl:px-20;
     }
 
+    /* --- Logo sharp rendering (navbar, footer) — prevents blur on mobile/tablet --- */
+    .logo-sharp {
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+
     /* --- Section Padding (Tailwind responsive) --- */
     .section-padding {
         @apply py-10 md:py-12 lg:py-14 2xl:py-16 4xl:py-20;
@@ -371,7 +378,7 @@
 
     /* Hero / page title — text-xl → 4xl:text-5xl */
     .title {
-        @apply font-sans leading-tight font-semibold text-balance text-navy text-[24px] md:text-3xl lg:text-3xl xl:text-4xl xl:text-[44px] 2xl:text-4xl 4xl:text-5xl;
+        @apply font-sans text-[24px] leading-tight font-semibold text-balance text-navy md:text-3xl lg:text-3xl xl:text-4xl xl:text-[44px];
     }
 
     /* Section heading — text-2xl → 4xl:text-4xl */
@@ -449,8 +456,7 @@
 
     /* --- Section title on dark background (same scale as title-section) --- */
     .title-section-light {
-        @apply w-full font-instrument text-2xl leading-tight font-semibold text-balance
-        text-white ssm:text-3xl md:text-3xl 2xl:text-[40px];
+        @apply w-full font-instrument text-2xl leading-tight font-semibold text-balance text-white ssm:text-3xl md:text-3xl 2xl:text-[40px];
     }
 
     /* --- Body text on dark background (same scale as body) --- */
@@ -460,8 +466,7 @@
 
     /* --- Panel heading (same as title-card) --- */
     .heading-panel {
-        @apply font-instrument text-lg leading-snug font-semibold text-[#1A2D4B] md:text-xl
-        2xl:text-2xl;
+        @apply font-instrument text-lg leading-snug font-semibold text-[#1A2D4B] md:text-xl 2xl:text-2xl;
     }
 
     /* --- Panel heading smaller (same scale, slightly smaller) --- */
@@ -502,9 +507,7 @@
 
     /* --- Step number (01, 02, 03) --- */
     .step-num {
-        @apply mb-2 font-bold text-[#0C2143]/28 sm:mb-3 sm:leading-7
-        md:mb-4 text-[28px] md:leading-[38px] lg:mb-6 lg:text-[32px] lg:leading-[42px]
-        xl:text-[34px] 2xl:mb-7 2xl:text-[40px] 2xl:leading-[51px] 4xl:text-[50px];
+        @apply mb-2 text-[28px] font-bold text-[#0C2143]/28 sm:mb-3 sm:leading-7 md:mb-4 md:leading-[38px] lg:mb-6 lg:text-[32px] lg:leading-[42px] xl:text-[34px] 2xl:mb-7 2xl:text-[40px] 2xl:leading-[51px] 4xl:text-[50px];
     }
 
     /* --- Step title --- */
@@ -528,8 +531,7 @@
 
     /* --- Quote Section heading (same as title-section) --- */
     .quote-heading {
-        @apply h-auto w-full text-center font-sans text-2xl leading-tight font-medium text-balance
-        text-white md:text-4xl lg:max-w-[887px] 2xl:text-[40px];
+        @apply h-auto w-full text-center font-sans text-2xl leading-tight font-medium text-balance text-white md:text-4xl lg:max-w-[887px] 2xl:text-[40px];
     }
 
     /* --- Footer column title --- */
@@ -950,7 +952,7 @@
 /* 6. Global App Loader (Acendae) — Tailwind + minimal custom */
 
 .acendae-loader--fade-out {
-    @apply opacity-0 invisible -translate-y-0.5;
+    @apply invisible -translate-y-0.5 opacity-0;
 }
 
 /* Mountain track, path sheen, climber (need pseudo-elements) */
@@ -965,14 +967,21 @@
 .loader-path::before {
     content: '';
     @apply absolute inset-0;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 178, 0, 0.5) 50%, transparent 100%);
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 178, 0, 0.5) 50%,
+        transparent 100%
+    );
     animation: loader-sheen 1.8s ease-in-out infinite;
 }
 
 .loader-climber {
     @apply absolute bottom-2.5 left-[15%] h-2.5 w-2.5 rounded-full;
     background: linear-gradient(135deg, #ffe7a9 0%, #ffb200 50%, #b37506 100%);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9), 0 2px 6px rgba(11, 31, 58, 0.2);
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.9),
+        0 2px 6px rgba(11, 31, 58, 0.2);
     animation: loader-climb 2.2s ease-in-out infinite;
 }
 
@@ -989,24 +998,51 @@
     animation: loader-dot-bounce 0.5s ease-in-out infinite;
 }
 
-.loader-dots span:nth-child(1) { animation-delay: 0s; }
-.loader-dots span:nth-child(2) { animation-delay: 0.15s; }
-.loader-dots span:nth-child(3) { animation-delay: 0.3s; }
+.loader-dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+.loader-dots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+.loader-dots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
 
 @keyframes loader-bar-slide {
-    0% { transform: translateX(-100%); }
-    50% { transform: translateX(250%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(250%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes loader-dot-bounce {
-    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
-    30% { opacity: 1; transform: translateY(-3px); }
+    0%,
+    60%,
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
 }
 
 @keyframes loader-pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.9; transform: scale(1.03); }
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.03);
+    }
 }
 
 @keyframes loader-pop {
@@ -1063,24 +1099,50 @@
 }
 
 @keyframes loader-mountains {
-    0%, 100% { opacity: 0.95; transform: translateY(0); }
-    50% { opacity: 1; transform: translateY(-2px); }
+    0%,
+    100% {
+        opacity: 0.95;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
 }
 
 @keyframes loader-float {
-    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-    33% { transform: translate(8px, -6px) scale(1.05); opacity: 0.8; }
-    66% { transform: translate(-5px, 4px) scale(0.98); opacity: 0.5; }
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.6;
+    }
+    33% {
+        transform: translate(8px, -6px) scale(1.05);
+        opacity: 0.8;
+    }
+    66% {
+        transform: translate(-5px, 4px) scale(0.98);
+        opacity: 0.5;
+    }
 }
 
 @keyframes loader-shimmer {
-    0% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes loader-pulse-text {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 /* 7. Page Transitions (Vue <Transition> Name Classes) */
@@ -1186,7 +1248,6 @@
     @apply translate-x-0 translate-y-0 opacity-100;
 }
 
-
 /* Screen Reader Only */
 .sr-only {
     @apply absolute -m-px h-px w-px overflow-hidden border-0 p-0 whitespace-nowrap [clip:rect(0,0,0,0)];
@@ -1261,7 +1322,8 @@
 
 /* 9b. Blink Icon Animation (Outsource CTA status dot) */
 @keyframes blink-dot {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 1;
         transform: scale(1);
     }

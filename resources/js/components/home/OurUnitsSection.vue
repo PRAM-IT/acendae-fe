@@ -30,14 +30,18 @@ const setActiveTab = (index: number) => {
 </script>
 
 <template>
-    <section class="section-pt bg-white text-navy dark:bg-[#070F1C] dark:text-white">
+    <section
+        class="section-pt bg-white text-navy dark:bg-[#070F1C] dark:text-white"
+    >
         <div class="wrap mx-auto">
             <!-- SECTION HEADER -->
             <div
                 class="mx-auto mb-5 flex flex-col items-center gap-4 md:mb-10 xl:mb-14"
                 data-reveal="up"
             >
-                <h2 class="title-section text-center text-navy-light dark:text-white">
+                <h2
+                    class="title-section text-center text-navy-light dark:text-white"
+                >
                     {{ t('home.units.title') }}
                 </h2>
                 <p class="subtitle text-center dark:text-white/70">
@@ -47,7 +51,7 @@ const setActiveTab = (index: number) => {
 
             <!-- TAB NAVIGATION -->
             <div
-                class="lg:max-w-inner mx-auto grid h-auto w-full grid-cols-2 border border-[#D3D8E1] bg-white lg:flex lg:h-[65px] lg:flex-row xl:h-[70px] 2xl:h-[77px] dark:bg-[#0B1F3F] dark:border-[#30456B]"
+                class="lg:max-w-inner mx-auto grid h-auto w-full grid-cols-2 border border-[#D3D8E1] bg-white lg:flex lg:h-[65px] lg:flex-row xl:h-[70px] 2xl:h-[77px] dark:border-[#30456B] dark:bg-[#0B1F3F]"
                 data-reveal="up"
                 data-reveal-delay="50"
             >
@@ -57,7 +61,7 @@ const setActiveTab = (index: number) => {
                     class="flex h-[52px] cursor-pointer items-center justify-center transition-colors duration-200 sm:h-[56px] md:h-[60px] lg:h-full lg:flex-1"
                     :class="[
                         activeTab === index
-                            ? 'bg-[#F3F5FB] dark:bg-[#102347]'
+                            ? 'bg-[#F3F5FB] dark:bg-[#1d345e]'
                             : 'bg-white hover:bg-[#F3F5FB]/50 dark:bg-[#0B1F3F] dark:hover:bg-[#102347]',
                         index === 0
                             ? 'border-r border-b border-[#D3D8E1] lg:border-b-0'
@@ -87,8 +91,7 @@ const setActiveTab = (index: number) => {
 
             <!-- UNIT CARD PANEL WRAPPER -->
             <div
-                class="lg:max-w-inner mx-auto mt-10 flex w-full flex-col overflow-hidden border
-                border-[#D3D8E1] bg-white lg:min-h-[520px] xl:min-h-[565px] dark:bg-[#0B1F3F] dark:border-[#30456B]"
+                class="lg:max-w-inner mx-auto mt-10 flex w-full flex-col overflow-hidden border border-[#D3D8E1] bg-white lg:min-h-[520px] xl:min-h-[565px] dark:border-[#30456B] dark:bg-[#0B1F3F]"
             >
                 <Transition name="unit-fade" mode="out-in" class="flex flex-1">
                     <div
@@ -97,16 +100,18 @@ const setActiveTab = (index: number) => {
                     >
                         <!-- LEFT COLUMN (no data-reveal: content is dynamic on tab switch) -->
                         <div
-                            class="order-last flex w-full lg:w-1/2 flex-col bg-[rgba(249,251,255,0.71)]
-                            p-5 sm:p-6 md:p-8 lg:order-first lg:shrink-0 lg:p-[50px_44px]
-                            xl:p-[55px_50px] 2xl:p-[60px_58px] dark:bg-[#070F1C]"
+                            class="order-last flex w-full flex-col bg-[rgba(249,251,255,0.71)] p-5 sm:p-6 md:p-8 lg:order-first lg:w-1/2 lg:shrink-0 lg:p-[50px_44px] xl:p-[55px_50px] 2xl:p-[60px_58px] dark:bg-[#070F1C]"
                         >
                             <!-- HEADING GROUP -->
                             <div class="flex flex-col gap-2 lg:gap-[16px]">
-                                <h3 class="title-card text-[#0C2143] dark:text-white">
+                                <h3
+                                    class="title-card text-[#0C2143] dark:text-white"
+                                >
                                     {{ t(`home.units.${activeUnit}.name`) }}
                                 </h3>
-                                <p class="label text-[#000000D9] dark:text-white/80">
+                                <p
+                                    class="label text-[#000000D9] dark:text-white/80"
+                                >
                                     {{ t(`home.units.${activeUnit}.tagline`) }}
                                 </p>
                             </div>
@@ -134,28 +139,27 @@ const setActiveTab = (index: number) => {
                                         class="flex flex-row items-center gap-2 lg:gap-[10px]"
                                     >
                                         <div
-                                            class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-[1.5px] sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] lg:h-[13px] lg:w-[13px] 2xl:h-[15px] 2xl:w-[15px] 2xl:p-[2px]"
+                                            class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-[1.5px] sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] lg:h-[13px] lg:w-[13px] 2xl:h-[15px] 2xl:w-[15px] 2xl:p-[2px] dark:bg-[rgba(201,168,76,0.15)]"
                                         >
                                             <div
-                                                class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] lg:h-[10px] lg:w-[10px] 2xl:h-[11px] 2xl:w-[11px]"
+                                                class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] lg:h-[10px] lg:w-[10px] 2xl:h-[11px] 2xl:w-[11px] dark:bg-[#C9A84C]"
                                             ></div>
                                         </div>
-                                        <span class="body text-[#081B3A] dark:text-white/80">{{
-                                            feature
-                                        }}</span>
+                                        <span
+                                            class="body text-[#081B3A] dark:text-white/80"
+                                            >{{ feature }}</span
+                                        >
                                     </div>
                                 </div>
                             </div>
 
                             <!-- CTA BUTTONS -->
                             <div
-                                class="flex flex-col gap-[10px] lg:gap-[10px] lg:pt-[32px] xl:flex-row xl:gap-[14px] mt-8 lg:mt-0"
+                                class="mt-8 flex flex-col gap-[10px] lg:mt-0 lg:gap-[10px] lg:pt-[32px] xl:flex-row xl:gap-[14px]"
                             >
                                 <Link
                                     :href="route('services.outsource')"
-                                    class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[#0B1F3F] dark:!bg-[#FFB200]/80
-                                     px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)]
-                                    focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 active:bg-[#081629] sm:h-[46px] lg:h-[48px] lg:rounded-[8px] lg:px-6 xl:w-auto 2xl:h-[55px]"
+                                    class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[#0B1F3F] px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 active:bg-[#081629] sm:h-[46px] lg:h-[48px] lg:rounded-[8px] lg:px-6 xl:w-auto 2xl:h-[55px] dark:!bg-[#FFB200]/80"
                                 >
                                     <span class="btn-text whitespace-nowrap">
                                         {{
@@ -181,12 +185,7 @@ const setActiveTab = (index: number) => {
 
                                 <Link
                                     :href="route('services.dedicated-team')"
-                                    class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[rgba(77,161,240,0.11)]
-                                    dark:bg-transparent dark:border dark:border-[#FFB200]/80
-                                    px-4 transition-all duration-200 hover:-translate-y-px
-                                    hover:bg-[rgba(77,161,240,0.2)] focus-visible:outline-2 focus-visible:outline-offset-2
-                                    focus-visible:outline-[#c9a84c] active:translate-y-0 sm:h-[46px] lg:h-[48px] lg:rounded-[8px]
-                                    lg:px-6 xl:w-auto 2xl:h-[55px]"
+                                    class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[rgba(77,161,240,0.11)] px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[rgba(77,161,240,0.2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 sm:h-[46px] lg:h-[48px] lg:rounded-[8px] lg:px-6 xl:w-auto 2xl:h-[55px] dark:border dark:border-[#FFB200]/80 dark:bg-transparent"
                                 >
                                     <span
                                         class="btn-text font-semibold whitespace-nowrap !text-[#1D4FBC] dark:!text-white"
@@ -264,13 +263,13 @@ const setActiveTab = (index: number) => {
                                     :class="[
                                         activeUnit === 'development'
                                             ? 'h-auto w-full translate-x-6 object-contain object-left ' +
-                                             'drop-shadow-[0px_12px_32px_rgba(0,0,0,0.4)] lg:h-full' +
+                                              'drop-shadow-[0px_12px_32px_rgba(0,0,0,0.4)] lg:h-full' +
                                               'lg:translate-x-10 2xl:translate-x-14'
                                             : activeUnit === 'outsourcing'
                                               ? 'h-auto w-full object-contain drop-shadow-[0px_12px_32px_rgba(0,0,0,0.3)] ' +
-                                               'lg:h-full lg:object-cover 2xl:shadow-[0px_24px_64px_rgba(0,0,0,0.35)]'
+                                                'lg:h-full lg:object-cover 2xl:shadow-[0px_24px_64px_rgba(0,0,0,0.35)]'
                                               : 'h-full w-full object-cover shadow-[0px_12px_32px_rgba(0,0,0,0.3)] ' +
-                                               '2xl:shadow-[0px_24px_64px_rgba(0,0,0,0.35)]',
+                                                '2xl:shadow-[0px_24px_64px_rgba(0,0,0,0.35)]',
                                     ]"
                                 />
                             </div>

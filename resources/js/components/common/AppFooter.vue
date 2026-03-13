@@ -81,8 +81,7 @@ const legalLinks = computed(() => [
             <!-- Link Grid -->
             <!-- Mobile: 2×2 grid | Desktop: single row flex -->
             <div
-                class="grid w-full grid-cols-2 gap-x-[40px] gap-y-[44px] sm:gap-x-[55px] items-center justify-items-center
-    lg:flex lg:flex-row lg:justify-between lg:gap-0"
+                class="grid w-full grid-cols-2 items-start justify-items-start gap-x-[40px] gap-y-[44px] sm:gap-x-[55px] lg:flex lg:flex-row lg:justify-between lg:gap-0"
             >
                 <div
                     v-for="section in footerSections"
@@ -178,7 +177,7 @@ const legalLinks = computed(() => [
                     <img
                         :src="logoLight"
                         :alt="t('common.logoAlt') || 'Acendae'"
-                        class="h-full w-full object-contain"
+                        class="logo-sharp h-full w-full object-contain"
                         onerror="this.src = '/images/logo-light.svg'"
                     />
                 </Link>
@@ -186,7 +185,7 @@ const legalLinks = computed(() => [
 
             <!-- Copyright + Legal -->
             <div
-                class="mt-[40px] flex w-full flex-col items-center gap-6  border-white/20 pt-8 text-center lg:gap-[32px] lg:pt-10"
+                class="mt-[40px] flex w-full flex-col items-center gap-6 border-white/20 pt-8 text-center lg:gap-[32px] lg:pt-10"
             >
                 <p class="footer-copyright">
                     {{ t('footer.copyright') }}
