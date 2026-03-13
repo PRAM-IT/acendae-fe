@@ -274,7 +274,7 @@ const closeAllMobile = () => {
                                 >
                             </div>
                             <div
-                                class="flex items-center gap-4 rounded-full border border-black/10 bg-white p-1.5"
+                                class="flex items-center gap-4 rounded-full border border-black/10 bg-white p-1.5 dark:border-white/15 dark:bg-[#0B1F3F]"
                             >
                                 <button
                                     v-for="lang in ['en', 'nl'] as const"
@@ -284,7 +284,7 @@ const closeAllMobile = () => {
                                     :class="
                                         locale === lang
                                             ? 'bg-[#D5E2FF] text-[#1D4FBC] dark:bg-[#C9A84C] dark:text-[#070F1C]'
-                                            : 'text-black/50 dark:text-white/60'
+                                            : 'text-black/50 dark:text-white/90'
                                     "
                                 >
                                     {{ lang }}
@@ -298,10 +298,10 @@ const closeAllMobile = () => {
                                 variant="primary"
                                 tag="Link"
                                 href="/contact"
-                                class="!h-[56px] w-full !rounded-[12px] !bg-[#0B1F3F] !text-[16px] !font-bold"
+                                class="!h-[56px] w-full !rounded-[12px] !bg-[#0B1F3F] !text-[16px] !font-bold dark:!bg-[#FFB200]/80 dark:hover:!bg-[#E3C45F] dark:active:!bg-[#B8933D]"
                                 @click="closeAllMobile"
                             >
-                                <span class="text-[#9ABAFF]">{{
+                                <span class="text-[#9ABAFF] dark:!text-white">{{
                                     t('nav.getStarted')
                                 }}</span>
                             </AppButton>

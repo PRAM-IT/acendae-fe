@@ -35,7 +35,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
         <!-- 2. The Connected Grid Area -->
         <div class="wrap relative w-full border-t border-b border-[#d3d8e1] dark:border-[#30456B]">
-            <div class="md:wrap relative z-10 mx-auto w-full px-0">
+            <div class="relative z-10 mx-auto w-full px-0">
                 <div
                     class="flex w-full flex-col divide-y divide-[#d3d8e1] border-x border-[#d3d8e1]/20 lg:flex-row lg:divide-x lg:divide-y-0 dark:divide-[#30456B] dark:border-[#30456B]"
                 >
