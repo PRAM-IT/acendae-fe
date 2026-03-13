@@ -10,8 +10,6 @@ import HowWeWorkSection from '@/components/home/HowWeWorkSection.vue';
 import QuoteSection from '@/components/home/QuoteSection.vue';
 import JoinSection from '@/components/home/JoinSection.vue';
 import CtaSection from '@/components/sections/CtaSection.vue';
-import MountainScrollIndicator from '@/components/common/MountainScrollIndicator.vue';
-
 const { t } = useI18n();
 </script>
 
@@ -53,7 +51,6 @@ const { t } = useI18n();
             <QuoteSection />
             <JoinSection />
             <CtaSection />
-            <MountainScrollIndicator />
         </div>
     </Transition>
 </template>

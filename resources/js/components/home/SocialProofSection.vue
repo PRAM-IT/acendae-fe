@@ -13,7 +13,7 @@ const { t } = useI18n();
             <div
                 class="container-px relative flex min-h-[440px] shrink-0 flex-col
                 justify-start overflow-hidden py-8 sm:min-h-[480px] sm:py-9 md:min-h-[500px]
-                md:py-10 lg:min-h-[640px] lg:w-[44%] lg:shrink-0 lg:p-0 xl:min-h-[660px] 2xl:min-h-[700px]"
+                md:py-10 lg:min-h-[640px] lg:w-[44%] lg:shrink-0 xl:min-h-[660px] 2xl:min-h-[700px]"
                 style="
                     background: linear-gradient(
                         180deg,
@@ -36,9 +36,10 @@ const { t } = useI18n();
 
                 <!-- Content -->
                 <div
-                    class="relative z-10 flex h-full w-full flex-col flex-wrap gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 xl:gap-14 2xl:gap-[44px]"
+                    class="relative z-10 flex h-full w-full flex-col flex-wrap gap-5 sm:gap-6 md:gap-7 lg:gap-8
+                    xl:gap-9 xl:gap-14 2xl:gap-[44px]"
                 >
-                    <h2 class="title-section-light pt-10 xl:pt-20 4xl:pt-32">
+                    <h2 class="title-section-light pt-20 lg:pt-32">
                         {{ t('home.social_proof.title') }}
                     </h2>
                     <div
@@ -112,12 +113,12 @@ const { t } = useI18n();
                             <div
                                 class="flex flex-row items-center gap-4 sm:gap-5 lg:flex-col lg:items-start lg:gap-5 2xl:gap-[25px]"
                             >
-                                <!-- Flag Pair -->
+                                <!-- Flag Pair: Netherlands on top, Sri Lanka behind -->
                                 <div
                                     class="flex items-center -space-x-2.5 sm:-space-x-3 md:-space-x-3 lg:-space-x-3 2xl:-space-x-3"
                                 >
                                     <div
-                                        class="z-20 h-9 w-9 overflow-hidden rounded-full border border-white shadow-sm ring-2 ring-white sm:h-10 sm:w-10 md:h-10 md:w-10 lg:h-11 lg:w-11 2xl:h-12 2xl:w-12"
+                                        class="z-10 h-9 w-9 overflow-hidden rounded-full border border-white shadow-sm ring-2 ring-white sm:h-10 sm:w-10 md:h-10 md:w-10 lg:h-11 lg:w-11 2xl:h-12 2xl:w-12"
                                     >
                                         <img
                                             src="/images/flags/sri-lanka.png"
@@ -126,7 +127,7 @@ const { t } = useI18n();
                                         />
                                     </div>
                                     <div
-                                        class="z-10 h-9 w-9 overflow-hidden rounded-full border border-white shadow-sm ring-2 ring-white sm:h-10 sm:w-10 md:h-10 md:w-10 lg:h-11 lg:w-11 2xl:h-12 2xl:w-12"
+                                        class="z-20 h-9 w-9 overflow-hidden rounded-full border border-white shadow-sm ring-2 ring-white sm:h-10 sm:w-10 md:h-10 md:w-10 lg:h-11 lg:w-11 2xl:h-12 2xl:w-12"
                                     >
                                         <img
                                             src="/images/flags/netherlands.png"

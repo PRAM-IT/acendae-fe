@@ -84,7 +84,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
             <!-- UNIT CARD PANEL WRAPPER -->
             <div
                 class="lg:max-w-inner mx-auto mt-10 flex w-full flex-col overflow-hidden border
-                border-[#D3D8E1] bg-white lg:min-h-[620px] xl:min-h-[580px] 2xl:min-h-[640px] dark:bg-[#0B1F3F] dark:border-[#30456B]"
+                border-[#D3D8E1] bg-white lg:min-h-[520px] xl:min-h-[565px] dark:bg-[#0B1F3F] dark:border-[#30456B]"
             >
                 <Transition name="unit-fade" mode="out-in" class="flex flex-1">
                     <div
@@ -104,7 +104,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 <h3 class="title-card text-[#0C2143] dark:text-white">
                                     {{ t(`home.units.${activeUnit}.name`) }}
                                 </h3>
-                                <p class="label text-navy/85 dark:text-white/80">
+                                <p class="label text-[#000000D9] dark:text-white/80">
                                     {{ t(`home.units.${activeUnit}.tagline`) }}
                                 </p>
                             </div>

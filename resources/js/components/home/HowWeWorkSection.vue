@@ -48,7 +48,7 @@ const steps = computed(() => [
                            p-8 sm:p-10 lg:p-12 xl:p-14 4xl:p-16
                            transition-all duration-200
                            hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(29,79,188,0.1)]
-                           md:min-h-[300px] lg:min-h-[360px] xl:min-h-[320px] 4xl:min-h-[350px]
+                           md:min-h-[300px] lg:min-h-[360px] xl:min-h-[250px] 4xl:min-h-[300px]
                            dark:border-[#30456B] dark:bg-[#0B1F3F] dark:bg-none dark:hover:shadow-[0_8px_32px_rgba(0,0,0,0.45)]"
                 >
                     <div class="step-num" aria-hidden="true">

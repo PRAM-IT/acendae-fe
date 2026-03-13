@@ -14,20 +14,20 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
 
 <template>
     <section
-        class="section-pt relative overflow-hidden border-t border-[#b0c8f3] bg-white text-navy dark:bg-[#070F1C] dark:text-white dark:border-[#30456B]"
+        class="section-pt relative overflow-hidden bg-white text-navy dark:bg-[#070F1C] dark:text-white dark:border-[#30456B]"
     >
         <!-- 1. Header Area -->
         <div class="wrap mx-auto mb-5 md:mb-10 xl:mb-14">
             <div
                 data-reveal="up"
-                class="relative z-10 flex flex-col items-center gap-[17px]"
+                class="relative z-10 flex flex-col items-center gap-4"
             >
                 <h2
                     class="title-section m-0 max-w-[300px] text-center md:max-w-md 2xl:max-w-lg"
                 >
                     {{ t('home.two_ways.title') }}
                 </h2>
-                <p class="subtitle m-0 text-center dark:text-white/70">
+                <p class="subtitle m-0 text-center dark:text-[#000000D9]">
                     {{ t('home.two_ways.subtitle') }}
                 </p>
             </div>
@@ -52,7 +52,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                         <!-- Card — flex-1 so it fills the column height -->
                         <div
                             data-reveal="up"
-                            class="wrap md:px-0 relative flex flex-1 flex-col rounded-[14px] border
+                            class=" md:px-0 relative flex flex-1 flex-col rounded-[14px] border
                             border-[rgba(195,204,222,0.32)] bg-white sm:rounded-[16px] lg:rounded-[20px] dark:bg-[#0B1F3F] dark:border-[#30456B]"
                         >
                             <!-- Card Content — flex-1 so button can sit at bottom -->
@@ -108,7 +108,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                         <div
                                             class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]"
                                         >
-                                            <div class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A]"></div>
+                                            <div class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] animate-blink-dot"></div>
                                         </div>
                                         <span class="btn-text">
                                             {{ t('home.two_ways.outsource.cta') }}
@@ -192,19 +192,6 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                         <span class="btn-text-outline">
                                             {{ t('home.two_ways.team.cta') }}
                                         </span>
-                                        <svg
-                                            viewBox="0 0 18 18"
-                                            fill="none"
-                                            class="h-4 w-4 text-[#0b1f3f] transition-colors duration-200"
-                                        >
-                                            <path
-                                                d="M4 14L14 4M14 4H7M14 4V11"
-                                                stroke="currentColor"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
                                     </div>
                                 </AppButton>
                             </div>
