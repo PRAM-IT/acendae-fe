@@ -8,7 +8,7 @@ const { t } = useI18n();
     <section class="wrap bg-white pt-5 xl:pt-10 dark:bg-[#070F1C]">
         <div class="mx-auto">
             <div
-                class="relative mx-auto aspect-[370/340] h-auto w-full overflow-hidden rounded-lg border border-white md:aspect-[16/9] lg:aspect-auto lg:h-[340px] lg:max-w-full"
+                class="relative mx-auto aspect-[360/340] h-auto w-full overflow-hidden rounded-lg md:aspect-[16/9] lg:aspect-auto lg:h-[340px] lg:max-w-full dark:border dark:border-white"
                 data-reveal="up"
             >
                 <!-- BACKGROUND IMAGE -->
@@ -21,8 +21,7 @@ const { t } = useI18n();
 
                 <!-- FADE OVERLAY (light: white, dark: navy) -->
                 <div
-                    class="absolute inset-x-0 bottom-0 z-1 h-3/4 bg-gradient-to-t from-[rgba(255,255,255,0.85)] via-[rgba(255,255,255,0.4)] to-transparent lg:h-full lg:bg-gradient-to-b lg:from-transparent lg:via-transparent lg:to-[rgba(255,255,255,0.85)]
-                    dark:from-[rgba(7,15,28,0.9)] dark:via-[rgba(7,15,28,0.7)] dark:to-transparent lg:dark:from-transparent lg:dark:via-transparent lg:dark:to-[rgba(7,15,28,0.9)]"
+                    class="absolute inset-x-0 bottom-0 z-1 h-3/4 bg-gradient-to-t from-[rgba(255,255,255,0.85)] via-[rgba(255,255,255,0.4)] to-transparent lg:h-full lg:bg-gradient-to-b lg:from-transparent lg:via-transparent lg:to-[rgba(255,255,255,0.85)] dark:from-[rgba(7,15,28,0.9)] dark:via-[rgba(7,15,28,0.7)] dark:to-transparent lg:dark:from-transparent lg:dark:via-transparent lg:dark:to-[rgba(7,15,28,0.9)]"
                 ></div>
 
                 <!-- QUOTE CONTENT -->

@@ -47,7 +47,8 @@ const switchLanguage = (lang: 'en' | 'nl') => {
 
 const toggleDarkMode = () => {
     const next =
-        resolvedAppearance.value === 'dark' || resolvedAppearance.value === 'system'
+        resolvedAppearance.value === 'dark' ||
+        resolvedAppearance.value === 'system'
             ? 'light'
             : 'dark';
 
@@ -81,14 +82,14 @@ const closeAllMobile = () => {
                     <img
                         :src="logoDark"
                         :alt="t('common.logoAlt') || 'Acendae'"
-                        class="h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:hidden"
+                        class="logo-sharp h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:hidden"
                         onerror="this.src = '/images/logo-dark.svg'"
                     />
                     <!-- Dark theme logo -->
                     <img
                         src="/assets/images/logo-light.svg"
                         :alt="t('common.logoAlt') || 'Acendae'"
-                        class="hidden h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:block"
+                        class="logo-sharp hidden h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:block"
                     />
                 </Link>
             </div>
@@ -126,13 +127,12 @@ const closeAllMobile = () => {
             >
                 <!-- Branded Language Switcher Pill -->
                 <div
-                    class="relative flex h-[36px] items-center rounded-full border
-                    border-black/10 bg-white p-1.5 dark:border-white/15 dark:bg-[#0B1F3F]"
+                    class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white p-1.5 dark:border-white/15 dark:bg-[#0B1F3F]"
                 >
                     <div class="flex items-center pr-2">
                         <img
                             :src="globeIcon"
-                            class="h-[24px] w-[24px] dark:invert dark:brightness-110"
+                            class="h-[24px] w-[24px] dark:brightness-110 dark:invert"
                             alt=""
                         />
                     </div>
@@ -141,12 +141,11 @@ const closeAllMobile = () => {
                             v-for="lang in ['en', 'nl'] as const"
                             :key="lang"
                             @click="switchLanguage(lang)"
-                            class="flex h-[28px] min-w-[30px] items-center justify-center rounded-full
-                            px-3 py-1 text-[14px] font-medium uppercase transition-all duration-150"
+                            class="flex h-[28px] min-w-[30px] items-center justify-center rounded-full px-3 py-1 text-[14px] font-medium uppercase transition-all duration-150"
                             :class="
                                 locale === lang
                                     ? 'bg-[rgba(213,226,255,0.31)] text-[#1D4FBC] dark:bg-[#C9A84C] ' +
-                                     'dark:text-[#070F1C]'
+                                      'dark:text-[#070F1C]'
                                     : 'text-black hover:bg-black/10 dark:text-white dark:hover:bg-white/15'
                             "
                         >
@@ -188,7 +187,7 @@ const closeAllMobile = () => {
 
             <!-- MOBILE MENU TRIGGER -->
             <button
-                class="flex h-10 w-10 items-center justify-center rounded-lg text-[#0B1F3F] transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/10 lg:hidden"
+                class="flex h-10 w-10 items-center justify-center rounded-lg text-[#0B1F3F] transition-colors hover:bg-black/5 lg:hidden dark:text-white dark:hover:bg-white/10"
                 @click="isMobileMenuOpen = !isMobileMenuOpen"
                 :aria-expanded="isMobileMenuOpen"
             >
@@ -209,11 +208,13 @@ const closeAllMobile = () => {
         <Transition name="slide-down">
             <div
                 v-if="isMobileMenuOpen"
-                class="fixed inset-x-0 top-[64px] z-[90] h-[calc(100vh-64px)] w-full overflow-y-auto bg-white dark:bg-[#070F1C] lg:hidden"
+                class="fixed inset-x-0 top-[64px] z-[90] h-[calc(100vh-64px)] w-full overflow-y-auto bg-white lg:hidden dark:bg-[#070F1C]"
             >
                 <div class="flex flex-col p-6 pt-8 pb-12">
                     <!-- Nav Links Stack -->
-                    <nav class="flex flex-col divide-y divide-black/5 dark:divide-white/10">
+                    <nav
+                        class="flex flex-col divide-y divide-black/5 dark:divide-white/10"
+                    >
                         <Link
                             v-for="link in navLinks"
                             :key="link.path"
@@ -238,10 +239,14 @@ const closeAllMobile = () => {
                     </nav>
 
                     <!-- Bottom Branded Area -->
-                    <div class="mt-10 space-y-8 rounded-2xl bg-gray-50/80 p-6 dark:bg-white/5">
+                    <div
+                        class="mt-10 space-y-8 rounded-2xl bg-gray-50/80 p-6 dark:bg-white/5"
+                    >
                         <!-- Theme Toggle -->
                         <div class="flex items-center justify-between">
-                            <span class="text-[15px] font-medium text-black/60 dark:text-white/80">
+                            <span
+                                class="text-[15px] font-medium text-black/60 dark:text-white/80"
+                            >
                                 {{ t('common.darkMode') }}
                             </span>
                             <button
@@ -265,11 +270,11 @@ const closeAllMobile = () => {
                             <div class="flex items-center gap-3">
                                 <img
                                     :src="globeIcon"
-                                class="h-5 w-5 opacity-60 dark:invert dark:brightness-110"
+                                    class="h-5 w-5 opacity-60 dark:brightness-110 dark:invert"
                                     alt=""
                                 />
                                 <span
-                                class="text-[15px] font-medium text-black/60 dark:text-white/80"
+                                    class="text-[15px] font-medium text-black/60 dark:text-white/80"
                                     >{{ t('common.language') }}</span
                                 >
                             </div>

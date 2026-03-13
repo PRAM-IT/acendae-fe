@@ -18,7 +18,7 @@ defineProps<{
 
 <template>
     <div
-        class="flex min-h-svh flex-col items-center justify-center gap-6 bg-[#F8F8F6] p-6 text-navy dark:bg-[#070F1C] dark:text-white md:p-10"
+        class="flex min-h-svh flex-col items-center justify-center gap-6 bg-[#F8F8F6] p-6 text-navy md:p-10 dark:bg-[#070F1C] dark:text-white"
     >
         <div class="flex w-full max-w-md flex-col gap-6">
             <Link

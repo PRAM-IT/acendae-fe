@@ -59,13 +59,17 @@ const avatarData = [
 
             <!-- Heading & Supporting Text -->
             <div class="flex w-full flex-col items-center gap-2">
-                <h2 class="text-xl text-center dark:text-white">
+                <h2 class="text-center text-xl dark:text-white">
                     {{ t('cta.readyTitle') }}
                 </h2>
-                <p class="body w-full max-w-2xl text-center text-muted dark:text-white/80">
+                <p
+                    class="body w-full max-w-2xl text-center text-muted dark:text-white/80"
+                >
                     {{ t('cta.readySubtext1') }}
                 </p>
-                <p class="body w-full max-w-2xl text-center text-muted dark:text-white/80">
+                <p
+                    class="body w-full max-w-2xl text-center text-muted dark:text-white/80"
+                >
                     {{ t('cta.readySubtext2') }}
                 </p>
             </div>
@@ -78,15 +82,14 @@ const avatarData = [
                     variant="primary"
                     tag="Link"
                     href="/contact"
-                    class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F]
-                     dark:!bg-[#FFB200] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
+                    class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12 dark:!bg-[#FFB200]"
                 >
                     <div class="flex items-center gap-[10px]">
                         <div
                             class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5"
                         >
                             <div
-                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] animate-blink-dot md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
+                                class="animate-blink-dot h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
                             ></div>
                         </div>
                         <span class="btn-text">
@@ -99,8 +102,7 @@ const avatarData = [
                     variant="outline"
                     tag="Link"
                     href="/team-outsourcing"
-                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] border border-[rgba(11,31,63,0.67)] dark:!border-[#FFB200]/80
-                    bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
+                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] border border-[rgba(11,31,63,0.67)] bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px] dark:!border-[#FFB200]/80"
                 >
                     <span class="btn-text-outline dark:!text-[#ffffff]">
                         {{ t('cta.discussOutsourcing') }}
@@ -110,16 +112,14 @@ const avatarData = [
 
             <!-- Italic Tagline -->
             <p
-                class="eyebrow-accent w-full max-w-xs text-center sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg italic
-                    dark:!text-[#ffffff]/70"
+                class="eyebrow-accent w-full max-w-xs text-center italic sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg dark:!text-[#ffffff]/70"
             >
                 {{ t('cta.tagline') }}
             </p>
 
             <!-- Decorative Gold Shape -->
             <div
-                class="pointer-events-none absolute hidden lg:block z-0 overflow-visible select-none lg:right-[-120px]
-                lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
+                class="pointer-events-none absolute z-0 hidden overflow-visible select-none lg:right-[-120px] lg:bottom-[-90px] lg:block lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
             >
                 <img src="/images/logo-n.svg" alt="" class="h-auto w-full" />
             </div>

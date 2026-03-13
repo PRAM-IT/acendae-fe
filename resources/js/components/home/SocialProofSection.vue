@@ -6,14 +6,12 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="flex w-full overflow-hidden border-t border-b border-[#D3D8E1] bg-white text-navy dark:bg-[#070F1C] dark:text-white dark:border-[#30456B]"
+        class="flex w-full overflow-hidden border-t border-b border-[#D3D8E1] bg-white text-navy dark:border-[#30456B] dark:bg-[#070F1C] dark:text-white"
     >
         <div class="mx-auto flex w-full flex-col lg:flex-row">
             <!-- LEFT PANEL: Dark Hero -->
             <div
-                class="container-px relative flex shrink-0 flex-col
-                justify-start overflow-hidden py-8 min-h-[480px] sm:py-9 md:min-h-[500px]
-                md:py-10 lg:min-h-[600px] lg:w-[44%] lg:shrink-0 xl:min-h-[660px] 2xl:min-h-[700px]"
+                class="container-px relative flex min-h-[480px] shrink-0 flex-col justify-start overflow-hidden py-8 sm:py-9 md:min-h-[500px] md:py-10 lg:min-h-[600px] lg:w-[44%] lg:shrink-0 xl:min-h-[660px] 2xl:min-h-[700px]"
                 style="
                     background: linear-gradient(
                         180deg,
@@ -25,10 +23,7 @@ const { t } = useI18n();
             >
                 <!-- Decorative Logo Watermark (Desktop) -->
                 <div
-                    class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px]
-                    overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px]
-                    md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] 2xl:right-[-100px] 2xl:bottom-[-60px]
-                    2xl:w-[480px]"
+                    class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px] overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px] md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] 2xl:right-[-100px] 2xl:bottom-[-60px] 2xl:w-[480px]"
                 >
                     <img
                         src="/images/logo-n.svg"
@@ -39,10 +34,11 @@ const { t } = useI18n();
 
                 <!-- Content -->
                 <div
-                    class="relative z-10 flex h-full w-full flex-col flex-wrap gap-5 sm:gap-6 md:gap-7 lg:gap-8
-                    xl:gap-9 xl:gap-14 2xl:gap-[44px]"
+                    class="relative z-10 flex h-full w-full flex-col flex-wrap gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 xl:gap-14 2xl:gap-[44px]"
                 >
-                    <h2 class="title-section-light pt-10 md:pt-16 lg:pt-20 lg:pt-32">
+                    <h2
+                        class="title-section-light pt-10 md:pt-16 lg:pt-20 lg:pt-32"
+                    >
                         {{ t('home.social_proof.title') }}
                     </h2>
                     <div
@@ -57,7 +53,7 @@ const { t } = useI18n();
 
             <!-- RIGHT PANEL: Grid + Map -->
             <div
-                class="relative flex w-full lg:w-1/2 flex-1 flex-col bg-white lg:min-h-[680px] dark:bg-[#070F1C]"
+                class="relative flex w-full flex-1 flex-col bg-white lg:min-h-[680px] lg:w-1/2 dark:bg-[#070F1C]"
             >
                 <!-- Content Grid Area -->
                 <div
