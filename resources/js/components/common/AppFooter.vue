@@ -110,8 +110,11 @@ const legalLinks = computed(() => [
 
                 <div class="flex flex-row items-center gap-[28px]">
                     <a
-                        href="#"
+                        href="https://www.instagram.com/acendae?igsh=Ym1wMWo2OTd1czg1"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="h-6 w-6 transition-opacity hover:opacity-70"
+                        aria-label="Acendae on Instagram"
                     >
                         <img
                             :src="iconInstagram"
@@ -120,8 +123,11 @@ const legalLinks = computed(() => [
                         />
                     </a>
                     <a
-                        href="#"
+                        href="https://www.linkedin.com/company/acendae/posts/?feedView=all"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="h-6 w-6 transition-opacity hover:opacity-70"
+                        aria-label="Acendae on LinkedIn"
                     >
                         <img
                             :src="iconLinkedin"
@@ -130,7 +136,9 @@ const legalLinks = computed(() => [
                         />
                     </a>
                     <a
-                        href="#"
+                        href="https://www.tiktok.com/@acendae"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="h-6 w-6 transition-opacity hover:opacity-70"
                     >
                         <img
@@ -176,15 +184,15 @@ const legalLinks = computed(() => [
                 </Link>
             </div>
 
-            <!-- Copyright + Legal — desktop only -->
+            <!-- Copyright + Legal -->
             <div
-                class="mt-[40px] hidden w-full flex-col items-center gap-[32px] lg:flex"
+                class="mt-[40px] flex w-full flex-col items-center gap-6  border-white/20 pt-8 text-center lg:gap-[32px] lg:pt-10"
             >
                 <p class="footer-copyright">
                     {{ t('footer.copyright') }}
                 </p>
                 <div
-                    class="flex flex-row items-center justify-center gap-[64px]"
+                    class="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-2 lg:gap-x-[64px]"
                 >
                     <Link
                         v-for="link in legalLinks"

@@ -25,7 +25,7 @@ const { t } = useI18n();
             >
                 <!-- Eyebrow Badge -->
                 <div
-                    class="flex w-fit max-w-full flex-row items-center rounded-2xl
+                    class="flex w-fit max-w-full flex-row items-center rounded-lg
                     bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:px-4 sm:py-2 md:mb-6 md:px-5 mb-5
                     lg:max-w-md lg:py-2.5 lg:pr-6 lg:pl-4 md:mb-6 2xl:max-w-none 2xl:py-2.5
                      2xl:pr-6 2xl:pl-4"
@@ -71,7 +71,7 @@ const { t } = useI18n();
                                 class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5"
                             >
                                 <div
-                                    class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
+                                    class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] animate-blink-dot md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
                                 ></div>
                             </div>
                             <span class="btn-text dark:text-[#070F1C]">
@@ -178,7 +178,7 @@ const { t } = useI18n();
                             class="flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]"
                         >
                             <div
-                                class="h-[6px] w-[6px] rounded-full bg-[#0A5E4A]"
+                                class="h-[6px] w-[6px] rounded-full bg-[#0A5E4A] animate-blink-dot"
                             ></div>
                         </div>
                         <span class="btn-text">

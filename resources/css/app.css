@@ -72,6 +72,9 @@
     /* Z-index */
     --z-toast: 60;
     --z-navbar: 100;
+    /* Loader animations */
+    --animate-loader-pop: loader-pop 500ms var(--ease-spring) forwards;
+    --animate-loader-pulse: loader-pulse 2s ease-in-out infinite;
 }
 
 /* 3. CSS Custom Properties (:root) */
@@ -388,7 +391,7 @@
 
     /* Body text — text-sm → 4xl:text-base */
     .body {
-        @apply text-sm leading-relaxed font-normal text-navy/85 md:text-base 4xl:text-[16px];
+        @apply text-sm leading-relaxed font-normal text-[#000000D9] md:text-base 4xl:text-[16px];
     }
 
     /* Small body — text-xs → 2xl:text-sm */
@@ -452,7 +455,7 @@
 
     /* --- Body text on dark background (same scale as body) --- */
     .body-on-dark {
-        @apply w-full text-sm leading-relaxed font-normal text-white/85 md:text-base 2xl:text-lg 4xl:text-base;
+        @apply w-full text-sm leading-relaxed font-normal text-[#FFFFFFD9] md:text-base 2xl:text-lg 4xl:text-base;
     }
 
     /* --- Panel heading (same as title-card) --- */
@@ -525,8 +528,8 @@
 
     /* --- Quote Section heading (same as title-section) --- */
     .quote-heading {
-        @apply h-auto w-full text-center font-instrument text-2xl leading-tight font-semibold text-balance
-        text-white  md:text-3xl lg:max-w-[887px] 2xl:text-4xl 4xl:text-4xl;
+        @apply h-auto w-full text-center font-sans text-2xl leading-tight font-medium text-balance
+        text-white md:text-4xl lg:max-w-[887px] 2xl:text-[40px];
     }
 
     /* --- Footer column title --- */
@@ -944,196 +947,51 @@
     }
 }
 
-/* 6. Global App Loader (Acendae) */
+/* 6. Global App Loader (Acendae) — Tailwind + minimal custom */
 
-.acendae-loader {
-    position: fixed;
-    inset: 0;
-    z-index: var(--z-top);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    pointer-events: auto;
-    overflow: hidden;
-    background: linear-gradient(165deg, #f0f4f9 0%, #e8ecf4 50%, #dfe4ed 100%);
-    transition: opacity 550ms var(--ease-in-out), transform 550ms var(--ease-in-out), visibility 550ms var(--ease-in-out);
+.acendae-loader--fade-out {
+    @apply opacity-0 invisible -translate-y-0.5;
 }
 
-.acendae-loader__bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: url('/images/quote-bg.png') no-repeat center center;
-    background-size: cover;
-    opacity: 0.6;
-    mix-blend-mode: soft-light;
+/* Mountain track, path sheen, climber (need pseudo-elements) */
+.loader-mountain {
+    @apply relative h-[52px] w-40 overflow-hidden rounded-2xl border border-navy/10 bg-white/60;
 }
 
-.acendae-loader__corners {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+.loader-path {
+    @apply absolute inset-3 overflow-hidden rounded-full bg-navy/10;
 }
 
-.acendae-loader__corner {
-    position: absolute;
-    width: 56px;
-    height: 56px;
-    border-color: rgba(201, 168, 76, 0.55);
-    border-style: solid;
-    border-width: 0;
-    z-index: 2;
-}
-
-.acendae-loader__corner--tl {
-    top: 16px;
-    left: 16px;
-    border-top-width: 2px;
-    border-left-width: 2px;
-    border-radius: 8px 0 0 0;
-}
-
-.acendae-loader__corner--tr {
-    top: 16px;
-    right: 16px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-radius: 0 8px 0 0;
-}
-
-.acendae-loader__corner--bl {
-    bottom: 16px;
-    left: 16px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-    border-radius: 0 0 0 8px;
-}
-
-.acendae-loader__corner--br {
-    bottom: 16px;
-    right: 16px;
-    border-bottom-width: 2px;
-    border-right-width: 2px;
-    border-radius: 0 0 8px 0;
-}
-
-.acendae-loader__content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 340px;
-    padding: 2rem;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 16px 48px rgba(11, 31, 58, 0.08);
-    text-align: center;
-}
-
-.acendae-loader__logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    animation: loader-pop 500ms var(--ease-spring) forwards;
-}
-
-.acendae-loader__logo-img {
-    width: 100px;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
-    animation: loader-logo-pulse 2s ease-in-out infinite;
-    animation-delay: 600ms;
-}
-
-@keyframes loader-logo-pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.9; transform: scale(1.03); }
-}
-
-.acendae-loader__tagline {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    max-width: 18rem;
-    margin: 0;
-    color: #0b1f3a;
-    font-weight: 500;
-}
-
-.acendae-loader__mountain {
-    position: relative;
-    width: 160px;
-    height: 52px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(11, 31, 58, 0.12);
-    overflow: hidden;
-}
-
-.acendae-loader__path {
-    position: absolute;
-    inset: 14px 18px 12px 18px;
-    border-radius: 999px;
-    background: rgba(11, 31, 58, 0.1);
-    overflow: hidden;
-}
-
-.acendae-loader__path::before {
+.loader-path::before {
     content: '';
-    position: absolute;
-    inset: 0;
+    @apply absolute inset-0;
     background: linear-gradient(90deg, transparent 0%, rgba(255, 178, 0, 0.5) 50%, transparent 100%);
     animation: loader-sheen 1.8s ease-in-out infinite;
 }
 
-.acendae-loader__climber {
-    position: absolute;
-    left: 15%;
-    bottom: 10px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.loader-climber {
+    @apply absolute bottom-2.5 left-[15%] h-2.5 w-2.5 rounded-full;
     background: linear-gradient(135deg, #ffe7a9 0%, #ffb200 50%, #b37506 100%);
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9), 0 2px 6px rgba(11, 31, 58, 0.2);
     animation: loader-climb 2.2s ease-in-out infinite;
 }
 
-.acendae-loader__progress {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 180px;
-}
-
-.acendae-loader__progress-track {
-    width: 100%;
-    height: 6px;
-    border-radius: 999px;
-    background: rgba(11, 31, 58, 0.12);
-    overflow: hidden;
-}
-
-.acendae-loader__progress-bar {
-    height: 100%;
-    width: 35%;
-    min-width: 50px;
-    border-radius: inherit;
-    background: linear-gradient(90deg, #c9a84c 0%, #ffb200 60%, #e8c25a 100%);
-    box-shadow: 0 0 16px rgba(255, 178, 0, 0.5);
+.loader-bar {
     animation: loader-bar-slide 1.4s ease-in-out infinite;
 }
+
+.loader-loading-text {
+    animation: loader-pulse-text 1.2s ease-in-out infinite;
+}
+
+.loader-dots span {
+    @apply inline-block;
+    animation: loader-dot-bounce 0.5s ease-in-out infinite;
+}
+
+.loader-dots span:nth-child(1) { animation-delay: 0s; }
+.loader-dots span:nth-child(2) { animation-delay: 0.15s; }
+.loader-dots span:nth-child(3) { animation-delay: 0.3s; }
 
 @keyframes loader-bar-slide {
     0% { transform: translateX(-100%); }
@@ -1141,54 +999,14 @@
     100% { transform: translateX(-100%); }
 }
 
-.acendae-loader__loading-text {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(11, 31, 58, 0.75);
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
-    animation: loader-pulse-text 1.2s ease-in-out infinite;
-}
-
-.acendae-loader__dots span {
-    display: inline-block;
-    animation: loader-dot-bounce 0.5s ease-in-out infinite;
-}
-
-.acendae-loader__dots span:nth-child(1) { animation-delay: 0s; }
-.acendae-loader__dots span:nth-child(2) { animation-delay: 0.15s; }
-.acendae-loader__dots span:nth-child(3) { animation-delay: 0.3s; }
-
 @keyframes loader-dot-bounce {
     0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
     30% { opacity: 1; transform: translateY(-3px); }
 }
 
-@media (min-width: 768px) {
-    .acendae-loader__content {
-        max-width: 380px;
-        padding: 2.25rem;
-        gap: 1.75rem;
-    }
-
-    .acendae-loader__logo-img {
-        width: 120px;
-    }
-
-    .acendae-loader__tagline {
-        font-size: 0.9rem;
-    }
-
-    .acendae-loader__progress {
-        max-width: 200px;
-    }
-}
-
-.acendae-loader--fade-out {
-    opacity: 0;
-    transform: translateY(-2%);
-    visibility: hidden;
+@keyframes loader-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.03); }
 }
 
 @keyframes loader-pop {
@@ -1263,20 +1081,6 @@
 @keyframes loader-pulse-text {
     0%, 100% { opacity: 0.6; }
     50% { opacity: 1; }
-}
-
-.acendae-loader__dots span {
-    animation: loader-dot 1.4s ease-in-out infinite;
-    animation-fill-mode: both;
-}
-
-.acendae-loader__dots span:nth-child(1) { animation-delay: 0s; }
-.acendae-loader__dots span:nth-child(2) { animation-delay: 0.2s; }
-.acendae-loader__dots span:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes loader-dot {
-    0%, 80%, 100% { opacity: 0.2; }
-    40% { opacity: 1; }
 }
 
 /* 7. Page Transitions (Vue <Transition> Name Classes) */
@@ -1382,7 +1186,7 @@
     @apply translate-x-0 translate-y-0 opacity-100;
 }
 
- 
+
 /* Screen Reader Only */
 .sr-only {
     @apply absolute -m-px h-px w-px overflow-hidden border-0 p-0 whitespace-nowrap [clip:rect(0,0,0,0)];
@@ -1453,6 +1257,21 @@
     :root {
         --navbar-height: 4rem;
     }
+}
+
+/* 9b. Blink Icon Animation (Outsource CTA status dot) */
+@keyframes blink-dot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(0.85);
+    }
+}
+.animate-blink-dot {
+    animation: blink-dot 1.5s ease-in-out infinite;
 }
 
 /* 10. Reduced Motion (Accessibility) */

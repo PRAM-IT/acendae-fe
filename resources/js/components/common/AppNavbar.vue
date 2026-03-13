@@ -126,25 +126,28 @@ const closeAllMobile = () => {
             >
                 <!-- Branded Language Switcher Pill -->
                 <div
-                    class="relative flex h-[36px] items-center rounded-full border border-black/10 bg-white pr-1 pl-1.5 dark:border-white/15 dark:bg-[#0B1F3F]"
+                    class="relative flex h-[36px] items-center rounded-full border
+                    border-black/10 bg-white p-1.5 dark:border-white/15 dark:bg-[#0B1F3F]"
                 >
-                    <div class="flex items-center pr-1">
+                    <div class="flex items-center pr-2">
                         <img
                             :src="globeIcon"
-                            class="h-[26px] w-[26px] dark:invert dark:brightness-110"
+                            class="h-[24px] w-[24px] dark:invert dark:brightness-110"
                             alt=""
                         />
                     </div>
-                    <div class="flex">
+                    <div class="flex items-center gap-1">
                         <button
                             v-for="lang in ['en', 'nl'] as const"
                             :key="lang"
                             @click="switchLanguage(lang)"
-                            class="flex h-[26px] w-[32px] items-center justify-center text-[14px] font-medium uppercase transition-all duration-150"
+                            class="flex h-[32px] min-w-[30px] items-center justify-center rounded-full
+                            px-3 py-2 text-[14px] font-medium uppercase transition-all duration-150"
                             :class="
                                 locale === lang
-                                    ? 'rounded-full bg-[rgba(213,226,255,0.31)] text-[#1D4FBC] dark:bg-[#C9A84C] dark:text-[#070F1C]'
-                                    : 'rounded text-black hover:bg-black/5 dark:text-white dark:hover:bg-white/10'
+                                    ? 'bg-[rgba(213,226,255,0.31)] text-[#1D4FBC] dark:bg-[#C9A84C] ' +
+                                     'dark:text-[#070F1C]'
+                                    : 'text-black hover:bg-black/10 dark:text-white dark:hover:bg-white/15'
                             "
                         >
                             {{ lang }}
@@ -250,13 +253,13 @@ const closeAllMobile = () => {
                                 >
                             </div>
                             <div
-                                class="flex rounded-full border border-black/10 bg-white p-1"
+                                class="flex items-center gap-4 rounded-full border border-black/10 bg-white p-1.5"
                             >
                                 <button
                                     v-for="lang in ['en', 'nl'] as const"
                                     :key="lang"
                                     @click="switchLanguage(lang)"
-                                    class="flex h-[28px] w-[40px] items-center justify-center rounded-full text-[13px] font-bold uppercase transition-all"
+                                    class="flex h-[36px] min-w-[48px] flex-1 items-center justify-center rounded-full px-5 py-2 text-[13px] font-bold uppercase transition-all hover:bg-black/10 dark:hover:bg-white/15"
                                     :class="
                                         locale === lang
                                             ? 'bg-[#D5E2FF] text-[#1D4FBC] dark:bg-[#C9A84C] dark:text-[#070F1C]'

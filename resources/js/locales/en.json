@@ -258,6 +258,33 @@
         "discussOutsourcing": "Discuss team outsourcing",
         "tagline": "We'll find the right next step."
     },
+    "errors": {
+        "404": {
+            "title": "Lost on the trail",
+            "subtitle": "Page not found",
+            "description": "The path you're looking for doesn't exist. Let's get you back to base camp.",
+            "pageTitle": "Page Not Found"
+        },
+        "403": {
+            "title": "Restricted route",
+            "subtitle": "Access denied",
+            "description": "You don't have permission to reach this summit. Head back to base camp.",
+            "pageTitle": "Access Denied"
+        },
+        "500": {
+            "title": "Storm at the summit",
+            "subtitle": "Something went wrong",
+            "description": "We hit some rough weather. Our team is already on it. Please try again in a moment.",
+            "pageTitle": "Server Error"
+        },
+        "503": {
+            "title": "Temporarily off the trail",
+            "subtitle": "Service unavailable",
+            "description": "We're doing some trail maintenance. Please try again shortly.",
+            "pageTitle": "Service Unavailable"
+        },
+        "goHome": "Return home"
+    },
     "common": {
         "logoAlt": "Acendae",
         "en": "EN",

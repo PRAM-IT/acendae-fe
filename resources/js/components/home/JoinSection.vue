@@ -14,7 +14,8 @@ const { t, tm } = useI18n();
         <div class="flex w-full flex-col lg:flex-row lg:items-stretch">
             <!-- LEFT COLUMN -->
             <div
-                class="join-content-left md:container-pr flex w-full flex-1 flex-col gap-4 bg-white pt-4 pb-10 sm:pt-6 sm:pb-12 md:flex-[0_0_44%] md:gap-5 md:pt-8 md:pb-14 lg:pt-[40px] lg:pb-[70px] xl:pt-[45px] xl:pb-[80px] 2xl:pt-[50px] 2xl:pb-[90px] dark:bg-[#070F1C]"
+                class="join-content-left md:container-pr flex w-full flex-1 flex-col gap-4 bg-white pr-20
+                py-16 md:flex-[0_0_44%] md:gap-5 dark:bg-[#070F1C]"
                 data-reveal="up"
             >
                 <h2 class="title-section text-navy-light dark:text-white">
@@ -112,7 +113,8 @@ const { t, tm } = useI18n();
 
                 <!-- QUOTE CONTENT -->
                 <div
-                    class="absolute inset-0 z-2 flex items-start justify-center px-6 pt-16 pb-8 sm:px-8 sm:pt-20 sm:pb-10 md:px-10 md:pt-10 md:pb-11 lg:mt-0 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-14 2xl:py-16"
+                    class="absolute inset-0 z-2 flex items-start justify-center px-6 pt-16 pb-8 sm:px-8 sm:pt-20 sm:pb-10
+                    md:px-10 md:pt-10 md:pb-11 lg:mt-0 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-14 2xl:py-16"
                 >
                     <blockquote
                         class="title-section w-full max-w-xs text-center sm:max-w-sm

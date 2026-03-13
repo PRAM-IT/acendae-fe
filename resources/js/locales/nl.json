@@ -258,6 +258,33 @@
         "discussOutsourcing": "Bespreek team outsourcing",
         "tagline": "We vinden de juiste volgende stap."
     },
+    "errors": {
+        "404": {
+            "title": "Verloren op het pad",
+            "subtitle": "Pagina niet gevonden",
+            "description": "Het pad dat je zoekt bestaat niet. Laten we je terug naar basiskamp brengen.",
+            "pageTitle": "Pagina niet gevonden"
+        },
+        "403": {
+            "title": "Beperkte route",
+            "subtitle": "Toegang geweigerd",
+            "description": "Je hebt geen toestemming om deze top te bereiken. Ga terug naar basiskamp.",
+            "pageTitle": "Toegang geweigerd"
+        },
+        "500": {
+            "title": "Storm op de top",
+            "subtitle": "Er is iets misgegaan",
+            "description": "We hebben ruw weer gehad. Ons team is er al mee bezig. Probeer het over een moment opnieuw.",
+            "pageTitle": "Serverfout"
+        },
+        "503": {
+            "title": "Tijdelijk van het pad",
+            "subtitle": "Service niet beschikbaar",
+            "description": "We doen padonderhoud. Probeer het over een moment opnieuw.",
+            "pageTitle": "Service niet beschikbaar"
+        },
+        "goHome": "Terug naar home"
+    },
     "common": {
         "logoAlt": "Acendae",
         "en": "EN",

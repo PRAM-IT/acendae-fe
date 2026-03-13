@@ -86,7 +86,7 @@ const avatarData = [
                             md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5 dark:bg-[#FFB200]/80"
                         >
                             <div
-                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A]  md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
+                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] animate-blink-dot md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
                             ></div>
                         </div>
                         <span class="btn-text">
@@ -110,7 +110,7 @@ const avatarData = [
 
             <!-- Italic Tagline -->
             <p
-                class="eyebrow-accent w-full max-w-xs text-center sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg"
+                class="eyebrow-accent w-full max-w-xs text-center sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg italic"
             >
                 {{ t('cta.tagline') }}
             </p>
