@@ -121,7 +121,7 @@ const avatarData = [
             <div
                 class="pointer-events-none absolute z-0 hidden overflow-visible select-none lg:right-[-120px] lg:bottom-[-90px] lg:block lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
             >
-                <img src="/images/logo-n.svg" alt="" class="h-auto w-full" />
+                <img src="/images/logo-n.svg" alt="" class="logo-sharp h-auto w-full" />
             </div>
         </div>
     </section>

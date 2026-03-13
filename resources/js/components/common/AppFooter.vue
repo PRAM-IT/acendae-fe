@@ -118,7 +118,7 @@ const legalLinks = computed(() => [
                         <img
                             :src="iconInstagram"
                             :alt="t('common.instagram') || 'Instagram'"
-                            class="h-6 w-6 object-contain"
+                            class="logo-sharp h-6 w-6 object-contain"
                         />
                     </a>
                     <a
@@ -131,7 +131,7 @@ const legalLinks = computed(() => [
                         <img
                             :src="iconLinkedin"
                             :alt="t('common.linkedin') || 'LinkedIn'"
-                            class="h-6 w-6 object-contain"
+                            class="logo-sharp h-6 w-6 object-contain"
                         />
                     </a>
                     <a
@@ -143,7 +143,7 @@ const legalLinks = computed(() => [
                         <img
                             :src="iconTiktok"
                             :alt="t('common.tiktok') || 'TikTok'"
-                            class="h-6 w-6 object-contain"
+                            class="logo-sharp h-6 w-6 object-contain"
                         />
                     </a>
                     <a
@@ -153,7 +153,7 @@ const legalLinks = computed(() => [
                         <img
                             :src="iconTwitter"
                             :alt="t('common.twitter') || 'X'"
-                            class="h-6 w-6 object-contain"
+                            class="logo-sharp h-6 w-6 object-contain"
                         />
                     </a>
                     <a
@@ -163,7 +163,7 @@ const legalLinks = computed(() => [
                         <img
                             :src="iconFacebook"
                             :alt="t('common.facebook') || 'Facebook'"
-                            class="h-6 w-6 object-contain"
+                            class="logo-sharp h-6 w-6 object-contain"
                         />
                     </a>
                 </div>
@@ -172,12 +172,15 @@ const legalLinks = computed(() => [
             </div>
 
             <!-- Logo -->
-            <div class="mt-[57px] h-[75px] w-[217px]">
-                <Link href="/">
+            <div class="logo-wrap mt-[57px] h-[75px] w-[217px] shrink-0">
+                <Link href="/" class="block h-full w-full">
                     <img
                         :src="logoLight"
                         :alt="t('common.logoAlt') || 'Acendae'"
-                        class="logo-sharp h-full w-full object-contain"
+                        class="logo-sharp logo-footer h-full w-full object-contain"
+                        width="217"
+                        height="75"
+                        fetchpriority="high"
                         onerror="this.src = '/images/logo-light.svg'"
                     />
                 </Link>

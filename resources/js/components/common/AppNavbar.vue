@@ -73,23 +73,29 @@ const closeAllMobile = () => {
             class="wrap mx-auto flex h-full w-full items-center justify-between"
         >
             <!-- LOGO SECTION -->
-            <div class="flex items-center">
+            <div class="logo-wrap flex items-center">
                 <Link
                     href="/"
-                    class="flex items-center transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                    class="flex items-center transition-opacity duration-200 hover:opacity-90 active:opacity-95"
                 >
                     <!-- Light theme logo -->
                     <img
                         :src="logoDark"
                         :alt="t('common.logoAlt') || 'Acendae'"
-                        class="logo-sharp h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:hidden"
+                        class="logo-sharp logo-nav h-[36px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[48px] dark:hidden"
+                        width="217"
+                        height="75"
+                        fetchpriority="high"
                         onerror="this.src = '/images/logo-dark.svg'"
                     />
                     <!-- Dark theme logo -->
                     <img
                         src="/assets/images/logo-light.svg"
                         :alt="t('common.logoAlt') || 'Acendae'"
-                        class="logo-sharp hidden h-[34px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[49px] dark:block"
+                        class="logo-sharp logo-nav hidden h-[36px] w-auto shrink-0 object-contain lg:h-[40px] xl:h-[48px] dark:block"
+                        width="217"
+                        height="75"
+                        fetchpriority="high"
                     />
                 </Link>
             </div>
