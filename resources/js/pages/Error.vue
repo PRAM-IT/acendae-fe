@@ -81,13 +81,13 @@ const pageTitle = computed(() =>
                     <img
                         src="/assets/images/logo-dark.svg"
                         alt="Acendae"
-                        class="h-auto w-[100px] object-contain md:w-[120px] dark:hidden"
+                        class="logo-sharp h-auto w-[100px] object-contain md:w-[120px] dark:hidden"
                         onerror="this.src = '/images/logo-dark.svg'"
                     />
                     <img
                         src="/assets/images/logo-light.svg"
                         alt="Acendae"
-                        class="hidden h-auto w-[100px] object-contain md:w-[120px] dark:block"
+                        class="logo-sharp hidden h-auto w-[100px] object-contain md:w-[120px] dark:block"
                         onerror="this.src = '/images/logo-dark.svg'"
                     />
                 </div>

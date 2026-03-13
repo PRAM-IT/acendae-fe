@@ -31,7 +31,7 @@
                     <img
                         src="/assets/images/logo-dark.svg"
                         alt="Acendae"
-                        class="block h-auto max-w-full w-[100px] object-contain animate-loader-pulse md:w-[120px]"
+                        class="logo-sharp block h-auto max-w-full w-[100px] object-contain animate-loader-pulse md:w-[120px]"
                     >
                 </div>
                 <div class="loader-mountain">

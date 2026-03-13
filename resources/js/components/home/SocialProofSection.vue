@@ -28,7 +28,7 @@ const { t } = useI18n();
                     <img
                         src="/images/logo-n.svg"
                         alt=""
-                        class="h-auto w-full"
+                        class="logo-sharp h-auto w-full"
                     />
                 </div>
 

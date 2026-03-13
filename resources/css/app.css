@@ -322,11 +322,32 @@
         @apply mx-auto w-full max-w-[1920px] px-4 md:px-10 xl:px-14 2xl:px-16 4xl:px-20;
     }
 
-    /* --- Logo sharp rendering (navbar, footer) — prevents blur on mobile/tablet --- */
+    /* --- Logo sharp rendering (navbar, footer, icons) — prevents blur on mobile/tablet --- */
+    /* Includes Safari/iOS fixes: -webkit-filter: blur(0) resets Safari's implicit blur when compositing */
+    /* Logos are SVG-wrapped raster (embedded PNG) — scaling causes blur on Retina/iOS */
     .logo-sharp {
         image-rendering: -webkit-optimize-contrast;
-        transform: translateZ(0);
+        image-rendering: crisp-edges;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+
+    /* High-DPI / Retina / iOS Safari: logos contain embedded raster — force crisp scaling */
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .logo-sharp {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+    }
+
+    /* Navbar/footer logos: own compositing layer for sharper rendering on iOS */
+    .logo-nav,
+    .logo-footer {
+        isolation: isolate;
     }
 
     /* --- Section Padding (Tailwind responsive) --- */
