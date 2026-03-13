@@ -23,6 +23,10 @@ const unitKeys: UnitKey[] = [
 ];
 
 const activeUnit = computed(() => unitKeys[activeTab.value]);
+
+const setActiveTab = (index: number) => {
+    activeTab.value = index;
+};
 </script>
 
 <template>
@@ -66,7 +70,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                             : '',
                         index === 3 ? 'lg:border-r-0' : '',
                     ]"
-                    @click="activeTab = index"
+                    @click="setActiveTab(index)"
                 >
                     <span
                         class="subtitle px-1 lg:px-0"
@@ -91,13 +95,11 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                         :key="activeTab"
                         class="flex w-full flex-1 flex-col lg:flex-row lg:items-stretch"
                     >
-                        <!-- LEFT COLUMN -->
+                        <!-- LEFT COLUMN (no data-reveal: content is dynamic on tab switch) -->
                         <div
-                            class=" order-last flex w-full lg:w-1/2 flex-col bg-[rgba(249,251,255,0.71)]
+                            class="order-last flex w-full lg:w-1/2 flex-col bg-[rgba(249,251,255,0.71)]
                             p-5 sm:p-6 md:p-8 lg:order-first lg:shrink-0 lg:p-[50px_44px]
                             xl:p-[55px_50px] 2xl:p-[60px_58px] dark:bg-[#070F1C]"
-                            data-reveal="up"
-                            data-reveal-delay="100"
                         >
                             <!-- HEADING GROUP -->
                             <div class="flex flex-col gap-2 lg:gap-[16px]">
@@ -151,7 +153,8 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                             >
                                 <Link
                                     :href="route('services.outsource')"
-                                    class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[#0B1F3F] px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)]
+                                    class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[#0B1F3F] dark:!bg-[#FFB200]/80
+                                     px-4 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)]
                                     focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c] active:translate-y-0 active:bg-[#081629] sm:h-[46px] lg:h-[48px] lg:rounded-[8px] lg:px-6 xl:w-auto 2xl:h-[55px]"
                                 >
                                     <span class="btn-text whitespace-nowrap">
@@ -179,13 +182,14 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                 <Link
                                     :href="route('services.dedicated-team')"
                                     class="flex h-[44px] w-full items-center justify-center gap-[7px] rounded-[6px] bg-[rgba(77,161,240,0.11)]
+                                    dark:bg-transparent dark:border dark:border-[#FFB200]/80
                                     px-4 transition-all duration-200 hover:-translate-y-px
                                     hover:bg-[rgba(77,161,240,0.2)] focus-visible:outline-2 focus-visible:outline-offset-2
                                     focus-visible:outline-[#c9a84c] active:translate-y-0 sm:h-[46px] lg:h-[48px] lg:rounded-[8px]
                                     lg:px-6 xl:w-auto 2xl:h-[55px]"
                                 >
                                     <span
-                                        class="btn-text font-semibold whitespace-nowrap !text-[#1D4FBC]"
+                                        class="btn-text font-semibold whitespace-nowrap !text-[#1D4FBC] dark:!text-white"
                                     >
                                         {{
                                             t(
@@ -201,6 +205,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                         <path
                                             d="M4 14L14 4M14 4H7M14 4V11"
                                             stroke="#1D4FBC"
+                                            class="dark:stroke-white"
                                             stroke-width="1.5"
                                             stroke-linecap="round"
                                             stroke-linejoin="round"
@@ -210,7 +215,7 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                             </div>
                         </div>
 
-                        <!-- RIGHT COLUMN (image) -->
+                        <!-- RIGHT COLUMN (image) (no data-reveal: content is dynamic) -->
                         <div
                             class="relative order-first h-[340px] w-full overflow-hidden sm:h-[400px] md:h-[460px] lg:order-last lg:h-auto lg:flex-1 lg:self-stretch"
                             style="
@@ -220,8 +225,6 @@ const activeUnit = computed(() => unitKeys[activeTab.value]);
                                     #0c2c71 100%
                                 );
                             "
-                            data-reveal="fade"
-                            data-reveal-delay="150"
                         >
                             <div
                                 class="pointer-events-none absolute inset-0 lg:hidden"

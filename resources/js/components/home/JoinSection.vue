@@ -8,13 +8,13 @@ const { t, tm } = useI18n();
 
 <template>
     <section
-        class="wrap mt-10 flex flex-col border-b border-[#D3D8E1] bg-white text-navy md:mt-12 md:border-y
+        class="wrap mt-0 flex flex-col border-b border-[#D3D8E1] bg-white text-navy md:mt-12 md:border-y
         lg:mt-14 2xl:mt-20 4xl:mt-26 dark:bg-[#070F1C] dark:text-white dark:border-[#30456B]"
     >
         <div class="flex w-full flex-col lg:flex-row lg:items-stretch">
             <!-- LEFT COLUMN -->
             <div
-                class="join-content-left md:container-pr flex w-full flex-1 flex-col gap-4 bg-white pr-20
+                class="join-content-left md:container-pr flex w-full flex-1 flex-col gap-4 bg-white md:pr-20
                 py-16 md:flex-[0_0_44%] md:gap-5 dark:bg-[#070F1C]"
                 data-reveal="up"
             >

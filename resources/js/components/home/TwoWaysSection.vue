@@ -46,14 +46,14 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                         <!-- Gradient Background -->
                         <div
                             class="absolute inset-0 z-0 opacity-60 bg-gradient-to-b from-[rgba(251,252,255,0.2)] via-[rgba(251,252,255,0.4)]
-                            to-[rgba(29,79,188,0.2)] dark:from-[rgba(7,15,28,0.7)] dark:via-[rgba(7,15,28,0.85)] dark:to-[rgba(7,15,28,1)]"
+                            to-[rgba(29,79,188,0.2)] dark:from-transparent dark:via-transparent dark:to-[#FFB200]/40"
                         ></div>
 
                         <!-- Card — flex-1 so it fills the column height -->
                         <div
                             data-reveal="up"
                             class=" md:px-0 relative flex flex-1 flex-col rounded-[14px] border
-                            border-[rgba(195,204,222,0.32)] bg-white sm:rounded-[16px] lg:rounded-[20px] dark:bg-[#0B1F3F] dark:border-[#30456B]"
+                            border-[rgba(195,204,222,0.32)] bg-transparent sm:rounded-[16px] lg:rounded-[20px]"
                         >
                             <!-- Card Content — flex-1 so button can sit at bottom -->
                             <div
@@ -61,7 +61,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 bg-transparent p-6 sm:p-8 md:p-10 lg:gap-8 2xl:gap-9"
                             >
                                 <div class="flex flex-col gap-2">
-                                    <h3 class="title-card m-0 text-navy-light dark:text-white">
+                                    <h3 class="title-card m-0 text-navy-light dark:!text-[#FFB200]">
                                         {{ t('home.two_ways.outsource.title') }}
                                     </h3>
                                     <p class="label m-0 text-navy-light dark:text-white/80">
@@ -83,11 +83,13 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                             :key="item"
                                             class="flex items-center gap-3"
                                         >
-                                            <img
-                                                src="/images/blue-circle.svg"
-                                                alt=""
-                                                class="h-3 w-3 shrink-0"
-                                            />
+                                            <div
+                                                class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-0.5 sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] dark:bg-[rgba(201,168,76,0.15)]"
+                                            >
+                                                <div
+                                                    class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] dark:bg-[#C9A84C]"
+                                                ></div>
+                                            </div>
                                             <span class="body dark:text-white/80">{{ item }}</span>
                                         </li>
                                     </ul>
@@ -102,11 +104,12 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                     variant="primary"
                                     tag="Link"
                                     :href="route('services.outsource')"
-                                    class="mt-auto !flex !h-12 w-full !items-center !justify-center !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-10 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:w-fit"
+                                    class="mt-auto !flex !h-12 w-full !items-center !justify-center !rounded-[8px] !border-0 !bg-[#0B1F3F] dark:!bg-[#FFB200]/80
+                                     !px-10 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:w-fit"
                                 >
                                     <div class="flex items-center gap-3">
                                         <div
-                                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]"
+                                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] "
                                         >
                                             <div class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] animate-blink-dot"></div>
                                         </div>
@@ -137,7 +140,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                             data-reveal="up"
                             data-reveal-delay="100"
                             class="relative flex flex-1 flex-col rounded-[14px] border
-                             border-[rgba(195,204,222,0.32)] bg-white sm:rounded-[16px] lg:rounded-[20px] dark:bg-[#0B1F3F] dark:border-[#30456B]"
+                             border-[rgba(195,204,222,0.32)] bg-transparent sm:rounded-[16px] lg:rounded-[20px]"
                         >
                             <!-- Card Content — flex-1 so button can sit at bottom -->
                             <div
@@ -145,7 +148,7 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                 bg-transparent p-6 sm:p-8 md:p-10 lg:gap-8 2xl:gap-9"
                             >
                                 <div class="flex flex-col gap-2">
-                                    <h3 class="title-card m-0 text-navy-light dark:text-white">
+                                    <h3 class="title-card m-0 text-navy-light dark:!text-[#FFB200]">
                                         {{ t('home.two_ways.team.title') }}
                                     </h3>
                                     <p class="label m-0 text-navy-light dark:text-white/80">
@@ -167,11 +170,13 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                             :key="item"
                                             class="flex items-center gap-3"
                                         >
-                                            <img
-                                                src="/images/blue-circle.svg"
-                                                alt=""
-                                                class="h-3 w-3 shrink-0"
-                                            />
+                                            <div
+                                                class="flex h-[10px] w-[10px] shrink-0 items-center justify-center rounded-full bg-[#D5E2FF] p-0.5 sm:h-[11px] sm:w-[11px] md:h-[12px] md:w-[12px] dark:bg-[rgba(201,168,76,0.15)]"
+                                            >
+                                                <div
+                                                    class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] dark:bg-[#C9A84C]"
+                                                ></div>
+                                            </div>
                                             <span class="body dark:text-white/80">{{ item }}</span>
                                         </li>
                                     </ul>
@@ -186,10 +191,11 @@ const teamItems = computed(() => tm('home.two_ways.team.items') as string[]);
                                     variant="outline"
                                     tag="Link"
                                     :href="route('services.dedicated-team')"
-                                    class="mt-auto !flex !h-12 w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-10 sm:w-fit"
+                                    class="mt-auto !flex !h-12 w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)]
+                                    dark:!border-[#FFB200]/80 !bg-transparent !px-10 sm:w-fit"
                                 >
                                     <div class="flex items-center gap-3">
-                                        <span class="btn-text-outline">
+                                        <span class="btn-text-outline dark:!text-white">
                                             {{ t('home.two_ways.team.cta') }}
                                         </span>
                                     </div>

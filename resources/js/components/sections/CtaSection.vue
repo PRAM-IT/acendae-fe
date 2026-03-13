@@ -78,12 +78,12 @@ const avatarData = [
                     variant="primary"
                     tag="Link"
                     href="/contact"
-                    class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
+                    class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F]
+                     dark:!bg-[#FFB200] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-12"
                 >
                     <div class="flex items-center gap-[10px]">
                         <div
-                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]
-                            md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5 dark:bg-[#FFB200]/80"
+                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5"
                         >
                             <div
                                 class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] animate-blink-dot md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
@@ -110,7 +110,8 @@ const avatarData = [
 
             <!-- Italic Tagline -->
             <p
-                class="eyebrow-accent w-full max-w-xs text-center sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg italic"
+                class="eyebrow-accent w-full max-w-xs text-center sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg italic
+                    dark:!text-[#ffffff]/70"
             >
                 {{ t('cta.tagline') }}
             </p>

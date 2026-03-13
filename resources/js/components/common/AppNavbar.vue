@@ -141,8 +141,8 @@ const closeAllMobile = () => {
                             v-for="lang in ['en', 'nl'] as const"
                             :key="lang"
                             @click="switchLanguage(lang)"
-                            class="flex h-[32px] min-w-[30px] items-center justify-center rounded-full
-                            px-3 py-2 text-[14px] font-medium uppercase transition-all duration-150"
+                            class="flex h-[28px] min-w-[30px] items-center justify-center rounded-full
+                            px-3 py-1 text-[14px] font-medium uppercase transition-all duration-150"
                             :class="
                                 locale === lang
                                     ? 'bg-[rgba(213,226,255,0.31)] text-[#1D4FBC] dark:bg-[#C9A84C] ' +
@@ -239,6 +239,27 @@ const closeAllMobile = () => {
 
                     <!-- Bottom Branded Area -->
                     <div class="mt-10 space-y-8 rounded-2xl bg-gray-50/80 p-6 dark:bg-white/5">
+                        <!-- Theme Toggle -->
+                        <div class="flex items-center justify-between">
+                            <span class="text-[15px] font-medium text-black/60 dark:text-white/80">
+                                {{ t('common.darkMode') }}
+                            </span>
+                            <button
+                                @click="toggleDarkMode"
+                                class="group flex h-10 w-10 items-center justify-center rounded-full transition-all hover:bg-black/10 dark:hover:bg-white/15"
+                                :title="t('common.darkMode')"
+                            >
+                                <Sun
+                                    v-if="resolvedAppearance === 'dark'"
+                                    class="h-6 w-6 text-[#C9A84C] transition-transform group-hover:rotate-12"
+                                />
+                                <Moon
+                                    v-else
+                                    class="h-6 w-6 text-[#0B1F3F] transition-transform group-hover:rotate-12 dark:text-white"
+                                />
+                            </button>
+                        </div>
+
                         <!-- Language Switcher -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-3">

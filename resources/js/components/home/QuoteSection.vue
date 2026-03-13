@@ -8,7 +8,7 @@ const { t } = useI18n();
     <section class="wrap bg-white pt-5 xl:pt-10 dark:bg-[#070F1C]">
         <div class="mx-auto">
             <div
-                class="relative mx-auto aspect-[390/340] h-auto w-full overflow-hidden rounded-lg border border-white md:aspect-[16/9] lg:aspect-auto lg:h-[340px] lg:max-w-full"
+                class="relative mx-auto aspect-[370/340] h-auto w-full overflow-hidden rounded-lg border border-white md:aspect-[16/9] lg:aspect-auto lg:h-[340px] lg:max-w-full"
                 data-reveal="up"
             >
                 <!-- BACKGROUND IMAGE -->

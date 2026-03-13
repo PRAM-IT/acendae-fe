@@ -75,7 +75,7 @@ const legalLinks = computed(() => [
 
 <template>
     <footer
-        class="section-py w-full bg-[#070F1C] font-['Mona_Sans',sans-serif] text-white"
+        class="section-py w-full bg-[#03070d] font-['Mona_Sans',sans-serif] text-white"
     >
         <div class="wrap mx-auto flex w-full flex-col items-center gap-0">
             <!-- Link Grid -->

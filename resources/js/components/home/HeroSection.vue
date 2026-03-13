@@ -9,7 +9,7 @@ const { t } = useI18n();
 <template>
     <section
         class="container-px relative flex w-full items-center overflow-hidden
-        bg-white text-navy min-h-[850px]
+        bg-white text-navy min-h-[900px] md:min-h-[1000px] md:py-5 lg:py-0
         lg:min-h-[690px] 2xl:min-h-[750px] 4xl:min-h-[800px]
         dark:bg-[#070F1C] dark:text-white"
     >
@@ -20,24 +20,25 @@ const { t } = useI18n();
         >
             <!-- Left Column - Text Area -->
             <div
-                class="flex w-full min-w-0 flex-col items-start lg:col-start-1 lg:justify-start"
+                class="flex w-full flex-col items-start lg:col-start-1 lg:justify-start"
                 data-reveal="up"
             >
                 <!-- Eyebrow Badge -->
                 <div
                     class="flex w-fit max-w-full flex-row items-center rounded-lg
-                    bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:px-4 sm:py-2 md:mb-6 md:px-5 mb-5
+                    bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:px-4 sm:py-2 md:mb-6 md:px-5
                     lg:max-w-md lg:py-2.5 lg:pr-6 lg:pl-4 md:mb-6 2xl:max-w-none 2xl:py-2.5
                      2xl:pr-6 2xl:pl-4"
                 >
-                    <span class="eyebrow-accent dark:!text-white">
+                    <span class="eyebrow-accent dark:!text-white w-full">
                         {{ t('home.hero.eyebrow') }}
                     </span>
                 </div>
 
                 <!-- Content Block -->
                 <div
-                    class="mb-6 flex w-full flex-col sm:mb-7 md:mb-8 gap-5 md:gap-6 lg:mb-7 lg:gap-2.5 2xl:mb-7 2xl:gap-2.5"
+                    class="mb-6 flex w-full flex-col sm:mb-7 md:mb-8 gap-5 md:gap-6 lg:mb-7 lg:gap-2.5 2xl:mb-7 2xl:gap-2.5
+                                mt-6 xl:mt-9"
                 >
                     <h1 class="title w-full break-words dark:text-white">
                         {{ t('home.hero.title') }}

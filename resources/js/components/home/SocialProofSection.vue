@@ -11,9 +11,9 @@ const { t } = useI18n();
         <div class="mx-auto flex w-full flex-col lg:flex-row">
             <!-- LEFT PANEL: Dark Hero -->
             <div
-                class="container-px relative flex min-h-[440px] shrink-0 flex-col
-                justify-start overflow-hidden py-8 sm:min-h-[480px] sm:py-9 md:min-h-[500px]
-                md:py-10 lg:min-h-[640px] lg:w-[44%] lg:shrink-0 xl:min-h-[660px] 2xl:min-h-[700px]"
+                class="container-px relative flex shrink-0 flex-col
+                justify-start overflow-hidden py-8 min-h-[480px] sm:py-9 md:min-h-[500px]
+                md:py-10 lg:min-h-[600px] lg:w-[44%] lg:shrink-0 xl:min-h-[660px] 2xl:min-h-[700px]"
                 style="
                     background: linear-gradient(
                         180deg,
@@ -25,7 +25,10 @@ const { t } = useI18n();
             >
                 <!-- Decorative Logo Watermark (Desktop) -->
                 <div
-                    class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px] overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px] md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] 2xl:right-[-100px] 2xl:bottom-[-60px] 2xl:w-[480px]"
+                    class="pointer-events-none absolute right-[-50px] bottom-[-20px] z-0 block w-[220px]
+                    overflow-visible select-none sm:right-[-15px] sm:bottom-[-25px] sm:w-[270px] md:right-[-30px]
+                    md:bottom-[-40px] md:w-[380px] lg:right-[-80px] lg:w-[420px] 2xl:right-[-100px] 2xl:bottom-[-60px]
+                    2xl:w-[480px]"
                 >
                     <img
                         src="/images/logo-n.svg"
@@ -39,7 +42,7 @@ const { t } = useI18n();
                     class="relative z-10 flex h-full w-full flex-col flex-wrap gap-5 sm:gap-6 md:gap-7 lg:gap-8
                     xl:gap-9 xl:gap-14 2xl:gap-[44px]"
                 >
-                    <h2 class="title-section-light pt-20 lg:pt-32">
+                    <h2 class="title-section-light pt-10 md:pt-16 lg:pt-20 lg:pt-32">
                         {{ t('home.social_proof.title') }}
                     </h2>
                     <div
