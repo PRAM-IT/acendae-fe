@@ -7,11 +7,22 @@ import { useAppearance } from '@/composables/useAppearance';
 const { appearance, updateAppearance } = useAppearance();
 const { t } = useI18n();
 
-const tabs = computed(() => [
-    { value: 'light', Icon: Sun, label: t('settings.appearance.light') },
-    { value: 'dark', Icon: Moon, label: t('settings.appearance.dark') },
-    { value: 'system', Icon: Monitor, label: t('settings.appearance.system') },
-] as const);
+const tabs = computed(
+    () =>
+        [
+            {
+                value: 'light',
+                Icon: Sun,
+                label: t('settings.appearance.light'),
+            },
+            { value: 'dark', Icon: Moon, label: t('settings.appearance.dark') },
+            {
+                value: 'system',
+                Icon: Monitor,
+                label: t('settings.appearance.system'),
+            },
+        ] as const,
+);
 </script>
 
 <template>
@@ -25,7 +36,7 @@ const tabs = computed(() => [
             :class="[
                 'flex items-center rounded-md px-3.5 py-1.5 transition-colors',
                 appearance === value
-                    ? 'bg-white shadow-xs dark:bg-neutral-700 dark:text-neutral-100'
+                    ? 'shadow-xs bg-white dark:bg-neutral-700 dark:text-neutral-100'
                     : 'text-neutral-500 hover:bg-neutral-200/60 hover:text-black dark:text-neutral-400 dark:hover:bg-neutral-700/60',
             ]"
         >

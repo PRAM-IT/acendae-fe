@@ -58,7 +58,9 @@ const { t } = useI18n();
                 </div>
 
                 <div class="grid gap-2">
-                    <Label for="password">{{ t('auth.register.password') }}</Label>
+                    <Label for="password">{{
+                        t('auth.register.password')
+                    }}</Label>
                     <Input
                         id="password"
                         type="password"
@@ -72,7 +74,9 @@ const { t } = useI18n();
                 </div>
 
                 <div class="grid gap-2">
-                    <Label for="password_confirmation">{{ t('auth.register.confirmPassword') }}</Label>
+                    <Label for="password_confirmation">{{
+                        t('auth.register.confirmPassword')
+                    }}</Label>
                     <Input
                         id="password_confirmation"
                         type="password"
@@ -80,7 +84,9 @@ const { t } = useI18n();
                         :tabindex="4"
                         autocomplete="new-password"
                         name="password_confirmation"
-                        :placeholder="t('auth.register.confirmPasswordPlaceholder')"
+                        :placeholder="
+                            t('auth.register.confirmPasswordPlaceholder')
+                        "
                     />
                     <InputError :message="errors.password_confirmation" />
                 </div>
@@ -97,7 +103,7 @@ const { t } = useI18n();
                 </Button>
             </div>
 
-            <div class="text-center text-sm text-muted-foreground">
+            <div class="text-muted-foreground text-center text-sm">
                 {{ t('auth.register.alreadyHaveAccount') }}
                 <TextLink
                     :href="login()"

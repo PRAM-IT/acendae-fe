@@ -55,7 +55,9 @@ const user = computed(() => page.props.auth.user);
                     v-slot="{ errors, processing, recentlySuccessful }"
                 >
                     <div class="grid gap-2">
-                        <Label for="name">{{ t('settings.profile.name') }}</Label>
+                        <Label for="name">{{
+                            t('settings.profile.name')
+                        }}</Label>
                         <Input
                             id="name"
                             class="mt-1 block w-full"
@@ -69,7 +71,9 @@ const user = computed(() => page.props.auth.user);
                     </div>
 
                     <div class="grid gap-2">
-                        <Label for="email">{{ t('settings.profile.email') }}</Label>
+                        <Label for="email">{{
+                            t('settings.profile.email')
+                        }}</Label>
                         <Input
                             id="email"
                             type="email"
@@ -84,12 +88,12 @@ const user = computed(() => page.props.auth.user);
                     </div>
 
                     <div v-if="mustVerifyEmail && !user.email_verified_at">
-                        <p class="-mt-4 text-sm text-muted-foreground">
+                        <p class="text-muted-foreground -mt-4 text-sm">
                             {{ t('settings.profile.unverified') }}
                             <Link
                                 :href="send()"
                                 as="button"
-                                class="text-foreground underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out hover:decoration-current! dark:decoration-neutral-500"
+                                class="text-foreground hover:decoration-current! underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out dark:decoration-neutral-500"
                             >
                                 {{ t('settings.profile.resend') }}
                             </Link>

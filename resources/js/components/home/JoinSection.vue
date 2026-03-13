@@ -8,41 +8,34 @@ const { t, tm } = useI18n();
 
 <template>
     <section
-        class="flex flex-col border-b border-[#D3D8E1] bg-white md:flex-row md:border-y"
+        class="landing-section flex flex-col border-b border-[#D3D8E1] bg-white md:border-y"
     >
-        <!-- LEFT COLUMN -->
         <div
-            class="acendae-container join-content-left flex w-full flex-col gap-4 bg-white pt-4 pb-10 sm:pt-6 sm:pb-12 md:mx-0 md:max-w-none md:flex-[0_0_44%] md:gap-5 md:px-0 md:pt-8 md:pb-14 md:pr-[var(--container-padding)] lg:pt-[40px] lg:pb-[70px] xl:pt-[45px] xl:pb-[80px] 2xl:pt-[50px] 2xl:pb-[90px]"
-            data-reveal="up"
+            class="wrap flex w-full flex-col md:flex-row md:items-stretch"
         >
-            <h2
-                class="font-instrument text-[24px] leading-[30px] font-semibold text-[#1A2D4B] sm:text-[26px] sm:leading-[32px] md:text-[28px] md:leading-[34px] lg:text-[32px] lg:leading-[40px] xl:text-[36px] xl:leading-[44px] 2xl:text-[40px] 2xl:leading-[48px]"
+            <!-- LEFT COLUMN -->
+            <div
+                class="join-content-left flex w-full flex-1 flex-col gap-4 bg-white pb-10 pt-4 sm:pb-12 sm:pt-6 md:flex-[0_0_44%] md:gap-5 md:pb-14 md:container-pr md:pt-8 lg:pb-[70px] lg:pt-[40px] xl:pb-[80px] xl:pt-[45px] 2xl:pb-[90px] 2xl:pt-[50px]"
+                data-reveal="up"
             >
+            <h2 class="title-section text-navy-light">
                 {{ t('home.join.title') }}
             </h2>
 
-            <p
-                class="font-instrument text-[14px] leading-[20px] font-semibold text-[#152746] sm:text-[15px] sm:leading-[21px] md:text-[16px] md:leading-[23px] lg:text-[18px] lg:leading-[25px] xl:text-[20px] xl:leading-[27px] 2xl:text-[22px] 2xl:leading-[28px]"
-            >
+            <p class="subtitle text-navy-light">
                 {{ t('home.join.subtitle') }}
             </p>
 
             <div class="flex flex-col gap-3 sm:gap-4 md:gap-4 lg:gap-5">
-                <p
-                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
-                >
+                <p class="body max-w-full lg:max-w-md xl:max-w-lg 2xl:max-w-xl">
                     {{ t('home.join.body1') }}
                 </p>
-                <p
-                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
-                >
+                <p class="body max-w-full lg:max-w-md xl:max-w-lg 2xl:max-w-xl">
                     {{ t('home.join.body2') }}
                 </p>
             </div>
 
-            <p
-                class="text-[13px] leading-5 font-semibold text-black/85 sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[17px] 2xl:text-[18px]"
-            >
+            <p class="label text-navy/85">
                 {{ t('home.join.who_label') }}
             </p>
 
@@ -62,9 +55,7 @@ const { t, tm } = useI18n();
                             class="h-[7px] w-[7px] rounded-full bg-[#1D4FBC] sm:h-[8px] sm:w-[8px] md:h-[9px] md:w-[9px] lg:h-[10px] lg:w-[10px] 2xl:h-[11px] 2xl:w-[11px]"
                         ></div>
                     </div>
-                    <span
-                        class="text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-[18px] 2xl:leading-[27px]"
-                    >
+                    <span class="body">
                         {{ value }}
                     </span>
                 </li>
@@ -73,14 +64,10 @@ const { t, tm } = useI18n();
             <div
                 class="mt-2 flex flex-col gap-3 sm:mt-3 sm:gap-4 md:gap-4 lg:mt-4 lg:gap-5"
             >
-                <p
-                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
-                >
+                <p class="body max-w-full lg:max-w-md xl:max-w-lg 2xl:max-w-xl">
                     {{ t('home.join.body3') }}
                 </p>
-                <p
-                    class="max-w-full text-[13px] leading-5 font-normal text-black/85 sm:text-[14px] sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:max-w-[420px] lg:text-[16px] lg:leading-[25px] xl:max-w-[460px] xl:text-[17px] xl:leading-[26px] 2xl:max-w-[480px] 2xl:text-[18px] 2xl:leading-[27px]"
-                >
+                <p class="body max-w-full lg:max-w-md xl:max-w-lg 2xl:max-w-xl">
                     {{ t('home.join.body4') }}
                 </p>
             </div>
@@ -91,9 +78,7 @@ const { t, tm } = useI18n();
                     :href="route('careers')"
                     class="flex w-full items-center justify-center rounded-md bg-[#0B1F3F] px-6 py-2 transition-all duration-200 hover:-translate-y-px hover:bg-[#1a3358] hover:shadow-[0_6px_20px_rgba(11,31,58,0.28)] active:translate-y-0 active:bg-[#081629] sm:h-[44px] sm:px-7 md:h-[46px] md:px-8 lg:h-[50px] lg:w-fit lg:rounded-lg lg:px-8 2xl:h-[55px] 2xl:px-10 2xl:py-2.5"
                 >
-                    <span
-                        class="text-[13px] font-semibold text-white sm:text-[14px] md:text-[15px] lg:text-[16px]"
-                    >
+                    <span class="btn-text">
                         {{ t('home.join.cta') }}
                     </span>
                 </Link>
@@ -109,25 +94,24 @@ const { t, tm } = useI18n();
             <!-- TEAM PHOTO -->
             <img
                 src="/images/units/team.png"
-                alt=""
+                :alt="t('home.join.team_image_alt')"
                 class="absolute inset-0 z-0 block h-full w-full object-cover object-center"
             />
 
             <!-- QUOTE CONTENT -->
             <div
-                class="absolute inset-0 z-2 flex items-start justify-center px-6 pt-16 pb-8 sm:px-8 sm:pt-20 sm:pb-10 md:px-10 md:pt-24 md:pb-11 lg:mt-0 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-14 2xl:py-16"
+                class="z-2 absolute inset-0 flex items-start justify-center px-6 pb-8 pt-16 sm:px-8 sm:pb-10 sm:pt-20 md:px-10 md:pb-11 md:pt-24 lg:mt-0 lg:px-10 lg:py-12 xl:px-12 xl:py-14 2xl:px-14 2xl:py-16"
             >
                 <blockquote
-                    class="font-instrument w-full max-w-[280px] text-center text-[24px] leading-[32px] font-semibold text-white sm:max-w-[340px] sm:text-[28px] sm:leading-[36px] md:max-w-[420px] md:text-[34px] md:leading-[42px] lg:max-w-[360px] lg:text-[26px] lg:leading-[34px] xl:max-w-[390px] xl:text-[30px] xl:leading-[40px] 2xl:max-w-[420px] 2xl:text-[36px] 2xl:leading-[46px]"
+                    class="title-section w-full max-w-xs text-center text-white sm:max-w-sm md:max-w-md lg:max-w-sm xl:max-w-md 2xl:max-w-lg"
                     data-reveal="up"
                     data-reveal-delay="200"
                 >
-                    “<span>{{
-                        t('home.join.right_quote').split(' climb together')[0]
-                    }}</span
-                    ><span class="text-[#D7A118]"> climb together</span>”
+                    “<span>{{ t('home.join.right_quote_prefix') }}</span
+                    ><span class="text-highlight-gold">{{ t('home.join.right_quote_highlight') }}</span>”
                 </blockquote>
             </div>
+        </div>
         </div>
     </section>
 </template>
@@ -135,11 +119,5 @@ const { t, tm } = useI18n();
 <style scoped>
 .font-instrument {
     font-family: 'Instrument Sans Variable', sans-serif;
-}
-
-@media (min-width: 768px) {
-    .join-content-left {
-        margin-left: var(--container-offset);
-    }
 }
 </style>
