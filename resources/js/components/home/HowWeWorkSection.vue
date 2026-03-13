@@ -54,7 +54,7 @@ const steps = computed(() => [
                     <div class="step-num" aria-hidden="true">
                         {{ step.num }}
                     </div>
-                    <h3 class="step-title m-0">
+                    <h3 class="step-title m-0 dark:!text-[#FFB200]">
                         {{ step.title }}
                     </h3>
                     <p class="step-desc m-0">

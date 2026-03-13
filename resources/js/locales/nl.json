@@ -59,10 +59,10 @@
             "careers": "Vacatures"
         },
         "services": {
-            "developmentUnit": "Development Unit",
-            "engineeringUnit": "Engineering Unit",
-            "teamOutsourcing": "Team Outsourcing",
-            "experienceUnit": "Experience Unit"
+            "developmentUnit": "Ontwikkeling Unit",
+            "engineeringUnit": "Techniek Unit",
+            "teamOutsourcing": "Team Uitbesteding Unit",
+            "experienceUnit": "Ervaring Unit"
         },
         "resources": {
             "ourProcess": "Ons Proces",
@@ -88,7 +88,7 @@
             "description": "Elk bedrijf heeft zijn berg. Acendae is de gids."
         },
         "hero": {
-            "eyebrow": "Nederlandse strategie. Wereldklasse uitvoering. Eén geïntegreerd team",
+            "eyebrow": "Nederlandse strategie. Wereldklasse uitvoering. Eén team",
             "title": "Elk bedrijf heeft zijn berg, Acendae is de gids",
             "subtitle": "Wij helpen bedrijven te ascenderen via strategie, technologie en mensen. Van de eerste stappen tot schaalbare systemen — we klimmen samen, stap voor stap.",
             "cta_outsource": "Project uitbesteden",
@@ -145,17 +145,17 @@
             }
         },
         "units": {
-            "title": "Onze capability units",
-            "subtitle": "Gespecialiseerde teams voor specifieke uitdagingen.",
+            "title": "Onze Units",
+            "subtitle": "Gestructureerde expertise, georganiseerd voor duidelijkheid.",
             "tabs_aria": "Capability units",
             "tabs": {
-                "development": "Development Unit",
-                "engineering": "Engineering Unit",
-                "outsourcing": "Team Outsourcing Unit",
-                "experience": "Experience Unit"
+                "development": "Ontwikkeling Unit",
+                "engineering": "Techniek Unit",
+                "outsourcing": "Team Uitbesteding Unit",
+                "experience": "Ervaring Unit"
             },
             "development": {
-                "name": "Development Unit",
+                "name": "Ontwikkeling Unit",
                 "tagline": "Websites en platforms die een sterke basis vormen.",
                 "description": "Wij bouwen websites en e-commerce platforms die groei, prestaties en onderhoudbaarheid op lange termijn ondersteunen.",
                 "features": [
@@ -168,7 +168,7 @@
                 "cta_secondary": "Huur Developers"
             },
             "engineering": {
-                "name": "Engineering Unit",
+                "name": "Techniek Unit",
                 "tagline": "Softwaresystemen gebouwd voor groei en schaal.",
                 "description": "Wij ontwerpen betrouwbare, toekomstbestendige software die complexe bedrijfsbehoeften en langdurige groei ondersteunt.",
                 "features": [
@@ -181,7 +181,7 @@
                 "cta_secondary": "Huur Engineers"
             },
             "outsourcing": {
-                "name": "Team Outsourcing Unit",
+                "name": "Team Uitbesteding Unit",
                 "tagline": "Dedicated teams die uw leveringskracht vergroten.",
                 "description": "Wij helpen bedrijven en digitale bureaus schalen door developers en teams op afstand te bieden die werken als onderdeel van hun organisatie.",
                 "features": [
@@ -194,7 +194,7 @@
                 "cta_secondary": "Huur Talenten"
             },
             "experience": {
-                "name": "Experience Unit",
+                "name": "Ervaring Unit",
                 "tagline": "Rustige, intuïtieve ervaringen ontwerpen langs het pad.",
                 "description": "Wij ontwerpen digitale ervaringen die een balans vinden tussen bruikbaarheid, esthetiek en zakelijke doelen.",
                 "features": [
