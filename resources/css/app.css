@@ -10,6 +10,7 @@
 
 /* 2. Tailwind CSS v4 Import */
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Point Tailwind to the source template files outside the css folder */
 @source "../js";
@@ -34,8 +35,9 @@
     /* Content width (1440px) — use max-w-inner */
     --width-inner: 1920px;
     /* Custom font families */
-    --font-sans: "Mona Sans Variable", ui-sans-serif, system-ui, sans-serif;
-    --font-instrument: "Instrument Sans Variable", "Instrument Sans", sans-serif;
+    --font-sans: 'Mona Sans Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-instrument:
+        'Instrument Sans Variable', 'Instrument Sans', sans-serif;
     /* Shadow for primary button hover */
     --shadow-btn-hover: 0 6px 20px rgba(11, 31, 58, 0.28);
     /* Brand colors for utilities (text-navy, bg-gold, etc.) */
@@ -54,8 +56,10 @@
     --color-border: rgba(11, 31, 58, 0.1);
     --color-gold-light: rgba(201, 168, 76, 0.12);
     /* Shadows */
-    --shadow-md: 0 4px 12px rgba(11, 31, 58, 0.08), 0 2px 4px rgba(11, 31, 58, 0.04);
-    --shadow-card: 0 2px 16px rgba(11, 31, 58, 0.06), 0 1px 4px rgba(11, 31, 58, 0.03);
+    --shadow-md:
+        0 4px 12px rgba(11, 31, 58, 0.08), 0 2px 4px rgba(11, 31, 58, 0.04);
+    --shadow-card:
+        0 2px 16px rgba(11, 31, 58, 0.06), 0 1px 4px rgba(11, 31, 58, 0.03);
     --shadow-navbar: 0 1px 0 rgba(11, 31, 58, 0.1);
     /* Transitions */
     --duration-150: 150ms;
@@ -197,7 +201,7 @@
     *,
     *::before,
     *::after {
-        @apply box-border m-0 p-0;
+        @apply m-0 box-border p-0;
     }
 
     html {
@@ -206,7 +210,11 @@
     }
 
     body {
-        @apply font-sans text-base text-navy bg-white h-full overflow-x-hidden antialiased;
+        @apply h-full overflow-x-hidden bg-white font-sans text-base text-navy antialiased;
+    }
+
+    .dark body {
+        @apply bg-[#070F1C] text-white;
     }
 
     img,
@@ -214,7 +222,7 @@
     video,
     canvas,
     svg {
-        @apply block max-w-full h-auto;
+        @apply block h-auto max-w-full;
     }
 
     img,
@@ -237,7 +245,7 @@
     select {
         font: inherit;
         color: inherit;
-        @apply bg-transparent border-none;
+        @apply border-none bg-transparent;
     }
 
     nav ul,
@@ -259,7 +267,7 @@
     h4,
     h5,
     h6 {
-        @apply font-sans font-bold leading-tight tracking-tight text-navy text-balance;
+        @apply font-sans leading-tight font-bold tracking-tight text-balance text-navy;
     }
 
     p {
@@ -267,7 +275,7 @@
     }
 
     :focus-visible {
-        @apply outline-2 outline-offset-[3px] outline-gold rounded-sm;
+        @apply rounded-sm outline-2 outline-offset-[3px] outline-gold;
     }
 
     :focus:not(:focus-visible) {
@@ -341,7 +349,11 @@
 
     /* Section vertical padding only */
     .section-py {
-        @apply py-10 md:py-12 lg:py-14 2xl:py-16 4xl:py-20;
+        @apply py-14 md:py-16 lg:py-20 2xl:py-26 4xl:py-32;
+    }
+
+    .section-pt {
+        @apply pt-14 md:pt-16 lg:pt-20 2xl:pt-26 4xl:pt-32;
     }
 
     /* Unified landing content — same horizontal padding as wrap */
@@ -356,85 +368,107 @@
 
     /* Hero / page title — text-xl → 4xl:text-5xl */
     .title {
-        @apply font-instrument text-navy ssm:text-2xl 4xl:text-5xl text-xl font-semibold leading-tight text-balance md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl;
+        @apply font-instrument text-xl leading-tight font-semibold text-balance text-navy md:text-2xl md:text-3xl lg:text-3xl xl:text-4xl xl:text-[44px] 2xl:text-4xl 4xl:text-5xl;
     }
 
     /* Section heading — text-2xl → 4xl:text-4xl */
     .title-section {
-        @apply font-instrument text-navy ssm:text-3xl 4xl:text-4xl text-2xl font-semibold leading-tight text-balance md:text-3xl 2xl:text-4xl;
+        @apply font-instrument text-2xl leading-tight font-semibold text-balance text-navy md:text-3xl xl:text-[40px] 4xl:text-4xl;
     }
 
     /* Card / subsection title — text-lg → 4xl:text-2xl */
     .title-card {
-        @apply font-instrument text-navy 4xl:text-2xl text-lg font-semibold leading-snug md:text-xl 2xl:text-2xl;
+        @apply font-instrument text-lg leading-snug font-semibold text-navy md:text-xl xl:text-[40px] 4xl:text-2xl;
     }
 
     /* Subtitle / overline — text-xs → 2xl:text-base */
     .subtitle {
-        @apply text-muted text-sm font-normal leading-relaxed md:text-base 2xl:text-lg;
+        @apply text-sm leading-relaxed font-normal text-muted md:text-base 2xl:text-lg;
     }
 
     /* Body text — text-sm → 4xl:text-base */
     .body {
-        @apply text-navy/85 4xl:text-base text-sm font-normal leading-relaxed md:text-base;
+        @apply text-sm leading-relaxed font-normal text-navy/85 md:text-base 4xl:text-[16px];
     }
 
     /* Small body — text-xs → 2xl:text-sm */
     .body-sm {
-        @apply text-muted text-xs font-normal leading-relaxed md:text-sm 2xl:text-sm;
+        @apply text-xs leading-relaxed font-normal text-muted md:text-sm 2xl:text-sm;
     }
 
     /* Label / small heading — text-sm → 4xl:text-lg */
     .label {
-        @apply 4xl:text-lg text-sm font-medium leading-snug md:text-base;
+        @apply text-sm leading-snug font-medium md:text-base 4xl:text-lg;
     }
 
     /* Nav link — text-sm → 2xl:text-base */
     .nav-link {
-        @apply ssm:text-sm text-sm font-medium leading-snug transition-colors duration-200 md:text-base 2xl:text-base;
+        @apply text-sm leading-snug font-medium transition-colors duration-200 ssm:text-sm md:text-base 2xl:text-base;
     }
 
     .nav-link:hover {
         @apply text-gold;
     }
 
+    /* Dark mode overrides for shared typography */
+    .dark .title,
+    .dark .title-section,
+    .dark .title-card {
+        @apply text-white;
+    }
+
+    .dark .subtitle,
+    .dark .body-sm {
+        @apply text-white/70;
+    }
+
+    .dark .body {
+        @apply text-white/85;
+    }
+
+    .dark .label {
+        @apply text-white/80;
+    }
+
     /* CTA / button text — text-xs → 4xl:text-base */
     .cta {
-        @apply text-gold ssm:text-sm 4xl:text-base text-xs font-bold uppercase tracking-widest md:text-sm;
+        @apply text-xs font-bold tracking-widest text-gold uppercase ssm:text-sm md:text-sm 4xl:text-base;
     }
 
     .menu-category {
-        @apply text-gold text-sm font-semibold;
+        @apply text-sm font-semibold text-gold;
     }
 
     /* Eyebrow / badge text — text-xs → lg:text-base */
     .eyebrow {
-        @apply text-xs font-medium leading-5 md:text-sm lg:text-base;
+        @apply text-xs leading-5 font-medium md:text-sm lg:text-base;
     }
 
     /* --- Section title on dark background (same scale as title-section) --- */
     .title-section-light {
-        @apply font-instrument w-full font-semibold leading-tight text-white text-balance ssm:text-3xl 4xl:text-4xl text-2xl md:text-3xl 2xl:text-4xl;
+        @apply w-full font-instrument text-2xl leading-tight font-semibold text-balance
+        text-white ssm:text-3xl md:text-3xl 2xl:text-[40px];
     }
 
     /* --- Body text on dark background (same scale as body) --- */
     .body-on-dark {
-        @apply w-full font-normal leading-relaxed text-white/85 4xl:text-base text-sm md:text-base 2xl:text-lg;
+        @apply w-full text-sm leading-relaxed font-normal text-white/85 md:text-base 2xl:text-lg 4xl:text-base;
     }
 
     /* --- Panel heading (same as title-card) --- */
     .heading-panel {
-        @apply font-instrument font-semibold leading-snug text-[#1A2D4B] 4xl:text-2xl text-lg md:text-xl 2xl:text-2xl;
+        @apply font-instrument text-lg leading-snug font-semibold text-[#1A2D4B] md:text-xl
+        2xl:text-2xl;
     }
 
     /* --- Panel heading smaller (same scale, slightly smaller) --- */
     .heading-panel-sm {
-        @apply font-instrument font-semibold leading-snug text-[#1A2D4B] 4xl:text-xl text-base md:text-lg 2xl:text-xl;
+        @apply font-instrument text-base leading-snug font-semibold text-[#1A2D4B] md:text-lg 2xl:text-xl 4xl:text-xl;
     }
 
     /* --- Body in panel (same scale as body) --- */
     .body-panel {
-        @apply font-normal leading-relaxed text-black/85 4xl:text-base text-sm md:text-base 2xl:text-lg;
+        @apply text-sm leading-relaxed font-normal text-black/85 md:text-base 2xl:text-lg 4xl:text-base;
     }
 
     /* --- Tagline in panel (Instrument font) --- */
@@ -442,19 +476,32 @@
         @apply font-instrument font-semibold text-[#1A2D4B] sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[22px] lg:text-lg lg:leading-[25px] xl:text-xl xl:leading-7 2xl:text-2xl 2xl:leading-8;
     }
 
+    /* Dark mode overrides for social proof typography */
+    .dark .heading-panel,
+    .dark .heading-panel-sm,
+    .dark .tagline-panel {
+        @apply text-white;
+    }
+
+    .dark .body-panel {
+        @apply text-white/80;
+    }
+
     /* --- Page heading (same as title-section) --- */
     .heading-page {
-        @apply font-instrument mb-2 font-semibold leading-tight text-navy text-balance ssm:text-3xl 4xl:text-4xl text-2xl md:text-3xl 2xl:text-4xl;
+        @apply mb-2 font-instrument text-2xl leading-tight font-semibold text-balance text-navy ssm:text-3xl md:text-3xl 2xl:text-4xl 4xl:text-4xl;
     }
 
     /* --- Page subtitle (same as subtitle) --- */
     .subtitle-page {
-        @apply text-muted text-sm font-normal leading-relaxed md:text-base 2xl:text-lg;
+        @apply text-sm leading-relaxed font-normal text-muted md:text-base 2xl:text-lg;
     }
 
     /* --- Step number (01, 02, 03) --- */
     .step-num {
-        @apply mb-2 font-bold text-[#0C2143]/28 sm:mb-3 sm:text-[22px] sm:leading-7 md:mb-4 md:text-[28px] md:leading-[38px] lg:mb-6 lg:text-[32px] lg:leading-[42px] xl:text-[34px] 2xl:mb-7 2xl:text-[36px] 2xl:leading-[51px];
+        @apply mb-2 font-bold text-[#0C2143]/28 sm:mb-3 sm:leading-7
+        md:mb-4 text-[28px] md:leading-[38px] lg:mb-6 lg:text-[32px] lg:leading-[42px]
+        xl:text-[34px] 2xl:mb-7 2xl:text-[40px] 2xl:leading-[51px] 4xl:text-[50px];
     }
 
     /* --- Step title --- */
@@ -467,24 +514,34 @@
         @apply text-black/85 sm:text-sm sm:leading-[21px] md:text-[15px] md:leading-[22px] lg:text-base lg:leading-[25px] xl:text-[17px] xl:leading-[26px] 2xl:text-lg 2xl:leading-[27px];
     }
 
+    .dark .step-num,
+    .dark .step-title {
+        @apply text-white;
+    }
+
+    .dark .step-desc {
+        @apply text-white/80;
+    }
+
     /* --- Quote Section heading (same as title-section) --- */
     .quote-heading {
-        @apply font-instrument h-auto w-full text-center font-semibold leading-tight text-white text-balance ssm:text-3xl 4xl:text-4xl text-2xl md:text-3xl 2xl:text-4xl lg:max-w-[887px];
+        @apply h-auto w-full text-center font-instrument text-2xl leading-tight font-semibold text-balance
+        text-white  md:text-3xl lg:max-w-[887px] 2xl:text-4xl 4xl:text-4xl;
     }
 
     /* --- Footer column title --- */
     .footer-heading {
-        @apply text-xl font-medium leading-6 text-white;
+        @apply text-xl leading-6 font-medium text-white;
     }
 
     /* --- Footer link --- */
     .footer-link {
-        @apply whitespace-nowrap text-sm font-normal leading-5 text-white transition-opacity hover:opacity-70 lg:text-base lg:leading-[23px];
+        @apply text-sm leading-5 font-normal whitespace-nowrap text-white transition-opacity hover:opacity-70 lg:text-base lg:leading-[23px];
     }
 
     /* --- Footer legal link --- */
     .footer-legal {
-        @apply whitespace-nowrap text-base font-normal leading-[23px] text-white transition-opacity hover:opacity-70;
+        @apply text-base leading-[23px] font-normal whitespace-nowrap text-white transition-opacity hover:opacity-70;
     }
 
     /* --- Button text (primary CTA) --- */
@@ -494,17 +551,17 @@
 
     /* --- Button text (outline) --- */
     .btn-text-outline {
-        @apply text-navy text-sm font-medium transition-colors md:text-base;
+        @apply text-sm font-medium text-navy transition-colors md:text-base;
     }
 
     /* --- CTA section heading --- */
     .cta-heading {
-        @apply w-full max-w-2xl text-center text-[#101828] 4xl:text-lg text-sm font-medium leading-snug md:text-base;
+        @apply w-full max-w-2xl text-center text-sm leading-snug font-medium text-[#101828] md:text-base 4xl:text-lg;
     }
 
     /* --- Eyebrow accent (blue) --- */
     .eyebrow-accent {
-        @apply text-[#1D4FBC] text-xs font-medium leading-5 md:text-sm lg:text-base;
+        @apply text-xs leading-5 font-medium text-[#1D4FBC] md:text-sm lg:text-base;
     }
 
     /* --- Quote highlight (gold) --- */
@@ -514,7 +571,7 @@
 
     /* --- Footer copyright --- */
     .footer-copyright {
-        @apply text-xl font-normal leading-7 text-white;
+        @apply text-xl leading-7 font-normal text-white;
     }
 
     /* --- Mega menu title --- */
@@ -534,7 +591,7 @@
 
     /* --- Mega menu tagline --- */
     .mega-tagline {
-        @apply italic text-white/70 sm:text-[15px];
+        @apply text-white/70 italic sm:text-[15px];
     }
 
     /* --- CTA / button label (primary) --- */
@@ -561,7 +618,7 @@
     }
 
     .mega-tagline {
-        @apply text-[13px] italic text-white/70 sm:text-[15px];
+        @apply text-[13px] text-white/70 italic sm:text-[15px];
     }
 
     /* --- Mega menu title --- */
@@ -581,7 +638,7 @@
 
     /* --- Mega menu tagline --- */
     .mega-tagline {
-        @apply italic text-white/70 sm:text-[15px];
+        @apply text-white/70 italic sm:text-[15px];
     }
 
     /* --- Mega menu CTA --- */
@@ -607,7 +664,7 @@
     }
 
     .mega-tagline {
-        @apply text-[13px] italic text-white/70 sm:text-[15px];
+        @apply text-[13px] text-white/70 italic sm:text-[15px];
     }
 
     .mega-btn {
@@ -648,7 +705,7 @@
 
     /* --- Mega menu tagline --- */
     .mega-tagline {
-        @apply italic text-white/70 sm:text-[15px];
+        @apply text-white/70 italic sm:text-[15px];
     }
 
     /* --- Mega menu --- */
@@ -665,7 +722,7 @@
     }
 
     .mega-tagline {
-        @apply text-[13px] italic text-white/70 sm:text-[15px];
+        @apply text-[13px] text-white/70 italic sm:text-[15px];
     }
 
     .mega-btn {
@@ -689,22 +746,22 @@
 
     /* --- Mega menu tagline --- */
     .mega-tagline {
-        @apply text-[13px] italic text-white/70 sm:text-[15px];
+        @apply text-[13px] text-white/70 italic sm:text-[15px];
     }
 
     /* --- CTA section heading --- */
     .cta-heading {
-        @apply w-full max-w-2xl text-center text-[#101828] 4xl:text-lg text-sm font-medium leading-snug md:text-base;
+        @apply w-full max-w-2xl text-center text-sm leading-snug font-medium text-[#101828] md:text-base 4xl:text-lg;
     }
 
     /* --- CTA section body --- */
     .cta-body {
-        @apply w-full max-w-2xl text-center text-[#667085] text-navy/85 4xl:text-base text-sm font-normal leading-relaxed md:text-base;
+        @apply w-full max-w-2xl text-center text-sm leading-relaxed font-normal text-[#667085] text-navy/85 md:text-base 4xl:text-base;
     }
 
     /* --- CTA eyebrow --- */
     .cta-eyebrow {
-        @apply w-full max-w-xs text-center font-medium italic text-[#1D4FBC] text-xs leading-5 md:text-sm lg:text-base sm:max-w-sm md:max-w-md lg:max-w-md 2xl:max-w-lg;
+        @apply w-full max-w-xs text-center text-xs leading-5 font-medium text-[#1D4FBC] italic sm:max-w-sm md:max-w-md md:text-sm lg:max-w-md lg:text-base 2xl:max-w-lg;
     }
 
     /* --- Card Shadow --- */
@@ -713,12 +770,12 @@
     }
 
     .card-shadow:hover {
-        @apply shadow-lg -translate-y-0.5;
+        @apply -translate-y-0.5 shadow-lg;
     }
 
     /* --- Buttons --- */
     .btn {
-        @apply inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-transparent font-sans font-semibold leading-none whitespace-nowrap no-underline select-none py-2.5 px-[1.375rem] text-sm transition-[background-color,color,border-color,box-shadow,transform] duration-150;
+        @apply inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-transparent px-[1.375rem] py-2.5 font-sans text-sm leading-none font-semibold whitespace-nowrap no-underline transition-[background-color,color,border-color,box-shadow,transform] duration-150 select-none;
     }
 
     .btn:active {
@@ -727,47 +784,47 @@
 
     .btn[disabled],
     .btn.is-loading {
-        @apply opacity-55 pointer-events-none;
+        @apply pointer-events-none opacity-55;
     }
 
     .btn-primary {
-        @apply bg-navy text-white border-navy;
+        @apply border-navy bg-navy text-white;
     }
 
     .btn-primary:hover {
-        @apply bg-navy-light border-navy-light -translate-y-px shadow-btn-hover;
+        @apply -translate-y-px border-navy-light bg-navy-light shadow-btn-hover;
     }
 
     .btn-primary:active {
-        @apply bg-navy-dark border-navy-dark translate-y-0 shadow-none;
+        @apply translate-y-0 border-navy-dark bg-navy-dark shadow-none;
     }
 
     .btn-outline {
-        @apply bg-transparent text-navy border-[rgba(11,31,58,0.25)];
+        @apply border-[rgba(11,31,58,0.25)] bg-transparent text-navy;
     }
 
     .btn-outline:hover {
-        @apply bg-navy/5 border-navy;
+        @apply border-navy bg-navy/5;
     }
 
     .btn-outline-white {
-        @apply bg-transparent text-white border-white/35;
+        @apply border-white/35 bg-transparent text-white;
     }
 
     .btn-outline-white:hover {
-        @apply bg-white/10 border-white;
+        @apply border-white bg-white/10;
     }
 
     .btn-gold {
-        @apply bg-gold text-white border-gold;
+        @apply border-gold bg-gold text-white;
     }
 
     .btn-gold:hover {
-        @apply bg-gold-hover border-gold-hover;
+        @apply border-gold-hover bg-gold-hover;
     }
 
     .btn-ghost {
-        @apply bg-transparent text-navy border-transparent;
+        @apply border-transparent bg-transparent text-navy;
     }
 
     .btn-ghost:hover {
@@ -775,42 +832,42 @@
     }
 
     .btn-sm {
-        @apply py-2 px-4 text-xs;
+        @apply px-4 py-2 text-xs;
     }
 
     .btn-lg {
-        @apply py-3.5 px-[1.875rem] text-base;
+        @apply px-[1.875rem] py-3.5 text-base;
     }
 
     /* --- Surfaces --- */
     .surface {
-        @apply bg-white border border-[rgba(11,31,58,0.1)] rounded-lg;
+        @apply rounded-lg border border-[rgba(11,31,58,0.1)] bg-white;
     }
 
     .surface-muted {
-        @apply bg-[#f2f2ef] border border-[rgba(11,31,58,0.1)] rounded-lg;
+        @apply rounded-lg border border-[rgba(11,31,58,0.1)] bg-[#f2f2ef];
     }
 
     .surface-warm {
-        @apply bg-[#f8f8f6] border border-[rgba(11,31,58,0.1)] rounded-lg;
+        @apply rounded-lg border border-[rgba(11,31,58,0.1)] bg-[#f8f8f6];
     }
 
     /* --- Badges --- */
     .badge {
-        @apply inline-flex py-1 px-2.5 rounded-full text-xs font-semibold bg-[#f2f2ef] text-muted border border-[rgba(11,31,58,0.1)];
+        @apply inline-flex rounded-full border border-[rgba(11,31,58,0.1)] bg-[#f2f2ef] px-2.5 py-1 text-xs font-semibold text-muted;
     }
 
     .badge-gold {
-        @apply inline-flex py-1 px-2.5 rounded-full text-xs font-semibold bg-gold/10 text-gold border border-gold/20;
+        @apply inline-flex rounded-full border border-gold/20 bg-gold/10 px-2.5 py-1 text-xs font-semibold text-gold;
     }
 
     .badge-navy {
-        @apply inline-flex py-1 px-2.5 rounded-full text-xs font-semibold bg-navy text-white;
+        @apply inline-flex rounded-full bg-navy px-2.5 py-1 text-xs font-semibold text-white;
     }
 
     /* --- Divider --- */
     .divider {
-        @apply block w-full h-px bg-[rgba(11,31,58,0.1)] border-0;
+        @apply block h-px w-full border-0 bg-[rgba(11,31,58,0.1)];
     }
 
     /* --- Section Themes --- */
@@ -861,11 +918,11 @@
     }
 
     .gold-bullet-list li {
-        @apply flex items-start gap-2.5 text-sm mb-2;
+        @apply mb-2 flex items-start gap-2.5 text-sm;
     }
 
     .gold-bullet-list li::before {
-        @apply content-[''] shrink-0 w-1.5 h-1.5 rounded-full bg-gold mt-[0.48em];
+        @apply mt-[0.48em] h-1.5 w-1.5 shrink-0 rounded-full bg-gold content-[''];
     }
 
     /* --- Gold Underline Hover --- */
@@ -874,16 +931,16 @@
     }
 
     .gold-underline::after {
-        @apply content-[''] absolute -bottom-0.5 left-0 w-full h-0.5 bg-gold scale-x-0 origin-right transition-transform duration-250 ease-in-out;
+        @apply absolute -bottom-0.5 left-0 h-0.5 w-full origin-right scale-x-0 bg-gold transition-transform duration-250 ease-in-out content-[''];
     }
 
     .gold-underline:hover::after {
-        @apply scale-x-100 origin-left;
+        @apply origin-left scale-x-100;
     }
 
     /* --- Gradient Text --- */
     .text-gradient-gold {
-        @apply bg-gradient-to-br from-[#d4a943] via-[#e8c25a] to-[#b8933d] bg-clip-text text-transparent text-gold;
+        @apply bg-gradient-to-br from-[#d4a943] via-[#e8c25a] to-[#b8933d] bg-clip-text text-gold text-transparent;
     }
 }
 
@@ -896,11 +953,11 @@
 }
 .page-enter-from,
 .page-leave-to {
-    @apply opacity-0 translate-y-2.5;
+    @apply translate-y-2.5 opacity-0;
 }
 .page-enter-to,
 .page-leave-from {
-    @apply opacity-100 translate-y-0;
+    @apply translate-y-0 opacity-100;
 }
 
 /* Name: fade */
@@ -963,7 +1020,7 @@
 
 /* Screen Reader Only */
 .sr-only {
-    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0 [clip:rect(0,0,0,0)];
+    @apply absolute -m-px h-px w-px overflow-hidden border-0 p-0 whitespace-nowrap [clip:rect(0,0,0,0)];
 }
 
 /* Aspect Ratios */
@@ -990,7 +1047,7 @@
 
 /* Image Utilities */
 .img-fill {
-    @apply w-full h-full object-cover block;
+    @apply block h-full w-full object-cover;
 }
 
 .overflow-clip {
@@ -1005,7 +1062,7 @@
 }
 
 .spinner {
-    @apply w-[1.125em] h-[1.125em] border-2 border-white/25 border-t-current rounded-full shrink-0 animate-[loader-spin_0.7s_linear_infinite];
+    @apply h-[1.125em] w-[1.125em] shrink-0 animate-[loader-spin_0.7s_linear_infinite] rounded-full border-2 border-white/25 border-t-current;
 }
 
 /* Pulse Dot (Discuss a Project - Live Indicator) */
@@ -1022,7 +1079,7 @@
 }
 
 .pulse-dot {
-    @apply w-[7px] h-[7px] rounded-full bg-[#4caf89] shrink-0 animate-[loader-pulse_1.6s_ease-in-out_infinite];
+    @apply h-[7px] w-[7px] shrink-0 animate-[loader-pulse_1.6s_ease-in-out_infinite] rounded-full bg-[#4caf89];
 }
 
 /* 9. Responsive Token Overrides */
@@ -1039,7 +1096,7 @@
     *,
     *::before,
     *::after {
-        @apply [animation-duration:0.01ms]! [animation-iteration-count:1]! [transition-duration:0.01ms]!;
+        @apply [transition-duration:0.01ms]! [animation-duration:0.01ms]! [animation-iteration-count:1]!;
     }
 
     html {
@@ -1048,6 +1105,6 @@
 
     [data-reveal],
     [data-stagger] > * {
-        @apply opacity-100! transform-none!;
+        @apply transform-none! opacity-100!;
     }
 }

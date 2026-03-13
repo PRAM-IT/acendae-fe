@@ -1,46 +1,50 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../../wayfinder'
+import {
+    queryParams,
+    type RouteQueryOptions,
+    type RouteDefinition,
+} from './../../../../wayfinder';
 /**
-* @see \App\Http\Controllers\CareerController::index
+ * @see \App\Http\Controllers\CareerController::index
  * @see app/Http/Controllers/CareerController.php:13
  * @route '/careers'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: index.url(options),
     method: 'get',
-})
+});
 
 index.definition = {
-    methods: ["get","head"],
+    methods: ['get', 'head'],
     url: '/careers',
-} satisfies RouteDefinition<["get","head"]>
+} satisfies RouteDefinition<['get', 'head']>;
 
 /**
-* @see \App\Http\Controllers\CareerController::index
+ * @see \App\Http\Controllers\CareerController::index
  * @see app/Http/Controllers/CareerController.php:13
  * @route '/careers'
  */
 index.url = (options?: RouteQueryOptions) => {
-    return index.definition.url + queryParams(options)
-}
+    return index.definition.url + queryParams(options);
+};
 
 /**
-* @see \App\Http\Controllers\CareerController::index
+ * @see \App\Http\Controllers\CareerController::index
  * @see app/Http/Controllers/CareerController.php:13
  * @route '/careers'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: index.url(options),
     method: 'get',
-})
+});
 /**
-* @see \App\Http\Controllers\CareerController::index
+ * @see \App\Http\Controllers\CareerController::index
  * @see app/Http/Controllers/CareerController.php:13
  * @route '/careers'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: index.url(options),
     method: 'head',
-})
-const CareerController = { index }
+});
+const CareerController = { index };
 
-export default CareerController
+export default CareerController;

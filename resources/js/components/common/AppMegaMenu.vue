@@ -64,12 +64,12 @@ const handleClose = () => {
     <Transition name="slide-down">
         <div
             v-if="open"
-            class="shadow-navy-lg absolute left-0 right-0 z-[90] w-full overflow-hidden bg-white pt-[40px]"
+            class="shadow-navy-lg absolute right-0 left-0 z-[90] w-full overflow-hidden bg-white pt-[40px]"
             @mouseleave="handleClose"
         >
             <div class="wrap mx-auto grid grid-cols-2 gap-0">
                 <!-- Left Column -->
-                <div class="flex flex-col gap-6 pb-12 pr-12">
+                <div class="flex flex-col gap-6 pr-12 pb-12">
                     <div class="mb-4">
                         <h3 class="mb-1 text-[18px] font-bold text-[#0B1F3F]">
                             {{ t('megaMenu.outsource.title') }}
@@ -135,12 +135,12 @@ const handleClose = () => {
 
             <!-- Bottom Bar -->
             <div
-                class="mt-auto flex h-[60px] w-full items-center justify-between bg-[#0B1F3F] container-px"
+                class="container-px mt-auto flex h-[60px] w-full items-center justify-between bg-[#0B1F3F]"
             >
                 <i18n-t
                     keypath="megaMenu.tagline"
                     tag="p"
-                    class="text-[13px] italic text-white/70 sm:text-[15px]"
+                    class="text-[13px] text-white/70 italic sm:text-[15px]"
                 >
                     <template #highlight>
                         <strong class="ml-1 font-bold text-white">{{

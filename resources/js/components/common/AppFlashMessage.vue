@@ -48,7 +48,7 @@ onUnmounted(() => {
         <Transition name="slide-up">
             <div
                 v-if="visible && message"
-                class="fixed bottom-8 right-8 z-60 flex min-w-[320px] max-w-md items-center overflow-hidden rounded-xl p-4 shadow-md"
+                class="fixed right-8 bottom-8 z-60 flex max-w-md min-w-[320px] items-center overflow-hidden rounded-xl p-4 shadow-md"
                 :class="
                     variant === 'success'
                         ? 'bg-[#4CAF89] text-white'

@@ -75,32 +75,26 @@ const legalLinks = computed(() => [
 
 <template>
     <footer
-        class="w-full bg-[#070F1C] py-[65px] font-['Mona_Sans',sans-serif] text-white lg:py-[100px]"
+        class="section-py w-full bg-[#070F1C] font-['Mona_Sans',sans-serif] text-white"
     >
-        <div
-            class="wrap mx-auto flex w-full flex-col items-center gap-0"
-        >
+        <div class="wrap mx-auto flex w-full flex-col items-center gap-0">
             <!-- Link Grid -->
             <!-- Mobile: 2×2 grid | Desktop: single row flex -->
             <div
-                class="grid w-full grid-cols-2 gap-x-[40px] gap-y-[44px] sm:gap-x-[55px] lg:flex lg:flex-row lg:justify-between lg:gap-0"
+                class="grid w-full grid-cols-2 gap-x-[40px] gap-y-[44px] sm:gap-x-[55px] items-center justify-items-center
+    lg:flex lg:flex-row lg:justify-between lg:gap-0"
             >
                 <div
                     v-for="section in footerSections"
                     :key="section.title"
                     class="flex flex-col gap-[24px]"
                 >
-                    <h4
-                        class="footer-heading"
-                    >
+                    <h4 class="footer-heading">
                         {{ section.title }}
                     </h4>
                     <ul class="flex flex-col gap-[8px]">
                         <li v-for="link in section.links" :key="link.path">
-                            <Link
-                                :href="link.path"
-                                class="footer-link"
-                            >
+                            <Link :href="link.path" class="footer-link">
                                 {{ link.name }}
                             </Link>
                         </li>
@@ -110,7 +104,7 @@ const legalLinks = computed(() => [
 
             <!-- Social Row -->
             <div
-                class="mt-[55px] flex w-full items-center justify-center gap-[29px] lg:mt-[186px]"
+                class="section-pt flex w-full items-center justify-center gap-[29px]"
             >
                 <div class="flex-1 border-t border-white/30"></div>
 

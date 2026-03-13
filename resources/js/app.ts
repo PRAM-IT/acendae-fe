@@ -10,6 +10,7 @@ import { ZiggyVue } from 'ziggy-js';
 import i18n from '@/plugins/i18n';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import { usePreferencesStore } from '@/stores/preferences';
+import { initializeTheme } from '@/composables/useAppearance';
 
 createInertiaApp({
     title: (title) => (title ? `${title} | Acendae` : 'Acendae'),
@@ -41,6 +42,8 @@ createInertiaApp({
             const preferences = usePreferencesStore(pinia);
             event.detail.visit.headers['X-Locale'] = preferences.lang;
         });
+
+        initializeTheme();
 
         const app = createApp({ render: () => h(App, props) })
             .use(plugin)

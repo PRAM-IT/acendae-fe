@@ -13,7 +13,9 @@ const avatarData = [
 </script>
 
 <template>
-    <section class="landing-section relative w-full overflow-hidden bg-[#F4F9FF]">
+    <section
+        class="landing-section relative w-full overflow-hidden bg-[#F4F9FF] text-navy dark:bg-[#070F1C] dark:text-white"
+    >
         <div
             class="wrap relative mx-auto flex flex-col items-center gap-5 sm:gap-6 md:gap-7 lg:gap-8"
         >
@@ -23,7 +25,7 @@ const avatarData = [
             >
                 <!-- Left Avatar -->
                 <div
-                    class="absolute left-0 top-2 z-10 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#ABB677] shadow-sm"
+                    class="absolute top-2 left-0 z-10 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#ABB677] shadow-sm"
                 >
                     <img
                         src="/images/avatars/avatar1.png"
@@ -34,7 +36,7 @@ const avatarData = [
 
                 <!-- Right Avatar -->
                 <div
-                    class="absolute left-[72px] top-2 z-20 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#D9B9BB] shadow-sm"
+                    class="absolute top-2 left-[72px] z-20 h-[48px] w-[48px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#D9B9BB] shadow-sm"
                 >
                     <img
                         src="/images/avatars/avatar2.png"
@@ -45,7 +47,7 @@ const avatarData = [
 
                 <!-- Center Avatar -->
                 <div
-                    class="absolute left-8 top-0 z-30 h-[56px] w-[56px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#C7B9DA] shadow-sm"
+                    class="absolute top-0 left-8 z-30 h-[56px] w-[56px] overflow-hidden rounded-full border-[1.5px] border-white bg-[#C7B9DA] shadow-sm"
                 >
                     <img
                         src="/images/avatars/avatar3.png"
@@ -57,13 +59,13 @@ const avatarData = [
 
             <!-- Heading & Supporting Text -->
             <div class="flex w-full flex-col items-center gap-2">
-                <h2 class="title-section text-center">
+                <h2 class="title-section text-center dark:text-white">
                     {{ t('cta.readyTitle') }}
                 </h2>
-                <p class="body w-full max-w-2xl text-center text-muted">
+                <p class="body w-full max-w-2xl text-center text-muted dark:text-white/80">
                     {{ t('cta.readySubtext1') }}
                 </p>
-                <p class="body w-full max-w-2xl text-center text-muted">
+                <p class="body w-full max-w-2xl text-center text-muted dark:text-white/80">
                     {{ t('cta.readySubtext2') }}
                 </p>
             </div>
@@ -80,15 +82,14 @@ const avatarData = [
                 >
                     <div class="flex items-center gap-[10px]">
                         <div
-                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)] md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5"
+                            class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[rgba(0,166,126,0.17)]
+                            md:h-[18px] md:w-[18px] 2xl:h-5 2xl:w-5 dark:bg-[#FFB200]/80"
                         >
                             <div
-                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
+                                class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A]  md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
                             ></div>
                         </div>
-                        <span
-                            class="btn-text"
-                        >
+                        <span class="btn-text">
                             {{ t('cta.discussProject') }}
                         </span>
                     </div>
@@ -98,9 +99,10 @@ const avatarData = [
                     variant="outline"
                     tag="Link"
                     href="/team-outsourcing"
-                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] !border !border-[rgba(11,31,63,0.67)] !bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
+                    class="!flex !h-[44px] !w-full !justify-center !rounded-[8px] border border-[rgba(11,31,63,0.67)] dark:!border-[#FFB200]/80
+                    bg-transparent !px-0 sm:!h-[46px] md:!h-[48px] md:!w-auto md:!px-5 lg:!h-[52px] lg:!w-[240px] 2xl:!h-[55px] 2xl:!w-[266px]"
                 >
-                    <span class="btn-text-outline">
+                    <span class="btn-text-outline dark:!text-[#ffffff]">
                         {{ t('cta.discussOutsourcing') }}
                     </span>
                 </AppButton>
@@ -115,7 +117,7 @@ const avatarData = [
 
             <!-- Decorative Gold Shape -->
             <div
-                class="pointer-events-none absolute z-0 hidden select-none overflow-visible md:bottom-[-70px] md:right-[-80px] md:block md:w-[450px] md:opacity-80 lg:bottom-[-90px] lg:right-[-120px] lg:w-[500px] lg:opacity-100 2xl:bottom-[-130px] 2xl:right-[-160px] 2xl:w-[620px]"
+                class="pointer-events-none absolute z-0 hidden overflow-visible select-none lg:right-[-120px] lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
             >
                 <img src="/images/logo-n.svg" alt="" class="h-auto w-full" />
             </div>

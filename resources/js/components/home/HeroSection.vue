@@ -8,14 +8,15 @@ const { t } = useI18n();
 
 <template>
     <section
-        class="container-px relative flex min-h-[700px] w-full items-center overflow-hidden
-        bg-white pt-5 sm:min-h-[750px] sm:pt-6 md:min-h-[850px] md:pt-7 lg:mb-8
-        lg:min-h-[660px] lg:pt-0 xl:min-h-[690px] 2xl:min-h-[700px]"
+        class="container-px relative flex w-full items-center overflow-hidden
+        bg-white text-navy min-h-[850px]
+        lg:min-h-[690px] 2xl:min-h-[750px] 4xl:min-h-[800px]
+        dark:bg-[#070F1C] dark:text-white"
     >
         <div
-            class="grid w-full grid-cols-1 items-center justify-center gap-7
-            pb-10 sm:gap-8 sm:pb-12 md:gap-8 md:pb-10 md:pt-4 lg:grid-cols-[1fr_420px]
-            lg:gap-x-10 lg:py-0 xl:grid-cols-[1fr_480px] xl:gap-x-16 2xl:grid-cols-[1fr_546px] 2xl:gap-x-20"
+            class="grid w-full grid-cols-1 items-center justify-center gap-7 pb-10 sm:gap-8
+            sm:pb-12 md:gap-8 md:pt-4 md:pb-10 lg:grid-cols-[1fr_420px] lg:gap-x-10 lg:py-0
+            xl:grid-cols-[1fr_480px] xl:gap-x-16 2xl:grid-cols-[1fr_546px] 2xl:gap-x-20"
         >
             <!-- Left Column - Text Area -->
             <div
@@ -24,22 +25,25 @@ const { t } = useI18n();
             >
                 <!-- Eyebrow Badge -->
                 <div
-                    class="mb-3 flex w-fit max-w-full flex-row items-center rounded-2xl bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:mb-5 sm:px-4 sm:py-2 md:mb-6 md:px-5 lg:mb-6 lg:max-w-md lg:py-2.5 lg:pl-4 lg:pr-6 2xl:mb-6 2xl:max-w-none 2xl:py-2.5 2xl:pl-4 2xl:pr-6"
+                    class="flex w-fit max-w-full flex-row items-center rounded-2xl
+                    bg-[rgba(77,161,240,0.11)] px-3 py-1 sm:px-4 sm:py-2 md:mb-6 md:px-5 mb-5
+                    lg:max-w-md lg:py-2.5 lg:pr-6 lg:pl-4 md:mb-6 2xl:max-w-none 2xl:py-2.5
+                     2xl:pr-6 2xl:pl-4"
                 >
-                    <span class="eyebrow-accent">
+                    <span class="eyebrow-accent dark:!text-white">
                         {{ t('home.hero.eyebrow') }}
                     </span>
                 </div>
 
                 <!-- Content Block -->
                 <div
-                    class="mb-6 flex w-full flex-col gap-2 sm:mb-7 sm:gap-2.5 md:mb-8 md:gap-3 lg:mb-7 lg:gap-2.5 2xl:mb-7 2xl:gap-2.5"
+                    class="mb-6 flex w-full flex-col sm:mb-7 md:mb-8 gap-5 md:gap-6 lg:mb-7 lg:gap-2.5 2xl:mb-7 2xl:gap-2.5"
                 >
-                    <h1 class="title w-full break-words">
+                    <h1 class="title w-full break-words dark:text-white">
                         {{ t('home.hero.title') }}
                     </h1>
 
-                    <p class="body w-full">
+                    <p class="body w-full dark:text-white/80">
                         {{ t('home.hero.subtitle') }}
                     </p>
                 </div>
@@ -54,7 +58,13 @@ const { t } = useI18n();
                         variant="primary"
                         tag="Link"
                         :href="route('services.outsource')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-4 2xl:!h-[55px] 2xl:!px-6"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !gap-[10px] !rounded-[8px] !border-0
+                        !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px
+                        hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2
+                        focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0
+                        active:!bg-[#081629] sm:!h-[50px] md:!h-[50px] md:!w-auto md:!px-5 lg:!h-[48px] lg:!w-auto
+                        lg:!px-8 xl:!h-[52px] xl:!px-4 2xl:!h-[55px] 2xl:!px-6 dark:!bg-[#FFB200]/80 dark:hover:!bg-[#E3C45F]
+                        dark:active:!bg-[#B8933D]"
                     >
                         <div class="flex items-center gap-[10px]">
                             <div
@@ -64,9 +74,7 @@ const { t } = useI18n();
                                     class="h-1.5 w-1.5 rounded-full bg-[#0A5E4A] md:h-[7px] md:w-[7px] 2xl:h-2 2xl:w-2"
                                 ></div>
                             </div>
-                            <span
-                                class="btn-text"
-                            >
+                            <span class="btn-text dark:text-[#070F1C]">
                                 {{ t('home.hero.cta_outsource') }}
                             </span>
                         </div>
@@ -77,11 +85,9 @@ const { t } = useI18n();
                         variant="outline"
                         tag="Link"
                         :href="route('services.dedicated-team')"
-                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!px-5 lg:!h-[48px] lg:!h-[50px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-6"
+                        class="!flex !h-[48px] !w-full !items-center !justify-center !rounded-[8px] !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 sm:!h-[50px] md:!px-5 lg:!h-[48px] lg:!h-[50px] lg:!w-auto lg:!px-8 xl:!h-[52px] xl:!px-10 2xl:!h-[55px] 2xl:!px-6 dark:!border-[#C9A84C] dark:hover:!bg-[#C9A84C]/10"
                     >
-                        <span
-                            class="btn-text-outline"
-                        >
+                        <span class="btn-text-outline dark:!text-white">
                             {{ t('home.hero.cta_team') }}
                         </span>
                     </AppButton>
@@ -164,7 +170,8 @@ const { t } = useI18n();
                     variant="primary"
                     tag="Link"
                     :href="route('services.outsource')"
-                    class="!flex !h-[47px] !w-full !max-w-none !items-center !justify-center !gap-[8px] !rounded-[7px] !border-0 !bg-[#0B1F3F] !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
+                    class="!flex !h-[47px] !w-full !max-w-none !items-center !justify-center !gap-[8px] !rounded-[7px] !border-0
+                    !bg-[#0B1F3F] dark:!bg-[#FFB200]/80 !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!bg-[#1a3358] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.28)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
                 >
                     <div class="flex items-center gap-[8px]">
                         <div
@@ -185,9 +192,14 @@ const { t } = useI18n();
                     variant="outline"
                     tag="Link"
                     :href="route('services.dedicated-team')"
-                    class="group !flex !h-[47px] !w-full !max-w-none !items-center !justify-center !rounded-[7px] !border !border-[rgba(11,31,63,0.67)] !bg-transparent !px-4 !transition-all !duration-200 hover:!-translate-y-px hover:!border-[#0b1f3a] hover:!bg-[#0b1f3a] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.2)] focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C] active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
+                    class="group !flex !h-[47px] !w-full !max-w-none !items-center !justify-center !rounded-[7px] !border
+                    !border-[rgba(11,31,63,0.67)]
+                    dark:!border-[#FFB200]/80 !bg-transparent !px-4 !transition-all !duration-200 hover:!-translate-y-px
+                    hover:!border-[#0b1f3a] hover:!bg-[#0b1f3a] hover:!shadow-[0_6px_20px_rgba(11,31,58,0.2)]
+                    focus-visible:!outline-2 focus-visible:!outline-offset-2 focus-visible:!outline-[#C9A84C]
+                    active:!translate-y-0 active:!bg-[#081629] sm:!h-[50px]"
                 >
-                    <span class="btn-text-outline">
+                    <span class="btn-text-outline dark:!text-white">
                         {{ t('home.hero.cta_team') }}
                     </span>
                 </AppButton>

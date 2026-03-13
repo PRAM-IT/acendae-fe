@@ -14,7 +14,7 @@ function setLanguage(lang: 'en' | 'nl') {
 
 <template>
     <div class="flex items-center gap-3">
-        <Globe2Icon class="text-navy h-4 w-4 opacity-50" />
+        <Globe2Icon class="h-4 w-4 text-navy opacity-50" />
 
         <div class="flex items-center gap-2 text-sm">
             <button
@@ -22,7 +22,7 @@ function setLanguage(lang: 'en' | 'nl') {
                 class="font-semibold transition-all duration-300"
                 :class="
                     locale === 'en'
-                        ? 'text-navy scale-105'
+                        ? 'scale-105 text-navy'
                         : 'text-navy/50 hover:text-navy/80'
                 "
             >
@@ -38,7 +38,7 @@ function setLanguage(lang: 'en' | 'nl') {
                 class="font-semibold transition-all duration-300"
                 :class="
                     locale === 'nl'
-                        ? 'text-navy scale-105'
+                        ? 'scale-105 text-navy'
                         : 'text-navy/50 hover:text-navy/80'
                 "
             >

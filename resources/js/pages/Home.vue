@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Transition } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import { useI18n } from 'vue-i18n';
 import HeroSection from '@/components/home/HeroSection.vue';
@@ -9,6 +10,7 @@ import HowWeWorkSection from '@/components/home/HowWeWorkSection.vue';
 import QuoteSection from '@/components/home/QuoteSection.vue';
 import JoinSection from '@/components/home/JoinSection.vue';
 import CtaSection from '@/components/sections/CtaSection.vue';
+import MountainScrollIndicator from '@/components/common/MountainScrollIndicator.vue';
 
 const { t } = useI18n();
 </script>
@@ -41,13 +43,17 @@ const { t } = useI18n();
             "
         />
     </Head>
-
-    <HeroSection />
-    <SocialProofSection />
-    <TwoWaysSection />
-    <OurUnitsSection />
-    <HowWeWorkSection />
-    <QuoteSection />
-    <JoinSection />
-    <CtaSection />
+    <Transition name="page" appear>
+        <div>
+            <HeroSection />
+            <SocialProofSection />
+            <TwoWaysSection />
+            <OurUnitsSection />
+            <HowWeWorkSection />
+            <QuoteSection />
+            <JoinSection />
+            <CtaSection />
+            <MountainScrollIndicator />
+        </div>
+    </Transition>
 </template>

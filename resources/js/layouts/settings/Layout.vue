@@ -34,7 +34,7 @@ const { isCurrentOrParentUrl } = useCurrentUrl();
 </script>
 
 <template>
-    <div class="px-4 py-6">
+    <div class="px-4 py-6 bg-white text-navy dark:bg-[#070F1C] dark:text-white">
         <Heading
             title="Settings"
             description="Manage your profile and account settings"
@@ -43,7 +43,7 @@ const { isCurrentOrParentUrl } = useCurrentUrl();
         <div class="flex flex-col lg:flex-row lg:space-x-12">
             <aside class="w-full max-w-xl lg:w-48">
                 <nav
-                    class="flex flex-col space-x-0 space-y-1"
+                    class="flex flex-col space-y-1 space-x-0"
                     aria-label="Settings"
                 >
                     <Button
