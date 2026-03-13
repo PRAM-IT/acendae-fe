@@ -376,7 +376,7 @@
 
     /* Section heading — text-2xl → 4xl:text-4xl */
     .title-section {
-        @apply font-instrument text-2xl leading-tight font-semibold text-balance text-navy md:text-3xl xl:text-[40px] 4xl:text-4xl;
+        @apply font-sans text-2xl leading-tight font-semibold text-balance text-navy md:text-3xl xl:text-[40px] 4xl:text-4xl;
     }
 
     /* Card / subsection title — text-lg → 4xl:text-2xl */
