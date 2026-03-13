@@ -59,7 +59,7 @@ const avatarData = [
 
             <!-- Heading & Supporting Text -->
             <div class="flex w-full flex-col items-center gap-2">
-                <h2 class="title-section text-center dark:text-white">
+                <h2 class="text-xl text-center dark:text-white">
                     {{ t('cta.readyTitle') }}
                 </h2>
                 <p class="body w-full max-w-2xl text-center text-muted dark:text-white/80">
@@ -117,7 +117,8 @@ const avatarData = [
 
             <!-- Decorative Gold Shape -->
             <div
-                class="pointer-events-none absolute z-0 hidden overflow-visible select-none lg:right-[-120px] lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
+                class="pointer-events-none absolute hidden lg:block z-0 overflow-visible select-none lg:right-[-120px]
+                lg:bottom-[-90px] lg:w-[500px] lg:opacity-100 2xl:right-[-160px] 2xl:bottom-[-130px] 2xl:w-[620px]"
             >
                 <img src="/images/logo-n.svg" alt="" class="h-auto w-full" />
             </div>
