@@ -244,7 +244,10 @@
             "body3": "We werken als één geïntegreerd team in Nederland en Sri Lanka — waarbij we strategie, technologie en uitvoering combineren.",
             "body4": "Als je aan betekenisvolle projecten wilt werken, continu wilt groeien en deel wilt uitmaken van langdurige partnerships in plaats van korte klussen, dan voel je je hier thuis.",
             "cta": "Word lid van Acendae als Acendor",
-            "right_quote": "We zijn altijd op zoek naar mensen die samen willen klimmen"
+            "right_quote": "We zijn altijd op zoek naar mensen die samen willen klimmen",
+            "right_quote_prefix": "We zijn altijd op zoek naar mensen die samen willen ",
+            "right_quote_highlight": "klimmen",
+            "team_image_alt": "Acendae teamleden"
         }
     },
     "cta": {

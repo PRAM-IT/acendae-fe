@@ -75,32 +75,26 @@ const legalLinks = computed(() => [
 
 <template>
     <footer
-        class="w-full bg-[#070F1C] py-[65px] font-['Mona_Sans',sans-serif] text-white lg:py-[100px]"
+        class="section-py w-full bg-[#070F1C] font-['Mona_Sans',sans-serif] text-white"
     >
-        <div
-            class="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-0 px-5 sm:px-8 md:px-[55px] lg:px-[85px]"
-        >
+        <div class="wrap mx-auto flex w-full flex-col items-center gap-0">
             <!-- Link Grid -->
             <!-- Mobile: 2×2 grid | Desktop: single row flex -->
             <div
-                class="grid w-full grid-cols-2 gap-x-[40px] gap-y-[44px] sm:gap-x-[55px] lg:flex lg:flex-row lg:justify-between lg:gap-0"
+                class="grid w-full grid-cols-2 gap-x-[40px] gap-y-[44px] sm:gap-x-[55px] items-center justify-items-center
+    lg:flex lg:flex-row lg:justify-between lg:gap-0"
             >
                 <div
                     v-for="section in footerSections"
                     :key="section.title"
                     class="flex flex-col gap-[24px]"
                 >
-                    <h4
-                        class="text-[20px] leading-[24px] font-medium text-white"
-                    >
+                    <h4 class="footer-heading">
                         {{ section.title }}
                     </h4>
                     <ul class="flex flex-col gap-[8px]">
                         <li v-for="link in section.links" :key="link.path">
-                            <Link
-                                :href="link.path"
-                                class="text-sm leading-[20px] font-normal whitespace-nowrap text-white transition-opacity hover:opacity-70 lg:text-base lg:leading-[23px]"
-                            >
+                            <Link :href="link.path" class="footer-link">
                                 {{ link.name }}
                             </Link>
                         </li>
@@ -110,11 +104,9 @@ const legalLinks = computed(() => [
 
             <!-- Social Row -->
             <div
-                class="mt-[55px] flex w-full items-center justify-center gap-[29px] lg:mt-[186px]"
+                class="section-pt flex w-full items-center justify-center gap-[29px]"
             >
-                <div
-                    class="flex-1 border-t border-white/30"
-                ></div>
+                <div class="flex-1 border-t border-white/30"></div>
 
                 <div class="flex flex-row items-center gap-[28px]">
                     <a
@@ -169,9 +161,7 @@ const legalLinks = computed(() => [
                     </a>
                 </div>
 
-                <div
-                    class="flex-1 border-t border-white/30"
-                ></div>
+                <div class="flex-1 border-t border-white/30"></div>
             </div>
 
             <!-- Logo -->
@@ -190,7 +180,7 @@ const legalLinks = computed(() => [
             <div
                 class="mt-[40px] hidden w-full flex-col items-center gap-[32px] lg:flex"
             >
-                <p class="text-[20px] leading-[28px] font-normal text-white">
+                <p class="footer-copyright">
                     {{ t('footer.copyright') }}
                 </p>
                 <div
@@ -200,7 +190,7 @@ const legalLinks = computed(() => [
                         v-for="link in legalLinks"
                         :key="link.name"
                         :href="link.path"
-                        class="text-[16px] leading-[23px] font-normal whitespace-nowrap text-white transition-opacity hover:opacity-70"
+                        class="footer-legal"
                     >
                         {{ link.name }}
                     </Link>

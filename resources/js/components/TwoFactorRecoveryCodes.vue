@@ -44,7 +44,9 @@ onMounted(async () => {
     <Card class="w-full">
         <CardHeader>
             <CardTitle class="flex gap-3">
-                <LockKeyhole class="size-4" />{{ t('settings.twoFactor.recoveryCodes') }}
+                <LockKeyhole class="size-4" />{{
+                    t('settings.twoFactor.recoveryCodes')
+                }}
             </CardTitle>
             <CardDescription>
                 {{ t('settings.twoFactor.recoveryCodesDesc') }}
@@ -59,7 +61,11 @@ onMounted(async () => {
                         :is="isRecoveryCodesVisible ? EyeOff : Eye"
                         class="size-4"
                     />
-                    {{ isRecoveryCodesVisible ? t('settings.twoFactor.hide') : t('settings.twoFactor.show') }}
+                    {{
+                        isRecoveryCodesVisible
+                            ? t('settings.twoFactor.hide')
+                            : t('settings.twoFactor.show')
+                    }}
                 </Button>
 
                 <Form
@@ -99,7 +105,7 @@ onMounted(async () => {
                             <div
                                 v-for="n in 8"
                                 :key="n"
-                                class="h-4 animate-pulse rounded bg-muted-foreground/20"
+                                class="bg-muted-foreground/20 h-4 animate-pulse rounded"
                             ></div>
                         </div>
                         <div
@@ -110,7 +116,7 @@ onMounted(async () => {
                             {{ code }}
                         </div>
                     </div>
-                    <p class="text-xs text-muted-foreground select-none">
+                    <p class="text-muted-foreground text-xs select-none">
                         {{ t('settings.twoFactor.recoveryCodesHelp') }}
                     </p>
                 </div>
